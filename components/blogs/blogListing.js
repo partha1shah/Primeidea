@@ -4,8 +4,8 @@ import Image from "next/image";
 import React from "react";
 
 export default function BlogListing({ posts, categoriesList }) {
-  console.log(posts);
-  console.log(categoriesList);
+  // console.log(posts);
+  // console.log(categoriesList);
 
   const categoryItems = [
     {
@@ -139,7 +139,7 @@ export default function BlogListing({ posts, categoriesList }) {
         <div className="w-full lg:w-[calc(100%-305px)] xl:w-[calc(100%-362px)] h-full lg:shadow-[0_0_7px_0_#00000040] rounded-2xl ">
           <ul>
             {posts.map((item, index) => {
-              console.log("items", item);
+              // console.log("items", item);
               return (
                 <li
                   className="border-b border-b-[#222222] py-4 px-2 sm:px-4 lg:px-8 last:border-b-0"

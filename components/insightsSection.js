@@ -7,7 +7,7 @@ import moment from "moment";
 
 const InsightsSection = (props) => {
   const blogsListing = props.blogsListing;
-  console.log(props);
+  // console.log(props);
   const insightsItems = [
     {
       imageUrl: "/images/home/insights/1.png",
