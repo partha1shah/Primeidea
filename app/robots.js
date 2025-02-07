@@ -1,16 +1,13 @@
 export default function robots() {
-    return {
-        rules: [
-        {
-            userAgent: 'Googlebot',
-            allow: ['/'],
-            disallow: ['/private/'],
-        },
-        {
-            userAgent: ['Applebot', 'Bingbot'],
-            disallow: ['/'],
-        },
+  return {
+    rules: [
+      {
+        userAgent: '*',
+        allow: '/',
+        disallow: ['/api/', '/admin/', '/private/'],
+      },
     ],
-      sitemap: 'https://primeidea.in/sitemap.xml',
-    }
-  }
+    sitemap: 'https://primeidea.in/sitemap.xml',
+    host: 'https://primeidea.in',
+  };
+}
