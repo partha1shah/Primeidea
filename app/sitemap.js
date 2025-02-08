@@ -53,7 +53,7 @@ export default async function sitemap() {
       })),
       // Blog posts
       ...posts.map(post => ({
-        url: `${BASE_URL}/blog/${post.slug}`,
+        url: `${BASE_URL}/blogs/${post.slug}`,
         lastModified: new Date(post.modified || post.date),
         changeFrequency: 'weekly',
         priority: 0.8

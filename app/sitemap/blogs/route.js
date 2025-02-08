@@ -33,7 +33,7 @@ export async function GET() {
           .filter(post => post && post.slug) // Filter out invalid posts
           .map(post => `
             <url>
-              <loc>${BASE_URL}/blog/${post.slug}</loc>
+              <loc>${BASE_URL}/blogs/${post.slug}</loc>
               <lastmod>${post.modified || post.date || new Date().toISOString()}</lastmod>
               <changefreq>daily</changefreq>
               <priority>0.8</priority>
