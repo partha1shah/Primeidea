@@ -102,7 +102,7 @@ export default async function AboutUs() {
 
             <HowFinancialAdvisorHelp />
 
-            <MeetOurTeam />
+            {/* <MeetOurTeam /> */}
 
             {/* <InsightsSection blogsListing={blogsListing.allPosts.nodes}/> */}
 
