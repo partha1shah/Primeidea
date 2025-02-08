@@ -51,7 +51,7 @@ const GetStarted = () => {
         formDataObj.append('description', formData.description);
 
         try {
-            const path = 'https://primeidea.kashyappandya.com';
+            const path = 'https://admin.primeidea.in';
             const response = await fetch(`${path}/wp-json/contact-form-7/v1/contact-forms/48/feedback`, {
                 method: 'POST',
                 body: formDataObj,

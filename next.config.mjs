@@ -7,13 +7,13 @@ const nextConfig = {
   },
   reactStrictMode: false,
   images: {
-    domains: ['primeidea.kashyappandya.com', 'https://primeidea.kashyappandya.com', 'https://primeidea.kashyappandya.com/wp-content/uploads', 'secure.gravatar.com'],
+    domains: ['admin.primeidea.in', 'https://admin.primeidea.in', 'https://admin.primeidea.in/wp-content/uploads', 'secure.gravatar.com'],
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'https://primeidea.kashyappandya.com/',
+        hostname: 'https://admin.primeidea.in/',
         port: '',
-        pathname: 'https://primeidea.kashyappandya.com/**',
+        pathname: 'https://admin.primeidea.in/**',
       }
     ]
   }
