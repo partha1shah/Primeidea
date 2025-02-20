@@ -7,13 +7,18 @@ const nextConfig = {
   },
   reactStrictMode: false,
   images: {
-    domains: ['admin.primeidea.in', 'https://admin.primeidea.in', 'https://admin.primeidea.in/wp-content/uploads', 'secure.gravatar.com'],
+    domains: ['login.primeidea.in', 'https://login.primeidea.in', 'admin.primeidea.in', 'https://admin.primeidea.in', 'https://admin.primeidea.in/wp-content/uploads', 'secure.gravatar.com'],
     remotePatterns: [
       {
         protocol: 'https',
         hostname: 'https://admin.primeidea.in/',
         port: '',
         pathname: 'https://admin.primeidea.in/**',
+      }, {
+        protocol: 'https',
+        hostname: 'https://login.primeidea.in',
+        port: '',
+        pathname: 'https://login.primeidea.in/**',
       }
     ]
   }
