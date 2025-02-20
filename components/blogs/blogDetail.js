@@ -99,8 +99,8 @@ const BlogDetail = (props) => {
                         </PopoverGroup>
                     </div>
                 </div>
-                <div className="border-y-2 border-black py-4 my-4 flex flex-col sm:flex-row sm:justify-between items-baseline sm:items-center">
-                    <div className="flex items-center  mb-3 sm:mb-0">
+                <div className="border-y-2 border-black py-[12px] my-4 flex flex-col sm:flex-row sm:justify-between items-baseline sm:items-center">
+                    <div className="flex items-center  mb-3 sm:mb-0 hidden">
                         <Image
                             src={post?.author.node.avatar.url}
                             width={120}
@@ -114,8 +114,8 @@ const BlogDetail = (props) => {
                       </h3>
                     </div>
                     <div className="text-left">
-                        <h3 className="font-semibold text-base md:text-xl lg:text-2xl sm:mb-[4px]">Updated: {moment(post.modified).format('MMMM D, YYYY')}</h3>
-                        <h3 className="font-semibold text-sm md:text-lg lg:text-xl text-[#727272]">Published: {moment(post.date).format('MMMM D, YYYY')}</h3>
+                        <h3 className="font-semibold text-base md:text-xl lg:text-2xl sm:mb-[4px] hidden">Updated: {moment(post.modified).format('MMMM D, YYYY')}</h3>
+                        <h3 className="font-semibold text-[16px] text-[#727272]">{moment(post.date).format('MMMM D, YYYY')} <span className='pr-[3px]'></span> |  <span className='capitalize text-[#727272] pl-[3px]'>{post?.author.node.name}</span></h3>
                     </div>
                 </div>
                 <div className="flex justify-between flex-col lg:flex-row">
