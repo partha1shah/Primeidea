@@ -4,12 +4,18 @@ import Header from "./header";
 import FadeUpAnimation from "@/animations/FadeUpAnimation";
 import FadeUpOneByOneAnimation from "@/animations/FadeUpOneByOneAnimation";
 import FadeUpAnimationDelay from "@/animations/FadeUpAnimationDelay";
+import ContactFormModal from "./ContactFormModal";
+import { useState } from "react";
 
 const BannerSection = (props) => {
+   const [isModalOpen, setIsModalOpen] = useState(false);
+      
+  const toggle = () => setIsModalOpen(!isModalOpen);
   
   // console.log(props);
   return (
     <section>
+      <ContactFormModal formTitle={'Connect with Us'} isOpen={isModalOpen} onClose={toggle} />
       <div className="banner-section relative h-full md:h-[100vh]">
         <div className="image-section h-[calc(100vh-166px)] w-full">
           <Image
@@ -45,10 +51,11 @@ const BannerSection = (props) => {
                 </p>
               }
               {props.mainLinkTitle &&
-              <a
-                href={props.mainLink?props.mainLink:''}
+              <button
+                // href={props.mainLink?props.mainLink:''}
                 className="bg-[#293C7D] md:text-md xl:text-lg font-bold rounded-md text-white px-6 py-3 inline-flex items-center"
-                target="_blank"
+                // target="_blank"
+                onClick={toggle}
               >
                 {props.mainLinkTitle?props.mainLinkTitle:''}
                 <Image
@@ -58,9 +65,10 @@ const BannerSection = (props) => {
                   alt="Read All"
                   className="ml-2"
                 />
-              </a>
+              </button>
               }
             </FadeUpAnimation>
+            
             {props.bannerRightImg &&
               <div className="max-w-[740px] w-full">
                 <Image
