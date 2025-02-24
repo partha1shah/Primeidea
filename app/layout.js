@@ -60,15 +60,15 @@ export const metadata = {
     shortcut: '/favicon-16x16.png',
     apple: '/apple-touch-icon.png',
   },
-  verification: {
-    google: 'your-google-verification-code',
-    // yandex: 'your-yandex-verification-code',
-    // yahoo: 'your-yahoo-verification-code',
-  },
-  other: {
-    'google-site-verification': 'your-verification-code',
-    'msvalidate.01': 'your-ms-validation-code',
-  },
+  // verification: {
+  //   google: 'your-google-verification-code',
+  //   yandex: 'your-yandex-verification-code',
+  //   yahoo: 'your-yahoo-verification-code',
+  // },
+  // other: {
+  //   'google-site-verification': 'your-verification-code',
+  //   'msvalidate.01': 'your-ms-validation-code',
+  // },
   assets: ['https://primeidea.in'],
 };
 
