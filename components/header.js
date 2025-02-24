@@ -32,6 +32,7 @@ const navigation = [
       { name: "Careers", href: "careers" },
     ],
   },
+  { name: "Contact Us", href: "/contact-us ", current: false },
   { name: "Login", href: "https://login.primeidea.in ", current: false },
 ];
 
@@ -86,7 +87,7 @@ export default function Header() {
                 width={184}
                 height={40}
                 alt="Primeidea Ventures"
-                className="h-10 w-[160px] sm:w-auto object-contain"
+                className="h-10 w-[140px] sm:w-[160px] sm:w-auto object-contain"
               />
             </Link>
           </div>
@@ -421,11 +422,10 @@ export default function Header() {
               </li>
                <li className="!ml-2">
                 <a
-                  href="https://login.primeidea.in"
-                  target="_blank"
+                  href="/contact-us"                  
                   className="block py-4 2xl:py-5 px-2 2xl:px-3 text-[15px] 2xl:text-base font-medium md:w-auto hover:text-[#E40115]"
                 >
-                  Login
+                  Contact Us
                 </a>
               </li>
             </ul>
@@ -435,10 +435,11 @@ export default function Header() {
         {/* Contact button */}
         <div className="lg:flex items-center">
           <a
-            href="/contact-us"
+            href="https://login.primeidea.in"
+            target="_blank"
             className="rounded-[10px] py-1.5 px-[18px] border border-solid border-[#1F1F1F] text-[#171717] hover:text-white hover:bg-[#E40115] hover:border-[#E40115]"
           >
-            Contact Now
+            Login
           </a>
         </div>
       </div>

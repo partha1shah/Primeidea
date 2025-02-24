@@ -59,7 +59,7 @@ export default async function Home() {
     <div className="bg-[#F6FDFF]">
       <BannerSection 
        mainBannerImage={"/images/home/banner.png"}
-       bannerRightImg={"/images/home/banner-right.webp"}
+       bannerRightImg={"/images/home/banner-right.png"}
        mainTitle={"Experience You Can Trust"}
        mainSubTitle={"Under Partha Shah's guidance, Primeidea turns financial goals into reality."}
        mainLinkTitle={"Start your journey with us"}
