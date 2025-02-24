@@ -168,7 +168,7 @@ const BlogDetail = (props) => {
                             <p className="mb-3">
                             Join our exclusive community of financial advisors! Share insights, and stay updated with the latest trends and tools. Connect with experts on WhatsApp!
                             </p>
-                            <a href="https://chat.whatsapp.com/Bgocyi51gNA3S4CrFkggot" className="border rounded-[5px] border-[#232D63] text-[#fff] bg-[#232D63] p-3 text-center font-bold w-full inline-block" >Join our community</a>
+                            <a href="https://whatsapp.com/channel/0029VaNUByW5vKAEkvUQCo33" className="border rounded-[5px] border-[#232D63] text-[#fff] bg-[#232D63] p-3 text-center font-bold w-full inline-block" >Join our community</a>
 
                         </div>
                     </div>

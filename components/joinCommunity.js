@@ -48,7 +48,7 @@ const JoinCommunity = () => {
                   </li>
                 </ul>
                 <a
-                href='https://chat.whatsapp.com/Bgocyi51gNA3S4CrFkggot'
+                href='https://whatsapp.com/channel/0029VaNUByW5vKAEkvUQCo33'
                 className="bg-[#293C7D] md:text-md xl:text-lg font-bold rounded-md text-white px-6 py-3 inline-flex items-center"
                 >
                   Join our WhatApps Community 

@@ -9,10 +9,10 @@ const ExpertiseSection = () => {
           <div className="flex justify-between items-center flex-col lg:flex-row mx-[-15px]">
             <div className="w-[80%] md:w-1/2 px-[15px] mb-10 lg:mb-0">
               <Image
-                src="/images/about-us/founder.png"
+                src="/images/about-us/founder.jpg"
                 width={485}
                 height={509}
-                alt="Founder"
+                alt="Founder - Mr. Partha Shah"
               />
             </div>
             <FadeUpOneByOneAnimation className="w-full md:w-[70%] lg:w-1/2 px-[30px] md:px-[15px]">
