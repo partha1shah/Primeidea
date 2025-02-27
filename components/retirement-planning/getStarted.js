@@ -115,54 +115,86 @@ const GetStarted = () => {
             </div>
 
             {modal && (
-                <div className="fixed inset-0 z-[99999] flex items-center justify-center bg-black bg-opacity-50" onClick={toggle}>
-                    <div className="bg-white rounded-lg overflow-hidden w-full max-w-lg" onClick={handleModalClick}>
-                        <div className="flex justify-between items-center pb-0 p-4 relative">
-                            <h2 className="text-[1.5rem] font-untitled text-black font-medium uppercase">Plan Your Retirement</h2>
-                            <button onClick={toggle} className="text-[72px] text-gray-500 hover:text-gray-700 leading-[100%] absolute right-3 top-[-10px]">
-                                &times;
+                <div className="fixed inset-0 z-[99999] flex items-center justify-center bg-black/60 backdrop-blur-md transition-all duration-300" onClick={toggle}>
+                    <div className="rounded-2xl overflow-hidden w-full max-w-lg transform transition-all duration-500 scale-100 
+                        bg-gradient-to-r from-[#14568e] to-[#293c7d] shadow-[0_0_40px_rgba(20,96,110,0.3)]
+                        backdrop-blur-lg backdrop-filter relative" 
+                        onClick={handleModalClick}>
+                        {/* Decorative Elements */}
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+                        <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-12 -translate-x-12"></div>
+                        
+                        <div className="flex justify-between items-center pb-0 p-8 relative">
+                            <h2 className="text-[1.75rem] font-untitled text-white font-medium uppercase tracking-wide">
+                                Plan Your Retirement
+                            </h2>
+                            <button 
+                                onClick={toggle} 
+                                className="text-3xl text-white/80 hover:text-white leading-none transition-all duration-300 
+                                    hover:rotate-90 transform p-2"
+                            >
+                                ×
                             </button>
                         </div>
-                        <div className="p-4">
-                            <p className="text-[#14606E] text-lg text-left">
+                        <div className="p-8 relative z-10">
+                            <p className="text-white/90 text-lg text-left font-light mb-8">
                                 Fill out the form below to start planning your retirement journey.
                             </p>
-                            <form onSubmit={handleSubmit} className="w-full mt-4">
-                                <input
-                                    type="text"
-                                    name="fullName"
-                                    value={formData.fullName}
-                                    onChange={handleChange}
-                                    placeholder="Full Name"
-                                    className="w-full h-12 px-4 py-2 mt-4 text-black border border-[#14606E] rounded-md focus:outline-none"
-                                />
-                                <input
-                                    type="email"
-                                    name="email"
-                                    value={formData.email}
-                                    onChange={handleChange}
-                                    placeholder="Email"
-                                    className="w-full h-12 px-4 py-2 mt-4 text-black border border-[#14606E] rounded-md focus:outline-none"
-                                />
-                                <input
-                                    type="tel"
-                                    name="phone"
-                                    value={formData.phone}
-                                    onChange={handleChange}
-                                    placeholder="Phone Number"
-                                    className="w-full h-12 px-4 py-2 mt-4 text-black border border-[#14606E] rounded-md focus:outline-none"
-                                />
-                                <textarea
-                                    name="description"
-                                    value={formData.description}
-                                    onChange={handleChange}
-                                    placeholder="Tell us about your retirement goals"
-                                    className="w-full h-32 px-4 py-2 mt-4 text-black border border-[#14606E] rounded-md focus:outline-none"
-                                ></textarea>
+                            <form onSubmit={handleSubmit} className="w-full space-y-6">
+                                <div className="relative group">
+                                    <input
+                                        type="text"
+                                        name="fullName"
+                                        value={formData.fullName}
+                                        onChange={handleChange}
+                                        placeholder="Full Name"
+                                        className="peer w-full h-12 px-5 text-white bg-white/10 border-2 border-white/30 rounded-xl
+                                            focus:outline-none focus:border-white focus:bg-white/20 transition-all duration-300
+                                            group-hover:border-white/50"
+                                    />
+                                </div>
+                                <div className="relative group">
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        value={formData.email}
+                                        onChange={handleChange}
+                                        placeholder="Email"
+                                        className="peer w-full h-12 px-5 text-white bg-white/10 border-2 border-white/30 rounded-xl
+                                            focus:outline-none focus:border-white focus:bg-white/20 transition-all duration-300
+                                            group-hover:border-white/50"
+                                    />
+                                </div>
+                                <div className="relative group">
+                                    <input
+                                        type="tel"
+                                        name="phone"
+                                        value={formData.phone}
+                                        onChange={handleChange}
+                                        placeholder="Phone Number"
+                                        className="peer w-full h-12 px-5 text-white bg-white/10 border-2 border-white/30 rounded-xl
+                                            focus:outline-none focus:border-white focus:bg-white/20 transition-all duration-300
+                                            group-hover:border-white/50"
+                                    />
+                                </div>
+                                <div className="relative group">
+                                    <textarea
+                                        name="description"
+                                        value={formData.description}
+                                        onChange={handleChange}
+                                        placeholder="Tell us about your retirement goals"
+                                        className="peer w-full h-32 px-5 py-4 text-white bg-white/10 border-2 border-white/30 rounded-xl
+                                            focus:outline-none focus:border-white focus:bg-white/20 transition-all duration-300
+                                            resize-none group-hover:border-white/50"
+                                    ></textarea>
+                                </div>
                                 <button 
                                     type="submit"
                                     disabled={isSubmitting}
-                                    className="w-full h-12 mt-4 text-white bg-[#479ad2] rounded-md disabled:opacity-50"
+                                    className="w-full h-12 mt-8 text-[#14606E] bg-white rounded-xl
+                                        disabled:opacity-50 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5
+                                        focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 font-medium text-lg
+                                        hover:bg-opacity-90 transform hover:scale-[1.02] active:scale-[0.98]"
                                 >
                                     {isSubmitting ? 'Submitting...' : 'Start Planning'}
                                 </button>

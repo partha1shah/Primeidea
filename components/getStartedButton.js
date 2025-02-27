@@ -30,6 +30,7 @@ const GetStartedButton = () => {
                     className="ml-3"
                 />
             </button>
+            <ContactFormModal formTitle={'Connect with Us'} isOpen={isModalOpen} onClose={toggle} />
         </div>
     )
 }

@@ -31,7 +31,7 @@ const BannerSection = () => {
                 <p className="text-base xl:text-lg 2xl:text-xl font-medium text-white mb-3">
                   Join a trusted network of financial professionals and elevate your practice with our expert support and resources.
                 </p>
-                <a
+                {/* <a
                   href="https://api.whatsapp.com/send?phone=918141027000&text=Hello, I'm interested in becoming a partner with Primeidea. Could you please provide me with some details on how I can get started? Looking forward to hearing from you!"
                   className="bg-[#293C7D] md:text-md xl:text-lg font-bold rounded-md text-white px-6 py-3 inline-flex items-center"
                   target="_blank"
@@ -44,7 +44,7 @@ const BannerSection = () => {
                     alt="Read All"
                     className="ml-2"
                   />
-                </a>
+                </a> */}
               </div>
             </FadeUpOneByOneAnimation>
             <div className="hidden md:flex flex-col items-center">
