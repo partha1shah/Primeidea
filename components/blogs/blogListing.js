@@ -142,10 +142,10 @@ export default function BlogListing({ posts, categoriesList }) {
               // console.log("items", item);
               return (
                 <li
-                  className="border-b border-b-[#222222] py-4 px-2 sm:px-4 lg:px-8 last:border-b-0"
+                  className="border-b border-b-[#222222] last:border-b-0"
                   key={index}
                 >
-                  <div className="flex flex-wrap lg:flex-nowrap">
+                  <a href={`/blogs/${item.slug}`} className="flex flex-wrap lg:flex-nowrap py-4 px-2 sm:px-4 lg:px-8 ">
                     <div className="w-[85px] md:w-[132px] mr-[10px] md:mr-4">
                       <Image
                         // src={item.author.node.avatar.url}
@@ -173,7 +173,7 @@ export default function BlogListing({ posts, categoriesList }) {
                         <div dangerouslySetInnerHTML={{ __html: item.excerpt}} className="line-clamp-3 text-sm sm:text-base mb-2 md:mb-0"></div>
                       </div>
                     </div>
-                    <a href={`/blogs/${item.slug}`} className="ml-auto inline-flex justify-end items-baseline w-full lg:w-[36px]">
+                    <div className="ml-auto inline-flex justify-end items-baseline w-full lg:w-[36px]">
                       <Image
                         src="/images/blogs/right-arrow.png"
                         width={36}
@@ -181,8 +181,8 @@ export default function BlogListing({ posts, categoriesList }) {
                         alt="Arrow"
                         className="w-[32px] sm:w-[36px] h-[32px] sm:h-[36px]"
                       />
-                    </a>
-                  </div>
+                    </div>
+                  </a>
                 </li>
               );
             })}
