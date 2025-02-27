@@ -132,12 +132,12 @@ export default async function ResearchBasedWealthManagementPage () {
              mainLinkTitle={"Start Your Wealth Transformation Today"}
              mainLink={"https://api.whatsapp.com/send?phone=918141027000&text=Hello, I'm interested in learning more about your financial advisory and investment services. Could you please provide me with some details on how I can start planning my investments? Looking forward to hearing from you!"}
              subSectionContent={"Primeidea creates financial plans that fuel your ambitions today and secure your success for tomorrow, whether you’re starting out or scaling up."}
-             subSectionTitle1={"Trusted By Clients"}
-             subSectionSubTitle1={"80+"}
+             subSectionTitle1={"Trusted By Family"}
+             subSectionSubTitle1={"1000+"}
              subSectionTitle2={"Years of expertise"}
-             subSectionSubTitle2={"12+"}
+             subSectionSubTitle2={"30+"}
              subSectionTitle3={"Client Satisfaction"}
-             subSectionSubTitle3={"92+"}
+             subSectionSubTitle3={"1500+"}
             />
 
             <WorkSection />
