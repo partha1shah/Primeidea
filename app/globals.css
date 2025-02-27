@@ -185,3 +185,51 @@ body {
   }
 
 /* Blog Detail Page CSS E */
+
+/* Career Details JD S */
+
+    .roles-and-resposibility-section {
+      /* margin-bottom: 20px; */
+      color: #001e3c;
+      padding: 30px;
+      border-bottom-width: 3px;
+      border-style: dashed;
+      border-color: #001e3c99;
+    }
+
+    .roles-and-resposibility-section h2 {
+      font-size: 28px;
+      font-weight: 600;
+      color: #001e3c;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    .roles-and-resposibility-section h3 {
+      font-size: 24px;
+      font-weight: 600;
+      color: #001e3c;
+      margin-bottom: 10px;
+    }
+
+    .roles-and-resposibility-section ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      /* list-style-position: inside; */
+    }
+
+    .roles-and-resposibility-section ul li {
+      font-size: 16px;
+      color: #141414;
+      font-weight: 500;
+      margin-bottom: 10px;    
+    }
+
+    .roles-and-resposibility-section p {
+      font-size: 16px;
+      color: #141414;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+/* Career Details JD E */

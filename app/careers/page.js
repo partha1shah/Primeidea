@@ -1,8 +1,15 @@
 import ApplyNow from "@/components/careers/applyNow";
 import BannerSection from "@/components/careers/bannerSection";
 import CoreValues from "@/components/careers/coreValues";
+import JobListingSection from "@/components/careers/jobListing";
 import ClientTestimonial from "@/components/clientTestimonial";
 import Footer from "@/components/footer";
+import { getJobOpeningtList } from "@/lib/jobOpenings";
+
+async function getJobOpeningData() {
+  const allJobOpenings = await getJobOpeningtList();
+  return { allJobOpenings: allJobOpenings };
+}
 
 export const metadata = {
   title: 'Careers | PrimeIdea - Your Trusted Financial Partner',
@@ -34,12 +41,14 @@ export const metadata = {
 };
 
 export default async function Careers() { 
- 
+  const jobOpeningsList = await getJobOpeningData();
     
     return (
         <div className="bg-[#F6FDFF]">
 
             <BannerSection />
+
+            <JobListingSection jobOpeningsList={jobOpeningsList.allJobOpenings.data.jobOpenings.nodes} />
 
             <CoreValues />
             

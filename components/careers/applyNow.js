@@ -15,7 +15,9 @@ const ApplyNow = () => {
                     <p className="text-gray-300 text-lg mb-10">
                         Send your resume to: <a href={`mailto:${emailAddress}`} className="text-blue-400 hover:text-blue-300 underline">{emailAddress}</a>
                     </p>
-                    <a href={`mailto:${emailAddress}`} 
+                    <a 
+                    // href={`mailto:${emailAddress}`} 
+                    href="/careers/submit-resume"
                        className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold tracking-wider text-white bg-gradient-to-r from-blue-600 to-blue-500 rounded-lg overflow-hidden transition-all duration-300 hover:from-blue-500 hover:to-blue-600 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-[#232D63]"
                        target="_blank"
                        >
