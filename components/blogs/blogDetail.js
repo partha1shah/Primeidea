@@ -115,7 +115,7 @@ const BlogDetail = (props) => {
                     </div>
                     <div className="text-left">
                         <h3 className="font-semibold text-base md:text-xl lg:text-2xl sm:mb-[4px] hidden">Updated: {moment(post.modified).format('MMMM D, YYYY')}</h3>
-                        <h3 className="font-semibold text-[16px] text-[#727272]">{moment(post.date).format('MMMM D, YYYY')} <span className='pr-[3px]'></span> |  <span className='capitalize text-[#727272] pl-[3px]'>{post?.author.node.name}</span></h3>
+                        <h3 className="font-semibold text-[16px] text-[#727272]">{moment(post.date).format('MMMM D, YYYY')} <span className='pr-[3px]'></span> |  <span className='text-[#727272] pl-[3px]'>{post?.author.node.name}</span></h3>
                     </div>
                 </div>
                 <div className="flex justify-between flex-col lg:flex-row">

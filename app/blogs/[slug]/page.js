@@ -1,4 +1,3 @@
-
 import React from "react";
 import BlogDetail from "@/components/blogs/blogDetail";
 import graphqlRequest from "@/lib/graphqlRequest";
@@ -20,10 +19,7 @@ export async function generateMetadata({ params }) {
             twitterTitle
             twitterDescription
             opengraphImage {
-              mediaDetails {
-                file
-              }
-            sourceUrl
+              sourceUrl
             }
           }
         }
@@ -57,14 +53,20 @@ export async function generateMetadata({ params }) {
       description: content.data.post.seo.metaDesc,
       url: `https://primeidea.in/${slug}`,
       site_name: 'PrimeIdea Ventures',
-      images: content.data.post.seo.opengraphImage.mediaDetails.file,
+      images: [{
+        url: content.data.post.seo.opengraphImage?.sourceUrl || '',
+        width: 1200,
+        height: 630,
+        alt: content.data.post.seo.title,
+      }],
       locale: "en_US",
       type: "website",
     },
     twitter: {
+      card: 'summary_large_image',
       title: content.data.post.seo.title,
       description: content.data.post.seo.metaDesc,
-      images: content.data.post.seo.opengraphImage.mediaDetails.file,
+      images: [`${content.data.post.seo.opengraphImage?.sourceUrl || ''}`],
     },
   };
 }
