@@ -21,9 +21,7 @@ export async function generateMetadata({ params }) {
             twitterDescription
             opengraphImage {
               mediaDetails {
-                sizes {
-                  sourceUrl
-                }
+                file
               }
             sourceUrl
             }
@@ -59,19 +57,14 @@ export async function generateMetadata({ params }) {
       description: content.data.post.seo.metaDesc,
       url: `https://primeidea.in/${slug}`,
       site_name: 'PrimeIdea Ventures',
-      // images: [
-      //   {
-      //     url: content.data.post.seo.sourceUrl,
-      //   },
-      // ],
-      images: content.data.post.seo.sourceUrl,
+      images: content.data.post.seo.opengraphImage.mediaDetails.file,
       locale: "en_US",
       type: "website",
     },
     twitter: {
       title: content.data.post.seo.title,
       description: content.data.post.seo.metaDesc,
-      images: content.data.post.seo.sourceUrl,
+      images: content.data.post.seo.opengraphImage.mediaDetails.file,
     },
   };
 }
