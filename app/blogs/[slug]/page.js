@@ -25,6 +25,7 @@ export async function generateMetadata({ params }) {
                   sourceUrl
                 }
               }
+            sourceUrl
             }
           }
         }
@@ -53,6 +54,11 @@ export async function generateMetadata({ params }) {
         'en-US': `https://primeidea.in/${slug}`,
       },
     },
+    images: [
+      {
+        url: content.data.post.seo.sourceUrl,
+      },
+    ],
     openGraph: {
       title: content.data.post.seo.title,
       description: content.data.post.seo.metaDesc,
@@ -60,8 +66,7 @@ export async function generateMetadata({ params }) {
       site_name: 'PrimeIdea Ventures',
       images: [
         {
-          url: content.data.post.seo.opengraphImage?.mediaDetails.sizes
-            .sourceUrl,
+          url: content.data.post.seo.sourceUrl,
         },
       ],
       locale: "en_US",
@@ -71,7 +76,7 @@ export async function generateMetadata({ params }) {
       title: content.data.post.seo.title,
       description: content.data.post.seo.metaDesc,
       images:
-        content.data.post.seo.opengraphImage?.mediaDetails.sizes.sourceUrl,
+        content.data.post.seo.sourceUrl,
     },
   };
 }
