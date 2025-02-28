@@ -54,29 +54,24 @@ export async function generateMetadata({ params }) {
         'en-US': `https://primeidea.in/${slug}`,
       },
     },
-    images: [
-      {
-        url: content.data.post.seo.sourceUrl,
-      },
-    ],
     openGraph: {
       title: content.data.post.seo.title,
       description: content.data.post.seo.metaDesc,
       url: `https://primeidea.in/${slug}`,
       site_name: 'PrimeIdea Ventures',
-      images: [
-        {
-          url: content.data.post.seo.sourceUrl,
-        },
-      ],
+      // images: [
+      //   {
+      //     url: content.data.post.seo.sourceUrl,
+      //   },
+      // ],
+      images: content.data.post.seo.sourceUrl,
       locale: "en_US",
       type: "website",
     },
     twitter: {
       title: content.data.post.seo.title,
       description: content.data.post.seo.metaDesc,
-      images:
-        content.data.post.seo.sourceUrl,
+      images: content.data.post.seo.sourceUrl,
     },
   };
 }
