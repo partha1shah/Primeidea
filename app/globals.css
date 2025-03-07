@@ -37,6 +37,10 @@ body {
 
 /* Blog Detail Page CSS S */
 
+  .single-blog-content * {
+    max-width: 100%;
+  }
+
   .single-blog-content section{
     font-size: 18px;
     color: #171717;
