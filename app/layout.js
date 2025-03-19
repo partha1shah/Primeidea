@@ -77,15 +77,18 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${manrope.variable}`}>
+      <Script
+          defer="defer"
+          type="text/javascript"
+          src="https://primeidea-ventures.odoo.com/im_livechat/loader/1"
+        />
+        <Script
+          defer="defer"
+          type="text/javascript"
+          src="https://primeidea-ventures.odoo.com/im_livechat/assets_embed.js"
+        />
       <body className={manrope.className}>
-        {children}
-        {/* <ChatBotScripts /> */}
-        <YellowMessengerWidget />
-        {/* <Script
-          id="yellow-ai-loader"
-          strategy="afterInteractive"
-          src="https://cdn.yellowmessenger.com/plugin/widget-v2/latest/dist/main.min.js"
-        /> */}
+        {children}        
       </body>
     </html>
   );
