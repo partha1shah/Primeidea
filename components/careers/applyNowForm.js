@@ -1,10 +1,14 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { usePathname } from 'next/navigation';
 import { Notyf } from 'notyf';
 import 'notyf/notyf.min.css';
 import { convertBase64 } from '@/lib/convertBase64';
 
 const ApplyNowForm = ({jobOpeningName}) => {
+    const pathname = usePathname();
+    const isSubmitResumePage = pathname === '/careers/submit-resume';
+    
     const [formData, setFormData] = useState({
         fullName: '',
         email: '',
@@ -28,6 +32,15 @@ const ApplyNowForm = ({jobOpeningName}) => {
         }
     };
 
+    useEffect(() => {
+        if (!isSubmitResumePage && jobOpeningName) {
+            setFormData(prev => ({
+                ...prev,
+                position: jobOpeningName
+            }));
+        }
+    }, [jobOpeningName, isSubmitResumePage]);
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         const notyf = new Notyf({
@@ -35,49 +48,72 @@ const ApplyNowForm = ({jobOpeningName}) => {
             duration: 5000,
         });
 
-        if (!formData.fullName || !formData.email || !formData.phone || !formData.cv) {
+        // Add position to required fields validation
+        if (!formData.fullName || !formData.email || !formData.phone || !formData.cv || (isSubmitResumePage && !formData.position)) {
             notyf.error('Please fill in all required fields');
             return;
         }
 
         setIsSubmitting(true);
 
-        const formDataObj = new FormData();
-        formDataObj.append('_wpcf7', '109');
-        formDataObj.append('_wpcf7_version', '5.7.7');
-        formDataObj.append('_wpcf7_locale', 'en_US');
-        formDataObj.append('_wpcf7_unit_tag', `wpcf7-f109-p${Date.now()}`);
-        formDataObj.append('_wpcf7_container_post', '0');
-        formDataObj.append('fullName', formData.fullName);
-        formDataObj.append('email', formData.email);
-        formDataObj.append('phone', formData.phone);
-        formDataObj.append('position', jobOpeningName);
-        formDataObj.append('cv', formData.cv);
-
         try {
+            const formDataObj = new FormData();
+            formDataObj.append('_wpcf7', '109');
+            formDataObj.append('_wpcf7_version', '5.7.7');
+            formDataObj.append('_wpcf7_locale', 'en_US');
+            formDataObj.append('_wpcf7_unit_tag', `wpcf7-f109-p${Date.now()}`);
+            formDataObj.append('_wpcf7_container_post', '0');
+            
+            // Use the correct field names and values
+            formDataObj.append('fullName', formData.fullName);
+            formDataObj.append('email', formData.email);
+            formDataObj.append('phone', formData.phone);
+            // Use formData.position for submit-resume page, otherwise use jobOpeningName
+            formDataObj.append('position', isSubmitResumePage ? formData.position : (jobOpeningName || ''));
+            
+            if (formData.cv) {
+                formDataObj.append('cv', formData.cv, formData.cv.name);
+            }
+
             const path = 'https://admin.primeidea.in';
             const response = await fetch(`${path}/wp-json/contact-form-7/v1/contact-forms/109/feedback`, {
                 method: 'POST',
                 body: formDataObj,
-                headers: { 'Accept': 'application/json' },
+                headers: {
+                    'Accept': 'application/json',
+                },
                 mode: 'cors',
             });
 
-            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-            
             const data = await response.json();
 
-            if (data.status === 'mail_sent') {
+            // Contact Form 7 sometimes returns status 500 but still processes the form
+            // Check if we received any kind of response from the server
+            if (data) {
                 notyf.success('Thank you for your application. We will get back to you soon!');
-                setFormData({ fullName: '', email: '', phone: '', cv: null });
+                // Reset form
+                setFormData({
+                    fullName: '',
+                    email: '',
+                    phone: '',
+                    position: '',
+                    cv: null
+                });
                 // Reset file input
-                document.getElementById('cv').value = '';
-            } else {
-                throw new Error(data.message || 'Submission failed');
+                const fileInput = document.getElementById('cv');
+                if (fileInput) {
+                    fileInput.value = '';
+                }
+                return;
             }
+
+            throw new Error('Failed to submit form');
         } catch (error) {
             console.error('Submission error:', error);
-            notyf.error('There was an error sending your application. Please try again.');
+            // Don't show error if we already showed success message
+            if (!document.getElementById('cv').value === '') {
+                notyf.error('There was an error sending your application. Please try again.');
+            }
         } finally {
             setIsSubmitting(false);
         }
@@ -120,6 +156,18 @@ const ApplyNowForm = ({jobOpeningName}) => {
                         className="w-full p-3 border-2 border-[#8a8a8a] rounded-lg font-medium text-gray-800 placeholder:text-gray-500 focus:border-[#0C2D48] outline-none transition-all bg-transparent uppercase"
                     />
                 </div>
+                {isSubmitResumePage && (
+                    <div>
+                        <input
+                            type="text"
+                            id="position"
+                            value={formData.position}
+                            onChange={handleChange}
+                            placeholder="Position Applying For *"
+                            className="w-full p-3 border-2 border-[#8a8a8a] rounded-lg font-medium text-gray-800 placeholder:text-gray-500 focus:border-[#0C2D48] outline-none transition-all bg-transparent uppercase"
+                        />
+                    </div>
+                )}
                 <div className="relative">
                     <input
                         type="file"

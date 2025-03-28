@@ -45,9 +45,9 @@ export async function generateMetadata({ params }) {
   const content = response;
 
   return {
-    title: content.data.jobOpening.seo.title,
-    description: content.data.jobOpening.seo.metaDesc,
-    keywords: content.data.jobOpening.metaKeywords,
+    title: content.data.jobOpening?.seo.title,
+    description: content.data.jobOpening?.seo.metaDesc,
+    keywords: content.data.jobOpening?.metaKeywords,
     applicationName: 'PrimeIdea Ventures',
     formatDetection: {
       email: true,
@@ -65,8 +65,8 @@ export async function generateMetadata({ params }) {
       },
     },
     openGraph: {
-      title: content.data.jobOpening.seo.title,
-      description: content.data.jobOpening.seo.metaDesc,
+      title: content.data.jobOpening?.seo.title,
+      description: content.data.jobOpening?.seo.metaDesc,
       url: `https://primeidea.in/careers/${jobOpeningSlug}`,
       site_name: 'PrimeIdea Ventures',
       // images: [
@@ -79,8 +79,8 @@ export async function generateMetadata({ params }) {
       type: "website",
     },
     twitter: {
-      title: content.data.jobOpening.seo.title,
-      description: content.data.jobOpening.seo.metaDesc,
+      title: content.data.jobOpening?.seo.title,
+      description: content.data.jobOpening?.seo.metaDesc,
       // images:
       //   content.data.category?.seo?.opengraphImage?.mediaDetails.sizes.sourceUrl,
     },
