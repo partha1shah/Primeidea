@@ -9,6 +9,9 @@ const CareerDetailSection = ({ jobOpeningDetail, jobOpeningName }) => {
             <div className="py-16 mx-auto 2xl:max-w-[1340px] xl:max-w-[1170px] lg:max-w-[1004px] px-4">
                 <div className="mx-auto max-w-[650px] shadow-[0_0_14px_1px_#0000001c] rounded-[20px] bg-white">
                     <div className="roles-and-resposibility-section">
+                        <h3 className="!capitalize ">
+                        <span className="">Position:</span>  <span className="underline">{jobOpeningName&&jobOpeningName}</span>
+                        </h3>
                         <div
                             dangerouslySetInnerHTML={{ __html: jobOpeningDetail?.content }}
                         ></div>

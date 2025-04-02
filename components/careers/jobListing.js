@@ -13,7 +13,7 @@ const JobListingSection = ({ jobOpeningsList }) => {
                             return (
                                 <li className="w-full" key={index}>
                                     <div className="group text-[12px] flex justify-between items-center sm:text-base border border-[#cfe7ff] text-[#666666] px-3 md:px-4 py-1 md:py-2 rounded-lg w-full inline-block leading-[1.2] mb-4 hover:bg-[#cfe7ff] hover:text-black duration-[0.3s] hover:duration-[0.3s]">
-                                        <span className="opening uppercase">{items.title}</span>
+                                        <span className="opening capitalize">{items.title}</span>
                                         <a href={`/careers/${items.slug}`} className="px-5 py-1 bg-[#cfe7ff] text-black rounded border border-[#cfe7ff] group-hover:border-black duration-[0.3s] hover:duration-[0.3s] whitespace-nowrap">Apply Now</a>
                                     </div>
                                 </li>
