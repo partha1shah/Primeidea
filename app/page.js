@@ -9,6 +9,7 @@ import InsightsSection from "@/components/insightsSection";
 import JoinCommunity from "@/components/joinCommunity";
 import { getPostList } from "@/lib/posts";
 import Image from "next/image";
+import AppInstall from "@/components/appInstall";
 
 export const metadata = {
   title: 'PrimeIdea Ventures - Mutual Funds, Insurance and Investment Advisory',
@@ -76,6 +77,8 @@ export default async function Home() {
       <WealthCreationPreservation />
 
       <ComprehensiveSolutions />
+
+      <AppInstall />
 
       <InsightsSection blogsListing={blogsListing.allPosts.nodes}/>
 
