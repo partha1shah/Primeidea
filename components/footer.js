@@ -93,6 +93,21 @@ const Footer = () => {
                   <h4 className="mb-3 text-lg font-semibold text-white">
                     <a href="/contact-us">Contact Us</a>
                   </h4>
+                  <h4 className="mt-5 mb-3 text-lg font-semibold text-white">
+                    <a 
+                      href="https://play.google.com/store/apps/details?id=com.primeidea.app"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Image
+                        src="/images/Google_Play_Store.png"
+                        width={135}
+                        height={40}
+                        alt="Get it on Google Play"
+                        className="inline-block"
+                      />
+                    </a>
+                  </h4>
                 </div>
               </FadeUpOneByOneAnimation>
             </div>
