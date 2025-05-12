@@ -8,6 +8,7 @@ async function handleRevalidation(secret) {
 
   revalidatePath("/")
   revalidatePath("/blogs")
+  revalidatePath("/careers")
 
   return NextResponse.json({ revalidated: true, now: Date.now() })
 }
