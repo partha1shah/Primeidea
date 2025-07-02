@@ -17,21 +17,39 @@ const AppInstall = () => {
             <p className="text-white/90 mb-10 text-lg max-w-xl ml-auto mr-auto">
               Download our mobile app to track your portfolio, stay updated with market insights, and manage your investments anytime, anywhere.
             </p>
-            <div className="transform hover:scale-105 transition-all duration-300 hover:shadow-2xl inline-block">
-              <a
-                href="https://play.google.com/store/apps/details?id=com.primeidea.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-white p-1 rounded-xl hover:bg-opacity-90 transition-all"
-              >
-                <Image
-                  src="/images/Google_Play_Store.png"
-                  width={220}
-                  height={65}
-                  alt="Get it on Google Play"
-                  className="inline-block"
-                />
-              </a>
+            <div className="flex gap-4 justify-center">
+              <div className="transform hover:scale-105 transition-all duration-300 hover:shadow-2xl inline-block">
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.primeidea.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-white p-1 rounded-xl hover:bg-opacity-90 transition-all"
+                >
+                  <Image
+                    src="/images/Google_Play_Store.png"
+                    width={220}
+                    height={65}
+                    alt="Get it on Google Play"
+                    className="inline-block"
+                  />
+                </a>
+              </div>
+              <div className="transform hover:scale-105 transition-all duration-300 hover:shadow-2xl inline-block">
+                <a
+                  href="https://apps.apple.com/us/app/primeidea/id6745963533?platform=iphone" // Replace with your actual App Store link
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-white p-1 rounded-xl hover:bg-opacity-90 transition-all"
+                >
+                  <Image
+                    src="/images/App_Store_Badge.png" // Add this image to your public/images folder
+                    width={220}
+                    height={65}
+                    alt="Download on the App Store"
+                    className="inline-block"
+                  />
+                </a>
+              </div>
             </div>
           </FadeUpOneByOneAnimation>
         </div>
