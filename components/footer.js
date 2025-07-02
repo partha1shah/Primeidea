@@ -108,6 +108,21 @@ const Footer = () => {
                       />
                     </a>
                   </h4>
+                  <h4 className="mb-3 text-lg font-semibold text-white">
+                    <a 
+                      href="https://apps.apple.com/us/app/primeidea/id6745963533?platform=iphone" // Replace with your actual App Store link
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Image
+                        src="/images/App_Store_Badge.png" // Add this image to your public/images folder
+                        width={135}
+                        height={40}
+                        alt="Download on the App Store"
+                        className="inline-block"
+                      />
+                    </a>
+                  </h4>
                 </div>
               </FadeUpOneByOneAnimation>
             </div>
