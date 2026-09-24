@@ -22,9 +22,13 @@ const BannerSection = (props) => {
   return (
     <section>
       <ContactFormModal formTitle={formTitle} isOpen={isModalOpen} onClose={toggle} />
-      <div className={`banner-section relative h-full ${hasSubSection ? "md:h-[100vh]" : "md:min-h-[85vh]"}`}>
+      <div className={`banner-section relative h-full ${hasSubSection ? "md:h-[100vh]" : ""}`}>
         <div
-          className={`image-section relative w-full bg-cover bg-center bg-no-repeat ${hasSubSection ? "h-[calc(100vh-166px)]" : "min-h-[520px] md:min-h-[85vh]"}`}
+          className={`image-section relative w-full overflow-hidden bg-cover bg-center bg-no-repeat ${
+            hasSubSection
+              ? "h-[calc(100vh-166px)]"
+              : "flex flex-col min-h-0 md:min-h-[85vh]"
+          }`}
           style={{
             backgroundImage:
               !props.isMobileBanner && props.mainBannerImage
@@ -52,8 +56,20 @@ const BannerSection = (props) => {
               )}
             </>
           )}
-          <div className="main-section mx-auto 2xl:max-w-[1340px] xl:max-w-[1170px] lg:max-w-[1004px] px-4 pt-[160px] sm:pt-0 flex justify-between flex-col sm:flex-row absolute w-full bottom-[186px] sm:bottom-unset top-0 sm:top-[20%] left-[50%] translate-x-[-50%]">
-            <FadeUpAnimation className="lg:max-w-[400px] xl:max-w-[520px] mb-[4%] md:mb-0 mt-0 sm:mt-[10%]">
+          <div
+            className={`main-section mx-auto 2xl:max-w-[1340px] xl:max-w-[1170px] lg:max-w-[1004px] px-4 flex justify-between flex-col sm:flex-row gap-6 sm:gap-8 w-full ${
+              hasSubSection
+                ? "absolute pt-[160px] sm:pt-0 bottom-[186px] top-0 sm:top-[20%] left-[50%] translate-x-[-50%] items-start"
+                : "relative flex-1 pt-[140px] pb-6 md:pt-[100px] md:pb-10 md:items-center"
+            }`}
+          >
+            <FadeUpAnimation
+              className={`lg:max-w-[400px] xl:max-w-[520px] w-full ${
+                hasSubSection
+                  ? "mb-[4%] md:mb-0 mt-0 sm:mt-[10%]"
+                  : "mb-0 flex flex-col justify-center"
+              }`}
+            >
               {props.mainTitle && (
                 <h1 className="text-2xl md:text-3xl xl:text-4xl text-[#2D2D2D] font-bold mb-3">
                   {props.mainTitle}
