@@ -20,11 +20,20 @@ const staticPages = [
   { path: 'leadership-team', priority: 0.8 },
   { path: 'mutual-fund-investment-support-vadodara', priority: 0.9 },
   { path: 'fixed-income-investments-vadodara', priority: 0.9 },
+  { path: 'pms-aif-sif-investment-support-gujarat-india', priority: 0.9 },
   { path: 'retirement-planning-vadodara', priority: 0.9 },
   { path: 'nri-investment-support-india', priority: 0.9 },
   { path: 'sebi-registered-research-analyst-vadodara', priority: 0.9 },
   { path: 'regulatory-disclosures', priority: 0.9 },
+  { path: 'privacy-policy', priority: 0.7 },
+  { path: 'terms-of-use', priority: 0.7 },
   { path: 'tax-planning-savings', priority: 0.9 },
+  { path: 'primeidea-ventures-profile', priority: 0.9 },
+  { path: 'comparisons', priority: 0.9 },
+  { path: 'comparisons/research-analyst-vs-investment-adviser-vs-mfd', priority: 0.8 },
+  { path: 'comparisons/pms-vs-mutual-funds', priority: 0.8 },
+  { path: 'comparisons/aif-vs-pms-vs-mutual-funds', priority: 0.8 },
+  { path: 'comparisons/sip-vs-lumpsum-vs-stp', priority: 0.8 },
 ];
 
 export default async function sitemap() {

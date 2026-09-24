@@ -24,6 +24,8 @@ const jumpLinks = [
   { href: "#complaint-status", label: "Complaint Status" },
   { href: "#grievance-redressal", label: "Grievance" },
   { href: "#sebi-scores", label: "SEBI SCORES" },
+  { href: "#disclaimer", label: "Disclaimer" },
+  { href: "#risk-disclosure", label: "Risk Disclosure" },
   { href: "#role-clarification", label: "Role Clarification" },
   { href: "#compliance-contact", label: "Contact" },
 ];
@@ -431,8 +433,9 @@ export default function RegulatoryContentSections() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
             {[
               {
-                title: "Research Analyst",
-                body: "Partha Shah is a SEBI Registered Research Analyst (INH000017815). Research and portfolio review are process-led.",
+                id: "disclaimer",
+                title: "Disclaimer",
+                body: "PrimeIdea content is research-led and educational. It is not personalised investment advice, a product offer, or a guarantee of outcomes. Partha Shah is a SEBI Registered Research Analyst (INH000017815).",
                 Icon: ShieldCheckIcon,
               },
               {
@@ -441,19 +444,19 @@ export default function RegulatoryContentSections() {
                 Icon: ScaleIcon,
               },
               {
-                title: "No return guarantees",
-                body: "Investments in securities market are subject to market risks. Past performance is not indicative of future results.",
+                id: "risk-disclosure",
+                title: "Risk disclosure",
+                body: "Investments in the securities market are subject to market risks. Read all scheme-related documents carefully. Past performance is not indicative of future results. PrimeIdea Ventures does not guarantee returns.",
                 Icon: ClipboardDocumentListIcon,
               },
-            ].map(({ title, body, Icon }) => (
-              <FadeUpOneByOneAnimation
-                key={title}
-                className="rounded-[20px] border border-white/15 bg-[#293C7D]/45 p-5 md:p-6"
-              >
-                <Icon className="h-6 w-6 text-[#FFC300] mb-4" aria-hidden="true" />
-                <h3 className="text-lg font-bold text-white mb-2">{title}</h3>
-                <p className="text-sm !text-white/80 leading-relaxed">{body}</p>
-              </FadeUpOneByOneAnimation>
+            ].map(({ id, title, body, Icon }) => (
+              <div key={title} id={id} className="scroll-mt-24">
+                <FadeUpOneByOneAnimation className="h-full rounded-[20px] border border-white/15 bg-[#293C7D]/45 p-5 md:p-6">
+                  <Icon className="h-6 w-6 text-[#FFC300] mb-4" aria-hidden="true" />
+                  <h3 className="text-lg font-bold text-white mb-2">{title}</h3>
+                  <p className="text-sm !text-white/80 leading-relaxed">{body}</p>
+                </FadeUpOneByOneAnimation>
+              </div>
             ))}
           </div>
         </div>

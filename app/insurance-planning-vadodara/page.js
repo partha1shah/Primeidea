@@ -1,5 +1,6 @@
 import BannerSection from "@/components/bannerSection";
 import Footer from "@/components/footer";
+import InsuranceReviewForm from "@/components/forms/InsuranceReviewForm";
 import InsurancePlanningContent from "@/components/insurancePlanning/insurancePlanningContent";
 import ScopeBreadcrumbs from "@/components/scope/ScopeBreadcrumbs";
 import ScopeDisclaimerBar from "@/components/scope/ScopeDisclaimerBar";
@@ -130,12 +131,12 @@ export default function InsurancePlanningVadodaraPage() {
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="Insurance Planning in Vadodara"
         mainSubTitle="Research-led life and health cover review from a Vadodara office, serving investors across Gujarat and India. Guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Cover first — not product push. Policy terms apply. No guaranteed claim outcomes."
-        mainLinkTitle="Book Portfolio Review"
-        mainLink="/portfolio-review-vadodara"
+        mainLinkTitle="Start Insurance Review"
+        mainLink="#lead-form"
         usePrimaryAsLink={true}
-        formTitle="Book Portfolio Review"
-        secondaryLinkTitle="View Research Process"
-        secondaryLink="/research-process"
+        formTitle="Insurance Review"
+        secondaryLinkTitle="Book Portfolio Review"
+        secondaryLink="/portfolio-review-vadodara"
       />
 
       <ScopePageMetaStrip
@@ -150,6 +151,8 @@ export default function InsurancePlanningVadodaraPage() {
       <ScopeBreadcrumbs items={[{ label: "Insurance Planning" }]} />
 
       <InsurancePlanningContent />
+
+      <InsuranceReviewForm />
 
       <ScopeSuccessionCrossLink context="insurance and nomination planning" />
 

@@ -10,18 +10,18 @@ const FaqsSection = () => {
         setActiveTab(index === activeTab ? -1 : index);
     };
     return (
-        <div className="py-16 sm:py-8">
+        <section aria-labelledby="home-faqs-heading" className="bg-[#F6FDFF] py-14 md:py-16">
             <div className="mx-auto 2xl:max-w-[1340px] xl:max-w-[1170px] lg:max-w-[1004px] px-4">
-              <FadeUpOneByOneAnimation className="text-center max-w-[767px] px-4 mx-auto">
-                <h2 className="text-2xl font-medium tracking-tight mb-6 md:mb-8 text-[#04102A] sm:text-3xl">
+              <FadeUpOneByOneAnimation className="text-center max-w-[767px] px-4 mx-auto mb-8 md:mb-10">
+                <h2
+                  id="home-faqs-heading"
+                  className="text-2xl font-medium tracking-tight m-0 text-[#04102A] sm:text-3xl"
+                >
                   Frequently Asked Questions
                 </h2>
-                {/* <p className="mb-12 text-base font-semibold leading-6 text-[#4D4D4D]">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                </p> */}
               </FadeUpOneByOneAnimation>
               <div className="max-w-[1023px] mx-auto">
-                <ul>
+                <ul className="space-y-3 list-none m-0 p-0">
                   <li className="bg-[#C6E8FF] p-4 md:p-6 rounded-lg cursor-pointer" onClick={() => handleTabClick(0)}>
                     <FadeUpOneByOneAnimation>
                     <h2 className="flex items-center justify-between text-[18px] md:text-[20px] 2xl:text-[22px] font-semibold text-[#222222]">
@@ -115,7 +115,7 @@ const FaqsSection = () => {
                 </ul>
               </div>
             </div>
-      </div>
+      </section>
     )
  }
 

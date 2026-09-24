@@ -1,5 +1,6 @@
 import BannerSection from "@/components/bannerSection";
 import Footer from "@/components/footer";
+import RetirementPlanningForm from "@/components/forms/RetirementPlanningForm";
 import RetirementPlanningContent from "@/components/retirement/retirementPlanningContent";
 import ScopeBreadcrumbs from "@/components/scope/ScopeBreadcrumbs";
 import ScopeDisclaimerBar from "@/components/scope/ScopeDisclaimerBar";
@@ -130,12 +131,12 @@ export default function RetirementPlanningVadodaraPage() {
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="Retirement Planning in Vadodara"
         mainSubTitle="Research-led corpus, allocation, and withdrawal review from a Vadodara office, serving investors across Gujarat and India. Guided by Partha Shah, SEBI Registered Research Analyst INH000017815. No guaranteed retirement income or investment returns. Market risks apply."
-        mainLinkTitle="Book Portfolio Review"
-        mainLink="/portfolio-review-vadodara"
+        mainLinkTitle="Start Retirement Form"
+        mainLink="#lead-form"
         usePrimaryAsLink={true}
-        formTitle="Book Portfolio Review"
-        secondaryLinkTitle="View Research Process"
-        secondaryLink="/research-process"
+        formTitle="Retirement Planning"
+        secondaryLinkTitle="Book Portfolio Review"
+        secondaryLink="/portfolio-review-vadodara"
       />
 
       <ScopePageMetaStrip
@@ -150,6 +151,8 @@ export default function RetirementPlanningVadodaraPage() {
       <ScopeBreadcrumbs items={[{ label: "Retirement Planning" }]} />
 
       <RetirementPlanningContent />
+
+      <RetirementPlanningForm />
 
       <ScopeSuccessionCrossLink context="retirement planning" />
 

@@ -16,51 +16,61 @@ import {
 
 const tools = [
   {
+    id: "sip",
     title: "SIP Calculator",
     description: "Estimate the future value of systematic investments over your chosen time horizon.",
     Icon: CalculatorIcon,
   },
   {
+    id: "lumpsum",
     title: "Lumpsum Future Value",
     description: "Project how a one-time investment may grow based on assumed returns and tenure.",
     Icon: ChartBarIcon,
   },
   {
+    id: "retirement",
     title: "Retirement Corpus",
     description: "Approximate the corpus needed for retirement income goals and planning gaps.",
     Icon: HomeModernIcon,
   },
   {
+    id: "education",
     title: "Child Education",
     description: "Plan for future education costs with inflation-aware goal estimates.",
     Icon: AcademicCapIcon,
   },
   {
+    id: "insurance",
     title: "Insurance Need",
     description: "Get a directional view of life cover needs based on income and family priorities.",
     Icon: ShieldCheckIcon,
   },
   {
+    id: "allocation",
     title: "Asset Allocation Checker",
     description: "Compare your current mix against a risk-aligned allocation starting point.",
     Icon: ChartPieIcon,
   },
   {
+    id: "emergency",
     title: "Emergency Fund",
     description: "Estimate a practical cash buffer based on monthly expenses and stability needs.",
     Icon: BanknotesIcon,
   },
   {
+    id: "swp",
     title: "SWP Calculator",
     description: "Model systematic withdrawals and how long a corpus may support income needs.",
     Icon: ArrowPathIcon,
   },
   {
+    id: "cagr-xirr",
     title: "CAGR & XIRR",
     description: "Understand return consistency across periods — beyond a single headline number.",
     Icon: PresentationChartLineIcon,
   },
   {
+    id: "emi-vs-invest",
     title: "EMI vs Investment",
     description: "Compare debt repayment and investment trade-offs with a clear side-by-side view.",
     Icon: ScaleIcon,
@@ -92,7 +102,7 @@ const WealthToolsSection = () => {
 
           <FadeUpOneByOneAnimation>
             <Link
-              href="/contact-us"
+              href="/wealth-tools?tab=calculators"
               className="inline-flex items-center gap-2 text-base font-semibold text-[#293C7D] hover:text-[#232D63] transition-colors group whitespace-nowrap"
             >
               <span
@@ -101,15 +111,18 @@ const WealthToolsSection = () => {
               >
                 →
               </span>
-              Book Portfolio Review
+              Open Calculators
             </Link>
           </FadeUpOneByOneAnimation>
         </div>
 
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-5 list-none m-0 p-0 mb-10">
-          {tools.map(({ title, description, Icon }) => (
-            <li key={title} className="sm:col-span-1 lg:col-span-1">
-              <FadeUpOneByOneAnimation className="group h-full rounded-[20px] border border-[#D6E4EE] bg-[#F6FDFF] p-5 transition-colors duration-300 hover:border-[#293C7D] hover:bg-white">
+          {tools.map(({ id, title, description, Icon }) => (
+            <li key={id} className="sm:col-span-1 lg:col-span-1">
+              <Link
+                href={`/wealth-tools?tool=${id}`}
+                className="group block h-full rounded-[20px] border border-[#D6E4EE] bg-[#F6FDFF] p-5 transition-colors duration-300 hover:border-[#293C7D] hover:bg-white"
+              >
                 <div className="w-11 h-11 mb-4 rounded-xl bg-white border border-[#D6E4EE] flex items-center justify-center group-hover:bg-[#293C7D] group-hover:border-[#293C7D] transition-colors duration-300">
                   <Icon
                     className="w-5 h-5 text-[#293C7D] group-hover:text-white transition-colors duration-300"
@@ -122,7 +135,7 @@ const WealthToolsSection = () => {
                 <p className="text-[13px] md:text-sm font-medium text-[#5A5A5A] leading-relaxed">
                   {description}
                 </p>
-              </FadeUpOneByOneAnimation>
+              </Link>
             </li>
           ))}
         </ul>
@@ -137,7 +150,7 @@ const WealthToolsSection = () => {
             </p>
           </div>
           <Link
-            href="/contact-us"
+            href="/portfolio-review-vadodara"
             className="bg-[#FFC300] text-[#232D63] text-base font-bold rounded-md px-5 py-3 inline-flex items-center hover:bg-white transition-colors shrink-0"
           >
             Book Portfolio Review

@@ -21,6 +21,15 @@ module.exports = {
         '3xl': '1536px', 
         // '4xl': '1920px', 
       },
+      keyframes: {
+        fadeUp: {
+          "0%": { opacity: "0", transform: "translateY(10px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+      },
+      animation: {
+        fadeUp: "fadeUp 0.35s ease-out",
+      },
     },
   },
   plugins: [],

@@ -1,5 +1,6 @@
 import BannerSection from "@/components/bannerSection";
 import Footer from "@/components/footer";
+import SuccessionPlanningForm from "@/components/forms/SuccessionPlanningForm";
 import SuccessionPlanningContent from "@/components/succession/successionPlanningContent";
 import ScopeBreadcrumbs from "@/components/scope/ScopeBreadcrumbs";
 import ScopeDisclaimerBar from "@/components/scope/ScopeDisclaimerBar";
@@ -130,9 +131,9 @@ export default function LegacySuccessionEstatePlanningPage() {
         mainTitle="Legacy, Succession and Estate Planning in India"
         mainSubTitle="Partner-enabled will, trust, probate and estate documentation coordination from a Vadodara base, across India. Guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Legal drafting by qualified professionals. No partner name or pricing. No guaranteed returns."
         mainLinkTitle="Book Succession Planning Consultation"
-        mainLink="/contact-us"
+        mainLink="#lead-form"
         usePrimaryAsLink={true}
-        formTitle="Book Succession Planning Consultation"
+        formTitle="Succession Planning"
         secondaryLinkTitle="Family Wealth Office"
         secondaryLink="/family-wealth-office-gujarat-india"
       />
@@ -150,13 +151,15 @@ export default function LegacySuccessionEstatePlanningPage() {
 
       <SuccessionPlanningContent />
 
+      <SuccessionPlanningForm />
+
       <ScopeFaqsSection
         title="Succession planning — Frequently Asked Questions"
         description="What PrimeIdea coordinates, what lawyers must do, and how to start."
         faqs={faqs}
       />
 
-      <ScopeDisclaimerBar ctaHref="/contact-us" ctaLabel="Book Succession Planning Consultation">
+      <ScopeDisclaimerBar ctaHref="#lead-form" ctaLabel="Book Succession Planning Consultation">
         PrimeIdea Ventures provides succession planning, estate planning and documentation
         coordination support through qualified legal/service partners. Legal drafting,
         registration, probate, succession certificate, legal heir certificate, property

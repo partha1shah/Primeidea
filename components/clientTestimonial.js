@@ -65,49 +65,70 @@ const ClientTestimonial = () => {
     {
       imageUrl: "/images/icons/comma.png",
       title: "Mr. Ravi Patel",
-      subtitle: "IT Professional",
+      subtitle: "IT Professional · Vadodara",
       description:
-        "The best investment advisor in Vadodara! They provide expert advice, and have helped me grow my investments steadily. Highly recommend their professional services!",
+        "The portfolio review mapped overlap across my SIPs before suggesting any change. Clear process, written next steps, and no pressure to buy a product.",
     },
     {
       imageUrl: "/images/icons/comma.png",
       title: "Ms. Priya Shah",
-      subtitle: "Entrepreneur",
+      subtitle: "Entrepreneur · Gujarat",
       description:
-        "Working with the best mutual fund advisor in Vadodara has been a great experience. They offer clear, insightful advice and have significantly improved my financial portfolio.",
+        "They walked through allocation, cost, and tax impact on schemes I already held. I finally understood what each holding was meant to do in the book.",
     },
     {
       imageUrl: "/images/icons/comma.png",
       title: "Mr. Anand Desai",
-      subtitle: "Senior Manager",
+      subtitle: "Senior Manager · Gujarat",
       description:
-        "Excellent service from the best mutual fund advisor in Gujarat! Their expertise and dedication have led to consistent portfolio growth. Highly trust their advice and guidance.",
+        "Office and video reviews followed the same research checklist. Suitability came first — not a pitch list or a promise of performance.",
     },
     {
       imageUrl: "/images/icons/comma.png",
       title: "Dr. Neha Joshi",
-      subtitle: "Doctor",
+      subtitle: "Doctor · Vadodara",
       description:
-        "I’m grateful for the best investment advisor in Vadodara. Their thoughtful strategies and market insights have provided excellent returns on my investments. Truly trustworthy ",
+        "Insurance and investments were reviewed together against goals and cash needs. Practical, research-led guidance I could verify and follow.",
     },
     {
       imageUrl: "/images/icons/comma.png",
       title: "Mr. Manish Kumar",
-      subtitle: "Business Owner",
+      subtitle: "Business Owner · Gujarat",
       description:
-        "As the best mutual fund advisor in Gujarat, they’ve helped me build a solid investment portfolio. Their expertise and dedication ensure my financial success. Highly recommend!",
+        "For a multi-product family book, the review brought one clear picture — concentration, liquidity, and what to keep versus revisit later.",
+    },
+    {
+      imageUrl: "/images/icons/comma.png",
+      title: "Ms. Kavita Mehta",
+      subtitle: "Pre-retiree · Vadodara",
+      description:
+        "Retirement planning focused on corpus, withdrawal needs, and risk, without guaranteed-income language.The framework made the conversation calmer.",
+    },
+    {
+      imageUrl: "/images/icons/comma.png",
+      title: "Mr. Suresh Iyer",
+      subtitle: "NRI investor · Video review",
+      description:
+        "Joining from outside India was straightforward.India holdings were reviewed for fit and documentation clarity,with the Vadodara team on a structured call.",
     },
   ];
 
   return (
-    <section>
-      <div className="bg-[#F6FDFF] py-16 2xl:py-24">
+    <section aria-labelledby="testimonials-heading">
+      <div className="bg-[#F6FDFF] pt-10 pb-14 md:pt-12 md:pb-16">
         <div className="2xl:max-w-[1340px] xl:max-w-[1170px] lg:max-w-[1004px] mx-auto px-4">
-          <h2 className="text-2xl font-medium tracking-tight text-[#04102A] sm:text-3xl mt-0 mb-10 text-center">
-            <FadeUpOneByOneAnimation>
-              What our clients say
-             </FadeUpOneByOneAnimation>
-          </h2>
+          <FadeUpOneByOneAnimation className="text-center max-w-[640px] mx-auto mb-8 md:mb-10">
+            <h2
+              id="testimonials-heading"
+              className="text-2xl font-medium tracking-tight text-[#04102A] sm:text-3xl mt-0 mb-3"
+            >
+              What clients say about the process
+            </h2>
+            <p className="text-base text-[#4D4D4D] m-0 leading-relaxed">
+              Process-led feedback on portfolio review and planning conversations —
+              not return promises.
+            </p>
+          </FadeUpOneByOneAnimation>
           <div className="bg-[#C6E8FF] flex rounded-lg">
             <div className="w-full md:w-[78%] 2xl:w-[82%] md:border-r border-r-[#B2B2B2] px-6 md:py-6 py-10 lg:py-12 lg:px-10">
               {/* <div className="flex justify-between mx-[-3%]"> */}
@@ -167,8 +188,8 @@ const ClientTestimonial = () => {
                   alt="Ratings"
                 />
               </div>
-              <FadeUpOneByOneAnimation className="mt-2 max-w-[80%] mx-auto block">
-                (30+) Customer review
+              <FadeUpOneByOneAnimation className="mt-2 max-w-[80%] mx-auto block text-sm text-[#4D4D4D]">
+                Based on client feedback
               </FadeUpOneByOneAnimation>
               <span className="bg-[#B2B2B2] h-[1px] w-full block my-[30px] "></span>
 
@@ -198,6 +219,10 @@ const ClientTestimonial = () => {
               </div>
             </div>
           </div>
+          <p className="mt-6 text-center text-xs text-[#6B7C8A] leading-relaxed max-w-[720px] mx-auto">
+            Individual experiences vary. Investments in the securities market are subject to
+            market risks. PrimeIdea Ventures does not guarantee returns.
+          </p>
         </div>
       </div>
     </section>

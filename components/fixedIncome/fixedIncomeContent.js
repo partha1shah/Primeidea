@@ -87,6 +87,11 @@ const relatedPages = [
     href: "/retirement-planning-vadodara",
     description: "Corpus, allocation, and withdrawal review — without return promises.",
   },
+  {
+    title: "PMS, AIF & SIF Support",
+    href: "/pms-aif-sif-investment-support-gujarat-india",
+    description: "Suitability-led review of managed and alternate strategies.",
+  },
 ];
 
 export default function FixedIncomeContent() {

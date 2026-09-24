@@ -27,7 +27,7 @@ const serviceGroups = [
       {
         name: "PMS, AIF and SIF Support",
         description: "Evaluating managed and alternate strategies",
-        href: "/research-based-wealth-management",
+        href: "/pms-aif-sif-investment-support-gujarat-india",
       },
     ],
   },
@@ -90,7 +90,7 @@ const primaryLinks = [
   { name: "Research Process", href: "/research-process" },
   { name: "Private Wealth", href: "/private-wealth-management-gujarat-india" },
   { name: "Family Wealth Office", href: "/family-wealth-office-gujarat-india" },
-  { name: "Knowledge Centre", href: "/blogs" },
+  { name: "Knowledge Centre", href: "/knowledge-centre" },
   { name: "Regulatory Disclosures", href: "/regulatory-disclosures" },
 ];
 
@@ -242,7 +242,7 @@ export default function Header() {
                         </p>
                       </div>
                       <Link
-                        href="/contact-us"
+                        href="/book-portfolio-review"
                         className="mt-5 inline-flex items-center justify-center gap-1.5 rounded-lg bg-[#FFC300] px-4 py-2.5 text-[13px] font-bold text-[#232D63] transition-colors hover:bg-white"
                         onClick={() => setIsServicesOpen(false)}
                       >
@@ -272,7 +272,7 @@ export default function Header() {
 
         <div className="hidden shrink-0 xl:block">
           <Link
-            href="/contact-us"
+            href="/book-portfolio-review"
             className="group inline-flex items-center gap-1.5 whitespace-nowrap rounded-xl bg-[#293C7D] px-4 py-2.5 text-[13px] font-bold text-white shadow-[0_8px_18px_-8px_rgba(41,60,125,0.9)] transition-colors hover:bg-[#232D63]"
           >
             Book Review
@@ -389,7 +389,7 @@ export default function Header() {
 
             <li className="pt-2">
               <Link
-                href="/contact-us"
+                href="/book-portfolio-review"
                 className="flex items-center justify-center gap-1.5 rounded-xl bg-[#293C7D] px-3 py-3 text-[15px] font-bold text-white transition-colors hover:bg-[#232D63]"
               >
                 Book Portfolio Review

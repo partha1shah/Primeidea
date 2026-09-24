@@ -61,15 +61,15 @@ const InsightsSection = (props) => {
                     up-to-date.
                 </p>
                 <Link
-                  href="/blogs"
+                  href="/knowledge-centre"
                   className="bg-[#293C7D] text-base md:text-lg font-bold rounded-md text-white px-6 py-3 inline-flex items-center"
                   >
-                  Read All
+                  Knowledge Centre
                   <Image
                     src="/images/icons/arrow-square-right.png"
                     width={21}
                     height={21}
-                    alt="Read All"
+                    alt="Knowledge Centre"
                     className="ml-2"
                     />
                 </Link>

@@ -98,6 +98,11 @@ const relatedPages = [
     href: "/leadership-team",
     description: "Partha Shah — photo, role, credentials, focus, and LinkedIn.",
   },
+  {
+    title: "Entity Profile",
+    href: "/primeidea-ventures-profile",
+    description: "Structured facts for search, LLMs, and investor clarity.",
+  },
 ];
 
 export default function AboutContentSections() {

@@ -34,6 +34,66 @@ body {
   }
 }
 
+/* Site footer: global base styles force #171717 on p/a/li/h4 — reset for navy footer */
+.site-footer {
+  color: #ffffff;
+}
+
+.site-footer .footer-heading,
+.site-footer .footer-sebi-label {
+  color: #ffc300;
+}
+
+.site-footer .footer-body,
+.site-footer .footer-body span {
+  color: rgba(255, 255, 255, 0.94);
+}
+
+.site-footer .footer-muted {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.site-footer .footer-link,
+.site-footer .footer-nav-link,
+.site-footer .footer-nav-link span {
+  color: rgba(255, 255, 255, 0.94);
+}
+
+.site-footer .footer-link:hover,
+.site-footer .footer-nav-link:hover,
+.site-footer .footer-nav-link:hover span {
+  color: #ffc300;
+}
+
+.site-footer .footer-link-accent {
+  color: #ffc300;
+}
+
+.site-footer .footer-link-accent:hover {
+  color: #ffe066;
+}
+
+.site-footer .footer-cta-primary {
+  color: #232d63 !important;
+}
+
+.site-footer .footer-cta-primary:hover {
+  color: #232d63 !important;
+}
+
+.site-footer .footer-cta-secondary {
+  color: #ffffff !important;
+}
+
+.site-footer .footer-cta-secondary:hover {
+  color: #ffc300 !important;
+}
+
+.site-footer p.text-white,
+.site-footer p.text-white span {
+  color: #ffffff;
+}
+
 
 /* Blog Detail Page CSS S */
 

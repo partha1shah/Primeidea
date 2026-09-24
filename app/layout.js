@@ -3,7 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./globals.css";
 import Script from "next/script";
-
+import StickyMobileCta from "@/components/StickyMobileCta";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -90,7 +90,8 @@ export default function RootLayout({ children }) {
           src="https://primeidea-ventures.odoo.com/im_livechat/assets_embed.js"
         /> */}
       <body className={manrope.className} suppressHydrationWarning>
-        {children}        
+        {children}
+        <StickyMobileCta />
          <Script
           id="tawk-to"
           strategy="afterInteractive"

@@ -67,9 +67,21 @@ const categories = [
 ];
 
 const specialtyProducts = [
-  { label: "PMS", image: "/images/home/icons/pms.png" },
-  { label: "AIF", image: "/images/home/icons/stocks.png" },
-  { label: "SIF", image: "/images/home/icons/personal-cfo.png" },
+  {
+    label: "PMS",
+    image: "/images/home/icons/pms.png",
+    href: "/pms-aif-sif-investment-support-gujarat-india",
+  },
+  {
+    label: "AIF",
+    image: "/images/home/icons/stocks.png",
+    href: "/pms-aif-sif-investment-support-gujarat-india",
+  },
+  {
+    label: "SIF",
+    image: "/images/home/icons/personal-cfo.png",
+    href: "/pms-aif-sif-investment-support-gujarat-india",
+  },
   { label: "Fixed Deposit", image: "/images/home/icons/fixed-deposit.png" },
   { label: "Gold", image: "/images/home/icons/gold.png" },
   {

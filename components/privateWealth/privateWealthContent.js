@@ -99,9 +99,9 @@ const relatedPages = [
     description: "Multi-generational review and family investment clarity.",
   },
   {
-    title: "NRI Investment Support",
-    href: "/nri-investment-support-india",
-    description: "India portfolio review for NRIs — video-first from Vadodara.",
+    title: "PMS, AIF & SIF Support",
+    href: "/pms-aif-sif-investment-support-gujarat-india",
+    description: "Suitability-led managed and alternate strategy review where permitted.",
   },
 ];
 

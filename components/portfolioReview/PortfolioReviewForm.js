@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import { Notyf } from "notyf";
 import { ArrowUpTrayIcon, DocumentArrowUpIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { CF7_FORM_IDS, submitCf7Form } from "@/lib/cf7Submit";
 
 const PRODUCT_OPTIONS = [
   "Mutual funds",
@@ -14,6 +15,7 @@ const PRODUCT_OPTIONS = [
   "Other",
 ];
 
+// Option strings must match CF7 form 422 exactly (en-dash U+2013).
 const SIZE_OPTIONS = [
   "Under ₹25 lakh",
   "₹25 lakh – ₹1 crore",
@@ -94,48 +96,20 @@ export default function PortfolioReviewForm() {
     setIsSubmitting(true);
     setSubmitStatus({ success: false, message: "" });
 
-    const description = [
-      "[Portfolio Review — Vadodara]",
-      `Approx. portfolio size: ${formData.portfolioSize || "Not specified"}`,
-      `Products used: ${products.length ? products.join(", ") : "Not specified"}`,
-      `Preferred callback: ${formData.callbackTime || "Not specified"}`,
-      `Main concern: ${formData.concern}`,
-      file ? `Holdings file attached: ${file.name}` : "No holdings file attached",
-    ].join("\n");
-
-    const formDataObj = new FormData();
-    formDataObj.append("_wpcf7", "48");
-    formDataObj.append("_wpcf7_version", "5.7.7");
-    formDataObj.append("_wpcf7_locale", "en_US");
-    formDataObj.append("_wpcf7_unit_tag", `wpcf7-f48-p${Date.now()}`);
-    formDataObj.append("_wpcf7_container_post", "0");
-    formDataObj.append("fullName", formData.fullName);
-    formDataObj.append("city", formData.city);
-    formDataObj.append("email", formData.email);
-    formDataObj.append("phone", formData.phone);
-    formDataObj.append("description", description);
-    if (file) {
-      formDataObj.append("portfolio", file);
-    }
-
     try {
-      const response = await fetch(
-        "https://admin.primeidea.in/wp-json/contact-form-7/v1/contact-forms/48/feedback",
-        {
-          method: "POST",
-          body: formDataObj,
-          headers: { Accept: "application/json" },
-          mode: "cors",
-        }
-      );
+      const result = await submitCf7Form(CF7_FORM_IDS.portfolioReview, {
+        fullName: formData.fullName,
+        city: formData.city,
+        email: formData.email,
+        phone: formData.phone,
+        portfolioSize: formData.portfolioSize,
+        callbackTime: formData.callbackTime,
+        products,
+        concern: formData.concern,
+        portfolio: file || undefined,
+      });
 
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-
-      const data = await response.json();
-
-      if (data.status === "mail_sent") {
+      if (result.ok) {
         const message =
           "Thank you. We have received your portfolio review request and will get back to you.";
         setSubmitStatus({ success: true, message });
@@ -154,7 +128,7 @@ export default function PortfolioReviewForm() {
         e.target.reset();
       } else {
         const message =
-          data.message || "There was an error sending your request. Please try again.";
+          result.message || "There was an error sending your request. Please try again.";
         setSubmitStatus({ success: false, message });
         notyf.error(message);
       }

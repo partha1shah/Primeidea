@@ -199,10 +199,10 @@ export default function RetirementPlanningContent() {
             </div>
             <div className="lg:col-span-5 flex flex-col items-center justify-center gap-3">
               <Link
-                href="/portfolio-review-vadodara"
+                href="#lead-form"
                 className="inline-flex items-center justify-center rounded-xl bg-[#FFC300] px-5 py-3 text-base font-bold text-[#232D63] hover:bg-white transition-colors"
               >
-                Book portfolio review
+                Start retirement form
               </Link>
               <Link
                 href="/research-process"
