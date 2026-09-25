@@ -1,14 +1,23 @@
 import { NextResponse } from 'next/server'
-import { revalidatePath } from 'next/cache'
+import { revalidatePath, revalidateTag } from 'next/cache'
 
 async function handleRevalidation(secret) {
   if (secret !== process.env.WORDPRESS_REVALIDATE_SECRET) {
     return NextResponse.json({ message: 'Invalid secret' }, { status: 401 })
   }
 
+  // Expire immediately. "max" would still serve the previous blog list
+  // on the first visit after WordPress publishes a post.
+  revalidateTag('graphql', { expire: 0 })
+
   revalidatePath("/")
   revalidatePath("/blogs")
+  revalidatePath("/blogs/[slug]", "page")
+  revalidatePath("/blogs/category/[categorySlug]", "page")
   revalidatePath("/careers")
+  revalidatePath("/sitemap.xml")
+  revalidatePath("/sitemap/blogs")
+  revalidatePath("/sitemap/categories")
 
   return NextResponse.json({ revalidated: true, now: Date.now() })
 }

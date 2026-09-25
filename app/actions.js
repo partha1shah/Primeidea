@@ -3,6 +3,5 @@
 import { revalidateTag } from 'next/cache'
  
 export default async function action() {
-  revalidateTag('posts')
-  revalidateTag('category')
+  revalidateTag('graphql', { expire: 0 })
 }
