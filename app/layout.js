@@ -23,7 +23,7 @@ const manrope = Manrope({
 // });
 
 export const metadata = {
-  metadataBase: new URL('https://primeidea.in'),
+  metadataBase: new URL('https://www.primeidea.in'),
   alternates: {
     canonical: '/',
     languages: {
@@ -67,7 +67,7 @@ export const metadata = {
   //   'google-site-verification': 'your-verification-code',
   //   'msvalidate.01': 'your-ms-validation-code',
   // },
-  assets: ['https://primeidea.in'],
+  assets: ['https://www.primeidea.in'],
 };
 
 export const viewport = {
@@ -98,6 +98,15 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{
             __html: `
               var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+              Tawk_API.customStyle = {
+                visibility: {
+                  mobile: {
+                    position: 'br',
+                    xOffset: 5,
+                    yOffset: 80
+                  }
+                }
+              };
               (function(){
                 var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
                 s1.async=true;

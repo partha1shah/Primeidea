@@ -11,11 +11,11 @@ export const metadata = {
     keywords: 'mutual funds, investment advisory, financial planning, wealth management, retirement planning, insurance solutions, Partha Shah, PrimeIdea Ventures, Gujarat financial advisor, investment consultant',
     author: 'Partha Shah',
     robots: 'index, follow',
-    canonical: 'https://primeidea.in/careers/submit-resume',
+    canonical: 'https://www.primeidea.in/careers/submit-resume',
     openGraph: {
         type: 'website',
         locale: 'en_IE',
-        url: 'https://primeidea.in/careers/submit-resume',
+        url: 'https://www.primeidea.in/careers/submit-resume',
         site_name: 'PrimeIdea Ventures',
         title: 'Careers | PrimeIdea - Your Trusted Financial Partner',
         description: 'Join PrimeIdea Ventures and be part of a dynamic team shaping the future of financial services. Explore exciting career opportunities in investment advisory, financial planning, and wealth management.',
@@ -26,9 +26,9 @@ export const metadata = {
         cardType: 'summary_large_image',
     },
     alternates: {
-        canonical: 'https://primeidea.in/careers/submit-resume',
+        canonical: 'https://www.primeidea.in/careers/submit-resume',
         languages: {
-            'en-US': 'https://primeidea.in/careers/submit-resume',
+            'en-US': 'https://www.primeidea.in/careers/submit-resume',
         },
     },
 };

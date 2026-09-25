@@ -13,7 +13,7 @@ import {
 } from "@heroicons/react/24/outline";
 
 const PAGE_PATH = COMPARISON_HUB.path;
-const PAGE_URL = `https://primeidea.in${PAGE_PATH}`;
+const PAGE_URL = `https://www.primeidea.in${PAGE_PATH}`;
 
 export const metadata = {
   title: COMPARISON_HUB.title,
@@ -52,7 +52,7 @@ const collectionSchema = {
   isPartOf: {
     "@type": "WebSite",
     name: "PrimeIdea Ventures",
-    url: "https://primeidea.in",
+    url: "https://www.primeidea.in",
   },
 };
 

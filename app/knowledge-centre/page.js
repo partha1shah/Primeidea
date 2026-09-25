@@ -17,7 +17,7 @@ import {
 } from "@heroicons/react/24/outline";
 
 const PAGE_PATH = "/knowledge-centre";
-const PAGE_URL = `https://primeidea.in${PAGE_PATH}`;
+const PAGE_URL = `https://www.primeidea.in${PAGE_PATH}`;
 
 const faqs = [
   {
@@ -104,12 +104,12 @@ const webPageSchema = {
   isPartOf: {
     "@type": "WebSite",
     name: "PrimeIdea Ventures",
-    url: "https://primeidea.in",
+    url: "https://www.primeidea.in",
   },
   about: {
     "@type": "FinancialService",
     name: "PrimeIdea Ventures",
-    url: "https://primeidea.in",
+    url: "https://www.primeidea.in",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Vadodara",

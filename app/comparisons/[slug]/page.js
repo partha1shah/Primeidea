@@ -31,7 +31,7 @@ export async function generateMetadata({ params }) {
   if (!comparison) {
     return { title: "Comparison not found" };
   }
-  const url = `https://primeidea.in/comparisons/${comparison.slug}`;
+  const url = `https://www.primeidea.in/comparisons/${comparison.slug}`;
   return {
     title: comparison.title,
     description: comparison.metaDescription,
@@ -66,7 +66,7 @@ export default async function ComparisonPage({ params }) {
   if (!comparison) notFound();
 
   const PAGE_PATH = `/comparisons/${comparison.slug}`;
-  const PAGE_URL = `https://primeidea.in${PAGE_PATH}`;
+  const PAGE_URL = `https://www.primeidea.in${PAGE_PATH}`;
 
   const faqs = (comparison.faqs || []).map((faq) => ({
     ...faq,
@@ -86,7 +86,7 @@ export default async function ComparisonPage({ params }) {
     publisher: {
       "@type": "Organization",
       name: "PrimeIdea Ventures",
-      url: "https://primeidea.in",
+      url: "https://www.primeidea.in",
     },
     about: comparison.columns.map((c) => c.name),
   };

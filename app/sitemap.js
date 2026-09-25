@@ -2,7 +2,7 @@ import graphqlRequest from '../lib/graphqlRequest';
 import { getJobOpeningsSlugs } from '../lib/jobOpenings';
 import staticPages from '../lib/sitemapStaticPages';
 
-const BASE_URL = 'https://primeidea.in';
+const BASE_URL = 'https://www.primeidea.in';
 
 export default async function sitemap() {
   try {

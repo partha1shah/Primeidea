@@ -16,7 +16,7 @@ import {
 } from "@heroicons/react/24/outline";
 
 const PAGE_PATH = "/primeidea-ventures-profile";
-const PAGE_URL = `https://primeidea.in${PAGE_PATH}`;
+const PAGE_URL = `https://www.primeidea.in${PAGE_PATH}`;
 
 const IDENTITY_LINE =
   "PrimeIdea Ventures is a Vadodara-based research-led wealth management and portfolio review firm serving investors across Gujarat and India, with a research process guided by Partha Shah, SEBI Registered Research Analyst INH000017815.";
@@ -97,7 +97,7 @@ const organizationSchema = {
   "@type": "FinancialService",
   name: "PrimeIdea Ventures",
   description: IDENTITY_LINE,
-  url: "https://primeidea.in",
+  url: "https://www.primeidea.in",
   telephone: "+918141027000",
   address: {
     "@type": "PostalAddress",
@@ -131,7 +131,7 @@ const personSchema = {
     name: "SEBI Registered Research Analyst",
     value: "INH000017815",
   },
-  url: "https://primeidea.in/sebi-registered-research-analyst",
+  url: "https://www.primeidea.in/sebi-registered-research-analyst",
 };
 
 const breadcrumbSchema = buildBreadcrumbJsonLd([

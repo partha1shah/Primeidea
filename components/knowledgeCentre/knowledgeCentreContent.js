@@ -118,7 +118,7 @@ const resourceCategories = [
     group: "learn",
     title: "Comparison guides",
     description:
-      "RA vs IA vs MFD, PMS vs mutual funds, AIF vs PMS vs MF, and SIP vs lumpsum vs STP — education only.",
+      "RA vs IA vs MFD, direct apps vs portfolio review, regular vs direct plans, PMS vs mutual funds, and planner vs wealth manager — education only.",
     href: "/comparisons",
     cta: "Browse comparisons",
     Icon: ScaleIcon,
@@ -269,7 +269,7 @@ const relatedPages = [
     step: "02",
     title: "Comparison Guides",
     href: "/comparisons",
-    description: "RA vs IA vs MFD, PMS vs MF, AIF vs PMS vs MF, SIP vs lumpsum vs STP.",
+    description: "RA vs IA vs MFD, direct apps vs review, regular vs direct, PMS vs MF, planner vs wealth manager.",
     cta: "Browse comparisons",
     Icon: ScaleIcon,
   },

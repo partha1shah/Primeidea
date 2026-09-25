@@ -109,6 +109,36 @@ const nextConfig = {
         destination: "/insurance-planning",
         permanent: true,
       },
+      {
+        source: "/direct-mutual-fund-apps-vs-portfolio-review",
+        destination: "/comparisons/direct-mutual-fund-apps-vs-portfolio-review",
+        permanent: true,
+      },
+      {
+        source: "/direct-mutual-fund-apps-vs-portfolio-review/",
+        destination: "/comparisons/direct-mutual-fund-apps-vs-portfolio-review",
+        permanent: true,
+      },
+      {
+        source: "/regular-plan-vs-direct-plan-mutual-funds",
+        destination: "/comparisons/regular-plan-vs-direct-plan-mutual-funds",
+        permanent: true,
+      },
+      {
+        source: "/regular-plan-vs-direct-plan-mutual-funds/",
+        destination: "/comparisons/regular-plan-vs-direct-plan-mutual-funds",
+        permanent: true,
+      },
+      {
+        source: "/financial-planner-vs-wealth-manager-vadodara",
+        destination: "/comparisons/financial-planner-vs-wealth-manager-vadodara",
+        permanent: true,
+      },
+      {
+        source: "/financial-planner-vs-wealth-manager-vadodara/",
+        destination: "/comparisons/financial-planner-vs-wealth-manager-vadodara",
+        permanent: true,
+      },
     ];
   },
 };

@@ -17,11 +17,13 @@ import WhatWeDoSection from "@/components/home/whatWeDoSection";
 import InsightsSection from "@/components/insightsSection";
 import { getPostList } from "@/lib/posts";
 import AppInstall from "@/components/appInstall";
+import homeFaqs from "@/data/homeFaqs";
 import ScopePageJsonLd, {
   buildBreadcrumbJsonLd,
+  buildFaqJsonLd,
 } from "@/components/scope/ScopePageJsonLd";
 
-const BASE_URL = "https://primeidea.in";
+const BASE_URL = "https://www.primeidea.in";
 const IDENTITY_LINE =
   "PrimeIdea Ventures is a Vadodara-based research-led wealth management and portfolio review firm serving investors across Gujarat and India, with a research process guided by Partha Shah, SEBI Registered Research Analyst INH000017815.";
 
@@ -125,6 +127,7 @@ const webSiteSchema = {
 };
 
 const breadcrumbSchema = buildBreadcrumbJsonLd([]);
+const faqSchema = buildFaqJsonLd(homeFaqs);
 
 export const metadata = {
   title: "Research-Led Wealth Management in Vadodara | PrimeIdea Ventures",
@@ -134,11 +137,11 @@ export const metadata = {
     "mutual funds, investment advisory, financial planning, wealth management, retirement planning, insurance solutions, Partha Shah, PrimeIdea Ventures, Gujarat financial advisor, investment consultant",
   author: "Partha Shah",
   robots: "index, follow",
-  canonical: "https://primeidea.in/",
+  canonical: "https://www.primeidea.in/",
   openGraph: {
     type: "website",
     locale: "en_IE",
-    url: "https://primeidea.in/",
+    url: "https://www.primeidea.in/",
     site_name: "PrimeIdea Ventures",
     title: "Research-Led Wealth Management in Vadodara | PrimeIdea Ventures",
     description:
@@ -150,9 +153,9 @@ export const metadata = {
     cardType: "summary_large_image",
   },
   alternates: {
-    canonical: "https://primeidea.in",
+    canonical: "https://www.primeidea.in",
     languages: {
-      "en-US": "https://primeidea.in",
+      "en-US": "https://www.primeidea.in",
     },
   },
 };
@@ -174,6 +177,7 @@ export default async function Home() {
           personSchema,
           webSiteSchema,
           breadcrumbSchema,
+          faqSchema,
         ]}
       />
 

@@ -17,7 +17,7 @@ import {
 } from "@heroicons/react/24/outline";
 
 const PAGE_PATH = "/about-us";
-const PAGE_URL = `https://primeidea.in${PAGE_PATH}`;
+const PAGE_URL = `https://www.primeidea.in${PAGE_PATH}`;
 
 const faqs = [
   {
@@ -98,7 +98,7 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "FinancialService",
   name: "PrimeIdea Ventures",
-  url: "https://primeidea.in",
+  url: "https://www.primeidea.in",
   description:
     "Vadodara-based research-led wealth management and portfolio review firm serving investors across Gujarat and India.",
   address: {
@@ -130,7 +130,7 @@ const personSchema = {
   worksFor: {
     "@type": "Organization",
     name: "PrimeIdea Ventures",
-    url: "https://primeidea.in",
+    url: "https://www.primeidea.in",
   },
   sameAs: ["https://www.linkedin.com/in/pssays"],
   url: PAGE_URL,

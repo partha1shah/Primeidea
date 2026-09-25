@@ -20,11 +20,11 @@ export const metadata = {
     keywords: 'mutual funds, investment advisory, financial planning, wealth management, retirement planning, insurance solutions, Partha Shah, PrimeIdea Ventures, Gujarat financial advisor, investment consultant',
     author: 'Partha Shah',
     robots: 'index, follow',
-    canonical: 'https://primeidea.in/tax-planning-savings/',
+    canonical: 'https://www.primeidea.in/tax-planning-savings/',
     openGraph: {
       type: 'website',
       locale: 'en_IE',
-      url: 'https://primeidea.in/tax-planning-savings/',
+      url: 'https://www.primeidea.in/tax-planning-savings/',
       site_name: 'PrimeIdea Ventures',
       title: 'Get Tax Planning And Management Services in India',
       description: 'Discover expert tax planning services in India to optimize your income and save more. Explore the best tax-saving plans to meet your financial goals. Secure your future with effective income tax planning strategies.',
@@ -35,9 +35,9 @@ export const metadata = {
       cardType: 'summary_large_image',
     },
     alternates: {
-      canonical: 'https://primeidea.in/tax-planning-savings/',
+      canonical: 'https://www.primeidea.in/tax-planning-savings/',
       languages: {
-        'en-US': 'https://primeidea.in/tax-planning-savings/',
+        'en-US': 'https://www.primeidea.in/tax-planning-savings/',
       },
     },
   };

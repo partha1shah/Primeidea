@@ -13,11 +13,11 @@ export const metadata = {
   keywords: 'mutual funds, investment advisory, financial planning, wealth management, retirement planning, insurance solutions, Partha Shah, PrimeIdea Ventures, Gujarat financial advisor, investment consultant',
   author: 'Partha Shah',
   robots: 'index, follow',
-  canonical: 'https://primeidea.in/become-a-partner/',
+  canonical: 'https://www.primeidea.in/become-a-partner/',
   openGraph: {
     type: 'website',
     locale: 'en_IE',
-    url: 'https://primeidea.in/become-a-partner/',
+    url: 'https://www.primeidea.in/become-a-partner/',
     site_name: 'PrimeIdea Ventures',
     title: 'Become A Partner | PrimeIdea - Your Trusted Financial Partner',
     description: 'Join PrimeIdea Ventures as a partner and grow your financial advisory business. Get access to comprehensive support, technology tools, and expert resources to enhance your practice and serve clients better.',
@@ -28,9 +28,9 @@ export const metadata = {
     cardType: 'summary_large_image',
   },
   alternates: {
-    canonical: 'https://primeidea.in/become-a-partner/',
+    canonical: 'https://www.primeidea.in/become-a-partner/',
     languages: {
-      'en-US': 'https://primeidea.in/become-a-partner/',
+      'en-US': 'https://www.primeidea.in/become-a-partner/',
     },
   },
 };

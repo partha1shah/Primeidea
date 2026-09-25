@@ -16,7 +16,7 @@ import {
 } from "@heroicons/react/24/outline";
 
 const PAGE_PATH = "/portfolio-review";
-const PAGE_URL = `https://primeidea.in${PAGE_PATH}`;
+const PAGE_URL = `https://www.primeidea.in${PAGE_PATH}`;
 
 const faqs = [
   {
@@ -102,7 +102,7 @@ const serviceSchema = {
   provider: {
     "@type": "FinancialService",
     name: "PrimeIdea Ventures",
-    url: "https://primeidea.in",
+    url: "https://www.primeidea.in",
     address: {
       "@type": "PostalAddress",
       streetAddress: "V3 Landmark, 306-307, opp. Atladara Railway Crossing Road, Narayanwadi, Atladara",

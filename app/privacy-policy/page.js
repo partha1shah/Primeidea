@@ -6,7 +6,7 @@ import ScopePageJsonLd, { buildBreadcrumbJsonLd } from "@/components/scope/Scope
 import Link from "next/link";
 
 const PAGE_PATH = "/privacy-policy";
-const PAGE_URL = `https://primeidea.in${PAGE_PATH}`;
+const PAGE_URL = `https://www.primeidea.in${PAGE_PATH}`;
 
 export const metadata = {
   title: "Privacy Policy",

@@ -17,7 +17,7 @@ export default function ScopePageJsonLd({ data }) {
 }
 
 export function buildBreadcrumbJsonLd(items) {
-  const baseUrl = "https://primeidea.in";
+  const baseUrl = "https://www.primeidea.in";
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",

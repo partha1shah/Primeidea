@@ -7,7 +7,7 @@ export default function robots() {
         disallow: ['/api/', '/admin/', '/private/'],
       },
     ],
-    sitemap: 'https://primeidea.in/sitemap.xml',
-    host: 'https://primeidea.in',
+    sitemap: 'https://www.primeidea.in/sitemap.xml',
+    host: 'https://www.primeidea.in',
   };
 }

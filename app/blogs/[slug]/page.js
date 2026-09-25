@@ -40,17 +40,17 @@ export async function generateMetadata({ params }) {
     },
     author: 'Partha Shah',
     robots: 'index, follow',
-    canonical: `https://primeidea.in/${slug}`,
+    canonical: `https://www.primeidea.in/${slug}`,
     alternates: {
-      canonical: `https://primeidea.in/${slug}`,
+      canonical: `https://www.primeidea.in/${slug}`,
       languages: {
-        'en-US': `https://primeidea.in/${slug}`,
+        'en-US': `https://www.primeidea.in/${slug}`,
       },
     },
     openGraph: {
       title: content.data.post.seo.title,
       description: content.data.post.seo.metaDesc,
-      url: `https://primeidea.in/${slug}`,
+      url: `https://www.primeidea.in/${slug}`,
       site_name: 'PrimeIdea Ventures',
       images: [{
         url: content.data.post.seo.opengraphImage?.sourceUrl || '',

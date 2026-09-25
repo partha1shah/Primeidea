@@ -19,7 +19,7 @@ import {
 } from "@heroicons/react/24/outline";
 
 const PAGE_PATH = "/research-based-wealth-management";
-const PAGE_URL = `https://primeidea.in${PAGE_PATH}/`;
+const PAGE_URL = `https://www.primeidea.in${PAGE_PATH}/`;
 
 const faqs = [
   {
@@ -105,7 +105,7 @@ const serviceSchema = {
   provider: {
     "@type": "FinancialService",
     name: "PrimeIdea Ventures",
-    url: "https://primeidea.in",
+    url: "https://www.primeidea.in",
   },
   areaServed: ["Vadodara", "Gujarat", "India"],
   url: PAGE_URL,

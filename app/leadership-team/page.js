@@ -16,7 +16,7 @@ import {
 } from "@heroicons/react/24/outline";
 
 const PAGE_PATH = "/leadership-team";
-const PAGE_URL = `https://primeidea.in${PAGE_PATH}`;
+const PAGE_URL = `https://www.primeidea.in${PAGE_PATH}`;
 
 const faqs = [
   {
@@ -90,7 +90,7 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "FinancialService",
   name: "PrimeIdea Ventures",
-  url: "https://primeidea.in",
+  url: "https://www.primeidea.in",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Vadodara",
@@ -109,11 +109,11 @@ const personSchema = {
   name: "Partha Shah",
   jobTitle: "Head of Research & Investment Strategy",
   identifier: "INH000017815",
-  image: "https://primeidea.in/images/about-us/founder.jpg",
+  image: "https://www.primeidea.in/images/about-us/founder.jpg",
   worksFor: {
     "@type": "Organization",
     name: "PrimeIdea Ventures",
-    url: "https://primeidea.in",
+    url: "https://www.primeidea.in",
   },
   sameAs: ["https://www.linkedin.com/in/pssays"],
   url: PAGE_URL,

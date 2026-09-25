@@ -1,4 +1,4 @@
-const BASE_URL = 'https://primeidea.in';
+const BASE_URL = 'https://www.primeidea.in';
 
 export async function GET() {
   const sitemaps = [

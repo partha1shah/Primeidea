@@ -57,7 +57,7 @@ const grievanceSteps = [
   },
 ];
 
-export default function RegulatoryContentSections() {
+export default function RegulatoryContentSections({ complaints = [] }) {
   return (
     <>
       <nav aria-label="On this page" className="bg-white border-b border-[#E3ECF5]">
@@ -287,10 +287,53 @@ export default function RegulatoryContentSections() {
             </h2>
             <p className="text-base md:text-lg text-[#4D4D4D] leading-relaxed">
               Every written concern is logged, acknowledged, and reviewed against our
-              research process and disclosures. You can ask for the status of your
+              research process and disclosures. The monthly register below is updated
+              even when the count is zero. You can ask for the status of your own
               complaint at any time using the reference shared in our acknowledgement.
             </p>
           </FadeUpOneByOneAnimation>
+
+          <div className="mb-8 overflow-x-auto rounded-[24px] border border-[#E3ECF5] bg-white shadow-[0_20px_50px_-36px_rgba(41,60,125,0.35)]">
+            <table className="w-full min-w-[760px] border-collapse text-left">
+              <caption className="sr-only">
+                Monthly complaint status for PrimeIdea Ventures
+              </caption>
+              <thead>
+                <tr className="bg-gradient-to-r from-[#232D63] to-[#293C7D]">
+                  {[
+                    "Month",
+                    "Complaints received",
+                    "Complaints resolved",
+                    "Complaints pending",
+                    "Average resolution time",
+                    "Remarks",
+                  ].map((heading) => (
+                    <th
+                      key={heading}
+                      scope="col"
+                      className="px-4 py-3.5 text-xs font-bold uppercase tracking-wider !text-[#FFC300]"
+                    >
+                      {heading}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {complaints.map((row) => (
+                  <tr key={row.month} className="border-t border-[#E3ECF5]">
+                    <th scope="row" className="px-4 py-3.5 text-sm font-semibold text-[#293C7D]">
+                      {row.month}
+                    </th>
+                    <td className="px-4 py-3.5 text-sm text-[#4D4D4D] tabular-nums">{row.received}</td>
+                    <td className="px-4 py-3.5 text-sm text-[#4D4D4D] tabular-nums">{row.resolved}</td>
+                    <td className="px-4 py-3.5 text-sm text-[#4D4D4D] tabular-nums">{row.pending}</td>
+                    <td className="px-4 py-3.5 text-sm text-[#4D4D4D]">{row.averageResolutionTime}</td>
+                    <td className="px-4 py-3.5 text-sm text-[#4D4D4D]">{row.remarks}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
 
           <ul className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 list-none m-0 p-0 mb-8">
             {[

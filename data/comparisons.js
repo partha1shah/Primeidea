@@ -6,7 +6,7 @@ export const COMPARISON_HUB = {
   path: "/comparisons",
   title: "Investment Comparison Guides",
   description:
-    "Educational comparisons — Research Analyst vs Investment Adviser vs MFD, PMS vs mutual funds, AIF vs PMS vs MF, and SIP vs lumpsum vs STP. Guided by Partha Shah, SEBI Registered Research Analyst INH000017815. No guaranteed returns.",
+    "Educational comparisons — Research Analyst vs Investment Adviser vs MFD, direct apps vs portfolio review, regular vs direct mutual funds, PMS vs mutual funds, and financial planner vs wealth manager. Guided by Partha Shah, SEBI Registered Research Analyst INH000017815. No guaranteed returns.",
 };
 
 export const COMPARISONS = [
@@ -395,6 +395,286 @@ export const COMPARISONS = [
         question: "What is an STP used for?",
         answer:
           "An STP systematically transfers money from one scheme to another over time — often from a liquid/debt parking scheme into a longer-term allocation. Costs, tax, and target-scheme fit should still be reviewed.",
+      },
+    ],
+  },
+  {
+    slug: "direct-mutual-fund-apps-vs-portfolio-review",
+    shortTitle: "Apps vs portfolio review",
+    title: "Direct Mutual Fund Apps vs Portfolio Review",
+    h1: "Direct Mutual Fund Apps vs a Portfolio Review",
+    summary:
+      "A direct mutual fund app is a place to transact. A portfolio review is a process that checks overlap, allocation, cost, and whether existing holdings still fit the goal.",
+    metaDescription:
+      "Educational comparison of direct mutual fund apps and a research-led portfolio review. PrimeIdea Ventures, Vadodara. Guided by Partha Shah, SEBI RA INH000017815. No guaranteed returns.",
+    keywords:
+      "direct mutual fund app vs portfolio review, direct mutual funds, portfolio overlap, PrimeIdea Ventures Vadodara",
+    columns: [
+      {
+        id: "app",
+        name: "Direct mutual fund app",
+        tagline: "Transaction platform",
+        highlight: false,
+      },
+      {
+        id: "review",
+        name: "Portfolio review",
+        tagline: "Research-led process",
+        highlight: true,
+      },
+    ],
+    rows: [
+      {
+        lens: "Primary job",
+        app: "Buy, sell, SIP, and view scheme transactions",
+        review: "Assess what you already hold before adding more",
+      },
+      {
+        lens: "What you typically see",
+        app: "Fund list, NAV, SIP status, and past returns on that platform",
+        review: "Overlap, allocation gaps, costs, tax impact, and written next steps",
+      },
+      {
+        lens: "What it may miss",
+        app: "Holdings outside the app, insurance, and goal fit across products",
+        review: "It is not a trading app and does not replace scheme documents",
+      },
+      {
+        lens: "Risk framing",
+        app: "Screens often lead with returns and star ratings",
+        review: "Suitability, concentration, and drawdown come before product choice",
+      },
+      {
+        lens: "PrimeIdea use",
+        app: "Clients may keep using an app they already have",
+        review: "PrimeIdea reviews the book from Vadodara, including video consultations",
+      },
+    ],
+    takeaways: [
+      "An app is a channel. A review is a decision process.",
+      "Map SIPs across platforms before starting another one.",
+      "Neither an app nor a review removes market risk or guarantees returns.",
+    ],
+    whenToUse: [
+      {
+        title: "Use this comparison when",
+        items: [
+          "You have several direct apps and no single picture of overlap",
+          "A fund screen is pushing a new SIP based on recent returns",
+          "You want a written review before investing further",
+        ],
+      },
+    ],
+    relatedServices: [
+      { title: "Mutual Fund Support", href: "/mutual-fund-investment-support" },
+      { title: "Portfolio Review", href: "/portfolio-review" },
+      { title: "Wealth Tools", href: "/wealth-tools" },
+    ],
+    faqs: [
+      {
+        question: "Are direct mutual fund apps a substitute for a portfolio review?",
+        answer:
+          "No. Apps help you transact and track schemes on that platform. A portfolio review looks across holdings, overlap, allocation, costs, and goals. Market risks still apply.",
+      },
+      {
+        question: "Does PrimeIdea ask investors to leave their existing app?",
+        answer:
+          "Not as a default. The review starts with what you already hold. Any change depends on suitability, cost, tax, and exit load — not on moving assets for its own sake.",
+      },
+    ],
+  },
+  {
+    slug: "regular-plan-vs-direct-plan-mutual-funds",
+    shortTitle: "Regular vs direct plan",
+    title: "Regular Plan vs Direct Plan Mutual Funds",
+    h1: "Regular Plan vs Direct Plan Mutual Funds",
+    summary:
+      "Regular and direct plans of the same scheme share a portfolio. The practical difference is cost and how advice or distribution is paid for — not a promise of higher returns.",
+    metaDescription:
+      "Educational comparison of regular plan vs direct plan mutual funds — cost, advice, and review checkpoints. PrimeIdea Ventures. SEBI RA INH000017815. No guaranteed returns.",
+    keywords:
+      "regular plan vs direct plan mutual funds, expense ratio, mutual fund review, PrimeIdea Ventures",
+    columns: [
+      {
+        id: "regular",
+        name: "Regular plan",
+        tagline: "Includes distribution cost",
+        highlight: false,
+      },
+      {
+        id: "direct",
+        name: "Direct plan",
+        tagline: "Investor transacts directly",
+        highlight: false,
+      },
+      {
+        id: "review",
+        name: "Review checkpoint",
+        tagline: "What to check first",
+        highlight: true,
+      },
+    ],
+    rows: [
+      {
+        lens: "Same scheme?",
+        regular: "Usually the same portfolio as the direct option of that scheme",
+        direct: "Usually the same portfolio, with a different plan code",
+        review: "Confirm scheme name, plan, and option before comparing returns",
+      },
+      {
+        lens: "Cost",
+        regular: "Expense ratio includes distribution commission",
+        direct: "Expense ratio is typically lower because commission is excluded",
+        review: "Cost matters, but overlap and goal fit can matter more",
+      },
+      {
+        lens: "Who is paid",
+        regular: "A distributor or platform may earn trail commission",
+        direct: "No distributor commission inside the scheme expense",
+        review: "Ask what service, if any, is included with the higher cost",
+      },
+      {
+        lens: "Switching",
+        regular: "Moving to direct can be a redemption with tax and exit load",
+        direct: "Staying direct is not automatically the right next step",
+        review: "Check exit load, tax, and whether the holding still has a role",
+      },
+      {
+        lens: "What it is not",
+        regular: "Not a guarantee of advice quality",
+        direct: "Not a guarantee of higher returns",
+        review: "Not a recommendation to switch every regular holding",
+      },
+    ],
+    takeaways: [
+      "Compare plan and option of the same scheme, not unrelated funds.",
+      "A lower expense ratio does not remove market risk.",
+      "A switch can trigger tax and exit load. Review those before acting.",
+    ],
+    whenToUse: [
+      {
+        title: "Use this comparison when",
+        items: [
+          "You hold the same scheme in both regular and direct plans",
+          "Someone says direct plans always produce higher returns",
+          "You are considering a switch and want cost, tax, and exit load checked",
+        ],
+      },
+    ],
+    relatedServices: [
+      { title: "Mutual Fund Support", href: "/mutual-fund-investment-support" },
+      { title: "Portfolio Review", href: "/portfolio-review" },
+      { title: "Research Process", href: "/research-process" },
+    ],
+    faqs: [
+      {
+        question: "Is a direct plan always better than a regular plan?",
+        answer:
+          "Direct plans usually have a lower expense ratio. That is a cost difference, not a return guarantee. Suitability, overlap, tax, and exit load still need a review. Investments are subject to market risks.",
+      },
+      {
+        question: "Can I switch from regular to direct without any cost?",
+        answer:
+          "A switch is often treated as a redemption and fresh purchase. Exit load and tax can apply. Check the scheme documents and your own tax position before switching.",
+      },
+    ],
+  },
+  {
+    slug: "financial-planner-vs-wealth-manager-vadodara",
+    shortTitle: "Planner vs wealth manager",
+    title: "Financial Planner vs Wealth Manager in Vadodara",
+    h1: "Financial Planner vs Wealth Manager in Vadodara",
+    summary:
+      "The titles are used loosely in Vadodara and across India. What matters is the registration, the process, and whether the conversation starts with your existing portfolio — not with a product list.",
+    metaDescription:
+      "Educational comparison of a financial planner and a wealth manager for investors in Vadodara. Research-led context from PrimeIdea Ventures. SEBI RA INH000017815. No guaranteed returns.",
+    keywords:
+      "financial planner vs wealth manager Vadodara, portfolio review Vadodara, SEBI RA INH000017815, PrimeIdea Ventures",
+    columns: [
+      {
+        id: "planner",
+        name: "Financial planner",
+        tagline: "Goals and cash flow",
+        highlight: false,
+      },
+      {
+        id: "manager",
+        name: "Wealth manager",
+        tagline: "Portfolio and products",
+        highlight: false,
+      },
+      {
+        id: "primeidea",
+        name: "PrimeIdea",
+        tagline: "Research-led review",
+        highlight: true,
+      },
+    ],
+    rows: [
+      {
+        lens: "Usual focus",
+        planner: "Goals, savings rate, insurance gaps, and retirement corpus",
+        manager: "Existing investments, product mix, and ongoing portfolio oversight",
+        primeidea: "Portfolio review first, then planning support across products",
+      },
+      {
+        lens: "Registration to check",
+        planner: "Ask which SEBI or distribution registration applies",
+        manager: "The label alone is not a SEBI category",
+        primeidea: "Partha Shah, SEBI Registered Research Analyst INH000017815",
+      },
+      {
+        lens: "Where work happens",
+        planner: "Office or online, depending on the firm",
+        manager: "Often positioned for larger or multi-product books",
+        primeidea: "Vadodara office, plus online consultations across Gujarat and India",
+      },
+      {
+        lens: "What to ask",
+        planner: "How goals, risk, and existing products are mapped",
+        manager: "How overlap, cost, and concentration are reviewed",
+        primeidea: "Request the research process and the written review steps",
+      },
+      {
+        lens: "What neither title guarantees",
+        planner: "A title does not guarantee returns",
+        manager: "A title does not mean SEBI Investment Adviser registration",
+        primeidea: "PrimeIdea is not an RIA unless separately registered, and does not guarantee returns",
+      },
+    ],
+    takeaways: [
+      "Verify the registration category. A job title is not a licence.",
+      "Start with the current portfolio, not with a new product.",
+      "Vadodara is PrimeIdea’s base. Service reach includes Gujarat, India, and NRI clients online.",
+    ],
+    whenToUse: [
+      {
+        title: "Use this comparison when",
+        items: [
+          "You are comparing firms in Vadodara by job title alone",
+          "You want to know whether someone is a Research Analyst or an Investment Adviser",
+          "You need a portfolio review before a broader wealth conversation",
+        ],
+      },
+    ],
+    relatedServices: [
+      { title: "SEBI RA page", href: "/sebi-registered-research-analyst" },
+      {
+        title: "RA vs IA vs MFD",
+        href: "/comparisons/research-analyst-vs-investment-adviser-vs-mfd",
+      },
+      { title: "Book Portfolio Review", href: "/book-portfolio-review" },
+    ],
+    faqs: [
+      {
+        question: "Is a wealth manager the same as a SEBI Registered Investment Adviser?",
+        answer:
+          "No. Wealth manager and financial planner are descriptions, not SEBI registration categories. A Research Analyst and an Investment Adviser are separate registrations. PrimeIdea operates under SEBI RA INH000017815 and does not present itself as an Investment Adviser unless separately registered.",
+      },
+      {
+        question: "Does this comparison apply only in Vadodara?",
+        answer:
+          "The page uses Vadodara because that is PrimeIdea’s office and a common search for this comparison. The registration and process points apply to investors who consult online from elsewhere in Gujarat, India, or as NRIs.",
       },
     ],
   },

@@ -9,9 +9,10 @@ import ScopePageJsonLd, {
   buildBreadcrumbJsonLd,
   buildFaqJsonLd,
 } from "@/components/scope/ScopePageJsonLd";
+import { getComplaintRegister } from "@/lib/complaintRegister";
 
 const PAGE_PATH = "/regulatory-disclosures";
-const PAGE_URL = `https://primeidea.in${PAGE_PATH}`;
+const PAGE_URL = `https://www.primeidea.in${PAGE_PATH}`;
 
 const faqs = [
   {
@@ -52,9 +53,9 @@ const faqs = [
   {
     question: "How can I check the status of my complaint?",
     answer:
-      "Write to PrimeIdea through the contact form or phone and quote the acknowledgement reference. We will confirm whether your complaint is under review, pending information, or closed. If you remain dissatisfied, you may use SEBI SCORES.",
+      "The monthly complaint register on this page shows complaints received, resolved, pending, and average resolution time. For your own complaint, write to PrimeIdea through the contact form or phone and quote the acknowledgement reference. If you remain dissatisfied, you may use SEBI SCORES.",
     plainText:
-      "Write to PrimeIdea through the contact form or phone and quote the acknowledgement reference. We will confirm whether your complaint is under review, pending information, or closed. If you remain dissatisfied, you may use SEBI SCORES.",
+      "The monthly complaint register on this page shows complaints received, resolved, pending, and average resolution time. For your own complaint, write to PrimeIdea through the contact form or phone and quote the acknowledgement reference. If you remain dissatisfied, you may use SEBI SCORES.",
   },
 ];
 
@@ -109,7 +110,9 @@ const breadcrumbSchema = buildBreadcrumbJsonLd([
 
 const faqSchema = buildFaqJsonLd(faqs);
 
-export default function RegulatoryDisclosuresPage() {
+export default async function RegulatoryDisclosuresPage() {
+  const complaints = await getComplaintRegister();
+
   return (
     <div className="bg-[#F6FDFF]">
       <ScopePageJsonLd data={[serviceSchema, breadcrumbSchema, faqSchema]} />
@@ -133,7 +136,7 @@ export default function RegulatoryDisclosuresPage() {
 
       <ScopeBreadcrumbs items={[{ label: "Regulatory Disclosures" }]} />
 
-      <RegulatoryContentSections />
+      <RegulatoryContentSections complaints={complaints} />
 
       <ScopeFaqsSection
         title="Disclosures — Frequently Asked Questions"
