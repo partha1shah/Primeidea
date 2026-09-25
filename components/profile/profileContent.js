@@ -53,10 +53,10 @@ const whatWeDont = [
 ];
 
 const serviceLinks = [
-  { title: "Portfolio Review", href: "/portfolio-review-vadodara" },
+  { title: "Portfolio Review", href: "/portfolio-review" },
   { title: "Research Process", href: "/research-process" },
   { title: "Private Wealth", href: "/private-wealth-management-gujarat-india" },
-  { title: "SEBI RA page", href: "/sebi-registered-research-analyst-vadodara" },
+  { title: "SEBI RA page", href: "/sebi-registered-research-analyst" },
   { title: "Regulatory Disclosures", href: "/regulatory-disclosures" },
   { title: "Comparison guides", href: "/comparisons" },
   { title: "Knowledge Centre", href: "/knowledge-centre" },
@@ -157,7 +157,7 @@ export default function ProfileContent() {
                 </div>
                 <div className="relative flex flex-col gap-2.5">
                   <Link
-                    href="/sebi-registered-research-analyst-vadodara"
+                    href="/sebi-registered-research-analyst"
                     className="inline-flex items-center justify-center rounded-xl bg-[#FFC300] px-4 py-3 text-sm font-bold text-[#232D63] hover:bg-white transition-colors"
                   >
                     Verify SEBI RA →

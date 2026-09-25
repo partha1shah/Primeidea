@@ -160,7 +160,7 @@ export default function ResearchReportsPage() {
         faqs={faqs}
       />
 
-      <ScopeDisclaimerBar ctaHref="/portfolio-review-vadodara" ctaLabel="Book Portfolio Review">
+      <ScopeDisclaimerBar ctaHref="/portfolio-review" ctaLabel="Book Portfolio Review">
         Research Reports content is for investor education only. Investments in the
         securities market are subject to market risks. PrimeIdea Ventures does not
         guarantee returns. Partha Shah is a SEBI Registered Research Analyst

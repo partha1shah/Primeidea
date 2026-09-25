@@ -131,7 +131,7 @@ const personSchema = {
     name: "SEBI Registered Research Analyst",
     value: "INH000017815",
   },
-  url: "https://primeidea.in/sebi-registered-research-analyst-vadodara",
+  url: "https://primeidea.in/sebi-registered-research-analyst",
 };
 
 const breadcrumbSchema = buildBreadcrumbJsonLd([

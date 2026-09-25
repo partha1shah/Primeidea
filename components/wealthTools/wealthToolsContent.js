@@ -347,7 +347,7 @@ function InsuranceCalculator() {
       title="Insurance Need Calculator"
       explanation="Build a directional life-cover estimate using income replacement years, liabilities, existing cover, and liquid assets. This is a starting point for a protection review — not a product recommendation."
       disclaimer="This calculator provides illustrative cover estimates only. It does not assess medical underwriting, claim eligibility, or product suitability. Insurance is subject to policy terms. PrimeIdea does not guarantee claim outcomes."
-      ctaHref="/insurance-planning-vadodara"
+      ctaHref="/insurance-planning"
       ctaLabel="Book Insurance Review"
       results={
         <ResultCard
@@ -841,7 +841,7 @@ export default function WealthToolsContent() {
                 When you are ready for suitability-based next steps, continue with a
                 research-led{" "}
                 <Link
-                  href="/portfolio-review-vadodara"
+                  href="/portfolio-review"
                   className="font-semibold text-[#293C7D] underline-offset-2 hover:underline"
                 >
                   portfolio review
@@ -1190,7 +1190,7 @@ export default function WealthToolsContent() {
             {[
               {
                 title: "Portfolio Review",
-                href: "/portfolio-review-vadodara",
+                href: "/portfolio-review",
                 description: "Upload holdings or book an office / video review.",
               },
               {
@@ -1200,12 +1200,12 @@ export default function WealthToolsContent() {
               },
               {
                 title: "Retirement Planning",
-                href: "/retirement-planning-vadodara",
-                description: "Corpus, allocation, and withdrawal review in Vadodara.",
+                href: "/retirement-planning",
+                description: "Corpus, allocation, and withdrawal review.",
               },
               {
                 title: "Insurance Planning",
-                href: "/insurance-planning-vadodara",
+                href: "/insurance-planning",
                 description: "Term and health cover review without product push.",
               },
             ].map((item) => (

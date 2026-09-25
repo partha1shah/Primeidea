@@ -293,14 +293,14 @@ export default function ResearchProcessContent() {
             </div>
             <div className="flex flex-wrap gap-3 shrink-0">
               <Link
-                href="/portfolio-review-vadodara"
+                href="/portfolio-review"
                 className="inline-flex items-center gap-2 rounded-xl bg-[#FFC300] px-5 py-3 text-base font-bold text-[#232D63] hover:bg-white transition-colors"
               >
                 Book Portfolio Review
                 <span aria-hidden="true">→</span>
               </Link>
               <Link
-                href="/sebi-registered-research-analyst-vadodara"
+                href="/sebi-registered-research-analyst"
                 className="inline-flex items-center gap-2 rounded-xl border border-white/30 px-5 py-3 text-base font-bold text-white hover:border-[#FFC300] hover:text-[#FFC300] transition-colors"
               >
                 SEBI RA credentials

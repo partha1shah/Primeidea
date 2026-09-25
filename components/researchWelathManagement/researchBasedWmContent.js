@@ -59,18 +59,18 @@ const relatedPages = [
     description: "The five-step method behind research-led reviews.",
   },
   {
-    title: "Portfolio Review in Vadodara",
-    href: "/portfolio-review-vadodara",
+    title: "Portfolio Review",
+    href: "/portfolio-review",
     description: "Upload holdings or book an office or video review.",
   },
   {
     title: "Mutual Fund Investment Support",
-    href: "/mutual-fund-investment-support-vadodara",
-    description: "SIP and scheme review for investors in Vadodara, Gujarat, and India.",
+    href: "/mutual-fund-investment-support",
+    description: "SIP and scheme review for investors across Gujarat and India.",
   },
   {
     title: "Fixed Income Investments",
-    href: "/fixed-income-investments-vadodara",
+    href: "/fixed-income-investments",
     description: "Debt, bonds, and stability allocation — risk before yield.",
   },
 ];
@@ -148,7 +148,7 @@ export default function ResearchBasedWmContent() {
 
               <div className="flex flex-wrap gap-3">
                 <Link
-                  href="/portfolio-review-vadodara"
+                  href="/portfolio-review"
                   className="inline-flex items-center gap-2 rounded-xl bg-[#FFC300] px-5 py-3 text-base font-bold text-[#232D63] hover:bg-[#293C7D] hover:text-white transition-colors"
                 >
                   Book Portfolio Review
@@ -222,7 +222,7 @@ export default function ResearchBasedWmContent() {
               </p>
             </div>
             <Link
-              href="/portfolio-review-vadodara"
+              href="/portfolio-review"
               className="inline-flex items-center gap-2 rounded-xl bg-[#FFC300] px-5 py-3 text-base font-bold text-[#232D63] hover:bg-white transition-colors shrink-0"
             >
               Book Portfolio Review

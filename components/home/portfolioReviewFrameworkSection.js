@@ -88,7 +88,7 @@ const PortfolioReviewFrameworkSection = () => {
 
           <FadeUpOneByOneAnimation className="flex flex-wrap gap-3 shrink-0">
             <Link
-              href="/portfolio-review-vadodara"
+              href="/portfolio-review"
               className="bg-[#293C7D] text-base font-bold rounded-md text-white px-5 py-3 inline-flex items-center hover:bg-[#232D63] transition-colors"
             >
               Book Portfolio Review

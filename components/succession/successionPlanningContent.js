@@ -89,8 +89,8 @@ const relatedPages = [
     description: "HNI portfolio review across Gujarat and India.",
   },
   {
-    title: "Portfolio Review in Vadodara",
-    href: "/portfolio-review-vadodara",
+    title: "Portfolio Review",
+    href: "/portfolio-review",
     description: "Start with a structured look at current holdings.",
   },
   {

@@ -5,5 +5,5 @@ export const metadata = {
 };
 
 export default function InsuranceRedirect() {
-  redirect("/insurance-planning-vadodara");
+  redirect("/insurance-planning");
 }

@@ -68,8 +68,8 @@ const whoItsFor = [
 
 const relatedPages = [
   {
-    title: "Portfolio Review in Vadodara",
-    href: "/portfolio-review-vadodara",
+    title: "Portfolio Review",
+    href: "/portfolio-review",
     description: "Upload a CAS or book an office or video review.",
   },
   {
@@ -198,7 +198,7 @@ export default function NriInvestmentSupportContent() {
             </div>
             <div className="lg:col-span-5 flex flex-col items-center justify-center gap-3">
               <Link
-                href="/portfolio-review-vadodara"
+                href="/portfolio-review"
                 className="inline-flex items-center justify-center rounded-xl bg-[#FFC300] px-5 py-3 text-base font-bold text-[#232D63] hover:bg-white transition-colors"
               >
                 Book video portfolio review

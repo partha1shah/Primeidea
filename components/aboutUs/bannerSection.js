@@ -37,7 +37,7 @@ const BannerSection = () => {
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <Link
-                    href="/portfolio-review-vadodara"
+                    href="/portfolio-review"
                     className="bg-[#FFC300] text-[#232D63] text-base font-bold rounded-md px-5 py-3 inline-flex items-center hover:bg-white transition-colors"
                   >
                     Book Portfolio Review

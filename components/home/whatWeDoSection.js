@@ -16,7 +16,7 @@ const services = [
     title: "Portfolio Review & Research",
     description:
       "Structured review of holdings, overlaps, risk, and asset allocation before further investing.",
-    href: "/portfolio-review-vadodara",
+    href: "/portfolio-review",
     Icon: ClipboardDocumentCheckIcon,
   },
   {
@@ -30,14 +30,14 @@ const services = [
     title: "Retirement Planning",
     description:
       "Corpus planning, withdrawal strategy, and long-term income security for retirement goals.",
-    href: "/retirement-planning-vadodara",
+    href: "/retirement-planning",
     Icon: SunIcon,
   },
   {
     title: "Insurance Planning",
     description:
       "Term, health, and protection review aligned to family needs and existing cover gaps.",
-    href: "/insurance-planning-vadodara",
+    href: "/insurance-planning",
     Icon: ShieldCheckIcon,
   },
   {

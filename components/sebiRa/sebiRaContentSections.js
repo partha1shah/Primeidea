@@ -244,7 +244,7 @@ export default function SebiRaContentSections() {
 
               <div className="flex flex-wrap gap-3">
                 <Link
-                  href="/portfolio-review-vadodara"
+                  href="/portfolio-review"
                   className="inline-flex items-center gap-2 rounded-md bg-[#293C7D] px-5 py-3 text-base font-bold text-white hover:bg-[#232D63] transition-colors"
                 >
                   Book Portfolio Review
@@ -300,7 +300,7 @@ export default function SebiRaContentSections() {
               },
               {
                 title: "Portfolio Review",
-                href: "/portfolio-review-vadodara",
+                href: "/portfolio-review",
                 description: "Book a structured review of your current holdings.",
               },
               {
@@ -310,8 +310,8 @@ export default function SebiRaContentSections() {
               },
               {
                 title: "Mutual Fund Investment Support",
-                href: "/mutual-fund-investment-support-vadodara",
-                description: "Research-led SIP and scheme review in Vadodara.",
+                href: "/mutual-fund-investment-support",
+                description: "Research-led SIP and scheme review.",
               },
             ].map((link) => (
               <FadeUpOneByOneAnimation key={link.title}>

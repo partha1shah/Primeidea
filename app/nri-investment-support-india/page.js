@@ -131,7 +131,7 @@ export default function NriInvestmentSupportPage() {
         mainTitle="NRI Investment Support in India"
         mainSubTitle="Research-led review of India holdings for NRIs — from a Vadodara office serving investors across Gujarat and India by video. Guided by Partha Shah, SEBI Registered Research Analyst INH000017815. No guaranteed returns. Not tax or FEMA legal advice."
         mainLinkTitle="Book Video Review"
-        mainLink="/portfolio-review-vadodara"
+        mainLink="/portfolio-review"
         usePrimaryAsLink={true}
         formTitle="Book Portfolio Review"
         secondaryLinkTitle="View Research Process"
@@ -159,7 +159,7 @@ export default function NriInvestmentSupportPage() {
         faqs={faqs}
       />
 
-      <ScopeDisclaimerBar ctaHref="/portfolio-review-vadodara" ctaLabel="Book Video Portfolio Review">
+      <ScopeDisclaimerBar ctaHref="/portfolio-review" ctaLabel="Book Video Portfolio Review">
         Investments in the securities market are subject to market risks. PrimeIdea Ventures does
         not guarantee returns. Tax, banking, and FEMA matters should be confirmed with qualified
         professionals. Partha Shah is a SEBI Registered Research Analyst (INH000017815). PrimeIdea

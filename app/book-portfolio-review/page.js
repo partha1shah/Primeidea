@@ -141,7 +141,7 @@ export default async function BookPortfolioReviewPage({ searchParams }) {
         usePrimaryAsLink={true}
         formTitle="Book Portfolio Review"
         secondaryLinkTitle="Upload holdings"
-        secondaryLink="/portfolio-review-vadodara"
+        secondaryLink="/portfolio-review"
       />
 
       <ScopePageMetaStrip
@@ -163,7 +163,7 @@ export default async function BookPortfolioReviewPage({ searchParams }) {
         faqs={faqs}
       />
 
-      <ScopeDisclaimerBar ctaHref="/portfolio-review-vadodara" ctaLabel="Upload Portfolio for Review">
+      <ScopeDisclaimerBar ctaHref="/portfolio-review" ctaLabel="Upload Portfolio for Review">
         Booking a review does not guarantee investment returns or outcomes.
         Investments in the securities market are subject to market risks. Partha Shah
         is a SEBI Registered Research Analyst (INH000017815). PrimeIdea does not act

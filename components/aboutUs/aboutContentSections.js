@@ -84,13 +84,13 @@ const relatedPages = [
     description: "Five-step review method, without product pushing.",
   },
   {
-    title: "Portfolio Review in Vadodara",
-    href: "/portfolio-review-vadodara",
+    title: "Portfolio Review",
+    href: "/portfolio-review",
     description: "Upload holdings or book an office or video review.",
   },
   {
     title: "SEBI RA credentials",
-    href: "/sebi-registered-research-analyst-vadodara",
+    href: "/sebi-registered-research-analyst",
     description: "How PrimeIdea is registered and what that means.",
   },
   {

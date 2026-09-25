@@ -50,7 +50,7 @@ const supportAreas = [
 
 const whoItsFor = [
   {
-    title: "SIP investors in Vadodara",
+    title: "SIP investors",
     description: "Several schemes over years, with overlap that has never been mapped.",
   },
   {
@@ -65,8 +65,8 @@ const whoItsFor = [
 
 const relatedPages = [
   {
-    title: "Portfolio Review in Vadodara",
-    href: "/portfolio-review-vadodara",
+    title: "Portfolio Review",
+    href: "/portfolio-review",
     description: "Upload a CAS or book an office or video review.",
   },
   {
@@ -81,7 +81,7 @@ const relatedPages = [
   },
   {
     title: "Fixed Income Investments",
-    href: "/fixed-income-investments-vadodara",
+    href: "/fixed-income-investments",
     description: "Debt, bonds, and stability allocation reviewed for risk — not yield alone.",
   },
   {
@@ -200,7 +200,7 @@ export default function MutualFundSupportContent() {
             </div>
             <div className="lg:col-span-5 flex flex-col items-center justify-center gap-3">
               <Link
-                href="/portfolio-review-vadodara"
+                href="/portfolio-review"
                 className="inline-flex items-center justify-center rounded-xl bg-[#FFC300] px-5 py-3 text-base font-bold text-[#232D63] hover:bg-white transition-colors"
               >
                 Upload portfolio for review

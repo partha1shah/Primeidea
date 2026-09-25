@@ -135,7 +135,7 @@ export default function WealthToolsPage() {
         mainTitle="Wealth Tools"
         mainSubTitle="Practical calculators to explore SIP growth, corpus needs, insurance cover, allocation starting points, and withdrawal trade-offs — then continue with a research-led portfolio review. Outputs are illustrative estimates only. Guided by Partha Shah, SEBI Registered Research Analyst INH000017815. No guaranteed returns."
         mainLinkTitle="Book Portfolio Review"
-        mainLink="/portfolio-review-vadodara"
+        mainLink="/portfolio-review"
         usePrimaryAsLink={true}
         formTitle="Book Portfolio Review"
         secondaryLinkTitle="Open Calculators"
@@ -163,7 +163,7 @@ export default function WealthToolsPage() {
         faqs={faqs}
       />
 
-      <ScopeDisclaimerBar ctaHref="/portfolio-review-vadodara" ctaLabel="Book Portfolio Review">
+      <ScopeDisclaimerBar ctaHref="/portfolio-review" ctaLabel="Book Portfolio Review">
         Wealth Tools provide illustrative estimates only. Investments in the securities market
         are subject to market risks. PrimeIdea Ventures does not guarantee returns, corpus size,
         insurance adequacy, or withdrawal sustainability. Partha Shah is a SEBI Registered

@@ -15,12 +15,12 @@ import {
   MapPinIcon,
 } from "@heroicons/react/24/outline";
 
-const PAGE_PATH = "/portfolio-review-vadodara";
+const PAGE_PATH = "/portfolio-review";
 const PAGE_URL = `https://primeidea.in${PAGE_PATH}`;
 
 const faqs = [
   {
-    question: "What is a portfolio review at PrimeIdea in Vadodara?",
+    question: "What is a portfolio review at PrimeIdea?",
     answer:
       "It is a structured, research-led look at your current holdings — allocation, overlap, risk path, cost, tax, and goals — so you know what to change before investing further. It does not guarantee returns.",
     plainText:
@@ -55,7 +55,7 @@ const faqs = [
       "No. Investments in securities market are subject to market risks. PrimeIdea does not guarantee returns or market-beating performance. The review is process-first.",
   },
   {
-    question: "Who should book a review in Vadodara?",
+    question: "Who should book a portfolio review?",
     answer:
       "Investors with overlapping funds, mixed products, family or inherited holdings, or NRIs with India portfolios. PrimeIdea is based in Vadodara and serves clients across Gujarat and India.",
     plainText:
@@ -64,11 +64,11 @@ const faqs = [
 ];
 
 export const metadata = {
-  title: "Portfolio Review in Vadodara",
+  title: "Portfolio Review",
   description:
-    "PrimeIdea Ventures helps investors in Vadodara and across Gujarat and India with a research-led portfolio review through a process guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Upload holdings or book an office or video review. No guaranteed returns.",
+    "PrimeIdea Ventures offers a research-led portfolio review for investors across Gujarat and India, guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Upload holdings or book an office or video review. No guaranteed returns.",
   keywords:
-    "portfolio review Vadodara, portfolio review Gujarat, upload portfolio for review, SEBI RA INH000017815, Partha Shah, PrimeIdea Ventures",
+    "portfolio review, portfolio review Gujarat India, upload portfolio for review, SEBI RA INH000017815, Partha Shah, PrimeIdea Ventures",
   author: "Partha Shah",
   robots: "index, follow",
   openGraph: {
@@ -76,9 +76,9 @@ export const metadata = {
     locale: "en_IE",
     url: PAGE_URL,
     site_name: "PrimeIdea Ventures",
-    title: "Portfolio Review in Vadodara | PrimeIdea Ventures",
+    title: "Portfolio Review | PrimeIdea Ventures",
     description:
-      "PrimeIdea Ventures helps investors in Vadodara and across Gujarat and India with a research-led portfolio review through a process guided by Partha Shah, SEBI Registered Research Analyst INH000017815.",
+      "Research-led portfolio review for investors across Gujarat and India, guided by Partha Shah, SEBI Registered Research Analyst INH000017815.",
   },
   twitter: {
     handle: "@primeidea",
@@ -96,9 +96,9 @@ export const metadata = {
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Portfolio Review in Vadodara",
+  name: "Portfolio Review",
   description:
-    "Research-led portfolio review services in Vadodara, guided by Partha Shah, SEBI Registered Research Analyst INH000017815.",
+    "Research-led portfolio review services, guided by Partha Shah, SEBI Registered Research Analyst INH000017815.",
   provider: {
     "@type": "FinancialService",
     name: "PrimeIdea Ventures",
@@ -117,12 +117,12 @@ const serviceSchema = {
 };
 
 const breadcrumbSchema = buildBreadcrumbJsonLd([
-  { name: "Portfolio Review in Vadodara", url: PAGE_PATH },
+  { name: "Portfolio Review", url: PAGE_PATH },
 ]);
 
 const faqSchema = buildFaqJsonLd(faqs);
 
-export default function PortfolioReviewVadodaraPage() {
+export default function PortfolioReviewPage() {
   return (
     <div className="bg-[#F6FDFF]">
       <ScopePageJsonLd data={[serviceSchema, breadcrumbSchema, faqSchema]} />
@@ -130,7 +130,7 @@ export default function PortfolioReviewVadodaraPage() {
       <BannerSection
         mainBannerImage="/images/home/banner.png"
         bannerRightImg="/images/home/banner-right.png"
-        mainTitle="Portfolio Review in Vadodara"
+        mainTitle="Portfolio Review"
         mainSubTitle="Upload your holdings or book an office or video review. PrimeIdea Ventures is a Vadodara-based research-led wealth management firm serving investors across Gujarat and India, with a research process guided by Partha Shah, SEBI Registered Research Analyst INH000017815. No product pushing. No guaranteed returns."
         mainLinkTitle="Upload Portfolio"
         mainLink="#upload-portfolio"
@@ -149,7 +149,7 @@ export default function PortfolioReviewVadodaraPage() {
         disclaimer="A portfolio review is a structured analysis of current holdings. Investments in securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns and does not present itself as a SEBI Registered Investment Adviser unless separately registered."
       />
 
-      <ScopeBreadcrumbs items={[{ label: "Portfolio Review in Vadodara" }]} />
+      <ScopeBreadcrumbs items={[{ label: "Portfolio Review" }]} />
 
       <PortfolioReviewContent />
 

@@ -101,7 +101,7 @@ function ThankYouInner() {
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link
-                href="/portfolio-review-vadodara"
+                href="/portfolio-review"
                 className="inline-flex items-center justify-center rounded-xl bg-[#293C7D] px-5 py-3.5 text-sm font-bold !text-white hover:bg-[#232D63] transition-colors"
               >
                 Upload holdings (optional)

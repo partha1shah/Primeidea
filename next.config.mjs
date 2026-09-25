@@ -40,23 +40,73 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/retirement-planning",
-        destination: "/retirement-planning-vadodara",
-        permanent: true,
-      },
-      {
-        source: "/retirement-planning/",
-        destination: "/retirement-planning-vadodara",
-        permanent: true,
-      },
-      {
         source: "/insurance",
-        destination: "/insurance-planning-vadodara",
+        destination: "/insurance-planning",
         permanent: true,
       },
       {
         source: "/insurance/",
-        destination: "/insurance-planning-vadodara",
+        destination: "/insurance-planning",
+        permanent: true,
+      },
+      {
+        source: "/portfolio-review-vadodara",
+        destination: "/portfolio-review",
+        permanent: true,
+      },
+      {
+        source: "/portfolio-review-vadodara/",
+        destination: "/portfolio-review",
+        permanent: true,
+      },
+      {
+        source: "/sebi-registered-research-analyst-vadodara",
+        destination: "/sebi-registered-research-analyst",
+        permanent: true,
+      },
+      {
+        source: "/sebi-registered-research-analyst-vadodara/",
+        destination: "/sebi-registered-research-analyst",
+        permanent: true,
+      },
+      {
+        source: "/mutual-fund-investment-support-vadodara",
+        destination: "/mutual-fund-investment-support",
+        permanent: true,
+      },
+      {
+        source: "/mutual-fund-investment-support-vadodara/",
+        destination: "/mutual-fund-investment-support",
+        permanent: true,
+      },
+      {
+        source: "/fixed-income-investments-vadodara",
+        destination: "/fixed-income-investments",
+        permanent: true,
+      },
+      {
+        source: "/fixed-income-investments-vadodara/",
+        destination: "/fixed-income-investments",
+        permanent: true,
+      },
+      {
+        source: "/retirement-planning-vadodara",
+        destination: "/retirement-planning",
+        permanent: true,
+      },
+      {
+        source: "/retirement-planning-vadodara/",
+        destination: "/retirement-planning",
+        permanent: true,
+      },
+      {
+        source: "/insurance-planning-vadodara",
+        destination: "/insurance-planning",
+        permanent: true,
+      },
+      {
+        source: "/insurance-planning-vadodara/",
+        destination: "/insurance-planning",
         permanent: true,
       },
     ];

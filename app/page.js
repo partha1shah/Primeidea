@@ -102,7 +102,7 @@ const personSchema = {
   jobTitle: "Head of Research & Investment Strategy",
   description:
     "SEBI Registered Research Analyst INH000017815. Guides the research process at PrimeIdea Ventures.",
-  url: `${BASE_URL}/sebi-registered-research-analyst-vadodara`,
+  url: `${BASE_URL}/sebi-registered-research-analyst`,
   image: `${BASE_URL}/images/about-us/founder.jpg`,
   worksFor: { "@id": `${BASE_URL}/#organization` },
   identifier: {

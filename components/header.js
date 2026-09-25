@@ -12,12 +12,12 @@ const serviceGroups = [
       {
         name: "Portfolio Review",
         description: "Independent health check of your holdings",
-        href: "/portfolio-review-vadodara",
+        href: "/portfolio-review",
       },
       {
         name: "Mutual Fund Investment Support",
         description: "Scheme selection, review and rebalancing",
-        href: "/mutual-fund-investment-support-vadodara",
+        href: "/mutual-fund-investment-support",
       },
       {
         name: "Direct Equity Research Support",
@@ -47,7 +47,7 @@ const serviceGroups = [
       {
         name: "Fixed Income Investments",
         description: "Bonds, debt funds and stability allocation",
-        href: "/fixed-income-investments-vadodara",
+        href: "/fixed-income-investments",
       },
       {
         name: "NRI Investment Support",
@@ -62,7 +62,7 @@ const serviceGroups = [
       {
         name: "Retirement Planning",
         description: "Corpus, allocation and withdrawal review",
-        href: "/retirement-planning-vadodara",
+        href: "/retirement-planning",
       },
       {
         name: "Legacy, Succession & Estate",
@@ -72,7 +72,7 @@ const serviceGroups = [
       {
         name: "Insurance Planning",
         description: "Right cover, without product push",
-        href: "/insurance-planning-vadodara",
+        href: "/insurance-planning",
       },
       {
         name: "Tax Planning Support",

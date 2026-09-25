@@ -93,7 +93,7 @@ const WealthCreationPreservation = () => {
             </div>
             <div className="mb-4 lg:mb-0 w-full sm:w-1/2 lg:w-1/4 px-2">
               <Link
-                href="/retirement-planning-vadodara"
+                href="/retirement-planning"
                 className="relative rounded-[12px] shadow-[0px_0px_4px_0px_#00000040] inline-block h-full w-full cursor-pointer"
               >
                 <Image

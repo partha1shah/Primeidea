@@ -124,7 +124,7 @@ export default function RegulatoryDisclosuresPage() {
         usePrimaryAsLink={true}
         formTitle="Contact Compliance"
         secondaryLinkTitle="SEBI RA Page"
-        secondaryLink="/sebi-registered-research-analyst-vadodara"
+        secondaryLink="/sebi-registered-research-analyst"
       />
 
       <ScopePageMetaStrip
@@ -141,7 +141,7 @@ export default function RegulatoryDisclosuresPage() {
         faqs={faqs}
       />
 
-      <ScopeDisclaimerBar ctaHref="/sebi-registered-research-analyst-vadodara" ctaLabel="View SEBI RA page">
+      <ScopeDisclaimerBar ctaHref="/sebi-registered-research-analyst" ctaLabel="View SEBI RA page">
         Investments in securities market are subject to market risks. PrimeIdea Ventures does
         not guarantee returns. Partha Shah is a SEBI Registered Research Analyst
         (INH000017815). PrimeIdea does not act as a SEBI Registered Investment Adviser unless

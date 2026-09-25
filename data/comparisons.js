@@ -83,7 +83,7 @@ export const COMPARISONS = [
       },
     ],
     relatedServices: [
-      { title: "SEBI RA page", href: "/sebi-registered-research-analyst-vadodara" },
+      { title: "SEBI RA page", href: "/sebi-registered-research-analyst" },
       { title: "Regulatory Disclosures", href: "/regulatory-disclosures" },
       { title: "Entity profile", href: "/primeidea-ventures-profile" },
     ],
@@ -174,7 +174,7 @@ export const COMPARISONS = [
       },
       {
         title: "Mutual Fund Support",
-        href: "/mutual-fund-investment-support-vadodara",
+        href: "/mutual-fund-investment-support",
       },
       {
         title: "Private Wealth",
@@ -380,10 +380,10 @@ export const COMPARISONS = [
     relatedServices: [
       {
         title: "Mutual Fund Support",
-        href: "/mutual-fund-investment-support-vadodara",
+        href: "/mutual-fund-investment-support",
       },
       { title: "Wealth Tools", href: "/wealth-tools" },
-      { title: "Portfolio Review", href: "/portfolio-review-vadodara" },
+      { title: "Portfolio Review", href: "/portfolio-review" },
     ],
     faqs: [
       {

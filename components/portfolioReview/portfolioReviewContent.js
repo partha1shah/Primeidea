@@ -77,17 +77,17 @@ const relatedPages = [
   },
   {
     title: "SEBI RA credentials",
-    href: "/sebi-registered-research-analyst-vadodara",
+    href: "/sebi-registered-research-analyst",
     description: "Partha Shah, SEBI Registered Research Analyst INH000017815.",
   },
   {
     title: "Mutual Fund Investment Support",
-    href: "/mutual-fund-investment-support-vadodara",
-    description: "SIP, overlap, cost, and scheme-role review in Vadodara.",
+    href: "/mutual-fund-investment-support",
+    description: "SIP, overlap, cost, and scheme-role review.",
   },
   {
     title: "Fixed Income Investments",
-    href: "/fixed-income-investments-vadodara",
+    href: "/fixed-income-investments",
     description: "Debt, bonds, and stability allocation — risk before yield.",
   },
 ];
@@ -95,14 +95,14 @@ const relatedPages = [
 const WHATSAPP_HREF =
   "https://api.whatsapp.com/send?phone=918141027000&text=" +
   encodeURIComponent(
-    "Hello, I would like a research-led portfolio review with PrimeIdea Ventures in Vadodara. I can share my current holdings."
+    "Hello, I would like a research-led portfolio review with PrimeIdea Ventures. I can share my current holdings."
   );
 
 export default function PortfolioReviewContent() {
   return (
     <>
       <section
-        id="review-in-vadodara"
+        id="portfolio-review-overview"
         aria-labelledby="review-intro-heading"
         className="bg-white py-14 md:py-16 scroll-mt-24"
       >

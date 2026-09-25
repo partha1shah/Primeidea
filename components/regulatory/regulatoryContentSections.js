@@ -101,7 +101,7 @@ export default function RegulatoryContentSections() {
                 INH000017815.
               </p>
               <Link
-                href="/sebi-registered-research-analyst-vadodara"
+                href="/sebi-registered-research-analyst"
                 className="inline-flex items-center gap-2 rounded-md bg-[#FFC300] px-5 py-3 text-base font-bold text-[#232D63] hover:bg-white transition-colors"
               >
                 View SEBI RA page
@@ -512,7 +512,7 @@ export default function RegulatoryContentSections() {
                 <span aria-hidden="true">→</span>
               </Link>
               <Link
-                href="/sebi-registered-research-analyst-vadodara"
+                href="/sebi-registered-research-analyst"
                 className="inline-flex items-center justify-center gap-2 rounded-md border-2 border-[#293C7D] px-5 py-3 text-base font-bold text-[#293C7D] hover:bg-white transition-colors"
               >
                 SEBI RA credentials

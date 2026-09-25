@@ -153,7 +153,7 @@ const resourceCategories = [
     title: "Quarterly portfolio note",
     description:
       "Quarterly reminders on review discipline: allocation drift, overlap, costs, and goal check-ins.",
-    href: "/portfolio-review-vadodara",
+    href: "/portfolio-review",
     cta: "Book a review",
     Icon: RectangleStackIcon,
     status: "live",
@@ -214,7 +214,7 @@ const pathways = [
   {
     title: "Pre-retirees",
     description: "Corpus planning, withdrawal design, and healthcare cover check-ins.",
-    href: "/retirement-planning-vadodara",
+    href: "/retirement-planning",
     Icon: ArrowPathIcon,
   },
   {
@@ -829,7 +829,7 @@ export default function KnowledgeCentreContent({ posts = [] }) {
 
                   <div className="flex flex-col sm:flex-row gap-2.5">
                     <Link
-                      href="/sebi-registered-research-analyst-vadodara"
+                      href="/sebi-registered-research-analyst"
                       className="inline-flex flex-1 items-center justify-center rounded-xl bg-[#FFC300] px-4 py-3 text-sm font-bold text-[#232D63] hover:bg-white transition-colors"
                     >
                       Verify SEBI RA →
@@ -968,7 +968,7 @@ export default function KnowledgeCentreContent({ posts = [] }) {
 
               <div className="lg:col-span-5 flex flex-col sm:flex-row lg:flex-col gap-3">
                 <Link
-                  href="/portfolio-review-vadodara"
+                  href="/portfolio-review"
                   className="inline-flex items-center justify-center rounded-xl bg-[#FFC300] px-5 py-3.5 text-sm font-bold text-[#232D63] hover:bg-white transition-colors"
                 >
                   Book Portfolio Review →

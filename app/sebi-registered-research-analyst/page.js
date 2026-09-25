@@ -10,7 +10,7 @@ import ScopePageJsonLd, {
 } from "@/components/scope/ScopePageJsonLd";
 import SebiRaContentSections from "@/components/sebiRa/sebiRaContentSections";
 
-const PAGE_PATH = "/sebi-registered-research-analyst-vadodara";
+const PAGE_PATH = "/sebi-registered-research-analyst";
 const PAGE_URL = `https://primeidea.in${PAGE_PATH}`;
 
 const faqs = [
@@ -43,7 +43,7 @@ const faqs = [
       "No. PrimeIdea Ventures does not guarantee returns, market-beating performance, or risk-free outcomes. Investments in securities market are subject to market risks, and all guidance is process-first with clear disclosures.",
   },
   {
-    question: "How can I verify SEBI registration in Vadodara?",
+    question: "How can I verify the SEBI registration?",
     answer:
       "Use registration number INH000017815 on the official SEBI website to verify Partha Shah’s status as a SEBI Registered Research Analyst. PrimeIdea is based in Vadodara and serves investors across Gujarat and India through office and online consultation.",
     plainText:
@@ -59,11 +59,11 @@ const faqs = [
 ];
 
 export const metadata = {
-  title: "SEBI Registered Research Analyst in Vadodara",
+  title: "SEBI Registered Research Analyst",
   description:
-    "PrimeIdea Ventures helps investors in Vadodara and across Gujarat and India understand SEBI Registered Research Analyst-led portfolio review through a research-led process guided by Partha Shah, SEBI Registered Research Analyst INH000017815.",
+    "PrimeIdea Ventures explains its SEBI Registered Research Analyst-led portfolio review for investors across Gujarat and India, through a research-led process guided by Partha Shah, SEBI Registered Research Analyst INH000017815.",
   keywords:
-    "SEBI Registered Research Analyst Vadodara, Partha Shah INH000017815, research analyst Gujarat, portfolio review Vadodara, PrimeIdea Ventures",
+    "SEBI Registered Research Analyst, Partha Shah INH000017815, research analyst Gujarat India, portfolio review, PrimeIdea Ventures",
   author: "Partha Shah",
   robots: "index, follow",
   openGraph: {
@@ -71,9 +71,9 @@ export const metadata = {
     locale: "en_IE",
     url: PAGE_URL,
     site_name: "PrimeIdea Ventures",
-    title: "SEBI Registered Research Analyst in Vadodara | PrimeIdea Ventures",
+    title: "SEBI Registered Research Analyst | PrimeIdea Ventures",
     description:
-      "PrimeIdea Ventures helps investors in Vadodara and across Gujarat and India understand SEBI Registered Research Analyst-led portfolio review through a research-led process guided by Partha Shah, SEBI Registered Research Analyst INH000017815.",
+      "PrimeIdea Ventures explains its SEBI Registered Research Analyst-led portfolio review for investors across Gujarat and India, through a research-led process guided by Partha Shah, SEBI Registered Research Analyst INH000017815.",
   },
   twitter: {
     handle: "@primeidea",
@@ -91,7 +91,7 @@ export const metadata = {
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "SEBI Registered Research Analyst Services in Vadodara",
+  name: "SEBI Registered Research Analyst Services",
   description:
     "Research-led portfolio review and analysis guided by Partha Shah, SEBI Registered Research Analyst INH000017815.",
   provider: {
@@ -123,10 +123,10 @@ export default function SebiRegisteredResearchAnalystPage() {
       <BannerSection
         mainBannerImage="/images/home/banner.png"
         bannerRightImg="/images/home/banner-right.png"
-        mainTitle="SEBI Registered Research Analyst in Vadodara"
+        mainTitle="SEBI Registered Research Analyst"
         mainSubTitle="PrimeIdea Ventures is a Vadodara-based research-led wealth management and portfolio review firm serving investors across Gujarat and India, with a research process guided by Partha Shah, SEBI Registered Research Analyst INH000017815."
         mainLinkTitle="Book Portfolio Review"
-        mainLink="/portfolio-review-vadodara"
+        mainLink="/portfolio-review"
         usePrimaryAsLink={true}
         formTitle="Book Portfolio Review"
         secondaryLinkTitle="View Research Process"

@@ -276,7 +276,7 @@ const relatedPages = [
   {
     step: "02",
     title: "Portfolio Review",
-    href: "/portfolio-review-vadodara",
+    href: "/portfolio-review",
     description: "Upload holdings or book an office or video review.",
     cta: "Upload portfolio",
     Icon: ClipboardDocumentCheckIcon,
@@ -284,7 +284,7 @@ const relatedPages = [
   {
     step: "03",
     title: "Mutual Fund Support",
-    href: "/mutual-fund-investment-support-vadodara",
+    href: "/mutual-fund-investment-support",
     description: "SIP, overlap, and scheme-role review for fund holdings.",
     cta: "Review mutual funds",
     Icon: PresentationChartLineIcon,
@@ -843,7 +843,7 @@ export default function PmsAifSifContent() {
 
                   <div className="flex flex-col sm:flex-row gap-2.5">
                     <Link
-                      href="/sebi-registered-research-analyst-vadodara"
+                      href="/sebi-registered-research-analyst"
                       className="inline-flex flex-1 items-center justify-center rounded-xl bg-[#FFC300] px-4 py-3 text-sm font-bold text-[#232D63] hover:bg-white transition-colors"
                     >
                       Verify SEBI RA →
@@ -1029,7 +1029,7 @@ export default function PmsAifSifContent() {
                   />
                 </Link>
                 <Link
-                  href="/portfolio-review-vadodara"
+                  href="/portfolio-review"
                   className="inline-flex items-center justify-center rounded-xl border border-white/25 bg-white/10 px-5 py-3.5 text-sm font-bold !text-white hover:bg-white/20 transition-colors"
                 >
                   Upload holdings

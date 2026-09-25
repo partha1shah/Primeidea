@@ -89,8 +89,8 @@ const relatedPages = [
     description: "Partner-enabled succession coordination. No partner name or pricing.",
   },
   {
-    title: "Portfolio Review in Vadodara",
-    href: "/portfolio-review-vadodara",
+    title: "Portfolio Review",
+    href: "/portfolio-review",
     description: "Upload holdings or book an office or video review.",
   },
   {

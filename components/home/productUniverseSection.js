@@ -25,7 +25,7 @@ const categories = [
   {
     title: "Mutual Funds & SIPs",
     description: "Scheme selection and review across categories — with overlap and risk clarity.",
-    href: "/mutual-fund-investment-support-vadodara",
+    href: "/mutual-fund-investment-support",
     Icon: SparklesIcon,
     products: [
       "Mutual Funds Schemes",
@@ -39,7 +39,7 @@ const categories = [
   {
     title: "Fixed Income",
     description: "Income and capital-preservation options assessed for credit, rate, and liquidity risk.",
-    href: "/fixed-income-investments-vadodara",
+    href: "/fixed-income-investments",
     Icon: BuildingLibraryIcon,
     products: [
       "Fixed Income Products",
@@ -53,7 +53,7 @@ const categories = [
   {
     title: "Protection, Retirement & Gold",
     description: "Planning support across insurance, retirement products, and gold-linked options.",
-    href: "/insurance-planning-vadodara",
+    href: "/insurance-planning",
     Icon: ShieldCheckIcon,
     products: [
       "Life Insurance Policies",

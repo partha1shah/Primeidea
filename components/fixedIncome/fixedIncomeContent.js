@@ -55,7 +55,7 @@ const whoItsFor = [
       "Want a clearer debt sleeve — not another product sold only on coupon or past return.",
   },
   {
-    title: "Families in Vadodara consolidating income assets",
+    title: "Families consolidating income assets",
     description:
       "Bonds, debt funds, and deposits across accounts that should be reviewed as one picture.",
   },
@@ -68,13 +68,13 @@ const whoItsFor = [
 
 const relatedPages = [
   {
-    title: "Portfolio Review in Vadodara",
-    href: "/portfolio-review-vadodara",
+    title: "Portfolio Review",
+    href: "/portfolio-review",
     description: "Upload holdings or book an office or video review.",
   },
   {
     title: "Mutual Fund Investment Support",
-    href: "/mutual-fund-investment-support-vadodara",
+    href: "/mutual-fund-investment-support",
     description: "SIP, overlap, and scheme-role review for fund holdings.",
   },
   {
@@ -84,7 +84,7 @@ const relatedPages = [
   },
   {
     title: "Retirement Planning",
-    href: "/retirement-planning-vadodara",
+    href: "/retirement-planning",
     description: "Corpus, allocation, and withdrawal review — without return promises.",
   },
   {
@@ -204,7 +204,7 @@ export default function FixedIncomeContent() {
             </div>
             <div className="lg:col-span-5 flex flex-col items-center justify-center gap-3">
               <Link
-                href="/portfolio-review-vadodara"
+                href="/portfolio-review"
                 className="inline-flex items-center justify-center rounded-xl bg-[#FFC300] px-5 py-3 text-base font-bold text-[#232D63] hover:bg-white transition-colors"
               >
                 Upload portfolio for review

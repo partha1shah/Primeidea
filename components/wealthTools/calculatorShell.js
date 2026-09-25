@@ -162,7 +162,7 @@ export default function CalculatorShell({
   children,
   results,
   disclaimer = DEFAULT_DISCLAIMER,
-  ctaHref = "/portfolio-review-vadodara",
+  ctaHref = "/portfolio-review",
   ctaLabel = "Book Portfolio Review",
 }) {
   return (

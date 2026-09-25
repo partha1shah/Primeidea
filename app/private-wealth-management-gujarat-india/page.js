@@ -141,7 +141,7 @@ export default function PrivateWealthPage() {
         usePrimaryAsLink={true}
         formTitle="Book Private Wealth Consultation"
         secondaryLinkTitle="Upload Portfolio"
-        secondaryLink="/portfolio-review-vadodara"
+        secondaryLink="/portfolio-review"
       />
 
       <ScopePageMetaStrip

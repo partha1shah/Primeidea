@@ -15,12 +15,12 @@ import {
   Squares2X2Icon,
 } from "@heroicons/react/24/outline";
 
-const PAGE_PATH = "/mutual-fund-investment-support-vadodara";
+const PAGE_PATH = "/mutual-fund-investment-support";
 const PAGE_URL = `https://primeidea.in${PAGE_PATH}`;
 
 const faqs = [
   {
-    question: "What is mutual fund investment support at PrimeIdea in Vadodara?",
+    question: "What is mutual fund investment support at PrimeIdea?",
     answer:
       "It is research-led review of the mutual funds you already hold — overlap, SIP fit, cost, tax, and allocation — guided by Partha Shah, SEBI Registered Research Analyst INH000017815. It is not a product push and does not guarantee returns.",
     plainText:
@@ -64,11 +64,11 @@ const faqs = [
 ];
 
 export const metadata = {
-  title: "Mutual Fund Investment Support in Vadodara",
+  title: "Mutual Fund Investment Support",
   description:
-    "PrimeIdea Ventures helps investors in Vadodara and across Gujarat and India with research-led mutual fund investment support through a process guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Mutual fund investments are subject to market risks. Read all scheme-related documents carefully.",
+    "PrimeIdea Ventures offers research-led mutual fund investment support for investors across Gujarat and India, guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Mutual fund investments are subject to market risks. Read all scheme-related documents carefully.",
   keywords:
-    "mutual fund investment support Vadodara, SIP review Vadodara, mutual fund overlap analysis, Partha Shah SEBI RA INH000017815, PrimeIdea Ventures",
+    "mutual fund investment support, SIP review, mutual fund overlap analysis, Partha Shah SEBI RA INH000017815, PrimeIdea Ventures",
   author: "Partha Shah",
   robots: "index, follow",
   openGraph: {
@@ -76,9 +76,9 @@ export const metadata = {
     locale: "en_IE",
     url: PAGE_URL,
     site_name: "PrimeIdea Ventures",
-    title: "Mutual Fund Investment Support in Vadodara | PrimeIdea Ventures",
+    title: "Mutual Fund Investment Support | PrimeIdea Ventures",
     description:
-      "Research-led mutual fund review in Vadodara, guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Market risks apply.",
+      "Research-led mutual fund review, guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Market risks apply.",
   },
   twitter: {
     handle: "@primeidea",
@@ -96,9 +96,9 @@ export const metadata = {
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Mutual Fund Investment Support in Vadodara",
+  name: "Mutual Fund Investment Support",
   description:
-    "Research-led mutual fund review and SIP support in Vadodara, guided by Partha Shah, SEBI Registered Research Analyst INH000017815.",
+    "Research-led mutual fund review and SIP support, guided by Partha Shah, SEBI Registered Research Analyst INH000017815.",
   provider: {
     "@type": "FinancialService",
     name: "PrimeIdea Ventures",
@@ -127,10 +127,10 @@ export default function MutualFundInvestmentSupportPage() {
       <BannerSection
         mainBannerImage="/images/home/banner.png"
         bannerRightImg="/images/home/banner-right.png"
-        mainTitle="Mutual Fund Investment Support in Vadodara"
+        mainTitle="Mutual Fund Investment Support"
         mainSubTitle="Research-led SIP and scheme review from a Vadodara office, serving investors across Gujarat and India. Guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Mutual fund investments are subject to market risks. Read all scheme-related documents carefully. No guaranteed returns."
         mainLinkTitle="Upload Portfolio"
-        mainLink="/portfolio-review-vadodara"
+        mainLink="/portfolio-review"
         usePrimaryAsLink={true}
         formTitle="Book Portfolio Review"
         secondaryLinkTitle="View Research Process"
@@ -152,11 +152,11 @@ export default function MutualFundInvestmentSupportPage() {
 
       <ScopeFaqsSection
         title="Mutual fund support — Frequently Asked Questions"
-        description="How schemes are reviewed in Vadodara, and how to start with a CAS or office visit."
+        description="How schemes are reviewed, and how to start with a CAS or office visit."
         faqs={faqs}
       />
 
-      <ScopeDisclaimerBar ctaHref="/portfolio-review-vadodara" ctaLabel="Upload Portfolio for Review">
+      <ScopeDisclaimerBar ctaHref="/portfolio-review" ctaLabel="Upload Portfolio for Review">
         Mutual fund investments are subject to market risks. Read all scheme-related documents
         carefully. PrimeIdea Ventures does not guarantee returns. Partha Shah is a SEBI
         Registered Research Analyst (INH000017815). PrimeIdea does not act as a SEBI Registered

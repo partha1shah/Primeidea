@@ -125,7 +125,7 @@ export default function ResearchProcessPage() {
         mainTitle="PrimeIdea Research Process"
         mainSubTitle="A structured, research-led portfolio review process: suitability, risk, overlap, and allocation first — guided by Partha Shah, SEBI Registered Research Analyst INH000017815. No product pushing. No guaranteed returns."
         mainLinkTitle="Book Portfolio Review"
-        mainLink="/portfolio-review-vadodara"
+        mainLink="/portfolio-review"
         usePrimaryAsLink={true}
         formTitle="Book Portfolio Review"
         secondaryLinkTitle="View Framework"
@@ -151,7 +151,7 @@ export default function ResearchProcessPage() {
         faqs={faqs}
       />
 
-      <ScopeDisclaimerBar ctaHref="/portfolio-review-vadodara" ctaLabel="Book Portfolio Review">
+      <ScopeDisclaimerBar ctaHref="/portfolio-review" ctaLabel="Book Portfolio Review">
         Investments in securities market are subject to market risks. PrimeIdea Ventures does
         not guarantee returns. Partha Shah is a SEBI Registered Research Analyst
         (INH000017815). PrimeIdea does not act as a SEBI Registered Investment Adviser unless

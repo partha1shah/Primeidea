@@ -451,7 +451,7 @@ export default function BookPortfolioReviewForm({
         </Link>
         . Or{" "}
         <Link
-          href="/portfolio-review-vadodara"
+          href="/portfolio-review"
           className="font-semibold text-[#293C7D] underline-offset-2 hover:underline"
         >
           upload holdings

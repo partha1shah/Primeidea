@@ -180,7 +180,7 @@ export default async function ResearchBasedWealthManagementPage() {
         mainTitle="Research-Based Wealth Management"
         mainSubTitle="A research-led approach to mutual funds, equity, and portfolio construction — guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Suitability, risk, and allocation first. No product pushing. No guaranteed returns."
         mainLinkTitle="Book Portfolio Review"
-        mainLink="/portfolio-review-vadodara"
+        mainLink="/portfolio-review"
         usePrimaryAsLink={true}
         formTitle="Book Portfolio Review"
         secondaryLinkTitle="View Research Process"
@@ -210,7 +210,7 @@ export default async function ResearchBasedWealthManagementPage() {
 
       <ClientTestimonial />
 
-      <ScopeDisclaimerBar ctaHref="/portfolio-review-vadodara" ctaLabel="Book Portfolio Review">
+      <ScopeDisclaimerBar ctaHref="/portfolio-review" ctaLabel="Book Portfolio Review">
         Investments in securities market are subject to market risks. PrimeIdea Ventures does
         not guarantee returns. Partha Shah is a SEBI Registered Research Analyst
         (INH000017815). PrimeIdea does not act as a SEBI Registered Investment Adviser unless

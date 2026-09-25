@@ -83,7 +83,7 @@ export default function BookPortfolioReviewContent({ defaultService }) {
                   Review page.
                 </p>
                 <Link
-                  href="/portfolio-review-vadodara"
+                  href="/portfolio-review"
                   className="inline-flex text-sm font-semibold text-[#293C7D]"
                 >
                   Upload portfolio for review →
@@ -123,7 +123,7 @@ export default function BookPortfolioReviewContent({ defaultService }) {
             {[
               {
                 title: "Portfolio Review",
-                href: "/portfolio-review-vadodara",
+                href: "/portfolio-review",
                 description: "Upload holdings or learn what a review covers.",
               },
               {

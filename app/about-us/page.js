@@ -167,7 +167,7 @@ export default function AboutUs() {
 
       <ClientTestimonial />
 
-      <ScopeDisclaimerBar ctaHref="/portfolio-review-vadodara" ctaLabel="Book Portfolio Review">
+      <ScopeDisclaimerBar ctaHref="/portfolio-review" ctaLabel="Book Portfolio Review">
         Investments in securities market are subject to market risks. PrimeIdea Ventures does
         not guarantee returns. Partha Shah is a SEBI Registered Research Analyst
         (INH000017815). PrimeIdea does not act as a SEBI Registered Investment Adviser unless

@@ -4,7 +4,8 @@ const BASE_URL = 'https://primeidea.in';
 
 export async function GET() {
   try {
-    const response = await graphqlRequest(`
+    const response = await graphqlRequest({
+      query: `
       query GetBlogSitemapContent {
         posts(first: 1000) {
           nodes {
@@ -14,14 +15,15 @@ export async function GET() {
           }
         }
       }
-    `);
+    `,
+    });
 
     // Validate posts data
-    if (!response?.posts?.nodes) {
+    if (!response?.data?.posts?.nodes) {
       throw new Error('Invalid posts data structure');
     }
 
-    const posts = response.posts.nodes;
+    const posts = response.data.posts.nodes;
     
     if (!Array.isArray(posts)) {
       throw new Error('Posts data is not an array');
@@ -62,7 +64,7 @@ export async function GET() {
       `<?xml version="1.0" encoding="UTF-8"?>
       <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
         <url>
-          <loc>${BASE_URL}/blog</loc>
+          <loc>${BASE_URL}/blogs</loc>
           <lastmod>${new Date().toISOString()}</lastmod>
           <changefreq>daily</changefreq>
           <priority>0.8</priority>

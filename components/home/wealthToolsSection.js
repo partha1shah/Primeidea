@@ -150,7 +150,7 @@ const WealthToolsSection = () => {
             </p>
           </div>
           <Link
-            href="/portfolio-review-vadodara"
+            href="/portfolio-review"
             className="bg-[#FFC300] text-[#232D63] text-base font-bold rounded-md px-5 py-3 inline-flex items-center hover:bg-white transition-colors shrink-0"
           >
             Book Portfolio Review

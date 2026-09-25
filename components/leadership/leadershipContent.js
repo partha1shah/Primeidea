@@ -30,7 +30,7 @@ const relatedPages = [
   },
   {
     title: "SEBI RA credentials",
-    href: "/sebi-registered-research-analyst-vadodara",
+    href: "/sebi-registered-research-analyst",
     description: "How to verify registration number INH000017815.",
   },
   {
@@ -141,7 +141,7 @@ export default function LeadershipContent() {
                   <span aria-hidden="true">→</span>
                 </a>
                 <Link
-                  href="/sebi-registered-research-analyst-vadodara"
+                  href="/sebi-registered-research-analyst"
                   className="inline-flex items-center gap-2 rounded-xl border-2 border-[#293C7D] px-5 py-3 text-base font-bold text-[#293C7D] hover:bg-[#F6FDFF] transition-colors"
                 >
                   Verify SEBI RA
@@ -218,7 +218,7 @@ export default function LeadershipContent() {
               </p>
             </div>
             <Link
-              href="/portfolio-review-vadodara"
+              href="/portfolio-review"
               className="inline-flex items-center gap-2 rounded-xl bg-[#FFC300] px-5 py-3 text-base font-bold text-[#232D63] hover:bg-white transition-colors shrink-0"
             >
               Book Portfolio Review

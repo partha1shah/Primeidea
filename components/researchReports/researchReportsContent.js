@@ -727,7 +727,7 @@ export default function ResearchReportsContent() {
 
                   <div className="flex flex-col sm:flex-row gap-2.5">
                     <Link
-                      href="/sebi-registered-research-analyst-vadodara"
+                      href="/sebi-registered-research-analyst"
                       className="inline-flex flex-1 items-center justify-center rounded-xl bg-[#FFC300] px-4 py-3 text-sm font-bold text-[#232D63] hover:bg-white transition-colors"
                     >
                       Verify SEBI RA →
@@ -792,7 +792,7 @@ export default function ResearchReportsContent() {
               </div>
               <div className="lg:col-span-5 flex flex-col sm:flex-row lg:flex-col gap-3">
                 <Link
-                  href="/portfolio-review-vadodara"
+                  href="/portfolio-review"
                   className="inline-flex items-center justify-center rounded-xl bg-[#FFC300] px-5 py-3.5 text-sm font-bold text-[#232D63] hover:bg-white transition-colors"
                 >
                   Book Portfolio Review →
@@ -841,7 +841,7 @@ export default function ResearchReportsContent() {
               },
               {
                 title: "SEBI RA page",
-                href: "/sebi-registered-research-analyst-vadodara",
+                href: "/sebi-registered-research-analyst",
                 description: "Verify Research Analyst registration details.",
                 cta: "Verify RA",
                 Icon: ShieldCheckIcon,

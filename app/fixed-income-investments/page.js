@@ -15,12 +15,12 @@ import {
   MapPinIcon,
 } from "@heroicons/react/24/outline";
 
-const PAGE_PATH = "/fixed-income-investments-vadodara";
+const PAGE_PATH = "/fixed-income-investments";
 const PAGE_URL = `https://primeidea.in${PAGE_PATH}`;
 
 const faqs = [
   {
-    question: "What is fixed income investment support at PrimeIdea in Vadodara?",
+    question: "What is fixed income investment support at PrimeIdea?",
     answer:
       "It is research-led review of debt funds, bonds, and related income holdings — credit, rate, liquidity, tax, and role in the book — guided by Partha Shah, SEBI Registered Research Analyst INH000017815. It is not a product push and does not guarantee returns.",
     plainText:
@@ -64,11 +64,11 @@ const faqs = [
 ];
 
 export const metadata = {
-  title: "Fixed Income Investments in Vadodara",
+  title: "Fixed Income Investments",
   description:
-    "PrimeIdea Ventures helps investors in Vadodara and across Gujarat and India with research-led fixed income investment support through a process guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Fixed income does not mean guaranteed returns. Market risks apply.",
+    "PrimeIdea Ventures offers research-led fixed income investment support for investors across Gujarat and India, guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Fixed income does not mean guaranteed returns. Market risks apply.",
   keywords:
-    "fixed income investments Vadodara, debt fund review Vadodara, bond investment support Gujarat, Partha Shah SEBI RA INH000017815, PrimeIdea Ventures",
+    "fixed income investments, debt fund review, bond investment support, Partha Shah SEBI RA INH000017815, PrimeIdea Ventures",
   author: "Partha Shah",
   robots: "index, follow",
   openGraph: {
@@ -76,9 +76,9 @@ export const metadata = {
     locale: "en_IE",
     url: PAGE_URL,
     site_name: "PrimeIdea Ventures",
-    title: "Fixed Income Investments in Vadodara | PrimeIdea Ventures",
+    title: "Fixed Income Investments | PrimeIdea Ventures",
     description:
-      "Research-led fixed income review in Vadodara, guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Not guaranteed returns. Market risks apply.",
+      "Research-led fixed income review, guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Not guaranteed returns. Market risks apply.",
   },
   twitter: {
     handle: "@primeidea",
@@ -96,9 +96,9 @@ export const metadata = {
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Fixed Income Investments in Vadodara",
+  name: "Fixed Income Investments",
   description:
-    "Research-led fixed income and debt product review in Vadodara, guided by Partha Shah, SEBI Registered Research Analyst INH000017815.",
+    "Research-led fixed income and debt product review, guided by Partha Shah, SEBI Registered Research Analyst INH000017815.",
   provider: {
     "@type": "FinancialService",
     name: "PrimeIdea Ventures",
@@ -127,10 +127,10 @@ export default function FixedIncomeInvestmentsPage() {
       <BannerSection
         mainBannerImage="/images/home/banner.png"
         bannerRightImg="/images/home/banner-right.png"
-        mainTitle="Fixed Income Investments in Vadodara"
+        mainTitle="Fixed Income Investments"
         mainSubTitle="Research-led review of debt funds, bonds, and stability allocation from a Vadodara office, serving investors across Gujarat and India. Guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Fixed income does not mean guaranteed returns. Market risks apply."
         mainLinkTitle="Upload Portfolio"
-        mainLink="/portfolio-review-vadodara"
+        mainLink="/portfolio-review"
         usePrimaryAsLink={true}
         formTitle="Book Portfolio Review"
         secondaryLinkTitle="View Research Process"
@@ -152,11 +152,11 @@ export default function FixedIncomeInvestmentsPage() {
 
       <ScopeFaqsSection
         title="Fixed income — Frequently Asked Questions"
-        description="How debt and bond holdings are reviewed in Vadodara, and how to start with a portfolio upload or office visit."
+        description="How debt and bond holdings are reviewed, and how to start with a portfolio upload or office visit."
         faqs={faqs}
       />
 
-      <ScopeDisclaimerBar ctaHref="/portfolio-review-vadodara" ctaLabel="Upload Portfolio for Review">
+      <ScopeDisclaimerBar ctaHref="/portfolio-review" ctaLabel="Upload Portfolio for Review">
         Investments in the securities market are subject to market risks. Fixed income products
         can lose value. PrimeIdea Ventures does not guarantee returns. Partha Shah is a SEBI
         Registered Research Analyst (INH000017815). PrimeIdea does not act as a SEBI Registered

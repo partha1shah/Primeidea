@@ -50,7 +50,7 @@ const supportAreas = [
 
 const whoItsFor = [
   {
-    title: "Professionals in Vadodara",
+    title: "Professionals",
     description:
       "Building a corpus over the next decade and want a research-led map, not a product pitch.",
   },
@@ -68,13 +68,13 @@ const whoItsFor = [
 
 const relatedPages = [
   {
-    title: "Portfolio Review in Vadodara",
-    href: "/portfolio-review-vadodara",
+    title: "Portfolio Review",
+    href: "/portfolio-review",
     description: "Upload holdings or book an office or video review.",
   },
   {
     title: "Insurance Planning",
-    href: "/insurance-planning-vadodara",
+    href: "/insurance-planning",
     description: "Term and health cover review linked to family cash-flow risk.",
   },
   {

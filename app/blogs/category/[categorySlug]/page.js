@@ -48,17 +48,17 @@ export async function generateMetadata({ params }) {
     },
     author: 'Partha Shah',
     robots: 'index, follow',
-    canonical: `https://primeidea.in/category/${categorySlug}`,
+    canonical: `https://primeidea.in/blogs/category/${categorySlug}`,
     alternates: {
-      canonical: `https://primeidea.in/category/${categorySlug}`,
+      canonical: `https://primeidea.in/blogs/category/${categorySlug}`,
       languages: {
-        'en-US': `https://primeidea.in/category/${categorySlug}`,
+        'en-US': `https://primeidea.in/blogs/category/${categorySlug}`,
       },
     },
     openGraph: {
       title: content.data.category.seo.title,
       description: content.data.category.seo.metaDesc,
-      url: `https://primeidea.in/category/${categorySlug}`,
+      url: `https://primeidea.in/blogs/category/${categorySlug}`,
       site_name: 'PrimeIdea Ventures',
       // images: [
       //   {

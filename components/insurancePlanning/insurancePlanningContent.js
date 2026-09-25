@@ -50,7 +50,7 @@ const supportAreas = [
 
 const whoItsFor = [
   {
-    title: "Families in Vadodara",
+    title: "Families",
     description:
       "Earning members with dependents who need a clear view of cover gaps before buying another policy.",
   },
@@ -69,7 +69,7 @@ const whoItsFor = [
 const relatedPages = [
   {
     title: "Retirement Planning",
-    href: "/retirement-planning-vadodara",
+    href: "/retirement-planning",
     description: "Corpus and withdrawal review linked to family cash-flow risk.",
   },
   {
@@ -78,8 +78,8 @@ const relatedPages = [
     description: "Partner-enabled wills and nominations coordination. No partner name or pricing.",
   },
   {
-    title: "Portfolio Review in Vadodara",
-    href: "/portfolio-review-vadodara",
+    title: "Portfolio Review",
+    href: "/portfolio-review",
     description: "Upload holdings or book an office or video review.",
   },
   {
@@ -206,7 +206,7 @@ export default function InsurancePlanningContent() {
                 Start insurance review
               </Link>
               <Link
-                href="/retirement-planning-vadodara"
+                href="/retirement-planning"
                 className="inline-flex items-center justify-center rounded-xl border border-white/30 px-5 py-3 text-base font-bold text-white hover:border-[#FFC300] hover:text-[#FFC300] transition-colors"
               >
                 Retirement planning

@@ -3,7 +3,8 @@ import graphqlRequest from '../../../lib/graphqlRequest';
 const BASE_URL = 'https://primeidea.in';
 
 export async function GET() {
-  const query = `
+  const query = {
+    query: `
     query GetCategorySitemapContent {
       categories(first: 100) {
         nodes {
@@ -17,15 +18,16 @@ export async function GET() {
         }
       }
     }
-  `;
+  `,
+  };
 
   try {
     const response = await graphqlRequest(query);
-    const categories = response?.categories?.nodes || [];
+    const categories = response?.data?.categories?.nodes || [];
 
     const categoryLastMod = {};
     categories.forEach(category => {
-      const posts = category.posts.nodes;
+      const posts = category?.posts?.nodes || [];
       if (posts.length > 0) {
         const dates = posts.map(post => new Date(post.modified || post.date));
         categoryLastMod[category.slug] = new Date(Math.max(...dates)).toISOString();
@@ -36,11 +38,12 @@ export async function GET() {
       `<?xml version="1.0" encoding="UTF-8"?>
       <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
         ${categories
+          .filter((category) => category?.slug)
           .map(
             (category) => `
               <url>
-                <loc>${BASE_URL}/category/${category.slug}</loc>
-                <lastmod>${categoryLastMod[category.slug]}</lastmod>
+                <loc>${BASE_URL}/blogs/category/${category.slug}</loc>
+                <lastmod>${categoryLastMod[category.slug] || new Date().toISOString()}</lastmod>
                 <changefreq>weekly</changefreq>
                 <priority>0.6</priority>
               </url>
