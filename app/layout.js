@@ -105,7 +105,7 @@ export default function RootLayout({ children }) {
                   mobile: {
                     position: 'br',
                     xOffset: 5,
-                    yOffset: 80
+                    yOffset: 120
                   }
                 }
               };
