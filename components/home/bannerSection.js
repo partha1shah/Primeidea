@@ -24,18 +24,23 @@ const BannerSection = (props) => {
       <ContactFormModal formTitle={formTitle} isOpen={isModalOpen} onClose={toggle} />
       <div className={`banner-section relative h-full ${hasSubSection ? "md:h-[100vh]" : ""}`}>
         <div
-          className={`image-section relative w-full overflow-hidden bg-cover bg-center bg-no-repeat ${
+          className={`image-section relative w-full overflow-hidden bg-[#E7F4FB] ${
             hasSubSection
               ? "h-[calc(100vh-166px)]"
               : "flex flex-col min-h-0 md:min-h-[85vh]"
           }`}
-          style={{
-            backgroundImage:
-              !props.isMobileBanner && props.mainBannerImage
-                ? `url(${props.mainBannerImage})`
-                : undefined,
-          }}
         >
+          {!props.isMobileBanner && props.mainBannerImage ? (
+            <Image
+              src={props.mainBannerImage}
+              alt=""
+              fill
+              priority
+              fetchPriority="high"
+              sizes="100vw"
+              className="object-cover object-center"
+            />
+          ) : null}
           {props.isMobileBanner && (
             <>
               <div
@@ -57,7 +62,7 @@ const BannerSection = (props) => {
             </>
           )}
           <div
-            className={`main-section mx-auto 2xl:max-w-[1340px] xl:max-w-[1170px] lg:max-w-[1004px] px-4 flex justify-between flex-col sm:flex-row gap-6 sm:gap-8 w-full ${
+            className={`main-section relative z-[1] mx-auto 2xl:max-w-[1340px] xl:max-w-[1170px] lg:max-w-[1004px] px-4 flex justify-between flex-col sm:flex-row gap-6 sm:gap-8 w-full ${
               hasSubSection
                 ? "absolute pt-[160px] sm:pt-0 bottom-[186px] top-0 sm:top-[20%] left-[50%] translate-x-[-50%] items-start"
                 : "relative flex-1 pt-[140px] pb-6 md:pt-[100px] md:pb-10 md:items-center"
@@ -138,8 +143,9 @@ const BannerSection = (props) => {
                   src={props.bannerRightImg}
                   width={802}
                   height={642}
-                  alt={props.mainTitle}
-                  className="max-h-[300px] sm:max-h-[555px] object-contain m-auto sm:m-0"
+                  alt={props.mainTitle || ""}
+                  sizes="(max-width: 640px) 90vw, 568px"
+                  className="max-h-[300px] sm:max-h-[555px] w-auto h-auto object-contain m-auto sm:m-0"
                 />
               </div>
             )}

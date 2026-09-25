@@ -41,7 +41,7 @@ const ContactUs = () => {
     return (
         <>
         <Header />
-            <main className="bg-[#f2f3f4] pt-24 py-12">
+            <div className="bg-[#f2f3f4] pt-24 py-12">
                 <div className="2xl:max-w-[1340px] xl:max-w-[1170px] lg:max-w-[1004px] mx-auto px-4">                
                     <section className="mt-12">
                         <div className="text-center">
@@ -96,7 +96,7 @@ const ContactUs = () => {
                         </div>
                     </div>
                 </div>
-            </main>
+            </div>
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14768.370415817908!2d73.1535375!3d22.2744817!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc62043c33df9%3A0x9fba545369e22bb9!2sPrimeidea%20Ventures%20-%20Mutual%20Fund%20%7C%20Insurance%20-%20Investment%20Advisor!5e0!3m2!1sen!2sin!4v1704794238110!5m2!1sen!2sin"
                 width="100%"

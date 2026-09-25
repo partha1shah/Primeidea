@@ -105,7 +105,7 @@ const LegacySuccessionSection = () => {
               href="/legacy-succession-estate-planning-india"
               className="border-2 border-[#293C7D] text-base font-bold rounded-md text-[#293C7D] px-5 py-3 inline-flex items-center hover:bg-[#293C7D] hover:text-white transition-colors"
             >
-              Learn More
+              Explore legacy and estate planning
             </Link>
           </FadeUpOneByOneAnimation>
         </div>

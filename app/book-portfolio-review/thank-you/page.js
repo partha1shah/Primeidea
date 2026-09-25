@@ -45,7 +45,7 @@ function ThankYouInner() {
   return (
     <div className="bg-[#F6FDFF] min-h-screen">
       <Header />
-      <main className="pt-28 md:pt-32 pb-16 md:pb-20">
+      <div className="pt-28 md:pt-32 pb-16 md:pb-20">
         <div className="mx-auto max-w-[720px] px-4">
           <div className="relative overflow-hidden rounded-[28px] border border-[#D0E0EC] bg-white p-6 md:p-10 shadow-[0_24px_60px_-40px_rgba(41,60,125,0.45)] text-center">
             <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-[#479AD2] via-[#293C7D] to-[#FFC300]" />
@@ -120,7 +120,7 @@ function ThankYouInner() {
             are subject to market risks.
           </p>
         </div>
-      </main>
+      </div>
       <Footer />
     </div>
   );

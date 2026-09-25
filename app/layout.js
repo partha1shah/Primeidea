@@ -6,8 +6,10 @@ import Script from "next/script";
 import StickyMobileCta from "@/components/StickyMobileCta";
 
 const manrope = Manrope({
-  subsets: ["latin"],
-  weight: ["200", "300", "400", "500", "600", "700", "800"],
+  subsets: ["latin", "latin-ext"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  display: "swap",
+  preload: true,
   variable: "--font-manrope",
 });
 
@@ -90,11 +92,11 @@ export default function RootLayout({ children }) {
           src="https://primeidea-ventures.odoo.com/im_livechat/assets_embed.js"
         /> */}
       <body className={manrope.className} suppressHydrationWarning>
-        {children}
+        <main>{children}</main>
         <StickyMobileCta />
          <Script
           id="tawk-to"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
               var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -112,7 +114,6 @@ export default function RootLayout({ children }) {
                 s1.async=true;
                 s1.src='https://embed.tawk.to/59db992c4854b82732ff4818/default';
                 s1.charset='UTF-8';
-                s1.setAttribute('crossorigin','*');
                 s0.parentNode.insertBefore(s1,s0);
               })();
             `,

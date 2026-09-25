@@ -1,8 +1,29 @@
+import path from "path";
+import { fileURLToPath } from "url";
 import "./env.mjs";
+
+const projectDir = path.dirname(fileURLToPath(import.meta.url));
+const modernPolyfill = path.join(projectDir, "lib/modern-polyfill.js");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: false,
+  turbopack: {
+    resolveAlias: {
+      "../build/polyfills/polyfill-module": "./lib/modern-polyfill.js",
+      "next/dist/build/polyfills/polyfill-module": "./lib/modern-polyfill.js",
+    },
+  },
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        "../build/polyfills/polyfill-module": modernPolyfill,
+        "next/dist/build/polyfills/polyfill-module": modernPolyfill,
+      };
+    }
+    return config;
+  },
   images: {
     remotePatterns: [
       {

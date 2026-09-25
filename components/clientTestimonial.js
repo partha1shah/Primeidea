@@ -1,5 +1,4 @@
 "use client";
-import FadeUpOneByOneAnimation from "@/animations/FadeUpOneByOneAnimation";
 import Image from "next/image";
 import { useEffect, useRef, useState, useCallback } from "react";
 import Slider from "react-slick";
@@ -115,9 +114,9 @@ const ClientTestimonial = () => {
 
   return (
     <section aria-labelledby="testimonials-heading">
-      <div className="bg-[#F6FDFF] pt-10 pb-14 md:pt-12 md:pb-16">
+      <div className="bg-[#F6FDFF] pt-10 pb-14 md:pt-12 md:pb-16 text-[#171717]">
         <div className="2xl:max-w-[1340px] xl:max-w-[1170px] lg:max-w-[1004px] mx-auto px-4">
-          <FadeUpOneByOneAnimation className="text-center max-w-[640px] mx-auto mb-8 md:mb-10">
+          <div className="text-center max-w-[640px] mx-auto mb-8 md:mb-10">
             <h2
               id="testimonials-heading"
               className="text-2xl font-medium tracking-tight text-[#04102A] sm:text-3xl mt-0 mb-3"
@@ -128,7 +127,7 @@ const ClientTestimonial = () => {
               Process-led feedback on portfolio review and planning conversations —
               not return promises.
             </p>
-          </FadeUpOneByOneAnimation>
+          </div>
           <div className="bg-[#C6E8FF] flex rounded-lg">
             <div className="w-full md:w-[78%] 2xl:w-[82%] md:border-r border-r-[#B2B2B2] px-6 md:py-6 py-10 lg:py-12 lg:px-10">
               {/* <div className="flex justify-between mx-[-3%]"> */}
@@ -149,7 +148,7 @@ const ClientTestimonial = () => {
                       key={index}
                       // className={currentSlide === index ? "active" : null}
                     >
-                      <FadeUpOneByOneAnimation
+                      <div
                         className={`px-[10px] sm:px-[30px] ${
                           activeSlides.includes(index) ? "sm:border-r " : ""
                         } border-r-[#B2B2B2]`}
@@ -170,7 +169,7 @@ const ClientTestimonial = () => {
                             {item.subtitle}
                           </h4>
                         </div>
-                      </FadeUpOneByOneAnimation>
+                      </div>
                     </div>
                   );
                 })}
@@ -178,8 +177,8 @@ const ClientTestimonial = () => {
               {/* </div> */}
             </div>
             <div className="hidden md:inline-block w-[22%] 2xl:w-[18%] p-10 text-center">
-              <FadeUpOneByOneAnimation className="text-[22px] font-normal">Average Rating</FadeUpOneByOneAnimation>
-              <FadeUpOneByOneAnimation className="my-3 text-6xl font-semibold block">4.9</FadeUpOneByOneAnimation>
+              <div className="text-[22px] font-normal">Average Rating</div>
+              <div className="my-3 text-6xl font-semibold block">4.9</div>
               <div className="flex flex-col justify-center items-center">
                 <Image
                   src="/images/icons/stars.png"
@@ -188,9 +187,9 @@ const ClientTestimonial = () => {
                   alt="Ratings"
                 />
               </div>
-              <FadeUpOneByOneAnimation className="mt-2 max-w-[80%] mx-auto block text-sm text-[#4D4D4D]">
+              <div className="mt-2 max-w-[80%] mx-auto block text-sm text-[#4D4D4D]">
                 Based on client feedback
-              </FadeUpOneByOneAnimation>
+              </div>
               <span className="bg-[#B2B2B2] h-[1px] w-full block my-[30px] "></span>
 
               <div className="flex">
@@ -219,7 +218,7 @@ const ClientTestimonial = () => {
               </div>
             </div>
           </div>
-          <p className="mt-6 text-center text-xs text-[#6B7C8A] leading-relaxed max-w-[720px] mx-auto">
+          <p className="mt-6 text-center text-xs text-[#3D4E5C] leading-relaxed max-w-[720px] mx-auto">
             Individual experiences vary. Investments in the securities market are subject to
             market risks. PrimeIdea Ventures does not guarantee returns.
           </p>
