@@ -101,7 +101,7 @@ const DISCLOSURE =
   "Educational content only. Investments in the securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns and does not present itself as a SEBI Registered Investment Adviser unless separately registered.";
 
 const PARTHA_EXPERIENCE =
-  "SEBI Registered Research Analyst. Engineering graduate (BE) and Master’s in Finance (MS Finance). CFA Level 2 examination completed. RIA examinations completed are not a SEBI Investment Adviser registration.";
+  "Engineering Graduate, Masters in Finance & SEBI Registered Research Analyst.";
 
 export function getBlogCategory(slug) {
   if (!slug) return null;
