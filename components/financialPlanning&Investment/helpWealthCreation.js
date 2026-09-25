@@ -13,9 +13,9 @@ const HelpWealthCreation = () => {
         <div className="flex justify-between flex-col md:flex-row mx-[-15px]">
           <div className="w-full md:w-1/2 px-[15px] mb-6 md:mb-0">
             <FadeUpOneByOneAnimation className="text-lg xl:text-xl mb-4 text-[#171717]">
-                We don&apos;t just recommend the right investments; we help you take
-                action and manage your portfolio. From investing to performance
-                analysis and rebalancing,
+                The review covers allocation, diversification, the goal date, the
+                current mix, and a later check-in. It does not name a single
+                best plan.
             </FadeUpOneByOneAnimation>
             <Image
               src="/images/financial-planning/wealth-creation.png"

@@ -185,22 +185,23 @@ const resourceCategories = [
     group: "events",
     title: "Investor education videos",
     description:
-      "Short explainers on research-led investing, portfolio review, and planning basics for Gujarat and India investors.",
-    href: "/contact-us",
-    cta: "Request access",
+      "Published explainers live as articles. Recorded sessions are added only when a real session is filmed — placeholder videos are not used.",
+    href: "/blogs",
+    cta: "Read explainers",
     Icon: FilmIcon,
-    status: "on-request",
+    status: "live",
   },
   {
     id: "seminars",
     group: "events",
     title: "Seminar presentations",
     description:
-      "Workshop and seminar decks for investor education sessions coordinated from the Vadodara office.",
-    href: "/contact-us",
-    cta: "Enquire about seminars",
+      "Outline used for investor education sessions from the Vadodara office. No product pitch and no return promise.",
+    href: "/docs/research/investor-education-seminar.pdf",
+    cta: "Download outline",
     Icon: PresentationChartBarIcon,
-    status: "on-request",
+    status: "live",
+    external: true,
   },
 ];
 

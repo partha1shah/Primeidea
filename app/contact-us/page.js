@@ -10,8 +10,8 @@ import Image from "next/image";
 
 export const metadata = {
     title: 'Contact Us | PrimeIdea - Financial Guidance & Support',
-    description: 'Have questions about financial planning or wealth management? Contact PrimeIdea Ventures for personalized advice and expert support.',
-    keywords: 'mutual funds, investment advisory, financial planning, wealth management, retirement planning, insurance solutions, Partha Shah, PrimeIdea Ventures, Gujarat financial advisor, investment consultant',
+    description: 'Contact PrimeIdea Ventures in Vadodara about a portfolio review or research-led planning. Research is guided by Partha Shah, SEBI Registered Research Analyst INH000017815.',
+    keywords: 'contact PrimeIdea, portfolio review, Vadodara, Partha Shah, SEBI Registered Research Analyst INH000017815',
     author: 'Partha Shah',
     robots: 'index, follow',
     canonical: 'https://www.primeidea.in/contact-us/',
@@ -21,7 +21,7 @@ export const metadata = {
       url: 'https://www.primeidea.in/contact-us/',
       site_name: 'PrimeIdea Ventures',
       title: 'Contact Us | PrimeIdea - Financial Guidance & Support',
-      description: 'Have questions about financial planning or wealth management? Contact PrimeIdea Ventures for personalized advice and expert support.',
+      description: 'Contact PrimeIdea Ventures in Vadodara about a portfolio review or research-led planning. Research is guided by Partha Shah, SEBI Registered Research Analyst INH000017815.',
     },
     twitter: {
       handle: '@primeidea',

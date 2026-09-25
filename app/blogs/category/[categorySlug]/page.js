@@ -2,144 +2,60 @@ import React from "react";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { getPostList, getCategoriesPostList } from "@/lib/posts";
-// import graphqlRequest from "@/lib/graphqlRequest";
 import BlogListing from "@/components/blogs/blogListing";
-import graphqlRequest from "@/lib/graphqlRequest";
-
+import { classifyPost, getBlogCategory } from "@/data/blogScope";
+import { notFound, redirect } from "next/navigation";
 
 export async function generateMetadata({ params }) {
   const { categorySlug } = await params;
-  const query = {
-    query: `query pageSEO {
-      category(id: "${categorySlug}", idType: SLUG) {
-          seo {
-            metaDesc
-            title
-            metaKeywords
-            canonical
-            focuskw
-            opengraphTitle
-            opengraphDescription
-            twitterTitle
-            twitterDescription
-            opengraphImage {
-              mediaDetails {
-                sizes {
-                  sourceUrl
-                }
-              }
-            }
-          }
-        }
-      }`,
-  };
-  const response = await graphqlRequest(query);
-  const content = response;
+  const category = getBlogCategory(categorySlug);
+  if (!category) {
+    return { title: "Category not found" };
+  }
+  const url = `https://www.primeidea.in/blogs/category/${category.slug}`;
+  const description = `PrimeIdea Ventures helps investors with ${category.label.toLowerCase()} through a research-led process guided by Partha Shah, SEBI Registered Research Analyst INH000017815.`;
 
   return {
-    title: content.data.category.seo.title,
-    description: content.data.category.seo.metaDesc,
-    keywords: content.data.category.metaKeywords,
-    applicationName: 'PrimeIdea Ventures',
-    formatDetection: {
-      email: true,
-      address: true,
-      telephone: true,
-    },
-    author: 'Partha Shah',
-    robots: 'index, follow',
-    canonical: `https://www.primeidea.in/blogs/category/${categorySlug}`,
+    title: category.label,
+    description,
+    keywords: `${category.label}, PrimeIdea Ventures, Partha Shah, SEBI RA INH000017815`,
+    author: "Partha Shah",
+    robots: "index, follow",
     alternates: {
-      canonical: `https://www.primeidea.in/blogs/category/${categorySlug}`,
+      canonical: url,
       languages: {
-        'en-US': `https://www.primeidea.in/blogs/category/${categorySlug}`,
+        "en-US": url,
       },
     },
     openGraph: {
-      title: content.data.category.seo.title,
-      description: content.data.category.seo.metaDesc,
-      url: `https://www.primeidea.in/blogs/category/${categorySlug}`,
-      site_name: 'PrimeIdea Ventures',
-      // images: [
-      //   {
-      //     url: content.data.category.seo.opengraphImage?.mediaDetails.sizes
-      //       .sourceUrl,
-      //   },
-      // ],
-      locale: "en_US",
+      title: `${category.label} | PrimeIdea Ventures`,
+      description,
+      url,
+      site_name: "PrimeIdea Ventures",
+      locale: "en_IN",
       type: "website",
     },
     twitter: {
-      title: content.data.category.seo.title,
-      description: content.data.category.seo.metaDesc,
-      // images:
-      //   content.data.category.seo.opengraphImage?.mediaDetails.sizes.sourceUrl,
+      card: "summary_large_image",
+      title: `${category.label} | PrimeIdea Ventures`,
+      description,
     },
   };
-}
-
-async function getData(categorySlug) {
-    const query = {
-        query: `query getPostListByCategory($categorySlug: String!) {
-            posts(where: {categoryName: $categorySlug, orderby: {field: DATE, order: DESC}}) {
-                nodes {
-                    date
-                    slug
-                    title
-                    excerpt(format: RENDERED)
-                    featuredImage {
-                        node {
-                            uri
-                            sourceUrl
-                            mediaDetails {
-                                file
-                                sizes {
-                                    sourceUrl
-                                    width
-                                    height
-                                }
-                            }
-                        }
-                    }
-                    categories {
-                        nodes {
-                            name
-                            slug
-                        }
-                    }
-                    author {
-                        node {
-                            avatar {
-                                url
-                            }
-                            name
-                        }
-                    }
-                }
-                pageInfo {
-                    endCursor
-                    hasNextPage
-                    hasPreviousPage
-                    startCursor
-                }
-            }
-        }`,
-        variables: { categorySlug } // Pass categorySlug as a variable
-    };
-
-    const data = await graphqlRequest(query);
-    return data.data; // Return the post data from the response
-}
-
-async function getCategoryData(params) {
-    const allPosts = await getCategoriesPostList();
-    return { allPosts: allPosts };
 }
 
 export default async function BlogsList({params}) {
     const { categorySlug } = await params;
-    const posts = await getData(categorySlug);
+    const category = getBlogCategory(categorySlug);
+    if (!category) notFound();
+    if (category.slug !== categorySlug) {
+      redirect(`/blogs/category/${category.slug}`);
+    }
+
+    const allPosts = await getPostList();
     const categoriesList = await getCategoriesPostList();
+    const posts = (allPosts?.nodes || []).filter(
+      (post) => classifyPost(post).slug === category.slug
+    );
 
     return (
         <div>
@@ -148,7 +64,7 @@ export default async function BlogsList({params}) {
 
             <div className="py-12">
                 <BlogListing 
-                posts={posts.posts.nodes}
+                posts={posts}
                 categoriesList={categoriesList.categories.nodes}
                 />
             </div>

@@ -22,7 +22,7 @@ const ExpertiseSection = () => {
                 Why Partner with <br/> PrimeIdea Ventures?
               </h2>
               <p className="text-lg xl:text-xl mb-3 font-medium text-black">
-                As a financial advisor, your focus is on delivering personalized financial strategies. Our partnership gives you the tools, expertise, and resources to serve your clients better and expand your business. We provide the support you need to enhance your offerings, stay compliant, and unlock new growth opportunities.
+                Partners use PrimeIdea’s research process with their own clients. PrimeIdea is a SEBI Registered Research Analyst practice based in Vadodara. It is not a SEBI Registered Investment Adviser unless separately registered, and it does not guarantee returns for a partner’s clients.
               </p>              
               <a
                 href="/contact-us"

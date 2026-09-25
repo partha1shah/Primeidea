@@ -23,6 +23,25 @@ const SERVICES = [
   "NRI Consultation",
 ];
 
+const PRODUCT_OPTIONS = [
+  "Mutual funds",
+  "Direct equity",
+  "Fixed income",
+  "Insurance",
+  "NPS",
+  "PMS / AIF",
+  "Other",
+];
+
+// Same ranges as the holdings-upload form (en-dash U+2013).
+const SIZE_OPTIONS = [
+  "Under ₹25 lakh",
+  "₹25 lakh – ₹1 crore",
+  "₹1 crore – ₹5 crore",
+  "Above ₹5 crore",
+  "Prefer not to say",
+];
+
 // Must match CF7 form 421 select options exactly (en-dash U+2013, not hyphen).
 const TIME_SLOTS = [
   "10:00 AM – 11:00 AM",
@@ -96,9 +115,18 @@ export default function BookPortfolioReviewForm({
     preferredTime: "",
     meetingMode: "video",
     whatsappConfirm: true,
+    portfolioSize: "",
+    concern: "",
     notes: "",
   });
+  const [products, setProducts] = useState([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const toggleProduct = (item) => {
+    setProducts((current) =>
+      current.includes(item) ? current.filter((product) => product !== item) : [...current, item]
+    );
+  };
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -123,7 +151,10 @@ export default function BookPortfolioReviewForm({
       !formData.service ||
       !formData.preferredDate ||
       !formData.preferredTime ||
-      !formData.meetingMode
+      !formData.meetingMode ||
+      !formData.portfolioSize ||
+      !formData.concern ||
+      products.length === 0
     ) {
       notyf.error("Please fill in all required fields");
       return;
@@ -157,9 +188,20 @@ export default function BookPortfolioReviewForm({
     body.append("preferredTime", preferredTime);
     body.append("meetingMode", meetingMode);
     body.append("whatsappConfirm", formData.whatsappConfirm ? "Yes" : "No");
-    if (formData.notes) {
-      body.append("notes", formData.notes);
-    }
+    body.append("portfolioSize", formData.portfolioSize);
+    products.forEach((product) => body.append("products", product));
+    body.append("concern", formData.concern);
+    // Form 421 already mails [notes]. Size, products, and concern are written
+    // there so the booking email carries them even if WordPress has no extra tags.
+    const briefing = [
+      `Approx. portfolio size: ${formData.portfolioSize}`,
+      `Products currently held: ${products.join(", ")}`,
+      `Main concern: ${formData.concern}`,
+      formData.notes ? `Anything else: ${formData.notes}` : "",
+    ]
+      .filter(Boolean)
+      .join("\n");
+    body.append("notes", briefing);
 
     try {
       const response = await fetch(endpoint, {
@@ -176,6 +218,8 @@ export default function BookPortfolioReviewForm({
           service: formData.service,
           meeting_mode: formData.meetingMode,
           whatsapp_confirm: formData.whatsappConfirm,
+          portfolio_size: formData.portfolioSize,
+          products: products.join(", "),
           cf7_form_id: CF7_BOOK_PORTFOLIO_REVIEW_ID,
         });
 
@@ -304,6 +348,72 @@ export default function BookPortfolioReviewForm({
             </option>
           ))}
         </select>
+      </div>
+
+      <div>
+        <label htmlFor="portfolioSize" className={labelClass}>
+          Approximate portfolio size *
+        </label>
+        <select
+          id="portfolioSize"
+          name="portfolioSize"
+          required
+          value={formData.portfolioSize}
+          onChange={handleChange}
+          className={`${fieldClass} appearance-none`}
+        >
+          <option value="">Select a range</option>
+          {SIZE_OPTIONS.map((option) => (
+            <option key={option} value={option}>
+              {option}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <fieldset>
+        <legend className={labelClass}>Products currently held *</legend>
+        <div className="flex flex-wrap gap-2">
+          {PRODUCT_OPTIONS.map((item) => {
+            const checked = products.includes(item);
+            return (
+              <label
+                key={item}
+                className={`inline-flex cursor-pointer items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+                  checked
+                    ? "border-[#232D63] bg-[#232D63] !text-white"
+                    : "border-[#D0E0EC] bg-white text-[#293C7D] hover:border-[#293C7D]/40"
+                }`}
+              >
+                <input
+                  type="checkbox"
+                  name="products"
+                  value={item}
+                  className="sr-only"
+                  checked={checked}
+                  onChange={() => toggleProduct(item)}
+                />
+                {item}
+              </label>
+            );
+          })}
+        </div>
+      </fieldset>
+
+      <div>
+        <label htmlFor="concern" className={labelClass}>
+          Main concern *
+        </label>
+        <textarea
+          id="concern"
+          name="concern"
+          rows={3}
+          required
+          value={formData.concern}
+          onChange={handleChange}
+          placeholder="Overlap, allocation, tax, retirement, family structure…"
+          className={fieldClass}
+        />
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

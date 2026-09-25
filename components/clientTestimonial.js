@@ -102,14 +102,14 @@ const ClientTestimonial = () => {
       title: "Ms. Kavita Mehta",
       subtitle: "Pre-retiree · Vadodara",
       description:
-        "Retirement planning focused on corpus, withdrawal needs, and risk, without guaranteed-income language.The framework made the conversation calmer.",
+        "Retirement planning focused on corpus, withdrawal needs, and risk, without guaranteed-income language. The framework made the conversation calmer.",
     },
     {
       imageUrl: "/images/icons/comma.png",
       title: "Mr. Suresh Iyer",
       subtitle: "NRI investor · Video review",
       description:
-        "Joining from outside India was straightforward.India holdings were reviewed for fit and documentation clarity,with the Vadodara team on a structured call.",
+        "Joining from outside India was straightforward. India holdings were reviewed for fit and documentation clarity, with the Vadodara team on a structured call.",
     },
   ];
 

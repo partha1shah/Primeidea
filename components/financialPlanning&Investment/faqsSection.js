@@ -38,13 +38,13 @@ const FaqsSection = () => {
                     <FadeUpOneByOneAnimation>
                     <h2 className="flex items-center justify-between text-[18px] md:text-[20px] 2xl:text-[22px] font-semibold text-[#222222]">
                       <span>
-                        What does an investment advisory service provide?
+                        Is this SEBI Registered Investment Adviser advice?
                       </span>
                       <Image src="/images/icons/circle-down-arrow.png" width={30} height={30} alt="Arrow" className="w-[24px] sm:w-[30px] h-[24px] sm:h-[30px] ml-2" />
                     </h2>
                     <div className={`content mt-4 text-base md:text-lg max-w-full md:max-w-[85%] text-[#222222] ${activeTab === 1 ? 'block' : 'hidden'}`}>
                       <p>
-                        Investment advisory services offer expert guidance on managing investments, selecting financial products, and building portfolios aligned with your risk tolerance, goals, and time horizon.
+                        No. PrimeIdea operates under SEBI Registered Research Analyst registration INH000017815. It does not present itself as a SEBI Registered Investment Adviser unless separately registered. The planning work is a research review of goals and holdings.
                       </p>
                     </div>
                     </FadeUpOneByOneAnimation>
@@ -74,7 +74,7 @@ const FaqsSection = () => {
                     </h2>
                     <div className={`content mt-4 text-base md:text-lg max-w-full md:max-w-[85%] text-[#222222] ${activeTab === 3 ? 'block' : 'hidden'}`}>
                       <p>
-                      The right options depend on factors like your risk tolerance, financial goals, investment horizon, and current financial situation. For more info contact with our advisor.
+                      The fit depends on risk tolerance, goals, time horizon, and the holdings already in place. Book a portfolio review and the research team will walk through that list with you.
                       </p>
                     </div>
                     </FadeUpOneByOneAnimation>

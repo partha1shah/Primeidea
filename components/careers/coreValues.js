@@ -10,7 +10,7 @@ const CoreValues = () => {
         },
         {
             title: "Ongoing Growth",
-            description: "We are committed to lifelong learning, staying ahead of industry trends, and constantly enhancing our expertise to deliver the best possible outcomes."
+            description: "We are committed to lifelong learning and to careful, documented work for investors. Outcomes in the securities market are not guaranteed."
         },
         {
             title: "Teamwork & Respect",

@@ -3,8 +3,9 @@ import moment from "moment";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { BLOG_CATEGORIES, classifyPost } from "@/data/blogScope";
 
-export default function BlogListing({ posts, categoriesList }) {
+export default function BlogListing({ posts }) {
   // console.log(posts);
   // console.log(categoriesList);
 
@@ -120,25 +121,44 @@ export default function BlogListing({ posts, categoriesList }) {
                 All Categories
               </Link>
             </li>
-            {categoriesList.filter(item => item.count > 0).map((items, index) => {
+            {BLOG_CATEGORIES.map((items) => {
               return (
                 <li
-                  key={index}
+                  key={items.slug}
                   className="border-b border-[#479AD2] last:border-b-0"
                 >
-                  <a
+                  <Link
                     href={`/blogs/category/${items.slug}`}
-                    className="text-[#222222] font-semibold text-lg xl:text-xl inline-block w-full px-4 py-3 xl:py-4"
+                    className="text-[#222222] font-semibold text-base xl:text-lg inline-block w-full px-4 py-3 xl:py-4"
                   >
-                    {items.name}
-                  </a>
+                    {items.label}
+                  </Link>
                 </li>
               );
             })}
           </ul>
         </div>
         <div className="w-full lg:w-[calc(100%-305px)] xl:w-[calc(100%-362px)] h-full lg:shadow-[0_0_7px_0_#00000040] rounded-2xl ">
+          <div className="lg:hidden flex flex-wrap gap-2 px-2 pb-4">
+            <Link href="/blogs" className="rounded-md bg-[#293C7D] px-3 py-1.5 text-sm font-semibold text-white">
+              All
+            </Link>
+            {BLOG_CATEGORIES.map((items) => (
+              <Link
+                key={items.slug}
+                href={`/blogs/category/${items.slug}`}
+                className="rounded-md bg-[#BCE4FF] px-3 py-1.5 text-sm font-semibold text-[#222]"
+              >
+                {items.label}
+              </Link>
+            ))}
+          </div>
           <ul>
+            {posts.length === 0 ? (
+              <li className="px-4 py-10 text-base text-[#4D4D4D]">
+                No articles are filed in this category yet.
+              </li>
+            ) : null}
             {posts.map((item, index) => {
               // console.log("items", item);
               return (
@@ -164,7 +184,7 @@ export default function BlogListing({ posts, categoriesList }) {
                     <div className="w-[calc(100%-95px)] md:w-[calc(100%-148px)] lg:w-[calc(100%-168px)]">
                       <div className="top-section flex items-center ">
                         <div className="bg-[#BCE4FF] text-[#000] px-3 py-1 rounded-md font-normal text-sm md:text-base">
-                          {item.categories.nodes[0].name}
+                          {classifyPost(item).label}
                         </div>{" "}
                         <span className="w-[16px] h-[2px] rounded-[5px] bg-[#222222] mx-2 md:mx-4"></span>{" "}
                         <div className="text-sm md:text-lg">{moment(item.date).format('MMMM D, YYYY')}</div>

@@ -13,15 +13,10 @@ import Footer from "@/components/footer";
 import InsightsSection from "@/components/insightsSection";
 import graphqlRequest from "@/lib/graphqlRequest";
 
-// export const metadata = {
-//     title: 'Financial Planning And Investment Advisory Services in India',
-//     description: 'Discover top-tier wealth management services in India with certified consultants. Contact with the best wealth management firm for solutions and expert advisory. Achieve your goals with our leading wealth management company.',
-// }
-
 export const metadata = {
-    title: 'Financial Planning And Investment Advisory Services in India',
-    description: 'Discover top-tier wealth management services in India with certified consultants. Contact with the best wealth management firm for solutions and expert advisory. Achieve your goals with our leading wealth management company.',
-    keywords: 'mutual funds, investment advisory, financial planning, wealth management, retirement planning, insurance solutions, Partha Shah, PrimeIdea Ventures, Gujarat financial advisor, investment consultant',
+    title: 'Financial Planning',
+    description: 'PrimeIdea writes a financial plan from goals, cash flow, and current holdings for investors in Vadodara and across Gujarat and India. Research is guided by Partha Shah, SEBI Registered Research Analyst INH000017815. This is not SEBI Registered Investment Adviser advice and does not guarantee returns.',
+    keywords: 'financial planning, portfolio review, wealth management, Partha Shah, PrimeIdea Ventures, SEBI Registered Research Analyst INH000017815, Vadodara',
     author: 'Partha Shah',
     robots: 'index, follow',
     canonical: 'https://www.primeidea.in/financial-planning-and-investment-advisory/',
@@ -30,8 +25,8 @@ export const metadata = {
       locale: 'en_IE',
       url: 'https://www.primeidea.in/financial-planning-and-investment-advisory/',
       site_name: 'PrimeIdea Ventures',
-      title: 'Financial Planning And Investment Advisory Services in India',
-      description: 'Discover top-tier wealth management services in India with certified consultants. Contact with the best wealth management firm for solutions and expert advisory. Achieve your goals with our leading wealth management company.',
+      title: 'Financial Planning | PrimeIdea Ventures',
+      description: 'PrimeIdea writes a financial plan from goals, cash flow, and current holdings for investors in Vadodara and across Gujarat and India. Research is guided by Partha Shah, SEBI Registered Research Analyst INH000017815. This is not SEBI Registered Investment Adviser advice and does not guarantee returns.',
     },
     twitter: {
       handle: '@primeidea',
@@ -103,43 +98,23 @@ export default async function FinancialPlanningAndInvestmentAdvisory() {
     const categorySlug= 'Finance Planning';
     const posts = await getData(categorySlug);
 
-    const steps = [
-        {
-          id: '01',
-          title: "Getting to know you.",
-          content:
-            "We begin the financial planning process by understanding your unique needs, goals, and existing assets and liabilities. We also pay close attention to the crucial details that impact your financial plan.",
-        },
-        {
-          id: '02',
-          title: "Finding the right investments",
-          content:
-            "We use our expertise and AI-driven Robo Advisor to match investment avenues with your goals, covering retirement and tax planning for a complete financial solution.",
-        },
-        {
-          id: '03',
-          title: "Recommending the best plan",
-          content:
-            "We recommend investments and manage your portfolio, including performance analysis and rebalancing, to help you achieve your financial goals.",
-        },
-      ];
-
     return (
         <div className="bg-[#F6FDFF]">
             <BannerSection 
              mainBannerImage={"/images/financial-planning/banner.png"}
              bannerRightImg={"/images/financial-planning/bannerright.png"}
-             mainTitle={"Empowering Young Professionals & Enterprenuers to Secure Their Financial Future"}
-             mainSubTitle={""}
-             mainLinkTitle={"Start your journey with us"}
-             mainLink={"https://api.whatsapp.com/send?phone=918141027000&text=Hello, I'm interested in learning more about your financial advisory and investment services. Could you please provide me with some details on how I can start planning my investments? Looking forward to hearing from you!"}
-             subSectionContent={"Primeidea creates financial plans that fuel your ambitions today and secure your success for tomorrow, whether you’re starting out or scaling up."}
-             subSectionTitle1={"Trusted By Family"}
-             subSectionSubTitle1={"1000+"}
-             subSectionTitle2={"Years of expertise"}
-             subSectionSubTitle2={"30+"}
-             subSectionTitle3={"Client Satisfaction"}
-             subSectionSubTitle3={"1500+"}
+             mainTitle={"Financial planning, written before the next investment"}
+             mainSubTitle={"Goals, cash flow, and holdings — reviewed in Vadodara"}
+             mainLinkTitle={"Book a portfolio review"}
+             mainLink={"/book-portfolio-review"}
+             usePrimaryAsLink={true}
+             subSectionContent={"PrimeIdea is based in Vadodara and serves investors across Gujarat and India. Research is guided by Partha Shah, SEBI RA INH000017815. No guaranteed returns."}
+             subSectionTitle1={"Based in"}
+             subSectionSubTitle1={"Vadodara"}
+             subSectionTitle2={"Registration"}
+             subSectionSubTitle2={"SEBI RA"}
+             subSectionTitle3={"Serving"}
+             subSectionSubTitle3={"India"}
             />
 
             <FinancialPlanning />

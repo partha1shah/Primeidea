@@ -4,8 +4,12 @@ import Link from "next/link";
 import {
   AcademicCapIcon,
   BeakerIcon,
+  BriefcaseIcon,
   CheckBadgeIcon,
+  ClipboardDocumentCheckIcon,
   MapPinIcon,
+  ScaleIcon,
+  UserGroupIcon,
 } from "@heroicons/react/24/outline";
 
 const credentials = [
@@ -20,6 +24,45 @@ const focusAreas = [
   "Suitability, overlap, and asset allocation",
   "Mutual fund and equity research support",
   "Private wealth and family book structure",
+];
+
+const roles = [
+  {
+    title: "Research",
+    description:
+      "Maps holdings, overlap, and risk, and writes the review. Every note is reviewed by Partha Shah.",
+    Icon: BeakerIcon,
+  },
+  {
+    title: "Relationship",
+    description:
+      "Schedules the Vadodara office visit or video call and collects goals before the research discussion.",
+    Icon: UserGroupIcon,
+  },
+  {
+    title: "Operations",
+    description:
+      "Keeps documents, meeting notes, and the follow-up on the written next steps.",
+    Icon: ClipboardDocumentCheckIcon,
+  },
+  {
+    title: "Compliance",
+    description:
+      "Keeps disclosures, the complaint register, and registration wording accurate. This is not legal practice.",
+    Icon: ScaleIcon,
+  },
+  {
+    title: "NISM",
+    description:
+      "People in regulated roles are expected to hold the relevant NISM certification. A certificate number is shown only after PrimeIdea verifies it.",
+    Icon: AcademicCapIcon,
+  },
+  {
+    title: "Named profiles",
+    description:
+      "A personal photo, LinkedIn link, and credentials are published only when PrimeIdea supplies them. Placeholder portraits are not used.",
+    Icon: BriefcaseIcon,
+  },
 ];
 
 const relatedPages = [
@@ -176,6 +219,15 @@ export default function LeadershipContent() {
             </p>
           </FadeUpOneByOneAnimation>
 
+          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 list-none m-0 p-0 mb-8">
+            {roles.map(({ title, description, Icon }) => (
+              <li key={title} className="rounded-[20px] border border-[#E3ECF5] bg-[#F6FDFF] p-5">
+                <Icon className="h-6 w-6 text-[#293C7D] mb-3" aria-hidden="true" />
+                <h3 className="text-base font-bold text-[#293C7D] mb-1">{title}</h3>
+                <p className="text-sm text-[#4D4D4D] leading-relaxed m-0">{description}</p>
+              </li>
+            ))}
+          </ul>
           <ul className="grid grid-cols-1 sm:grid-cols-3 gap-4 list-none m-0 p-0">
             <li className="rounded-[20px] border border-[#E3ECF5] bg-[#F6FDFF] p-5">
               <CheckBadgeIcon className="h-6 w-6 text-[#293C7D] mb-3" aria-hidden="true" />

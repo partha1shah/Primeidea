@@ -65,14 +65,14 @@ const ReportSection = () => {
               <FadeUpOneByOneLeftAnimation className="lg:w-[34%] xl:w-[28%] sm:hidden lg:flex flex-col items-center my-6 mx-auto md:mx-0  md:mb-16">
                 <Image
                     src="/images/financial-planning/financial-advisor-people.png"
-                    alt="Financial Planning & Investment Advisor"
+                    alt="Financial planning review"
                     width={477}
                     height={496}
                     className="w-full flex items-end"
                 />
-                <a href="https://api.whatsapp.com/send?phone=918141027000&text=Hello, I'm interested in learning more about your financial advisory and investment services. Could you please provide me with some details on how I can start planning my investments? Looking forward to hearing from you!"
+                <a href="https://api.whatsapp.com/send?phone=918141027000&text=Hello, I would like to book a portfolio review with PrimeIdea."
                 className="bg-[#293C7D] text-lg font-bold rounded-md text-white px-6 py-3 inline-flex items-center justify-center w-full "
-                >Get your personalized report 
+                >Book a portfolio review 
                 <Image
                     src="/images/icons/arrow-square-right.png"
                     width={21}

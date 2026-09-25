@@ -6,9 +6,9 @@ import ClientTestimonial from "@/components/clientTestimonial";
 import Footer from "@/components/footer";
 
 export const metadata = {
-    title: 'Careers | PrimeIdea - Your Trusted Financial Partner',
-    description: 'Join PrimeIdea Ventures and be part of a dynamic team shaping the future of financial services. Explore exciting career opportunities in investment advisory, financial planning, and wealth management.',
-    keywords: 'mutual funds, investment advisory, financial planning, wealth management, retirement planning, insurance solutions, Partha Shah, PrimeIdea Ventures, Gujarat financial advisor, investment consultant',
+    title: 'Submit a Resume',
+    description: 'Send a resume to PrimeIdea Ventures in Vadodara. The office works on portfolio review and research-led wealth management under SEBI Registered Research Analyst INH000017815.',
+    keywords: 'PrimeIdea careers, submit resume, Vadodara, Partha Shah, SEBI Registered Research Analyst INH000017815',
     author: 'Partha Shah',
     robots: 'index, follow',
     canonical: 'https://www.primeidea.in/careers/submit-resume',
@@ -17,8 +17,8 @@ export const metadata = {
         locale: 'en_IE',
         url: 'https://www.primeidea.in/careers/submit-resume',
         site_name: 'PrimeIdea Ventures',
-        title: 'Careers | PrimeIdea - Your Trusted Financial Partner',
-        description: 'Join PrimeIdea Ventures and be part of a dynamic team shaping the future of financial services. Explore exciting career opportunities in investment advisory, financial planning, and wealth management.',
+        title: 'Submit a Resume | PrimeIdea Ventures',
+        description: 'Send a resume to PrimeIdea Ventures in Vadodara. The office works on portfolio review and research-led wealth management under SEBI Registered Research Analyst INH000017815.',
     },
     twitter: {
         handle: '@primeidea',

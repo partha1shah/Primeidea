@@ -8,19 +8,19 @@ const StepperSection = () => {
       id: '01',
       title: "Getting to know you",
       content:
-        "We begin the financial planning process by understanding your unique needs, goals, and existing assets and liabilities. We also pay close attention to the crucial details that impact your financial plan.",
+        "We start with your goals, cash flow, and existing assets and liabilities. Those details decide what the written plan has to cover.",
     },
     {
       id: '02',
-      title: "Finding the right investments",
+      title: "Reviewing the holdings",
       content:
-        "We use our expertise and AI-driven Robo Advisor to match investment avenues with your goals, covering retirement and tax planning for a complete financial solution.",
+        "We check overlap, cost, tax, and risk against the goal date. There is no automated adviser that picks a product for you.",
     },
     {
       id: '03',
-      title: "Recommending the best plan",
+      title: "Writing the next step",
       content:
-        "We recommend investments and manage your portfolio, including performance analysis and rebalancing, to help you achieve your financial goals.",
+        "You receive a written note on what to keep, review, or change. It is not labelled the best plan, and it does not guarantee returns.",
     },
   ];
 

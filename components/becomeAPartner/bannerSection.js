@@ -29,7 +29,7 @@ const BannerSection = () => {
                   Partner with Us for Growth & Success
                 </h1>
                 <p className="text-base xl:text-lg 2xl:text-xl font-medium text-white mb-3">
-                  Join a trusted network of financial professionals and elevate your practice with our expert support and resources.
+                  Work with PrimeIdea’s Vadodara research desk. Partners use the research process with their clients. PrimeIdea is a SEBI Registered Research Analyst practice, not an investment adviser unless separately registered.
                 </p>
                 {/* <a
                   href="https://api.whatsapp.com/send?phone=918141027000&text=Hello, I'm interested in becoming a partner with Primeidea. Could you please provide me with some details on how I can get started? Looking forward to hearing from you!"
@@ -67,7 +67,7 @@ const BannerSection = () => {
                         </a>
                     </li>
                     <li className="m-2">
-                        <a href="https://api.whatsapp.com/send?phone=918141027000&text=Hello, I'm interested in learning more about your financial advisory and investment services. Could you please provide me with some details on how I can start planning my investments? Looking forward to hearing from you!">
+                        <a href="https://api.whatsapp.com/send?phone=918141027000&text=Hello, I would like to ask about partnering with PrimeIdea.">
                             <FadeUpOneByOneLeftAnimation><Image src="/images/icons/social-media/whatsapp.png" width={40} height={40} alt="WhatsApp" className="w-[35px] h-[35px] xl:w-[40px] xl:h-[40px]" /></FadeUpOneByOneLeftAnimation>
                         </a>
                     </li>

@@ -15,9 +15,9 @@ import graphqlRequest from "@/lib/graphqlRequest";
 // }
 
 export const metadata = {
-    title: 'Get Tax Planning And Management Services in India',
-    description: 'Discover expert tax planning services in India to optimize your income and save more. Explore the best tax-saving plans to meet your financial goals. Secure your future with effective income tax planning strategies.',
-    keywords: 'mutual funds, investment advisory, financial planning, wealth management, retirement planning, insurance solutions, Partha Shah, PrimeIdea Ventures, Gujarat financial advisor, investment consultant',
+    title: 'Tax Planning Support',
+    description: 'Tax is reviewed alongside holdings, goals, and cash flow for investors in Vadodara and across Gujarat and India. This is research support from PrimeIdea, not a claim of the best tax-saving plan, and not advice from a chartered accountant.',
+    keywords: 'tax planning, portfolio review, ELSS, Partha Shah, PrimeIdea Ventures, SEBI Registered Research Analyst INH000017815, Vadodara',
     author: 'Partha Shah',
     robots: 'index, follow',
     canonical: 'https://www.primeidea.in/tax-planning-savings/',
@@ -26,8 +26,8 @@ export const metadata = {
       locale: 'en_IE',
       url: 'https://www.primeidea.in/tax-planning-savings/',
       site_name: 'PrimeIdea Ventures',
-      title: 'Get Tax Planning And Management Services in India',
-      description: 'Discover expert tax planning services in India to optimize your income and save more. Explore the best tax-saving plans to meet your financial goals. Secure your future with effective income tax planning strategies.',
+      title: 'Tax Planning Support | PrimeIdea Ventures',
+      description: 'Tax is reviewed alongside holdings, goals, and cash flow for investors in Vadodara and across Gujarat and India. This is research support from PrimeIdea, not a claim of the best tax-saving plan, and not advice from a chartered accountant.',
     },
     twitter: {
       handle: '@primeidea',
@@ -131,17 +131,18 @@ export default async function TaxPlanningPage() {
             <BannerSection 
                 mainBannerImage={"/images/tax-planning/banner.png"}
                 bannerRightImg={"/images/tax-planning/bannerright.png"}
-                mainTitle={"Optimize Your Tax Liabilities with Strategic Planning"}
-                mainSubTitle={"Comprehensive Solutions to Minimize Taxes and Maximize Savings"}
-                mainLinkTitle={"Start Saving on Taxes Now"}
-                mainLink={"https://api.whatsapp.com/send?phone=918141027000&text=Hello, I'm interested in learning more about your financial advisory and investment services. Could you please provide me with some details on how I can start planning my investments? Looking forward to hearing from you!"}
-                subSectionContent={"Primeidea creates financial plans that fuel your ambitions today and secure your success for tomorrow, whether you’re starting out or scaling up."}
-                subSectionTitle1={"Trusted By Family"}
-                subSectionSubTitle1={"1000+"}
-                subSectionTitle2={"Years of expertise"}
-                subSectionSubTitle2={"30+"}
-                subSectionTitle3={"Client Satisfaction"}
-                subSectionSubTitle3={"1500+"}
+                mainTitle={"Tax reviewed with the rest of the portfolio"}
+                mainSubTitle={"Holdings, goals, and cash flow — from the Vadodara office"}
+                mainLinkTitle={"Book a portfolio review"}
+                mainLink={"/book-portfolio-review"}
+                usePrimaryAsLink={true}
+                subSectionContent={"PrimeIdea looks at tax alongside the investments you already hold. It does not promise the best tax-saving plan, and it does not replace a chartered accountant."}
+                subSectionTitle1={"Based in"}
+                subSectionSubTitle1={"Vadodara"}
+                subSectionTitle2={"Registration"}
+                subSectionSubTitle2={"SEBI RA"}
+                subSectionTitle3={"Serving"}
+                subSectionSubTitle3={"India"}
             />
             <TaxPlanning  />
             <StepperSection title={'Steps for Tax Planning & Savings'}  steps={steps}/>

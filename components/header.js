@@ -22,7 +22,7 @@ const serviceGroups = [
       {
         name: "Direct Equity Research Support",
         description: "Research-backed equity decisions",
-        href: "/research-based-wealth-management",
+        href: "/direct-equity-research-support",
       },
       {
         name: "PMS, AIF and SIF Support",

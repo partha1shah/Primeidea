@@ -8,7 +8,7 @@ import BlogListing from "@/components/blogs/blogListing";
 export const metadata = {
     title: 'PrimeIdea Blog: Insights, Tips & Ideas for Financial Journey',
     description: 'Explore PrimeIdea Ventures blog for expert insights on financial planning, investment strategies, retirement planning, tax savings, and wealth management to make informed financial decisions.',
-    keywords: 'mutual funds, investment advisory, financial planning, wealth management, retirement planning, insurance solutions, Partha Shah, PrimeIdea Ventures, Gujarat financial advisor, investment consultant',
+    keywords: 'mutual funds, portfolio review, financial planning, wealth management, retirement planning, insurance planning, Partha Shah, PrimeIdea Ventures, SEBI Registered Research Analyst INH000017815',
     author: 'Partha Shah',
     robots: 'index, follow',
     canonical: 'https://www.primeidea.in/blogs/',

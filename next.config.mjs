@@ -139,6 +139,36 @@ const nextConfig = {
         destination: "/comparisons/financial-planner-vs-wealth-manager-vadodara",
         permanent: true,
       },
+      {
+        source: "/blogs/category/finance-planning",
+        destination: "/blogs/category/mutual-fund-research",
+        permanent: true,
+      },
+      {
+        source: "/blogs/category/insurance",
+        destination: "/blogs/category/insurance-planning",
+        permanent: true,
+      },
+      {
+        source: "/blogs/category/mediclaim",
+        destination: "/blogs/category/insurance-planning",
+        permanent: true,
+      },
+      {
+        source: "/blogs/category/legacy-inheritance",
+        destination: "/blogs/category/investor-behaviour",
+        permanent: true,
+      },
+      {
+        source: "/blogs/category/wealth-management",
+        destination: "/blogs/category/portfolio-review",
+        permanent: true,
+      },
+      {
+        source: "/blogs/category/update",
+        destination: "/blogs/category/market-outlook",
+        permanent: true,
+      },
     ];
   },
 };

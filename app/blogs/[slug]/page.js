@@ -1,6 +1,8 @@
 import React from "react";
 import BlogDetail from "@/components/blogs/blogDetail";
 import graphqlRequest from "@/lib/graphqlRequest";
+import ScopePageJsonLd, { buildBreadcrumbJsonLd } from "@/components/scope/ScopePageJsonLd";
+import { classifyPost, getAuthorAttribution } from "@/data/blogScope";
 
 
 export async function generateMetadata({ params }) {
@@ -122,9 +124,52 @@ export async function getSinglePost(slug) {
 export default async function BlogDetailPage ({params}) {
     const { slug } = await params;
     const post = await getSinglePost(slug);
+    const author = getAuthorAttribution(post);
+    const category = classifyPost(post);
+    const pageUrl = `https://www.primeidea.in/blogs/${slug}`;
+
+    const articleSchema = {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: post?.title?.replace(/<[^>]+>/g, "") || "PrimeIdea article",
+      datePublished: post?.date,
+      dateModified: post?.modified || post?.date,
+      url: pageUrl,
+      author: author.writtenByPartha
+        ? {
+            "@type": "Person",
+            name: "Partha Shah",
+            jobTitle: author.role,
+            identifier: "INH000017815",
+          }
+        : [
+            {
+              "@type": "Organization",
+              name: "PrimeIdea Research Team",
+            },
+            {
+              "@type": "Person",
+              name: "Partha Shah",
+              jobTitle: "Head of Research & Investment Strategy",
+              identifier: "INH000017815",
+            },
+          ],
+      publisher: {
+        "@type": "Organization",
+        name: "PrimeIdea Ventures",
+        url: "https://www.primeidea.in",
+      },
+      articleSection: category.label,
+    };
+
+    const breadcrumbSchema = buildBreadcrumbJsonLd([
+      { name: "Blogs", url: "/blogs" },
+      { name: category.label, url: `/blogs/category/${category.slug}` },
+    ]);
 
     return (
         <div className="bg-[#F6FDFF]">
+            <ScopePageJsonLd data={[articleSchema, breadcrumbSchema]} />
             <BlogDetail slug={slug} post={post} />
         </div>
     )

@@ -8,10 +8,10 @@ const InvestmentAdvisory = () => {
           <div className="2xl:max-w-[1340px] xl:max-w-[1170px] lg:max-w-[1004px] mx-auto px-4">
             <div className="flex justify-between items-center flex-col md:flex-row mb-6">
               <h2 className="text-[24px] font-bold mb-4 md:mb-1 text-[#04102A]">
-                Investment Advisory
+                How the review is framed
               </h2>
-              <a href="https://api.whatsapp.com/send?phone=918141027000&text=Hello, I'm interested in learning more about your financial advisory and investment services. Could you please provide me with some details on how I can start planning my investments? Looking forward to hearing from you!" target="_blank" className="bg-[#293C7D] text-md font-bold rounded-[8px] text-white px-10 py-3 ">
-                  Start My Investing Journey
+              <a href="/book-portfolio-review" className="bg-[#293C7D] text-md font-bold rounded-[8px] text-white px-10 py-3 ">
+                  Book a portfolio review
               </a>
             </div>
             <ul className="flex justify-center md:justify-between flex-wrap md:flex-nowrap mx-[-10px]">
@@ -31,7 +31,7 @@ const InvestmentAdvisory = () => {
                   </h3>
                   <FadeUpOneByOneAnimation>
                     <p className="text-base md:text-[18px] leading-[140%] font-normal text-left mb-4 min-h-[138px]">
-                    Designed for those who prioritise stability and risk-averse strategies, the Foundation Plan offers secure investment options focused on long-term growth while minimising market volatility.
+                    Holdings are reviewed for cash needs, debt, and how much loss the investor can sit through. The note does not call any product secure.
                     </p>                    
                   </FadeUpOneByOneAnimation>
                   <p className="text-base font-normal text-left mb-1">
@@ -58,7 +58,7 @@ const InvestmentAdvisory = () => {
                   </h3>
                   <FadeUpOneByOneAnimation>
                     <p className="text-base md:text-[18px] leading-[140%] font-normal text-left mb-4 min-h-[138px]">
-                      The Growth Plan is perfect for individuals who want a balance between risk and return. This plan combines traditional investments with opportunities for higher growth in emerging markets and sectors.
+                      Equity and debt are checked for overlap, cost, and whether the mix still matches the goal date. Returns are not promised.
                     </p>                    
                   </FadeUpOneByOneAnimation>
                   <p className="text-base font-normal text-left mb-1">
@@ -85,7 +85,7 @@ const InvestmentAdvisory = () => {
                   </h3>
                   <FadeUpOneByOneAnimation>
                     <p className="text-base md:text-[18px] leading-[140%] font-normal text-left mb-4 min-h-[138px]">
-                      Designed for those who prioritise stability and risk-averse strategies, the Foundation Plan offers secure investment options focused on long-term growth while minimising market volatility.
+                      A larger equity share is reviewed for concentration, liquidity, and drawdown. A higher growth tilt also means a higher chance of loss.
                     </p>                    
                   </FadeUpOneByOneAnimation>
                   <p className="text-base font-normal text-left mb-1">

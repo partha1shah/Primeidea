@@ -124,6 +124,13 @@ export default function ProfileContent() {
                   About PrimeIdea
                 </Link>
               </div>
+              <p className="mt-4 text-sm text-[#4D4D4D] m-0">
+                A short machine-readable summary is at{" "}
+                <Link href="/llms.txt" className="font-semibold text-[#293C7D] underline-offset-2 hover:underline">
+                  /llms.txt
+                </Link>
+                .
+              </p>
             </div>
 
             <div className="lg:col-span-5">

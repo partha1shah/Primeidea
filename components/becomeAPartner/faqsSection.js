@@ -13,7 +13,7 @@ const FaqsSection = () => {
     const faqItems = [
         {
             question: "Who can become a partner with Primeidea Ventures?",
-            answer: "Anyone passionate about financial planning, investment advisory, or wealth management services can become a partner. We welcome experienced professionals and individuals looking to start their journey in financial advisory."
+            answer: "Professionals who work with investors on portfolios, planning, or research support can ask about a partnership. PrimeIdea is a SEBI Registered Research Analyst practice. It does not present itself as a SEBI Registered Investment Adviser unless separately registered."
         },
         {
             question: "What are the eligibility criteria to join Primeidea Ventures as a financial advisor?",
@@ -40,12 +40,12 @@ const FaqsSection = () => {
             answer: "Our product portfolio includes mutual funds, SIPs, insurance plans, tax-saving instruments, retirement plans, and more. This variety ensures you can cater to diverse client needs."
         },
         {
-            question: "How is Primeidea Ventures different from other financial advisory platforms?",
-            answer: "We stand out due to our personalized support, innovative tools, and a focus on empowering advisors with the skills and resources needed for success."
+            question: "How is PrimeIdea Ventures different from an investment-advisory platform?",
+            answer: "PrimeIdea works as a SEBI Registered Research Analyst practice. Research notes support a partner’s client conversations. They are not SEBI Registered Investment Adviser advice unless PrimeIdea is separately registered for that."
         },
         {
             question: "Can I earn passive income as a financial advisor with Primeidea Ventures?",
-            answer: "Absolutely! By building a loyal client base and managing their portfolios effectively, you can create a steady stream of passive income through recurring commissions."
+            answer: "Any commercial terms are set in the written partner arrangement. PrimeIdea does not promise passive income or returns."
         }
     ];
 

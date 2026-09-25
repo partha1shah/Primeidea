@@ -134,7 +134,7 @@ export const metadata = {
   description:
     "PrimeIdea Ventures helps investors across Gujarat and India with portfolio review and research-led wealth management through a process guided by Partha Shah, SEBI Registered Research Analyst INH000017815.",
   keywords:
-    "mutual funds, investment advisory, financial planning, wealth management, retirement planning, insurance solutions, Partha Shah, PrimeIdea Ventures, Gujarat financial advisor, investment consultant",
+    "mutual funds, portfolio review, financial planning, wealth management, retirement planning, insurance planning, Partha Shah, PrimeIdea Ventures, SEBI Registered Research Analyst INH000017815",
   author: "Partha Shah",
   robots: "index, follow",
   canonical: "https://www.primeidea.in/",

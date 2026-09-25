@@ -29,7 +29,7 @@ const BannerSection = () => {
                   Grow Your Career with Us
                 </h1>
                 <p className="text-base xl:text-lg 2xl:text-xl font-medium text-white mb-3">
-                  Join PrimeIdea Ventures  and take your career to new heights. We offer the support and resources you need to succeed. Let’s grow together.
+                  The Vadodara office works on portfolio review and research-led wealth management under SEBI Registered Research Analyst INH000017815.
                 </p>
               </div>
             </FadeUpOneByOneAnimation>
@@ -53,7 +53,7 @@ const BannerSection = () => {
                         </a>
                     </li>
                     <li className="m-2">
-                        <a href="https://api.whatsapp.com/send?phone=918141027000&text=Hello, I'm interested in learning more about your financial advisory and investment services. Could you please provide me with some details on how I can start planning my investments? Looking forward to hearing from you!">
+                        <a href="https://api.whatsapp.com/send?phone=918141027000&text=Hello, I would like to ask about careers at PrimeIdea in Vadodara.">
                             <FadeUpOneByOneLeftAnimation><Image src="/images/icons/social-media/whatsapp.png" width={40} height={40} alt="WhatsApp" className="w-[35px] h-[35px] xl:w-[40px] xl:h-[40px]" /></FadeUpOneByOneLeftAnimation>
                         </a>
                     </li>
