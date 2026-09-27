@@ -2,7 +2,7 @@ import React from "react";
 import BlogDetail from "@/components/blogs/blogDetail";
 import graphqlRequest from "@/lib/graphqlRequest";
 import ScopePageJsonLd, { buildBreadcrumbJsonLd } from "@/components/scope/ScopePageJsonLd";
-import { classifyPost, getAuthorAttribution } from "@/data/blogScope";
+import { getAuthorAttribution, getWordPressCategory } from "@/data/blogScope";
 
 
 export async function generateMetadata({ params }) {
@@ -125,7 +125,7 @@ export default async function BlogDetailPage ({params}) {
     const { slug } = await params;
     const post = await getSinglePost(slug);
     const author = getAuthorAttribution(post);
-    const category = classifyPost(post);
+    const category = getWordPressCategory(post);
     const pageUrl = `https://www.primeidea.in/blogs/${slug}`;
 
     const articleSchema = {
@@ -159,12 +159,14 @@ export default async function BlogDetailPage ({params}) {
         name: "PrimeIdea Ventures",
         url: "https://www.primeidea.in",
       },
-      articleSection: category.label,
+      ...(category ? { articleSection: category.label } : {}),
     };
 
     const breadcrumbSchema = buildBreadcrumbJsonLd([
       { name: "Blogs", url: "/blogs" },
-      { name: category.label, url: `/blogs/category/${category.slug}` },
+      ...(category
+        ? [{ name: category.label, url: `/blogs/category/${category.slug}` }]
+        : []),
     ]);
 
     return (

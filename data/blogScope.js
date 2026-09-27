@@ -1,7 +1,6 @@
 /**
- * Blog author box, category labels, and the internal-link rule.
- * Categories are assigned in the template so every article is filed even when
- * WordPress still uses older category names.
+ * Blog author box and related service links.
+ * Blog categories come from WordPress. Add or rename them in the WordPress admin.
  */
 
 export const SERVICE_LINKS = [
@@ -15,140 +14,23 @@ export const SERVICE_LINKS = [
   { title: "Regulatory Disclosures", href: "/regulatory-disclosures" },
 ];
 
-export const BLOG_CATEGORIES = [
-  {
-    slug: "mutual-fund-research",
-    label: "Mutual Fund Research",
-    wpSlugs: ["finance-planning"],
-    keywords: ["mutual fund", "sip", "elss", "index fund", "scheme"],
-    links: ["/mutual-fund-investment-support", "/portfolio-review", "/research-process"],
-  },
-  {
-    slug: "equity-research",
-    label: "Equity Research",
-    wpSlugs: [],
-    keywords: ["equity", "stock", "share market", "ipo", "shares"],
-    links: ["/research-process", "/portfolio-review", "/private-wealth-management-gujarat-india"],
-  },
-  {
-    slug: "portfolio-review",
-    label: "Portfolio Review",
-    wpSlugs: ["wealth-management"],
-    keywords: ["portfolio", "overlap", "asset allocation", "rebalanc"],
-    links: ["/portfolio-review", "/research-process", "/mutual-fund-investment-support"],
-  },
-  {
-    slug: "retirement-planning",
-    label: "Retirement Planning",
-    wpSlugs: ["retirement-planning"],
-    keywords: ["retirement", "nps", "pension", "corpus"],
-    links: ["/retirement-planning", "/portfolio-review", "/fixed-income-investments"],
-  },
-  {
-    slug: "insurance-planning",
-    label: "Insurance Planning",
-    wpSlugs: ["insurance", "mediclaim"],
-    keywords: ["insurance", "mediclaim", "term plan", "health cover"],
-    links: ["/insurance-planning", "/portfolio-review", "/research-process"],
-  },
-  {
-    slug: "tax-planning",
-    label: "Tax Planning",
-    wpSlugs: ["tax-planning"],
-    keywords: ["tax", "80c", "capital gain"],
-    links: ["/research-process", "/mutual-fund-investment-support", "/retirement-planning"],
-  },
-  {
-    slug: "fixed-income",
-    label: "Fixed Income",
-    wpSlugs: [],
-    keywords: ["fixed income", "bond", "debt fund", "gilt", "yield"],
-    links: ["/fixed-income-investments", "/portfolio-review", "/research-process"],
-  },
-  {
-    slug: "nri-investing",
-    label: "NRI Investing",
-    wpSlugs: [],
-    keywords: ["nri", "nre", "nro", "repatriat"],
-    links: ["/portfolio-review", "/research-process", "/regulatory-disclosures"],
-  },
-  {
-    slug: "pms-aif-sif",
-    label: "PMS / AIF / SIF",
-    wpSlugs: [],
-    keywords: ["pms", "aif", "sif", "alternative investment"],
-    links: ["/private-wealth-management-gujarat-india", "/research-process", "/portfolio-review"],
-  },
-  {
-    slug: "investor-behaviour",
-    label: "Investor Behaviour",
-    wpSlugs: ["legacy-inheritance"],
-    keywords: ["behaviour", "behavior", "bias", "discipline", "legacy", "nomination"],
-    links: ["/research-process", "/portfolio-review", "/regulatory-disclosures"],
-  },
-  {
-    slug: "market-outlook",
-    label: "Market Outlook",
-    wpSlugs: ["update"],
-    keywords: ["outlook", "capex", "macro"],
-    links: ["/research-process", "/portfolio-review", "/private-wealth-management-gujarat-india"],
-  },
-];
-
-const DEFAULT_CATEGORY = BLOG_CATEGORIES.find((item) => item.slug === "investor-behaviour");
-
 const DISCLOSURE =
   "Educational content only. Investments in the securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns and does not present itself as a SEBI Registered Investment Adviser unless separately registered.";
 
 const PARTHA_EXPERIENCE =
   "Engineering Graduate, Masters in Finance & SEBI Registered Research Analyst.";
 
-export function getBlogCategory(slug) {
-  if (!slug) return null;
-  return (
-    BLOG_CATEGORIES.find((item) => item.slug === slug) ||
-    BLOG_CATEGORIES.find((item) => item.wpSlugs.includes(slug)) ||
-    null
-  );
-}
-
-function plainText(value) {
-  return String(value || "")
-    .replace(/<[^>]+>/g, " ")
-    .replace(/\s+/g, " ")
-    .toLowerCase();
-}
-
-export function classifyPost(post) {
+/** Category assigned to the post in WordPress. */
+export function getWordPressCategory(post) {
   const nodes = post?.categories?.nodes || [];
-  for (const node of nodes) {
-    const mapped = getBlogCategory(node.slug);
-    if (mapped && mapped.slug !== node.slug) return mapped;
-    const exact = BLOG_CATEGORIES.find((item) => item.slug === node.slug);
-    if (exact) return exact;
-  }
-
-  const text = plainText(`${post?.title || ""} ${post?.excerpt || ""}`);
-  let best = null;
-  let bestScore = 0;
-  for (const category of BLOG_CATEGORIES) {
-    const score = category.keywords.reduce(
-      (total, keyword) => total + (text.includes(keyword) ? 1 : 0),
-      0
-    );
-    if (score > bestScore) {
-      best = category;
-      bestScore = score;
-    }
-  }
-  return best || DEFAULT_CATEGORY;
+  const node =
+    nodes.find((item) => item?.slug && item.slug !== "uncategorized") || nodes[0];
+  if (!node?.name || !node?.slug) return null;
+  return { label: node.name, slug: node.slug };
 }
 
-export function relatedServiceLinks(post) {
-  const category = classifyPost(post);
-  return category.links.map(
-    (href) => SERVICE_LINKS.find((item) => item.href === href)
-  ).filter(Boolean);
+export function relatedServiceLinks() {
+  return SERVICE_LINKS;
 }
 
 export function getAuthorAttribution(post) {

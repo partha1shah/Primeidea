@@ -11,9 +11,9 @@ import Facebook from '../../public/images/blogs/icons/fb.svg';
 import Linkedin from '../../public/images/blogs/icons/linkedin.svg';
 import { Notyf } from "notyf";
 import {
-  classifyPost,
   extractSources,
   getAuthorAttribution,
+  getWordPressCategory,
   relatedServiceLinks,
 } from "@/data/blogScope";
 // import 'notyf/notyf.min.css';
@@ -52,7 +52,7 @@ const BlogDetail = (props) => {
         window.open(url, '_blank');
     };
 
-    const category = classifyPost(post);
+    const category = getWordPressCategory(post);
     const author = getAuthorAttribution(post);
     const sources = extractSources(post?.content);
     const relatedLinks = relatedServiceLinks(post);
@@ -120,13 +120,17 @@ const BlogDetail = (props) => {
                     </div>
                 </div>
                 <div className="mb-6 mt-2 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-[#4D4D4D]">
-                    <Link
-                      href={`/blogs/category/${category.slug}`}
-                      className="inline-flex rounded-full bg-[#E8F5FF] px-3 py-1 text-sm font-semibold text-[#293C7D]"
-                    >
-                      {category.label}
-                    </Link>
-                    <span aria-hidden="true" className="hidden sm:inline text-[#D0E0EC]">|</span>
+                    {category ? (
+                      <Link
+                        href={`/blogs/category/${category.slug}`}
+                        className="inline-flex rounded-full bg-[#E8F5FF] px-3 py-1 text-sm font-semibold text-[#293C7D]"
+                      >
+                        {category.label}
+                      </Link>
+                    ) : null}
+                    {category ? (
+                      <span aria-hidden="true" className="hidden sm:inline text-[#D0E0EC]">|</span>
+                    ) : null}
                     <span>Updated {updatedLabel}</span>
                 </div>
                 <div className="flex flex-col lg:flex-row lg:items-start lg:gap-8">

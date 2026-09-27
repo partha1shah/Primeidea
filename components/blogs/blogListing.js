@@ -2,87 +2,43 @@
 import moment from "moment";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
-import { BLOG_CATEGORIES, classifyPost } from "@/data/blogScope";
+import { getWordPressCategory } from "@/data/blogScope";
 
-export default function BlogListing({ posts }) {
-  // console.log(posts);
-  // console.log(categoriesList);
+function topicChipClass(active) {
+  return [
+    "inline-flex min-h-9 items-center justify-center rounded-full border px-3.5 py-1.5 text-center text-[13px] font-semibold leading-tight transition-colors",
+    active
+      ? "border-[#293C7D] bg-[#293C7D] !text-white shadow-[0_8px_18px_-12px_rgba(41,60,125,0.95)]"
+      : "border-[#D7E4EF] bg-white !text-[#293C7D] hover:border-[#479AD2] hover:bg-[#F6FDFF]",
+  ].join(" ");
+}
 
-  const categoryItems = [
-    {
-      name: "Finance",
-    },
-    {
-      name: "Insurance",
-    },
-    {
-      name: "Mediclaim",
-    },
-  ];
+function listingExcerpt(html) {
+  return String(html || "")
+    .replace(/<audio[\s\S]*?<\/audio>/gi, "")
+    .replace(/Your browser does not support the audio element\.?\s*/gi, "");
+}
 
-  const insightsItems = [
-    {
-      imageUrl: "/images/home/insights/1.png",
-      title: "How can I start planning for retirement if I'm in my 30s ?",
-      description:
-        "Starting your retirement planning in your 30s is a smart move. Begin by assessing your current financial situation and setting clear retirement goals. Contribute regularly to retirement accounts like a 401(k) or IRA, and consider diversifying your investments to build a robust portfolio.",
-      category: "Retirement Planning",
-      date: "January 21, 2024",
-      author: "PrimeIdea",
-      url: "/",
-    },
-    {
-      imageUrl: "/images/home/insights/2.png",
-      title: "How can I start planning for retirement if I'm in my 30s ?",
-      description:
-        "Starting your retirement planning in your 30s is a smart move. Begin by assessing your current financial situation and setting clear retirement goals. Contribute regularly to retirement accounts like a 401(k) or IRA, and consider diversifying your investments to build a robust portfolio.",
-      category: "Retirement Planning",
-      date: "January 21, 2024",
-      author: "PrimeIdea",
-      url: "/",
-    },
-    {
-      imageUrl: "/images/home/insights/3.png",
-      title: "How can I start planning for retirement if I'm in my 30s ?",
-      description:
-        "Starting your retirement planning in your 30s is a smart move. Begin by assessing your current financial situation and setting clear retirement goals. Contribute regularly to retirement accounts like a 401(k) or IRA, and consider diversifying your investments to build a robust portfolio.",
-      category: "Retirement Planning",
-      date: "January 21, 2024",
-      author: "PrimeIdea",
-      url: "/",
-    },
-    {
-      imageUrl: "/images/home/insights/1.png",
-      title: "How can I start planning for retirement if I'm in my 30s ?",
-      description:
-        "Starting your retirement planning in your 30s is a smart move. Begin by assessing your current financial situation and setting clear retirement goals. Contribute regularly to retirement accounts like a 401(k) or IRA, and consider diversifying your investments to build a robust portfolio.",
-      category: "Retirement Planning",
-      date: "January 21, 2024",
-      author: "PrimeIdea",
-      url: "/",
-    },
-    {
-      imageUrl: "/images/home/insights/2.png",
-      title: "How can I start planning for retirement if I'm in my 30s ?",
-      description:
-        "Starting your retirement planning in your 30s is a smart move. Begin by assessing your current financial situation and setting clear retirement goals. Contribute regularly to retirement accounts like a 401(k) or IRA, and consider diversifying your investments to build a robust portfolio.",
-      category: "Retirement Planning",
-      date: "January 21, 2024",
-      author: "PrimeIdea",
-      url: "/",
-    },
-    {
-      imageUrl: "/images/home/insights/3.png",
-      title: "How can I start planning for retirement if I'm in my 30s ?",
-      description:
-        "Starting your retirement planning in your 30s is a smart move. Begin by assessing your current financial situation and setting clear retirement goals. Contribute regularly to retirement accounts like a 401(k) or IRA, and consider diversifying your investments to build a robust portfolio.",
-      category: "Retirement Planning",
-      date: "January 21, 2024",
-      author: "PrimeIdea",
-      url: "/",
-    },
-  ];
+function sideLinkClass(active) {
+  return [
+    "flex items-center justify-between gap-3 rounded-xl px-3.5 py-3 text-base font-semibold transition-colors xl:text-[17px]",
+    active
+      ? "bg-[#293C7D] !text-white shadow-[0_10px_22px_-16px_rgba(41,60,125,0.9)]"
+      : "!text-[#222222] hover:bg-[#F6FDFF]",
+  ].join(" ");
+}
+
+export default function BlogListing({ posts, categoriesList = [] }) {
+  const pathname = (usePathname() || "").replace(/\/$/, "") || "/";
+  const activeSlug = pathname.startsWith("/blogs/category/")
+    ? pathname.slice("/blogs/category/".length).split("/")[0]
+    : null;
+  const allActive = pathname === "/blogs";
+  const categories = (categoriesList || []).filter(
+    (item) => item?.slug && Number(item.count) >= 1
+  );
   return (
     <section className="2xl:max-w-[1320px] xl:max-w-[1170px] lg:max-w-[1004px] my-16 mx-auto flex flex-wrap">
       {/* <div className="flex flex-wrap">
@@ -112,97 +68,126 @@ export default function BlogListing({ posts }) {
               happier wallet.
             </p>
           </div>
-          <ul>
-            <li className="border-b border-[#479AD2]">
-              <Link
-                href="/blogs"
-                className="text-[#222222] font-semibold text-lg xl:text-xl inline-block w-full px-4 py-3 xl:py-4"
-              >
-                All Categories
-              </Link>
-            </li>
-            {BLOG_CATEGORIES.map((items) => {
-              return (
-                <li
-                  key={items.slug}
-                  className="border-b border-[#479AD2] last:border-b-0"
+          <nav aria-label="Blog categories" className="px-3 pb-4">
+            <p className="mb-2 px-1 text-[11px] font-bold uppercase tracking-[0.14em] text-[#479AD2]">
+              Topics
+            </p>
+            <ul className="m-0 flex list-none flex-col gap-1 p-0">
+              <li>
+                <Link
+                  href="/blogs"
+                  aria-current={allActive ? "page" : undefined}
+                  className={sideLinkClass(allActive)}
                 >
-                  <Link
-                    href={`/blogs/category/${items.slug}`}
-                    className="text-[#222222] font-semibold text-base xl:text-lg inline-block w-full px-4 py-3 xl:py-4"
-                  >
-                    {items.label}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
+                  All categories
+                  {allActive ? (
+                    <span className="h-2 w-2 shrink-0 rounded-full bg-[#FFC300]" aria-hidden="true" />
+                  ) : null}
+                </Link>
+              </li>
+              {categories.map((items) => {
+                const active = activeSlug === items.slug;
+                return (
+                  <li key={items.slug}>
+                    <Link
+                      href={`/blogs/category/${items.slug}`}
+                      aria-current={active ? "page" : undefined}
+                      className={sideLinkClass(active)}
+                    >
+                      {items.name}
+                      {active ? (
+                        <span className="h-2 w-2 shrink-0 rounded-full bg-[#FFC300]" aria-hidden="true" />
+                      ) : null}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
         </div>
         <div className="w-full lg:w-[calc(100%-305px)] xl:w-[calc(100%-362px)] h-full lg:shadow-[0_0_7px_0_#00000040] rounded-2xl ">
-          <div className="lg:hidden flex flex-wrap gap-2 px-2 pb-4">
-            <Link href="/blogs" className="rounded-md bg-[#293C7D] px-3 py-1.5 text-sm font-semibold text-white">
-              All
-            </Link>
-            {BLOG_CATEGORIES.map((items) => (
-              <Link
-                key={items.slug}
-                href={`/blogs/category/${items.slug}`}
-                className="rounded-md bg-[#BCE4FF] px-3 py-1.5 text-sm font-semibold text-[#222]"
-              >
-                {items.label}
-              </Link>
-            ))}
-          </div>
-          <ul>
+          <nav aria-label="Blog categories" className="mb-2 px-3 pb-2 lg:hidden">
+            <div className="overflow-hidden rounded-[22px] border border-[#D6E4EE] bg-white shadow-[0_18px_40px_-30px_rgba(41,60,125,0.55)]">
+              <div className="h-1 bg-gradient-to-r from-[#232D63] via-[#479AD2] to-[#FFC300]" aria-hidden="true" />
+              <div className="p-3.5">
+                <p className="mb-3 px-0.5 text-[11px] font-bold uppercase tracking-[0.16em] text-[#479AD2]">
+                  Browse topics
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <Link
+                    href="/blogs"
+                    aria-current={allActive ? "page" : undefined}
+                    className={topicChipClass(allActive)}
+                  >
+                    All topics
+                  </Link>
+                  {categories.map((items) => {
+                    const active = activeSlug === items.slug;
+                    return (
+                      <Link
+                        key={items.slug}
+                        href={`/blogs/category/${items.slug}`}
+                        aria-current={active ? "page" : undefined}
+                        className={topicChipClass(active)}
+                      >
+                        {items.name}
+                      </Link>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          </nav>
+          <ul className="m-0 list-none p-0">
             {posts.length === 0 ? (
               <li className="px-4 py-10 text-base text-[#4D4D4D]">
                 No articles are filed in this category yet.
               </li>
             ) : null}
-            {posts.map((item, index) => {
-              // console.log("items", item);
+            {posts.map((item) => {
+              const category = getWordPressCategory(item);
+              const imageUrl = item.featuredImage?.node?.sourceUrl || "/images/blogs/single-blog.jpg";
               return (
                 <li
-                  className="border-b border-b-[#222222] last:border-b-0"
-                  key={index}
+                  className="border-b border-[#E6EEF4] last:border-b-0"
+                  key={item.slug}
                 >
-                  <a href={`/blogs/${item.slug}`} className="flex flex-wrap lg:flex-nowrap py-4 px-2 sm:px-4 lg:px-8 ">
-                    <div className="w-[85px] md:w-[132px] mr-[10px] md:mr-4">
+                  <a href={`/blogs/${item.slug}`} className="group flex items-start gap-3 px-3 py-4 sm:px-4 lg:items-center lg:gap-4 lg:px-8">
+                    <div className="relative h-[72px] w-[96px] shrink-0 overflow-hidden rounded-xl bg-[#E8F4FB] md:h-[88px] md:w-[132px]">
                       <Image
-                        // src={item.author.node.avatar.url}
-                        src={item.featuredImage?.node.sourceUrl ? item.featuredImage?.node.sourceUrl : '/images/blogs/single-blog.jpg'}
-                        width={132}
-                        height={88}
-                        alt={item.title}
-                        className="object-contain rounded"
-                      />
-                      <h3 className="flex flex-col justify-center items-center mt-3 leading-[100%] text-sm md:text-base hidden">
-                        Written by{" "}
-                        <span className="text-base md:text-xl font-bold capitalize">{item.author.node.name}</span>
-                      </h3>
-                    </div>
-                    <div className="w-[calc(100%-95px)] md:w-[calc(100%-148px)] lg:w-[calc(100%-168px)]">
-                      <div className="top-section flex items-center ">
-                        <div className="bg-[#BCE4FF] text-[#000] px-3 py-1 rounded-md font-normal text-sm md:text-base">
-                          {classifyPost(item).label}
-                        </div>{" "}
-                        <span className="w-[16px] h-[2px] rounded-[5px] bg-[#222222] mx-2 md:mx-4"></span>{" "}
-                        <div className="text-sm md:text-lg">{moment(item.date).format('MMMM D, YYYY')}</div>
-                      </div>
-                      <div className="pt-2 md:pt-3">
-                        <h2 className="text-lg sm:text-xl md:text-2xl font-semibold mb-1 md:mb-0">{item.title}</h2>
-                        <div dangerouslySetInnerHTML={{ __html: item.excerpt}} className="line-clamp-3 text-sm sm:text-base mb-2 md:mb-0"></div>
-                      </div>
-                    </div>
-                    <div className="ml-auto inline-flex justify-end items-baseline w-full lg:w-[36px]">
-                      <Image
-                        src="/images/blogs/right-arrow.png"
-                        width={36}
-                        height={36}
-                        alt="Arrow"
-                        className="w-[32px] sm:w-[36px] h-[32px] sm:h-[36px]"
+                        src={imageUrl}
+                        alt=""
+                        fill
+                        sizes="132px"
+                        className="object-cover"
                       />
                     </div>
+                    <div className="min-w-0 flex-1">
+                      <div className="mb-1.5 flex flex-wrap items-center gap-x-2 gap-y-1">
+                        {category ? (
+                          <span className="rounded-full bg-[#E8F5FF] px-2.5 py-0.5 text-xs font-semibold !text-[#293C7D]">
+                            {category.label}
+                          </span>
+                        ) : null}
+                        <time dateTime={item.date} className="text-xs text-[#6B7C8A] md:text-sm">
+                          {moment(item.date).format("MMMM D, YYYY")}
+                        </time>
+                      </div>
+                      <h2 className="text-base font-semibold leading-snug text-[#2D2D2D] sm:text-lg md:text-2xl">
+                        {item.title}
+                      </h2>
+                      <div
+                        dangerouslySetInnerHTML={{ __html: listingExcerpt(item.excerpt) }}
+                        className="mt-1 line-clamp-2 text-sm leading-relaxed text-[#4D4D4D] md:line-clamp-3"
+                      />
+                    </div>
+                    <Image
+                      src="/images/blogs/right-arrow.png"
+                      width={28}
+                      height={28}
+                      alt=""
+                      className="mt-1 h-7 w-7 shrink-0 lg:mt-0 lg:h-9 lg:w-9"
+                    />
                   </a>
                 </li>
               );

@@ -1,24 +1,23 @@
 import React from "react";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-import { getPostList, getCategoriesPostList } from "@/lib/posts";
+import { getPostList, getCategoriesPostList, getCategoryDetails } from "@/lib/posts";
 import BlogListing from "@/components/blogs/blogListing";
-import { classifyPost, getBlogCategory } from "@/data/blogScope";
-import { notFound, redirect } from "next/navigation";
+import { notFound } from "next/navigation";
 
 export async function generateMetadata({ params }) {
   const { categorySlug } = await params;
-  const category = getBlogCategory(categorySlug);
-  if (!category) {
+  const category = await getCategoryDetails(categorySlug);
+  if (!category?.name || !category?.slug) {
     return { title: "Category not found" };
   }
   const url = `https://www.primeidea.in/blogs/category/${category.slug}`;
-  const description = `PrimeIdea Ventures helps investors with ${category.label.toLowerCase()} through a research-led process guided by Partha Shah, SEBI Registered Research Analyst INH000017815.`;
+  const description = `Articles filed under ${category.name} on the PrimeIdea Ventures blog, guided by Partha Shah, SEBI Registered Research Analyst INH000017815.`;
 
   return {
-    title: category.label,
+    title: category.name,
     description,
-    keywords: `${category.label}, PrimeIdea Ventures, Partha Shah, SEBI RA INH000017815`,
+    keywords: `${category.name}, PrimeIdea Ventures, Partha Shah, SEBI RA INH000017815`,
     author: "Partha Shah",
     robots: "index, follow",
     alternates: {
@@ -28,7 +27,7 @@ export async function generateMetadata({ params }) {
       },
     },
     openGraph: {
-      title: `${category.label} | PrimeIdea Ventures`,
+      title: `${category.name} | PrimeIdea Ventures`,
       description,
       url,
       site_name: "PrimeIdea Ventures",
@@ -37,7 +36,7 @@ export async function generateMetadata({ params }) {
     },
     twitter: {
       card: "summary_large_image",
-      title: `${category.label} | PrimeIdea Ventures`,
+      title: `${category.name} | PrimeIdea Ventures`,
       description,
     },
   };
@@ -45,16 +44,13 @@ export async function generateMetadata({ params }) {
 
 export default async function BlogsList({params}) {
     const { categorySlug } = await params;
-    const category = getBlogCategory(categorySlug);
-    if (!category) notFound();
-    if (category.slug !== categorySlug) {
-      redirect(`/blogs/category/${category.slug}`);
-    }
+    const category = await getCategoryDetails(categorySlug);
+    if (!category?.slug) notFound();
 
     const allPosts = await getPostList();
     const categoriesList = await getCategoriesPostList();
-    const posts = (allPosts?.nodes || []).filter(
-      (post) => classifyPost(post).slug === category.slug
+    const posts = (allPosts?.nodes || []).filter((post) =>
+      (post.categories?.nodes || []).some((node) => node.slug === category.slug)
     );
 
     return (
