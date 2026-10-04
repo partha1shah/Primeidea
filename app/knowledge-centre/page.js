@@ -37,9 +37,9 @@ const faqs = [
   {
     question: "Who reviews Knowledge Centre content?",
     answer:
-      "Educational content is aligned with PrimeIdea’s research process guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Investors should verify registration independently.",
+      "Educational content is aligned with PrimeIdea’s research process Investors should verify registration independently.",
     plainText:
-      "Educational content is aligned with PrimeIdea’s research process guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Investors should verify registration independently.",
+      "Educational content is aligned with PrimeIdea’s research process Investors should verify registration independently.",
   },
   {
     question: "Does Knowledge Centre content guarantee investment returns?",
@@ -47,13 +47,6 @@ const faqs = [
       "No. Investments in the securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns. Articles and notes are educational and illustrative only.",
     plainText:
       "No. Investments in the securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns. Articles and notes are educational and illustrative only.",
-  },
-  {
-    question: "Is this SEBI Registered Investment Adviser advice?",
-    answer:
-      "No. PrimeIdea operates under SEBI Registered Research Analyst registration. It does not present itself as a SEBI Registered Investment Adviser unless separately registered.",
-    plainText:
-      "No. PrimeIdea operates under SEBI Registered Research Analyst registration. It does not present itself as a SEBI Registered Investment Adviser unless separately registered.",
   },
   {
     question: "How do I go from learning to a portfolio review?",
@@ -67,9 +60,9 @@ const faqs = [
 export const metadata = {
   title: "Knowledge Centre",
   description:
-    "PrimeIdea Ventures Knowledge Centre — blogs, research notes, market outlooks, portfolio checklists, FAQs, guides, and investor education. Research process guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Educational content only; no guaranteed returns.",
+    "PrimeIdea Ventures Knowledge Centre — blogs, research notes, market outlooks, portfolio checklists, FAQs, guides, and investor education. Research process Educational content only; no guaranteed returns.",
   keywords:
-    "Knowledge Centre PrimeIdea, investor education Vadodara, financial blogs Gujarat, portfolio checklist, SEBI RA INH000017815, Partha Shah",
+    "Knowledge Centre PrimeIdea, investor education Vadodara, financial blogs Gujarat, portfolio checklist",
   author: "Partha Shah",
   robots: "index, follow",
   openGraph: {
@@ -144,7 +137,7 @@ export default async function KnowledgeCentrePage() {
         mainBannerImage="/images/home/banner.png"
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="Knowledge Centre"
-        mainSubTitle="Blogs, research notes, market outlooks, portfolio checklists, FAQs, downloadable guides, and seminar materials — research-led investor education for Vadodara, Gujarat, and India. Guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Educational content only. No guaranteed returns."
+        mainSubTitle="Blogs, research notes, market outlooks, portfolio checklists, FAQs, downloadable guides, and seminar materials — research-led investor education for Vadodara, Gujarat, and India. Educational content only. No guaranteed returns."
         mainLinkTitle="Explore Library"
         mainLink="#library"
         usePrimaryAsLink={true}
@@ -156,10 +149,9 @@ export default async function KnowledgeCentrePage() {
       <ScopePageMetaStrip
         stats={[
           { label: "Hub type", value: "Investor education", Icon: AcademicCapIcon },
-          { label: "Content", value: "Notes · guides · FAQs", Icon: BookOpenIcon },
-          { label: "Registration No.", value: "INH000017815", Icon: CheckBadgeIcon },
+          { label: "Content", value: "Notes · guides · FAQs", Icon: BookOpenIcon },
         ]}
-        disclaimer="Knowledge Centre materials are educational and illustrative. They do not constitute investment advice, research recommendations for a specific security, or guaranteed returns. Investments in the securities market are subject to market risks. PrimeIdea Ventures does not present itself as a SEBI Registered Investment Adviser unless separately registered."
+        disclaimer="Knowledge Centre materials are educational and illustrative. They do not constitute investment advice, research recommendations for a specific security, or guaranteed returns. Investments in the securities market are subject to market risks. "
       />
 
       <ScopeBreadcrumbs items={[{ label: "Knowledge Centre" }]} />
@@ -177,9 +169,7 @@ export default async function KnowledgeCentrePage() {
       <ScopeDisclaimerBar ctaHref="/portfolio-review" ctaLabel="Book Portfolio Review">
         Knowledge Centre content is for investor education only. Investments in the
         securities market are subject to market risks. PrimeIdea Ventures does not
-        guarantee returns. Partha Shah is a SEBI Registered Research Analyst
-        (INH000017815). PrimeIdea does not act as a SEBI Registered Investment Adviser
-        unless separately registered. Investors should verify registration independently
+        guarantee returns. Investors should verify registration independently
         and read all scheme-related documents carefully before investing.
       </ScopeDisclaimerBar>
 

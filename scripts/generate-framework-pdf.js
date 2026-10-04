@@ -6,7 +6,7 @@ const lines = [
   "Portfolio Review Framework",
   "",
   "SEBI Registered Research Analyst: Partha Shah  INH000017815",
-  "Research-led process. No guaranteed returns. Not an RIA unless separately registered.",
+  "Research-led process. No guaranteed returns. Market risks apply.",
   "",
   "Five-step research process",
   "1. Understand goals and constraints",

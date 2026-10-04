@@ -50,25 +50,18 @@ const faqs = [
   {
     question: "Who leads the research process?",
     answer:
-      "The research process is guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Investors should verify registration independently.",
+      "Research is led by a SEBI Registered Research Analyst. Investors can verify registration on the official SEBI website.",
     plainText:
-      "The research process is guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Investors should verify registration independently.",
-  },
-  {
-    question: "Is this SEBI Registered Investment Adviser advice?",
-    answer:
-      "No. PrimeIdea operates under SEBI Registered Research Analyst registration and does not present itself as a SEBI Registered Investment Adviser unless separately registered.",
-    plainText:
-      "No. PrimeIdea operates under SEBI Registered Research Analyst registration and does not present itself as a SEBI Registered Investment Adviser unless separately registered.",
+      "Research is led by a SEBI Registered Research Analyst. Investors can verify registration on the official SEBI website.",
   },
 ];
 
 export const metadata = {
   title: "Book Portfolio Review",
   description:
-    "Book a research-led portfolio review or consultation with PrimeIdea Ventures — choose service, preferred date/time, office visit or video call, and WhatsApp confirmation. Guided by Partha Shah, SEBI Registered Research Analyst INH000017815. No guaranteed returns.",
+    "Book a research-led portfolio review or consultation with PrimeIdea Ventures — choose service, preferred date/time, office visit or video call, and WhatsApp confirmation. No guaranteed returns.",
   keywords:
-    "book portfolio review Vadodara, schedule wealth consultation, NRI consultation booking, PrimeIdea Ventures, Partha Shah SEBI RA INH000017815",
+    "book portfolio review Vadodara, schedule wealth consultation, NRI consultation booking, PrimeIdea Ventures",
   author: "Partha Shah",
   robots: "index, follow",
   openGraph: {
@@ -135,7 +128,7 @@ export default async function BookPortfolioReviewPage({ searchParams }) {
         mainBannerImage="/images/home/banner.png"
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="Book Portfolio Review"
-        mainSubTitle="Choose your service, preferred date and time, and office visit or video call. Opt in for WhatsApp confirmation. Research process guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Educational consultation — no guaranteed returns."
+        mainSubTitle="Choose your service, preferred date and time, and office visit or video call. Opt in for WhatsApp confirmation. Research process Educational consultation — no guaranteed returns."
         mainLinkTitle="Start booking"
         mainLink="#booking-form"
         usePrimaryAsLink={true}
@@ -148,9 +141,8 @@ export default async function BookPortfolioReviewPage({ searchParams }) {
         stats={[
           { label: "Booking type", value: "Review / consultation", Icon: CalendarDaysIcon },
           { label: "Modes", value: "Office or video", Icon: MapPinIcon },
-          { label: "Registration No.", value: "INH000017815", Icon: CheckBadgeIcon },
         ]}
-        disclaimer="Booking requests are confirmed by the team subject to availability. Consultations are research-led and educational. Investments in the securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns and does not present itself as a SEBI Registered Investment Adviser unless separately registered."
+        disclaimer="Booking requests are confirmed by the team subject to availability. Consultations are research-led and educational. Investments in the securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns."
       />
 
       <ScopeBreadcrumbs items={[{ label: "Book Portfolio Review" }]} />
@@ -165,10 +157,7 @@ export default async function BookPortfolioReviewPage({ searchParams }) {
 
       <ScopeDisclaimerBar ctaHref="/portfolio-review" ctaLabel="Upload Portfolio for Review">
         Booking a review does not guarantee investment returns or outcomes.
-        Investments in the securities market are subject to market risks. Partha Shah
-        is a SEBI Registered Research Analyst (INH000017815). PrimeIdea does not act
-        as a SEBI Registered Investment Adviser unless separately registered.
-        Investors should verify registration independently.
+        Investments in the securities market are subject to market risks.
       </ScopeDisclaimerBar>
 
       <Footer />

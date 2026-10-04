@@ -1,5 +1,12 @@
 import FadeUpOneByOneAnimation from "@/animations/FadeUpOneByOneAnimation";
 import {
+  DISCLOSURE_SHORT,
+  IDENTITY_SHORT,
+  PRODUCT_ACCESS,
+  REGISTRATION_BLOCKS,
+  SEBI_LINKS,
+} from "@/data/registrations";
+import {
   ArrowDownTrayIcon,
   BriefcaseIcon,
   CheckBadgeIcon,
@@ -21,6 +28,7 @@ import Link from "next/link";
 const jumpLinks = [
   { href: "#sebi-registration", label: "SEBI Registration" },
   { href: "#investor-charter", label: "Investor Charter" },
+  { href: "#amfi-code-of-conduct", label: "AMFI Code of Conduct" },
   { href: "#complaint-status", label: "Complaint Status" },
   { href: "#grievance-redressal", label: "Grievance" },
   { href: "#sebi-scores", label: "SEBI SCORES" },
@@ -80,57 +88,96 @@ export default function RegulatoryContentSections({ complaints = [] }) {
       <section
         id="sebi-registration"
         aria-labelledby="sebi-registration-heading"
-        className="bg-[#232D63] py-14 md:py-16 bg-[url('/images/insurance/risk-management/bg.png')] bg-repeat bg-contain bg-center scroll-mt-24"
+        className="bg-[#232D63] py-14 md:py-20 bg-[url('/images/insurance/risk-management/bg.png')] bg-repeat bg-contain bg-center scroll-mt-24"
       >
         <div className="mx-auto 2xl:max-w-[1340px] xl:max-w-[1170px] lg:max-w-[1004px] px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            <FadeUpOneByOneAnimation className="lg:col-span-6">
-              <p className="text-xs md:text-sm font-semibold tracking-[0.14em] uppercase text-[#FFC300] mb-3">
-                Transparency &amp; compliance
-              </p>
-              <h2
-                id="sebi-registration-heading"
-                className="text-[28px] md:text-[36px] font-light text-white leading-[120%] mb-4"
-              >
-                SEBI Registered <strong className="font-semibold">Research Analyst</strong>
-              </h2>
-              <p className="text-base md:text-lg !text-white/80 leading-relaxed mb-6">
-                PrimeIdea Ventures is a Vadodara-based research-led wealth management and
-                portfolio review firm serving investors across Gujarat and India, with a
-                research process guided by Partha Shah, SEBI Registered Research Analyst
-                INH000017815.
-              </p>
-              <Link
-                href="/sebi-registered-research-analyst"
-                className="inline-flex items-center gap-2 rounded-md bg-[#FFC300] px-5 py-3 text-base font-bold text-[#232D63] hover:bg-white transition-colors"
-              >
-                View SEBI RA page
-                <span aria-hidden="true">→</span>
-              </Link>
-            </FadeUpOneByOneAnimation>
+          <FadeUpOneByOneAnimation className="mb-10 md:mb-12 max-w-[820px]">
+            <p className="text-xs md:text-sm font-semibold tracking-[0.14em] uppercase text-[#FFC300] mb-3">
+              Transparency &amp; compliance
+            </p>
+            <h2
+              id="sebi-registration-heading"
+              className="text-[28px] md:text-[40px] font-light text-white leading-[120%] mb-4"
+            >
+              Registrations &amp;{" "}
+              <strong className="font-semibold">distribution</strong>
+            </h2>
+            <p className="text-base md:text-lg !text-white/75 leading-relaxed mb-5">
+              {IDENTITY_SHORT}
+            </p>
+            <ul className="m-0 flex list-none flex-wrap gap-2 p-0">
+              {PRODUCT_ACCESS.slice(0, 4).map((product) => (
+                <li
+                  key={product}
+                  className="rounded-full border border-white/15 bg-white/[0.06] px-3 py-1 text-[12px] font-medium text-white/80"
+                >
+                  {product}
+                </li>
+              ))}
+            </ul>
+          </FadeUpOneByOneAnimation>
 
-            <FadeUpOneByOneAnimation className="lg:col-span-6">
-              <div className="rounded-[20px] border border-white/15 bg-[#293C7D]/50 px-6 py-6 md:px-8 md:py-8">
-                <p className="!text-white/70 text-sm mb-2">SEBI Registered Research Analyst</p>
-                <p className="!text-white text-xl md:text-2xl font-semibold mb-1">Partha Shah</p>
-                <p className="text-[#FFC300] text-2xl md:text-3xl font-light tracking-wide tabular-nums mb-4">
-                  INH000017815
-                </p>
-                <ul className="space-y-2 list-none m-0 p-0">
-                  {[
-                    "Investors should verify SEBI registration independently",
-                    "Investments in securities market are subject to market risks",
-                    "PrimeIdea Ventures does not guarantee returns",
-                  ].map((item) => (
-                    <li key={item} className="flex gap-2 text-sm !text-white/80 leading-relaxed">
-                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#FFC300]" aria-hidden="true" />
-                      <span className="!text-white/80">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </FadeUpOneByOneAnimation>
-          </div>
+          <FadeUpOneByOneAnimation>
+            <ul className="m-0 grid list-none grid-cols-1 gap-3 p-0 sm:grid-cols-2 xl:grid-cols-4">
+              {REGISTRATION_BLOCKS.map((block) => (
+                <li key={block.title}>
+                  <article className="group flex h-full flex-col rounded-2xl border border-white/12 bg-white/[0.05] p-5 transition-colors hover:border-[#FFC300]/35 hover:bg-white/[0.08]">
+                    <div className="mb-4 flex items-center justify-between gap-3">
+                      <span className="text-[10px] font-semibold uppercase tracking-[0.16em] text-[#FFC300]/90">
+                        {block.shortLabel}
+                      </span>
+                      <ShieldCheckIcon
+                        className="h-4 w-4 shrink-0 text-white/35 transition-colors group-hover:text-[#FFC300]"
+                        aria-hidden="true"
+                      />
+                    </div>
+                    <h3 className="mb-3 text-sm font-semibold leading-snug text-white/90">
+                      {block.title}
+                    </h3>
+                    <p className="mb-3 text-lg font-bold tabular-nums tracking-wide text-[#FFC300] md:text-xl">
+                      {block.number}
+                    </p>
+                    <div className="mt-auto space-y-1 border-t border-white/10 pt-3">
+                      {block.meta.map((line) => (
+                        <p
+                          key={line}
+                          className="text-[12px] leading-relaxed text-white/55 tabular-nums"
+                        >
+                          {line}
+                        </p>
+                      ))}
+                    </div>
+                  </article>
+                </li>
+              ))}
+            </ul>
+          </FadeUpOneByOneAnimation>
+
+          <FadeUpOneByOneAnimation className="mt-8 flex flex-col gap-4 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex flex-wrap gap-2">
+              {SEBI_LINKS.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/[0.05] px-3.5 py-2 text-[12px] font-semibold text-white/85 transition-colors hover:border-[#FFC300]/40 hover:text-white"
+                >
+                  {link.label}
+                  <span aria-hidden="true" className="text-[#FFC300]">
+                    ↗
+                  </span>
+                </a>
+              ))}
+            </div>
+            <Link
+              href="/sebi-registered-research-analyst"
+              className="inline-flex items-center justify-center gap-2 rounded-md bg-[#FFC300] px-5 py-3 text-sm font-bold text-[#232D63] transition-colors hover:bg-white sm:shrink-0"
+            >
+              View SEBI RA page
+              <span aria-hidden="true">→</span>
+            </Link>
+          </FadeUpOneByOneAnimation>
         </div>
       </section>
 
@@ -199,7 +246,7 @@ export default function RegulatoryContentSections({ complaints = [] }) {
                 {[
                   {
                     title: "Business transacted",
-                    body: "Research and portfolio-review support across mutual funds, equity, ETFs, fixed income, retirement, insurance planning context, and related wealth-management review. This is not SEBI RIA advice unless separately registered.",
+                    body: "Research and portfolio-review support across mutual funds, equity, ETFs, fixed income, retirement, insurance planning context, and related wealth-management review. ",
                     Icon: BriefcaseIcon,
                   },
                   {
@@ -264,6 +311,52 @@ export default function RegulatoryContentSections({ complaints = [] }) {
                   </ul>
                 </FadeUpOneByOneAnimation>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="amfi-code-of-conduct"
+        aria-labelledby="amfi-code-of-conduct-heading"
+        className="bg-white py-14 md:py-16 scroll-mt-24"
+      >
+        <div className="mx-auto 2xl:max-w-[1340px] xl:max-w-[1170px] lg:max-w-[1004px] px-4">
+          <div className="rounded-[24px] border border-[#E3ECF5] bg-[#F6FDFF] p-6 md:p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <div className="max-w-[720px]">
+              <p className="text-xs md:text-sm font-semibold tracking-[0.14em] uppercase text-[#479AD2] mb-3">
+                Association of Mutual Funds in India
+              </p>
+              <h2
+                id="amfi-code-of-conduct-heading"
+                className="text-[24px] md:text-[30px] font-semibold text-[#2D2D2D] mb-3"
+              >
+                AMFI Code of Conduct
+              </h2>
+              <p className="text-base text-[#4D4D4D] leading-relaxed">
+                View or download the AMFI Code of Conduct for intermediaries engaged in selling
+                and distribution of mutual fund units. This document sets out expected standards
+                of integrity, fair dealing, and investor protection in mutual fund distribution.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3 shrink-0">
+              <a
+                href="/docs/code-of-conduct.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-md bg-[#293C7D] px-5 py-3 text-base font-bold text-white hover:bg-[#232D63] transition-colors"
+              >
+                <EyeIcon className="h-5 w-5" aria-hidden="true" />
+                Read Code of Conduct
+              </a>
+              <a
+                href="/docs/code-of-conduct.pdf"
+                download
+                className="inline-flex items-center justify-center gap-2 rounded-md border-2 border-[#293C7D] px-5 py-3 text-base font-bold text-[#293C7D] hover:bg-white transition-colors"
+              >
+                <ArrowDownTrayIcon className="h-5 w-5" aria-hidden="true" />
+                {/* Download PDF */}
+              </a>
             </div>
           </div>
         </div>
@@ -478,19 +571,20 @@ export default function RegulatoryContentSections({ complaints = [] }) {
               {
                 id: "disclaimer",
                 title: "Disclaimer",
-                body: "PrimeIdea content is research-led and educational. It is not personalised investment advice, a product offer, or a guarantee of outcomes. Partha Shah is a SEBI Registered Research Analyst (INH000017815).",
-                Icon: ShieldCheckIcon,
-              },
-              {
-                title: "Not an RIA unless registered",
-                body: "PrimeIdea does not present itself as a SEBI Registered Investment Adviser unless separately registered and approved.",
+                body: DISCLOSURE_SHORT,
                 Icon: ScaleIcon,
               },
               {
                 id: "risk-disclosure",
                 title: "Risk disclosure",
-                body: "Investments in the securities market are subject to market risks. Read all scheme-related documents carefully. Past performance is not indicative of future results. PrimeIdea Ventures does not guarantee returns.",
+                body: "Investments in Mutual Funds, PMS, AIF, SIF and other market-linked products are subject to market risks. Read all scheme-related documents carefully. Past performance may or may not be sustained in future. PrimeIdea Ventures does not guarantee returns.",
                 Icon: ClipboardDocumentListIcon,
+              },
+              {
+                id: "role-note",
+                title: "Our role",
+                body: "PrimeIdea Ventures is a research-led firm and distributor of financial products (mutual funds, PMS, AIF, SIF and related solutions). Registration and validity details are published above and in the site footer.",
+                Icon: CheckBadgeIcon,
               },
             ].map(({ id, title, body, Icon }) => (
               <div key={title} id={id} className="scroll-mt-24">

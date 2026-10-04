@@ -109,19 +109,6 @@ const PortfolioReviewFrameworkSection = () => {
           </FadeUpOneByOneAnimation>
         </div>
 
-        {/* SEBI credibility strip */}
-        <FadeUpOneByOneAnimation className="mb-10 md:mb-12 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 rounded-2xl bg-[#F6FDFF] border border-[#D6E4EE] px-5 py-4 md:px-6 md:py-5">
-          <span className="inline-flex items-center justify-center rounded-full bg-[#FFC300] text-[#232D63] text-xs font-bold tracking-wide uppercase px-3 py-1.5 shrink-0">
-            Research-led
-          </span>
-          <p className="text-sm md:text-base text-[#2D2D2D] leading-relaxed">
-            Guided by{" "}
-            <strong className="font-semibold">Partha Shah</strong>, SEBI Registered Research Analyst{" "}
-            <strong className="text-[#293C7D] font-semibold">INH000017815</strong>
-            {" — "}process-first review with no guaranteed-return claims.
-          </p>
-        </FadeUpOneByOneAnimation>
-
         {/* Framework stages */}
         <ol className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 mb-10 md:mb-12 list-none m-0 p-0">
           {frameworkPillars.map(({ title, description, Icon }, index) => {

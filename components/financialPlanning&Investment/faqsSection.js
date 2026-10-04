@@ -38,13 +38,13 @@ const FaqsSection = () => {
                     <FadeUpOneByOneAnimation>
                     <h2 className="flex items-center justify-between text-[18px] md:text-[20px] 2xl:text-[22px] font-semibold text-[#222222]">
                       <span>
-                        Is this SEBI Registered Investment Adviser advice?
+                        How does PrimeIdea approach financial planning?
                       </span>
                       <Image src="/images/icons/circle-down-arrow.png" width={30} height={30} alt="Arrow" className="w-[24px] sm:w-[30px] h-[24px] sm:h-[30px] ml-2" />
                     </h2>
                     <div className={`content mt-4 text-base md:text-lg max-w-full md:max-w-[85%] text-[#222222] ${activeTab === 1 ? 'block' : 'hidden'}`}>
                       <p>
-                        No. PrimeIdea operates under SEBI Registered Research Analyst registration INH000017815. It does not present itself as a SEBI Registered Investment Adviser unless separately registered. The planning work is a research review of goals and holdings.
+                        Planning starts with a research review of your goals, cash flow, and current holdings — then a written note on what to keep, review, or change.
                       </p>
                     </div>
                     </FadeUpOneByOneAnimation>

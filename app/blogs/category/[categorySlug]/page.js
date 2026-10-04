@@ -12,12 +12,12 @@ export async function generateMetadata({ params }) {
     return { title: "Category not found" };
   }
   const url = `https://www.primeidea.in/blogs/category/${category.slug}`;
-  const description = `Articles filed under ${category.name} on the PrimeIdea Ventures blog, guided by Partha Shah, SEBI Registered Research Analyst INH000017815.`;
+  const description = `Articles filed under ${category.name} on the PrimeIdea Ventures blog.`;
 
   return {
     title: category.name,
     description,
-    keywords: `${category.name}, PrimeIdea Ventures, Partha Shah, SEBI RA INH000017815`,
+    keywords: `${category.name}, PrimeIdea Ventures blog`,
     author: "Partha Shah",
     robots: "index, follow",
     alternates: {

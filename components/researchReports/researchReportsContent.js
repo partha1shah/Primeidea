@@ -60,7 +60,9 @@ export default function ResearchReportsContent() {
   const [statusFilter, setStatusFilter] = useState("all");
 
   const featuredReport =
-    RESEARCH_REPORTS.find((r) => r.status === "available") || RESEARCH_REPORTS[0];
+    RESEARCH_REPORTS.find((r) => r.featured) ||
+    RESEARCH_REPORTS.find((r) => r.status === "available") ||
+    RESEARCH_REPORTS[0];
 
   const filteredReports = useMemo(() => {
     return RESEARCH_REPORTS.filter((report) => {
@@ -247,7 +249,7 @@ export default function ResearchReportsContent() {
         </div>
       </section>
 
-      {/* Featured download */}
+      {/* Featured report */}
       {featuredReport ? (
         <section
           aria-labelledby="rr-featured-heading"
@@ -256,19 +258,19 @@ export default function ResearchReportsContent() {
           <div className="mx-auto 2xl:max-w-[1340px] xl:max-w-[1170px] lg:max-w-[1004px] px-4">
             <FadeUpOneByOneAnimation className="mb-6">
               <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#479AD2] mb-2">
-                Featured download
+                Featured report
               </p>
               <h2
                 id="rr-featured-heading"
                 className="text-[22px] md:text-[28px] font-light text-[#2D2D2D] m-0"
               >
-                Start with a{" "}
-                <strong className="font-semibold">ready-to-use PDF</strong>
+                Start with the{" "}
+                <strong className="font-semibold">latest market outlook</strong>
               </h2>
             </FadeUpOneByOneAnimation>
 
             <div className="relative overflow-hidden rounded-[28px] border border-[#D0E0EC] bg-white grid grid-cols-1 lg:grid-cols-12 shadow-[0_20px_50px_-36px_rgba(41,60,125,0.45)]">
-              <div className="lg:col-span-4 relative min-h-[220px] bg-gradient-to-br from-[#232D63] via-[#293C7D] to-[#1E3A5F] p-6 md:p-8 flex flex-col justify-between">
+              <div className="lg:col-span-4 relative min-h-[240px] bg-gradient-to-br from-[#232D63] via-[#293C7D] to-[#1E3A5F] p-6 md:p-8 flex flex-col justify-between">
                 <div
                   className="pointer-events-none absolute inset-0 opacity-30"
                   style={{
@@ -279,12 +281,12 @@ export default function ResearchReportsContent() {
                   }}
                 />
                 <div className="relative">
-                  <span className="inline-flex rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[10px] font-bold uppercase tracking-wider !text-[#FFC300] mb-4">
+                  <span className="inline-flex rounded-full bg-[#FFC300] px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-[#232D63] mb-4">
                     {featuredReport.status === "available"
                       ? "Available now"
                       : "On request"}
                   </span>
-                  <p className="text-sm !text-white/70 m-0 mb-1">
+                  <p className="text-sm !text-white/70 m-0 mb-2">
                     {REPORT_CATEGORIES.find(
                       (c) => c.id === featuredReport.categoryId
                     )?.title || "Research note"}
@@ -293,28 +295,54 @@ export default function ResearchReportsContent() {
                     {featuredReport.title}
                   </h3>
                 </div>
-                <div className="relative mt-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-[#FFC300] text-[#232D63]">
-                  <ArrowDownTrayIcon className="h-7 w-7" aria-hidden="true" />
-                </div>
+                {featuredReport.status === "available" ? (
+                  <a
+                    href={featuredReport.href}
+                    download
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Download ${featuredReport.title} PDF`}
+                    className="relative mt-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-[#FFC300] text-[#232D63] transition-colors hover:bg-white"
+                  >
+                    <ArrowDownTrayIcon className="h-7 w-7" aria-hidden="true" />
+                  </a>
+                ) : (
+                  <div className="relative mt-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-[#FFC300] text-[#232D63]">
+                    <ArrowDownTrayIcon className="h-7 w-7" aria-hidden="true" />
+                  </div>
+                )}
               </div>
               <div className="lg:col-span-8 p-6 md:p-8 flex flex-col">
-                <p className="text-base text-[#4D4D4D] leading-relaxed m-0 mb-5 flex-1">
+                <p className="text-base md:text-lg text-[#4D4D4D] leading-relaxed m-0 mb-6 flex-1">
                   {featuredReport.summary}
                 </p>
                 <div className="flex flex-wrap items-center gap-3">
-                  <Link
-                    href={featuredReport.href}
-                    {...(featuredReport.status === "available"
-                      ? { target: "_blank", rel: "noopener noreferrer" }
-                      : {})}
-                    className="inline-flex items-center gap-2 rounded-xl bg-[#293C7D] px-5 py-3 text-sm font-bold !text-white hover:bg-[#232D63] transition-colors"
-                  >
-                    <ArrowDownTrayIcon className="h-4 w-4" aria-hidden="true" />
-                    {featuredReport.fileLabel}
-                    <span aria-hidden="true" className="!text-white">
-                      →
-                    </span>
-                  </Link>
+                  {featuredReport.status === "available" ? (
+                    <a
+                      href={featuredReport.href}
+                      download
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 rounded-xl bg-[#293C7D] px-5 py-3 text-sm font-bold !text-white hover:bg-[#232D63] transition-colors"
+                    >
+                      <ArrowDownTrayIcon className="h-4 w-4" aria-hidden="true" />
+                      Read report
+                      <span aria-hidden="true" className="!text-white">
+                        →
+                      </span>
+                    </a>
+                  ) : (
+                    <Link
+                      href={featuredReport.href}
+                      className="inline-flex items-center gap-2 rounded-xl bg-[#293C7D] px-5 py-3 text-sm font-bold !text-white hover:bg-[#232D63] transition-colors"
+                    >
+                      <EnvelopeIcon className="h-4 w-4" aria-hidden="true" />
+                      {featuredReport.fileLabel}
+                      <span aria-hidden="true" className="!text-white">
+                        →
+                      </span>
+                    </Link>
+                  )}
                   <Link
                     href="/research-process"
                     className="inline-flex items-center gap-2 rounded-xl border border-[#D0E0EC] px-5 py-3 text-sm font-bold text-[#293C7D] hover:border-[#293C7D] transition-colors"

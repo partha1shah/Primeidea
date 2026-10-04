@@ -82,10 +82,6 @@ const PrivateWealthSection = () => {
             <p className="text-base md:text-lg text-[#4D4D4D] leading-relaxed mb-6">
               Research-led private wealth support for high net worth investors — portfolio review, suitability across products, and disciplined planning without guaranteed-return claims.
             </p>
-            <p className="text-sm text-[#5A5A5A] leading-relaxed mb-8">
-              Guided by Partha Shah, SEBI Registered Research Analyst{" "}
-              <span className="font-semibold text-[#293C7D]">INH000017815</span>.
-            </p>
             <Link
               href="/private-wealth-management-gujarat-india"
               className="inline-flex items-center gap-2 text-base font-semibold text-[#293C7D] hover:text-[#232D63] transition-colors group"

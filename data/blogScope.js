@@ -15,7 +15,7 @@ export const SERVICE_LINKS = [
 ];
 
 const DISCLOSURE =
-  "Educational content only. Investments in the securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns and does not present itself as a SEBI Registered Investment Adviser unless separately registered.";
+  "Educational content only. Investments in the securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns.";
 
 const PARTHA_EXPERIENCE =
   "Engineering Graduate, Masters in Finance & SEBI Registered Research Analyst.";

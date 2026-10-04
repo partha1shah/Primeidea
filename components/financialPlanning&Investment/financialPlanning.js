@@ -33,10 +33,7 @@ const FinancialPlanning = () => {
         <div className="flex justify-between flex-col-reverse md:flex-row max-w-[1020px] mx-auto">
             <FadeUpOneByOneAnimation className="w-full md:w-[70%]">
                 <p className="text-[17px] md:text-[19px] font-normal mb-3">
-                    PrimeIdea writes a plan from your goals, cash flow, and current holdings — retirement, education, or longer-term saving. The review is guided by Partha Shah, SEBI Registered Research Analyst INH000017815.
-                </p>
-                <p className="text-[17px] md:text-[19px] font-normal mb-3">
-                    The note is a next step, not a claim that one product is best. PrimeIdea does not provide SEBI Registered Investment Adviser advice unless separately registered, and does not guarantee returns.
+                    PrimeIdea writes a plan from your goals, cash flow, and current holdings — retirement, education, or longer-term saving.
                 </p>
             </FadeUpOneByOneAnimation>
             <FadeUpOneByOneAnimation className="w-full max-w-[110px] md:max-w-[30%] mb-4 md:mb-0 flex justify-end items-baseline">

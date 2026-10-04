@@ -4,18 +4,13 @@ import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import FadeUpOneByOneAnimation from "@/animations/FadeUpOneByOneAnimation";
+import RegistrationsBlock from "@/components/registrations/RegistrationsBlock";
+import { IDENTITY_SHORT } from "@/data/registrations";
 import {
   ArrowUpIcon,
   MapPinIcon,
   PhoneIcon,
-  ShieldCheckIcon,
 } from "@heroicons/react/24/outline";
-
-const IDENTITY_LINE =
-  "PrimeIdea Ventures is a Vadodara-based research-led wealth management and portfolio review firm serving investors across Gujarat and India, with a research process guided by Partha Shah, SEBI Registered Research Analyst INH000017815.";
-
-const DISCLOSURE_SHORT =
-  "Investments in the securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns.";
 
 const SERVICE_LINKS = [
   {
@@ -60,6 +55,7 @@ const EXPLORE_LINKS = [
 const REGULATORY_LINKS = [
   { href: "/regulatory-disclosures", label: "Regulatory Disclosures" },
   { href: "/regulatory-disclosures#investor-charter", label: "Investor Charter" },
+  { href: "/regulatory-disclosures#amfi-code-of-conduct", label: "AMFI Code of Conduct" },
   { href: "/regulatory-disclosures#complaint-status", label: "Complaint Status" },
   { href: "/regulatory-disclosures#disclaimer", label: "Disclaimer" },
   { href: "/privacy-policy", label: "Privacy Policy" },
@@ -139,7 +135,7 @@ const Footer = () => {
                 </Link>
 
                 <p className="footer-body relative mb-6 text-[13px] leading-[1.65] md:text-sm">
-                  {IDENTITY_LINE}
+                  {IDENTITY_SHORT}
                 </p>
 
                 <ul className="relative m-0 mb-6 space-y-3.5 p-0 list-none">
@@ -163,18 +159,6 @@ const Footer = () => {
                 <div className="relative mb-6 flex flex-wrap gap-2">
                   <FooterCta href="/contact-us" label="Contact Us" />
                   <FooterCta href="/book-portfolio-review" label="Book Review" primary />
-                </div>
-
-                <div className="relative mb-6 inline-flex items-center gap-2.5 rounded-xl border border-[#FFC300]/25 bg-[#232D63]/60 px-3.5 py-2.5">
-                  <ShieldCheckIcon className="h-5 w-5 text-[#FFC300]" aria-hidden="true" />
-                  <div>
-                    <p className="footer-sebi-label text-[10px] font-semibold uppercase tracking-[0.14em]">
-                      SEBI Registered Research Analyst
-                    </p>
-                    <p className="footer-body text-sm font-semibold tabular-nums tracking-wide">
-                      INH000017815
-                    </p>
-                  </div>
                 </div>
 
                 <div className="relative border-t border-white/10 pt-5">
@@ -244,35 +228,49 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="relative z-10 border-t border-white/10 bg-[#232D63]/95 backdrop-blur-sm">
-        <div className="mx-auto px-4 py-6 sm:px-6 lg:max-w-[1024px] xl:max-w-[1170px] 2xl:max-w-[1340px]">
-          <div className="grid grid-cols-1 gap-5 lg:grid-cols-[auto_1fr_auto] lg:items-center lg:gap-8">
-            <ul className="m-0 flex list-none items-center gap-4 p-0">
+      <div className="relative z-10 border-t border-white/10 bg-[#1B2454]/95 backdrop-blur-sm">
+        <div className="mx-auto px-4 py-8 sm:px-6 lg:max-w-[1024px] xl:max-w-[1170px] 2xl:max-w-[1340px]">
+          <RegistrationsBlock variant="footer" />
+
+          <div className="mt-6 flex flex-col gap-4 border-t border-white/10 pt-5 sm:flex-row sm:items-center sm:justify-between">
+            <ul className="m-0 flex list-none items-center gap-3 p-0">
               {SOCIAL_LINKS.map((item) => (
                 <li key={item.label}>
                   <a
                     href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex rounded-full bg-white/5 p-2 ring-1 ring-white/10 transition-all hover:bg-white/10 hover:ring-white/20"
+                    className="inline-flex rounded-full bg-white/5 p-2 ring-1 ring-white/10 transition-all hover:bg-white/10 hover:ring-[#FFC300]/35"
                     aria-label={item.label}
                   >
-                    <Image src={item.src} alt="" width={22} height={22} aria-hidden="true" />
+                    <Image src={item.src} alt="" width={20} height={20} aria-hidden="true" />
                   </a>
                 </li>
               ))}
             </ul>
 
-            <p className="footer-body text-center text-[11px] leading-relaxed md:text-xs lg:text-left">
-              <span className="font-semibold text-white">SEBI RA INH000017815</span>
-              <span className="mx-2 hidden text-white/40 sm:inline">|</span>
-              <span className="block sm:inline mt-1 sm:mt-0">{DISCLOSURE_SHORT}</span>{" "}
-              <Link href="/regulatory-disclosures" className="footer-link-accent font-medium underline underline-offset-2">
-                View disclosures
+            <nav
+              aria-label="Legal"
+              className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] md:text-xs"
+            >
+              <Link href="/regulatory-disclosures" className="footer-link-accent font-medium hover:underline underline-offset-2">
+                Regulatory disclosures
               </Link>
-            </p>
+              <span className="text-white/25" aria-hidden="true">
+                ·
+              </span>
+              <Link href="/privacy-policy" className="footer-link-accent font-medium hover:underline underline-offset-2">
+                Privacy Policy
+              </Link>
+              <span className="text-white/25" aria-hidden="true">
+                ·
+              </span>
+              <Link href="/terms-of-use" className="footer-link-accent font-medium hover:underline underline-offset-2">
+                Terms of Use
+              </Link>
+            </nav>
 
-            <p className="footer-muted text-center text-[11px] md:text-xs lg:text-right">
+            <p className="footer-muted text-[11px] md:text-xs sm:text-right">
               © {new Date().getFullYear()} PrimeIdea Ventures. All rights reserved.
             </p>
           </div>

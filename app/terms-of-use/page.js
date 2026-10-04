@@ -11,7 +11,7 @@ const PAGE_URL = `https://www.primeidea.in${PAGE_PATH}`;
 export const metadata = {
   title: "Terms of Use",
   description:
-    "Terms for using the PrimeIdea Ventures website. Educational, research-led content from a Vadodara base — no guaranteed returns. Guided by Partha Shah, SEBI RA INH000017815.",
+    "Terms for using the PrimeIdea Ventures website. Educational, research-led content from a Vadodara base — no guaranteed returns. Guided by Partha Shah.",
   robots: "index, follow",
   openGraph: {
     type: "website",
@@ -40,7 +40,7 @@ const sections = [
   },
   {
     title: "Who we are",
-    body: "PrimeIdea Ventures is a Vadodara-based research-led wealth management and portfolio review firm serving investors across Gujarat and India, with a research process guided by Partha Shah, SEBI Registered Research Analyst INH000017815. PrimeIdea does not present itself as a SEBI Registered Investment Adviser unless separately registered.",
+    body: "PrimeIdea Ventures is a Vadodara-based research-led wealth management and portfolio review firm serving investors across Gujarat and India, with a research process ",
   },
   {
     title: "No advice or guarantees",
@@ -73,7 +73,7 @@ export default function TermsOfUsePage() {
         mainBannerImage="/images/home/banner.png"
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="Terms of Use"
-        mainSubTitle="Rules for using the PrimeIdea Ventures website — educational content, market risks, and clear role boundaries. Guided by Partha Shah, SEBI Registered Research Analyst INH000017815."
+        mainSubTitle="Rules for using the PrimeIdea Ventures website — educational content, market risks, and clear role boundaries."
         mainLinkTitle="Regulatory Disclosures"
         mainLink="/regulatory-disclosures"
         usePrimaryAsLink={true}

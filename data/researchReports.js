@@ -67,8 +67,22 @@ export const REPORT_CATEGORIES = [
  * status:
  * - available: PDF ready to download
  * - request: contact to receive the latest version
+ *
+ * Set featured: true on at most one report to pin the hero card on /research-reports.
  */
 export const RESEARCH_REPORTS = [
+  {
+    id: "market-outlook-fed-hike-india-rate-dilemma-sep-2026",
+    title: "Cross-Asset Market Outlook – Fed Hike & India's Rate Dilemma",
+    categoryId: "monthly-outlook",
+    summary:
+      "September 2026 outlook: Fed's first hike since 2023, oil shock, rupee and G-sec stress, and the live 5–7 October RBI MPC hold-vs-hike decision.",
+    dateLabel: "Sep 2026",
+    status: "available",
+    featured: true,
+    href: "/docs/research/market-outlook-fed-hike-india-rate-dilemma-sep-2026.pdf",
+    fileLabel: "Download PDF",
+  },
   {
     id: "portfolio-review-framework",
     title: "PrimeIdea Portfolio Review Framework",

@@ -9,8 +9,8 @@ import Footer from "@/components/footer";
 
 export const metadata = {
   title: 'Become a Partner',
-  description: 'Partner with PrimeIdea Ventures, a Vadodara research desk under SEBI Registered Research Analyst INH000017815. Partners use the research process with their clients. PrimeIdea is not a SEBI Registered Investment Adviser unless separately registered.',
-  keywords: 'PrimeIdea partner, portfolio review, research process, Partha Shah, SEBI Registered Research Analyst INH000017815, Vadodara',
+  description: 'Partner with PrimeIdea Ventures, a Vadodara research desk under SEBI Registered Research Analyst INH000017815. Partners use the research process with their clients.',
+  keywords: 'PrimeIdea partner, portfolio review, research process, SEBI Registered Research Analyst INH000017815, Vadodara',
   author: 'Partha Shah',
   robots: 'index, follow',
   canonical: 'https://www.primeidea.in/become-a-partner/',
@@ -20,7 +20,7 @@ export const metadata = {
     url: 'https://www.primeidea.in/become-a-partner/',
     site_name: 'PrimeIdea Ventures',
     title: 'Become a Partner | PrimeIdea Ventures',
-    description: 'Partner with PrimeIdea Ventures, a Vadodara research desk under SEBI Registered Research Analyst INH000017815. Partners use the research process with their clients. PrimeIdea is not a SEBI Registered Investment Adviser unless separately registered.',
+    description: 'Partner with PrimeIdea Ventures, a Vadodara research desk under SEBI Registered Research Analyst INH000017815. Partners use the research process with their clients.',
   },
   twitter: {
     handle: '@primeidea',

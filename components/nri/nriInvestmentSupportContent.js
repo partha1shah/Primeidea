@@ -111,13 +111,11 @@ export default function NriInvestmentSupportContent() {
               </h2>
               <p className="text-base md:text-lg text-[#4D4D4D] leading-relaxed mb-4">
                 PrimeIdea Ventures is a Vadodara-based research-led wealth management and
-                portfolio review firm serving investors across Gujarat and India. NRI investment
-                support is guided by Partha Shah, SEBI Registered Research Analyst INH000017815.
+                portfolio review firm serving investors across Gujarat and India.
               </p>
               <p className="text-base md:text-lg text-[#4D4D4D] leading-relaxed">
                 This is suitability-oriented review of India holdings — not guaranteed returns,
-                not cross-border tax or FEMA legal advice, and not SEBI Registered Investment
-                Adviser advice unless PrimeIdea is separately registered.
+                and not cross-border tax or FEMA legal advice.
               </p>
             </div>
             <ul className="lg:col-span-6 grid grid-cols-1 gap-3 list-none m-0 p-0">

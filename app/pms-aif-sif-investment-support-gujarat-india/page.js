@@ -22,9 +22,9 @@ const faqs = [
   {
     question: "What is PMS, AIF & SIF investment support at PrimeIdea?",
     answer:
-      "It is research-led suitability support for Portfolio Management Services, Alternative Investment Funds, and Specialized Investment Funds — costs, liquidity, concentration, and fit — guided by Partha Shah, SEBI Registered Research Analyst INH000017815. It is not a product push and does not guarantee returns.",
+      "It is research-led suitability support for Portfolio Management Services, Alternative Investment Funds, and Specialized Investment Funds — costs, liquidity, concentration, and fit — it is not a product push and does not guarantee returns.",
     plainText:
-      "It is research-led suitability support for Portfolio Management Services, Alternative Investment Funds, and Specialized Investment Funds — costs, liquidity, concentration, and fit — guided by Partha Shah, SEBI Registered Research Analyst INH000017815. It is not a product push and does not guarantee returns.",
+      "It is research-led suitability support for Portfolio Management Services, Alternative Investment Funds, and Specialized Investment Funds — costs, liquidity, concentration, and fit — it is not a product push and does not guarantee returns.",
   },
   {
     question: "Does PrimeIdea offer PMS, AIF, or SIF to every client?",
@@ -39,13 +39,6 @@ const faqs = [
       "No. Investments in the securities market are subject to market risks. Read all offer documents carefully. PrimeIdea does not guarantee returns or market-beating performance.",
     plainText:
       "No. Investments in the securities market are subject to market risks. Read all offer documents carefully. PrimeIdea does not guarantee returns or market-beating performance.",
-  },
-  {
-    question: "Is this SEBI Registered Investment Adviser advice?",
-    answer:
-      "No. PrimeIdea operates under SEBI Registered Research Analyst registration. It does not present itself as a SEBI Registered Investment Adviser unless separately registered.",
-    plainText:
-      "No. PrimeIdea operates under SEBI Registered Research Analyst registration. It does not present itself as a SEBI Registered Investment Adviser unless separately registered.",
   },
   {
     question: "Who is this support for?",
@@ -73,9 +66,9 @@ const faqs = [
 export const metadata = {
   title: "PMS, AIF & SIF Investment Support in Gujarat and India",
   description:
-    "PrimeIdea Ventures helps investors across Gujarat and India with research-led PMS, AIF, and SIF investment support through a process guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Suitability first. Market risks apply. No guaranteed returns.",
+    "PrimeIdea Ventures helps investors across Gujarat and India with research-led PMS, AIF, and SIF investment support through a process Suitability first. Market risks apply. No guaranteed returns.",
   keywords:
-    "PMS investment support Gujarat, AIF suitability India, SIF investment support, Portfolio Management Services Vadodara, Partha Shah SEBI RA INH000017815, PrimeIdea Ventures",
+    "PMS investment support Gujarat, AIF suitability India, SIF investment support, Portfolio Management Services Vadodara, PrimeIdea Ventures",
   author: "Partha Shah",
   robots: "index, follow",
   openGraph: {
@@ -86,7 +79,7 @@ export const metadata = {
     title:
       "PMS, AIF & SIF Investment Support in Gujarat and India | PrimeIdea Ventures",
     description:
-      "Research-led PMS, AIF, and SIF suitability support across Gujarat and India, guided by Partha Shah, SEBI Registered Research Analyst INH000017815. No guaranteed returns.",
+      "Research-led PMS, AIF, and SIF suitability support across Gujarat and India. No guaranteed returns.",
   },
   twitter: {
     handle: "@primeidea",
@@ -106,7 +99,7 @@ const serviceSchema = {
   "@type": "Service",
   name: "PMS, AIF & SIF Investment Support in Gujarat and India",
   description:
-    "Research-led PMS, AIF, and SIF suitability support for investors across Gujarat and India, guided by Partha Shah, SEBI Registered Research Analyst INH000017815.",
+    "Research-led PMS, AIF, and SIF suitability support for investors across Gujarat and India.",
   provider: {
     "@type": "FinancialService",
     name: "PrimeIdea Ventures",
@@ -136,7 +129,7 @@ export default function PmsAifSifInvestmentSupportPage() {
         mainBannerImage="/images/home/banner.png"
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="PMS, AIF & SIF Investment Support in Gujarat and India"
-        mainSubTitle="Research-led suitability support for Portfolio Management Services, Alternative Investment Funds, and Specialized Investment Funds — from a Vadodara base, across Gujarat and India. Guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Discussed only where suitable and where distribution rights exist. No guaranteed returns."
+        mainSubTitle="Research-led suitability support for Portfolio Management Services, Alternative Investment Funds, and Specialized Investment Funds — from a Vadodara base, across Gujarat and India. Discussed only where suitable and where distribution rights exist. No guaranteed returns."
         mainLinkTitle="Book Suitability Review"
         mainLink="/book-portfolio-review?service=PMS%20%2F%20AIF%20%2F%20SIF%20Suitability%20Review"
         usePrimaryAsLink={true}
@@ -148,10 +141,9 @@ export default function PmsAifSifInvestmentSupportPage() {
       <ScopePageMetaStrip
         stats={[
           { label: "Reach", value: "Gujarat & India", Icon: GlobeAltIcon },
-          { label: "Focus", value: "Suitability first", Icon: ScaleIcon },
-          { label: "Registration No.", value: "INH000017815", Icon: CheckBadgeIcon },
+          { label: "Focus", value: "Suitability first", Icon: ScaleIcon },
         ]}
-        disclaimer="PMS, AIF, and SIF products carry market, liquidity, and concentration risks. Availability depends on eligibility, empanelment, and compliance. PrimeIdea Ventures does not guarantee returns and does not present itself as a SEBI Registered Investment Adviser unless separately registered. Many reviews stay with mutual funds, equity, and fixed income."
+        disclaimer="PMS, AIF, and SIF products carry market, liquidity, and concentration risks. Availability depends on eligibility, empanelment, and compliance. PrimeIdea Ventures does not guarantee returns. Many reviews stay with mutual funds, equity, and fixed income."
       />
 
       <ScopeBreadcrumbs items={[{ label: "PMS, AIF & SIF Investment Support" }]} />
@@ -170,9 +162,7 @@ export default function PmsAifSifInvestmentSupportPage() {
       >
         Investments in the securities market are subject to market risks. PMS, AIF, and SIF
         products can lose value and may have limited liquidity. Read all offer documents
-        carefully. PrimeIdea Ventures does not guarantee returns. Partha Shah is a SEBI
-        Registered Research Analyst (INH000017815). PrimeIdea does not act as a SEBI Registered
-        Investment Adviser unless separately registered. Distribution support is provided only
+        carefully. PrimeIdea Ventures does not guarantee returns. Distribution support is provided only
         where empanelment and compliance rights exist. Investors should verify registration
         independently.
       </ScopeDisclaimerBar>

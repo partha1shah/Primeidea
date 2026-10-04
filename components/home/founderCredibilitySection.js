@@ -11,7 +11,7 @@ import {
 const credibilityPoints = [
   {
     title: "SEBI Registered Research Analyst",
-    description: "Registration number INH000017815 — research leadership you can verify.",
+    description: "Research leadership you can verify on the SEBI RA page and in the site footer.",
     Icon: CheckBadgeIcon,
   },
   {
@@ -65,13 +65,13 @@ const FounderCredibilitySection = () => {
               Partha <strong className="font-semibold">Shah</strong>
             </h2>
             <p className="text-[#FFC300] text-base md:text-lg font-semibold mb-4">
-              SEBI Registered Research Analyst · INH000017815
+              SEBI Registered Research Analyst
             </p>
             <p className="text-base md:text-lg text-white/80 leading-relaxed mb-6 max-w-[560px]">
               PrimeIdea Ventures is a Vadodara-based research-led wealth management and portfolio review firm serving investors across Gujarat and India, with a research process guided by Partha Shah.
             </p>
             <p className="text-sm md:text-base text-white/70 leading-relaxed mb-8 max-w-[560px]">
-              Investors should verify SEBI registration independently. PrimeIdea does not guarantee returns and does not present itself as a SEBI Registered Investment Adviser unless separately registered.
+              Investors should verify SEBI registration independently. PrimeIdea does not guarantee returns.
             </p>
 
             <div className="flex flex-wrap gap-3">

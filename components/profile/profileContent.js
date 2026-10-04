@@ -14,7 +14,7 @@ import {
 } from "@heroicons/react/24/outline";
 
 const IDENTITY_LINE =
-  "PrimeIdea Ventures is a Vadodara-based research-led wealth management and portfolio review firm serving investors across Gujarat and India, with a research process guided by Partha Shah, SEBI Registered Research Analyst INH000017815.";
+  "PrimeIdea Ventures is a Vadodara-based research-led wealth management firm and distributor of financial products — mutual funds, PMS, AIF, SIF — serving investors across Gujarat, India, and worldwide.";
 
 const entityFacts = [
   { label: "Legal / brand name", value: "PrimeIdea Ventures" },
@@ -28,25 +28,21 @@ const entityFacts = [
   },
   { label: "Phone / WhatsApp", value: "+91 81410 27000" },
   { label: "Research leadership", value: "Partha Shah — Head of Research & Investment Strategy" },
-  { label: "SEBI registration", value: "Research Analyst INH000017815" },
-  {
-    label: "Not claiming",
-    value: "SEBI Registered Investment Adviser (unless separately registered)",
-  },
+  { label: "SEBI RA", value: "INB010653732" },
+  { label: "AMFI MF ARN", value: "ARN-109345" },
   { label: "Returns policy", value: "No guaranteed / market-beating / risk-free return claims" },
 ];
 
 const whatWeDo = [
   "Structured portfolio review (allocation, overlap, suitability)",
-  "Mutual fund, fixed income, and equity research context",
+  "Distribute mutual funds, PMS, AIF, and SIF through registered channels",
   "Private wealth & family wealth office conversations",
-  "PMS / AIF / SIF suitability education where permitted",
   "Retirement, insurance, NRI, and succession coordination (partner-enabled for legal work)",
+  "Research-led guidance so investors understand products before investing",
 ];
 
 const whatWeDont = [
   "Guarantee returns or market-beating performance",
-  "Present as SEBI RIA unless separately registered",
   "Claim offices in other cities without proof",
   "List succession partner names or pricing on this site",
   "Sell products on star ratings alone",
@@ -92,7 +88,7 @@ export default function ProfileContent() {
                 {[
                   "Vadodara base",
                   "Gujarat & India reach",
-                  "SEBI RA INH000017815",
+                  "SEBI RA INB010653732",
                   "No return guarantees",
                 ].map((chip) => (
                   <li
@@ -160,7 +156,7 @@ export default function ProfileContent() {
                   <p className="text-[11px] font-semibold uppercase tracking-[0.14em] !text-white/55 m-0 mb-1">
                     SEBI registration
                   </p>
-                  <p className="text-xl font-bold tabular-nums !text-[#FFC300] m-0">INH000017815</p>
+                  <p className="text-xl font-bold tabular-nums !text-[#FFC300] m-0">INB010653732</p>
                 </div>
                 <div className="relative flex flex-col gap-2.5">
                   <Link
@@ -215,7 +211,7 @@ export default function ProfileContent() {
             {[
               { Icon: MapPinIcon, label: "Base", value: "Vadodara" },
               { Icon: GlobeAltIcon, label: "Reach", value: "Gujarat & India" },
-              { Icon: CheckBadgeIcon, label: "SEBI RA", value: "INH000017815" },
+              { Icon: CheckBadgeIcon, label: "SEBI RA", value: "INB010653732" },
             ].map(({ Icon, label, value }) => (
               <div
                 key={label}

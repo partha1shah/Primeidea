@@ -80,11 +80,10 @@ export default function DirectEquityContent() {
               </h2>
               <p className="text-base md:text-lg text-[#4D4D4D] leading-relaxed mb-4">
                 PrimeIdea Ventures is a Vadodara-based research-led firm serving investors across Gujarat and India.
-                Direct equity support is guided by Partha Shah, SEBI Registered Research Analyst INH000017815.
               </p>
               <p className="text-base md:text-lg text-[#4D4D4D] leading-relaxed">
                 The review looks at concentration, overlap, and whether each holding still has a role.
-                It is not a buy or sell tip, not a guaranteed return, and not SEBI Registered Investment Adviser advice unless separately registered.
+                It is not a buy or sell tip, and not a guaranteed return.
               </p>
             </div>
             <ul className="lg:col-span-6 grid grid-cols-1 gap-3 list-none m-0 p-0">

@@ -846,7 +846,7 @@ export default function WealthToolsContent() {
                 >
                   portfolio review
                 </Link>{" "}
-                guided by Partha Shah, SEBI Registered Research Analyst INH000017815.
+               
               </p>
             </FadeUpOneByOneAnimation>
 

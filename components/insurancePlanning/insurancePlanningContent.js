@@ -111,15 +111,12 @@ export default function InsurancePlanningContent() {
               </h2>
               <p className="text-base md:text-lg text-[#4D4D4D] leading-relaxed mb-4">
                 PrimeIdea Ventures is a Vadodara-based research-led wealth management and
-                portfolio review firm serving investors across Gujarat and India. Insurance
-                planning support is guided by Partha Shah, SEBI Registered Research Analyst
-                INH000017815.
+                portfolio review firm serving investors across Gujarat and India.
               </p>
               <p className="text-base md:text-lg text-[#4D4D4D] leading-relaxed">
                 This is cover-gap and suitability-oriented review — not a claim that PrimeIdea
-                is an insurer, not “best insurance” marketing, and not SEBI Registered Investment
-                Adviser advice unless PrimeIdea is separately registered. Policy issuance and
-                claims remain with the insurer and applicable intermediaries.
+                is an insurer, and not “best insurance” marketing. Policy issuance and claims
+                remain with the insurer and applicable intermediaries.
               </p>
             </div>
             <ul className="lg:col-span-6 grid grid-cols-1 gap-3 list-none m-0 p-0">

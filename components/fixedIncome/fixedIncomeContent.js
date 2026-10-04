@@ -116,14 +116,12 @@ export default function FixedIncomeContent() {
               </h2>
               <p className="text-base md:text-lg text-[#4D4D4D] leading-relaxed mb-4">
                 PrimeIdea Ventures is a Vadodara-based research-led wealth management and
-                portfolio review firm serving investors across Gujarat and India. Fixed income
-                review is guided by Partha Shah, SEBI Registered Research Analyst INH000017815.
+                portfolio review firm serving investors across Gujarat and India.
               </p>
               <p className="text-base md:text-lg text-[#4D4D4D] leading-relaxed">
                 Fixed income does not mean fixed or guaranteed returns. Bonds, debt funds, and
                 related instruments carry credit, interest-rate, and liquidity risks. This is
-                suitability-oriented research — not SEBI Registered Investment Adviser advice
-                unless PrimeIdea is separately registered.
+                suitability-oriented research.
               </p>
             </div>
             <ul className="lg:col-span-6 grid grid-cols-1 gap-3 list-none m-0 p-0">

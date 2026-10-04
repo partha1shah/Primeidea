@@ -1,4 +1,6 @@
 import FadeUpOneByOneAnimation from "@/animations/FadeUpOneByOneAnimation";
+import RegistrationsBlock from "@/components/registrations/RegistrationsBlock";
+import { IDENTITY_SHORT, SEBI_RA } from "@/data/registrations";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -11,20 +13,19 @@ import {
 const verificationSteps = [
   {
     title: "Check SEBI registration",
-    description:
-      "Verify Partha Shah’s registration as a SEBI Registered Research Analyst on the official SEBI website using registration number INH000017815.",
+    description: `Verify SEBI Registered Research Analyst registration on the official SEBI website using registration number ${SEBI_RA.number}. Validity – ${SEBI_RA.validity}.`,
     Icon: CheckBadgeIcon,
   },
   {
-    title: "Understand the RA role",
+    title: "Understand our dual role",
     description:
-      "A Research Analyst provides research and analysis. This is distinct from a SEBI Registered Investment Adviser or a mutual fund distributor.",
+      "PrimeIdea provides research-led guidance and also distributes financial products such as mutual funds, PMS, AIF, and SIF through registered channels.",
     Icon: DocumentMagnifyingGlassIcon,
   },
   {
     title: "Review disclosures",
     description:
-      "Read PrimeIdea’s regulatory disclosures, grievance process, and risk statements before acting on any research-led guidance.",
+      "Read PrimeIdea’s regulatory disclosures, AMFI / PMS credentials, grievance process, and risk statements before investing.",
     Icon: ShieldCheckIcon,
   },
   {
@@ -38,31 +39,31 @@ const verificationSteps = [
 const roleCards = [
   {
     title: "SEBI Registered Research Analyst",
-    subtitle: "What PrimeIdea operates under",
+    subtitle: `Registration ${SEBI_RA.number}`,
     points: [
       "Research and analysis on securities and investment products",
       "Portfolio review and suitability-oriented guidance",
-      "Process-first recommendations without return guarantees",
+      `Validity – ${SEBI_RA.validity}`,
     ],
     highlight: true,
   },
   {
-    title: "SEBI Registered Investment Adviser",
-    subtitle: "Not PrimeIdea’s current registration",
+    title: "Financial product distributor",
+    subtitle: "Mutual funds, PMS, AIF & SIF",
     points: [
-      "Personalised investment advice under a separate SEBI registration",
-      "PrimeIdea does not present itself as an RIA unless separately registered",
-      "Always verify registration category independently",
+      "AMFI Registered Mutual Fund Distributor (ARN-109345)",
+      "AMFI Registered SIF Distributor (EUIN E655130)",
+      "PMS Distribution (APRN02764) · Religare Broking AP0130040153084",
     ],
-    highlight: false,
+    highlight: true,
   },
   {
-    title: "Mutual Fund Distributor",
-    subtitle: "Different role and incentives",
+    title: "Investor responsibility",
+    subtitle: "Before you invest",
     points: [
-      "Distribution-focused model with commission structures",
-      "PrimeIdea’s positioning is research-led review, not product pushing",
-      "Suitability and process matter more than product sales volume",
+      "Read all scheme / offer documents carefully",
+      "Verify registrations independently on SEBI / AMFI records",
+      "Market-linked products do not guarantee returns",
     ],
     highlight: false,
   },
@@ -97,10 +98,7 @@ export default function SebiRaContentSections() {
               <strong className="font-semibold">SEBI Registered Research Analyst</strong>
             </h2>
             <p className="text-base md:text-lg text-[#4D4D4D] leading-relaxed">
-              PrimeIdea Ventures is a Vadodara-based research-led wealth management and
-              portfolio review firm serving investors across Gujarat and India, with a
-              research process guided by Partha Shah, SEBI Registered Research Analyst
-              INH000017815.
+              {IDENTITY_SHORT}
             </p>
           </FadeUpOneByOneAnimation>
 
@@ -140,12 +138,13 @@ export default function SebiRaContentSections() {
               id="sebi-role-heading"
               className="text-[28px] md:text-[36px] font-light text-white leading-[120%] mb-4"
             >
-              Research Analyst vs Investment Adviser vs{" "}
-              <strong className="font-semibold">Distributor</strong>
+              Research Analyst and{" "}
+              <strong className="font-semibold">product distributor</strong>
             </h2>
             <p className="text-base md:text-lg text-white/80 leading-relaxed">
-              Understanding registration categories helps you evaluate who you are working
-              with, what they can legally provide, and what disclosures you should expect.
+              PrimeIdea combines research-led portfolio review with registered distribution
+              of mutual funds, PMS, AIF, and SIF — so investors get clarity and access in one
+              place.
             </p>
           </FadeUpOneByOneAnimation>
 
@@ -270,6 +269,12 @@ export default function SebiRaContentSections() {
               </div>
             </FadeUpOneByOneAnimation>
           </div>
+        </div>
+      </section>
+
+      <section className="bg-[#F6FDFF] py-14 md:py-16">
+        <div className="mx-auto 2xl:max-w-[1340px] xl:max-w-[1170px] lg:max-w-[1004px] px-4">
+          <RegistrationsBlock />
         </div>
       </section>
 

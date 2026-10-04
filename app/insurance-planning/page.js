@@ -24,9 +24,9 @@ const faqs = [
   {
     question: "What is insurance planning support at PrimeIdea?",
     answer:
-      "It is research-led review of life and health cover gaps, policy mix, premiums versus need, and nominations — guided by Partha Shah, SEBI Registered Research Analyst INH000017815. It is not product push and does not guarantee claim outcomes.",
+      "It is research-led review of life and health cover gaps, policy mix, premiums versus need, and nominations — it is not product push and does not guarantee claim outcomes.",
     plainText:
-      "It is research-led review of life and health cover gaps, policy mix, premiums versus need, and nominations — guided by Partha Shah, SEBI Registered Research Analyst INH000017815. It is not product push and does not guarantee claim outcomes.",
+      "It is research-led review of life and health cover gaps, policy mix, premiums versus need, and nominations — it is not product push and does not guarantee claim outcomes.",
   },
   {
     question: "Is PrimeIdea an insurance company?",
@@ -41,13 +41,6 @@ const faqs = [
       "No. PrimeIdea does not use “best insurance” claims. Cover is reviewed for suitability against family need, existing policies, and cost — subject to each insurer’s terms.",
     plainText:
       "No. PrimeIdea does not use “best insurance” claims. Cover is reviewed for suitability against family need, existing policies, and cost — subject to each insurer’s terms.",
-  },
-  {
-    question: "Is this SEBI Registered Investment Adviser advice?",
-    answer:
-      "No. PrimeIdea operates under SEBI Registered Research Analyst registration. It does not present itself as a SEBI Registered Investment Adviser unless separately registered.",
-    plainText:
-      "No. PrimeIdea operates under SEBI Registered Research Analyst registration. It does not present itself as a SEBI Registered Investment Adviser unless separately registered.",
   },
   {
     question: "How does insurance planning connect to succession?",
@@ -68,9 +61,9 @@ const faqs = [
 export const metadata = {
   title: "Insurance Planning",
   description:
-    "PrimeIdea Ventures offers research-led insurance planning for investors across Gujarat and India, guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Cover review without product push. Policy terms apply. No guaranteed claim outcomes.",
+    "PrimeIdea Ventures offers research-led insurance planning for investors across Gujarat and India. Cover review without product push. Policy terms apply. No guaranteed claim outcomes.",
   keywords:
-    "insurance planning, term insurance review, health cover gap analysis, Partha Shah SEBI RA INH000017815, PrimeIdea Ventures",
+    "insurance planning, term insurance review, health cover gap analysis, PrimeIdea Ventures",
   author: "Partha Shah",
   robots: "index, follow",
   openGraph: {
@@ -80,7 +73,7 @@ export const metadata = {
     site_name: "PrimeIdea Ventures",
     title: "Insurance Planning | PrimeIdea Ventures",
     description:
-      "Research-led insurance cover review, guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Not product push. Policy terms apply.",
+      "Research-led insurance cover review, Not product push. Policy terms apply.",
   },
   twitter: {
     handle: "@primeidea",
@@ -100,7 +93,7 @@ const serviceSchema = {
   "@type": "Service",
   name: "Insurance Planning",
   description:
-    "Research-led life and health insurance cover review, guided by Partha Shah, SEBI Registered Research Analyst INH000017815.",
+    "Research-led life and health insurance cover review.",
   provider: {
     "@type": "FinancialService",
     name: "PrimeIdea Ventures",
@@ -130,7 +123,7 @@ export default function InsurancePlanningPage() {
         mainBannerImage="/images/home/banner.png"
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="Insurance Planning"
-        mainSubTitle="Research-led life and health cover review from a Vadodara office, serving investors across Gujarat and India. Guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Cover first — not product push. Policy terms apply. No guaranteed claim outcomes."
+        mainSubTitle="Research-led life and health cover review from a Vadodara office, serving investors across Gujarat and India. Cover first — not product push. Policy terms apply. No guaranteed claim outcomes."
         mainLinkTitle="Start Insurance Review"
         mainLink="#lead-form"
         usePrimaryAsLink={true}
@@ -143,9 +136,8 @@ export default function InsurancePlanningPage() {
         stats={[
           { label: "Base Location", value: "Vadodara", Icon: MapPinIcon },
           { label: "Focus", value: "Cover gaps", Icon: ShieldCheckIcon },
-          { label: "Registration No.", value: "INH000017815", Icon: CheckBadgeIcon },
         ]}
-        disclaimer="Insurance products are subject to insurer terms, conditions, and exclusions. PrimeIdea Ventures does not guarantee claim outcomes or investment-linked returns inside insurance products, and does not present itself as a SEBI Registered Investment Adviser unless separately registered."
+        disclaimer="Insurance products are subject to insurer terms, conditions, and exclusions. PrimeIdea Ventures does not guarantee claim outcomes or investment-linked returns inside insurance products."
       />
 
       <ScopeBreadcrumbs items={[{ label: "Insurance Planning" }]} />
@@ -164,10 +156,8 @@ export default function InsurancePlanningPage() {
 
       <ScopeDisclaimerBar ctaHref="/portfolio-review" ctaLabel="Book Portfolio Review">
         Insurance products are subject to the terms, conditions, exclusions, and claim processes of
-        the issuing insurer. PrimeIdea Ventures does not guarantee claim outcomes. Partha Shah is a
-        SEBI Registered Research Analyst (INH000017815). PrimeIdea does not act as a SEBI Registered
-        Investment Adviser unless separately registered. Investors should verify registration
-        independently and read all policy documents carefully.
+        the issuing insurer. PrimeIdea Ventures does not guarantee claim outcomes. Read all policy
+        documents carefully.
       </ScopeDisclaimerBar>
 
       <Footer />

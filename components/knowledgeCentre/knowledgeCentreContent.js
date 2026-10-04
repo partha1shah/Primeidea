@@ -248,6 +248,13 @@ const downloads = [
     meta: "PDF · Compliance",
   },
   {
+    title: "AMFI Code of Conduct",
+    description:
+      "AMFI Code of Conduct for intermediaries engaged in selling and distribution of mutual fund units.",
+    href: "/docs/code-of-conduct.pdf",
+    meta: "PDF · Compliance",
+  },
+  {
     title: "Regulatory Disclosures",
     description:
       "Registration details, grievance redressal, SCORES information, and role clarification on the live disclosures page.",
@@ -353,7 +360,7 @@ export default function KnowledgeCentreContent({ posts = [] }) {
               </p>
               <p className="text-base text-[#4D4D4D] leading-relaxed mb-6">
                 Educational material is aligned with PrimeIdea’s research process
-                guided by Partha Shah, SEBI Registered Research Analyst INH000017815.
+               
                 Dedicated research-report PDFs remain separate from general blogs.
               </p>
               <div className="flex flex-wrap gap-3">
@@ -419,7 +426,7 @@ export default function KnowledgeCentreContent({ posts = [] }) {
                 <li key={id}>
                   <Link
                     href={href}
-                    {...(external
+                    {.(external
                       ? { target: "_blank", rel: "noopener noreferrer" }
                       : {})}
                     className={`group relative overflow-hidden flex h-full flex-col rounded-[24px] bg-gradient-to-br ${accent} p-5 md:p-6 shadow-[0_18px_40px_-28px_rgba(35,45,99,0.55)]`}
@@ -568,7 +575,7 @@ export default function KnowledgeCentreContent({ posts = [] }) {
                 <li key={id} id={id} className="animate-fadeUp">
                   <Link
                     href={href}
-                    {...(external
+                    {.(external
                       ? { target: "_blank", rel: "noopener noreferrer" }
                       : {})}
                     className="group flex h-full flex-col rounded-[22px] border border-[#D0E0EC] bg-white p-5 md:p-6 transition-all hover:border-[#293C7D] hover:shadow-[0_16px_36px_-28px_rgba(41,60,125,0.55)]"
@@ -881,7 +888,7 @@ export default function KnowledgeCentreContent({ posts = [] }) {
               <li key={item.title}>
                 <Link
                   href={item.href}
-                  {...(!item.isPage
+                  {.(!item.isPage
                     ? { target: "_blank", rel: "noopener noreferrer" }
                     : {})}
                   className="group relative flex h-full flex-col overflow-hidden rounded-[22px] border border-[#D0E0EC] bg-white p-5 md:p-6 hover:border-[#293C7D] transition-colors"

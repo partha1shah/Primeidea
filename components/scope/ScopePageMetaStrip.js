@@ -6,13 +6,8 @@ import {
 
 const defaultStats = [
   {
-    label: "Registration",
-    value: "SEBI RA",
-    Icon: CheckBadgeIcon,
-  },
-  {
-    label: "Registration No.",
-    value: "INH000017815",
+    label: "Approach",
+    value: "Research-led",
     Icon: CheckBadgeIcon,
   },
   {
@@ -20,11 +15,16 @@ const defaultStats = [
     value: "Vadodara",
     Icon: MapPinIcon,
   },
+  {
+    label: "Reach",
+    value: "Gujarat & India",
+    Icon: MapPinIcon,
+  },
 ];
 
 export default function ScopePageMetaStrip({
   stats = defaultStats,
-  disclaimer = "Investors should verify SEBI registration independently. PrimeIdea does not guarantee returns and does not present itself as a SEBI Registered Investment Adviser unless separately registered.",
+  disclaimer = "Investors should verify SEBI registration independently. Investments in the securities market are subject to market risks. PrimeIdea does not guarantee returns.",
 }) {
   return (
     <section

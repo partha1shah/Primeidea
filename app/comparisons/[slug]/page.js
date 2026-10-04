@@ -69,7 +69,7 @@ export default async function ComparisonPage({ params }) {
   const PAGE_URL = `https://www.primeidea.in${PAGE_PATH}`;
 
   const faqs = (comparison.faqs || []).map((faq) => ({
-    ...faq,
+    .faq,
     plainText: faq.answer,
   }));
 
@@ -107,7 +107,7 @@ export default async function ComparisonPage({ params }) {
         mainBannerImage="/images/home/banner.png"
         bannerRightImg="/images/home/banner-right.png"
         mainTitle={comparison.h1}
-        mainSubTitle={`${comparison.summary} Guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Educational only. No guaranteed returns.`}
+        mainSubTitle={`${comparison.summary} Educational only. No guaranteed returns.`}
         mainLinkTitle="Book Portfolio Review"
         mainLink="/book-portfolio-review"
         usePrimaryAsLink={true}
@@ -153,9 +153,7 @@ export default async function ComparisonPage({ params }) {
       <ScopeDisclaimerBar ctaHref="/book-portfolio-review" ctaLabel="Book Portfolio Review">
         Educational content only. Investments in the securities market are subject to market
         risks. Read all scheme / offer documents carefully. PrimeIdea Ventures does not
-        guarantee returns. Partha Shah is a SEBI Registered Research Analyst (INH000017815).
-        PrimeIdea does not act as a SEBI Registered Investment Adviser unless separately
-        registered.
+        guarantee returns.
       </ScopeDisclaimerBar>
 
       <Footer />

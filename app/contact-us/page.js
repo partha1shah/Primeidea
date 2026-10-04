@@ -10,8 +10,8 @@ import Image from "next/image";
 
 export const metadata = {
     title: 'Contact Us | PrimeIdea - Financial Guidance & Support',
-    description: 'Contact PrimeIdea Ventures in Vadodara about a portfolio review or research-led planning. Research is guided by Partha Shah, SEBI Registered Research Analyst INH000017815.',
-    keywords: 'contact PrimeIdea, portfolio review, Vadodara, Partha Shah, SEBI Registered Research Analyst INH000017815',
+    description: 'Contact PrimeIdea Ventures in Vadodara about a portfolio review or research-led planning. Phone, address, and founder details on this page.',
+    keywords: 'contact PrimeIdea, portfolio review, Vadodara, PrimeIdea Ventures',
     author: 'Partha Shah',
     robots: 'index, follow',
     canonical: 'https://www.primeidea.in/contact-us/',
@@ -21,7 +21,7 @@ export const metadata = {
       url: 'https://www.primeidea.in/contact-us/',
       site_name: 'PrimeIdea Ventures',
       title: 'Contact Us | PrimeIdea - Financial Guidance & Support',
-      description: 'Contact PrimeIdea Ventures in Vadodara about a portfolio review or research-led planning. Research is guided by Partha Shah, SEBI Registered Research Analyst INH000017815.',
+      description: 'Contact PrimeIdea Ventures in Vadodara about a portfolio review or research-led planning.',
     },
     twitter: {
       handle: '@primeidea',
@@ -85,7 +85,7 @@ const ContactUs = () => {
                                     </a>
                                 </div>
                                 <p className="mt-4 text-base text-gray-600">&quot;Welcome to PrimeIdea Ventures. In a world of complex financial markets, clarity comes from deep research and experience. With over two decades of expertise, my focus is to ensure that every strategy we recommend is backed by rigorous analysis and tailored to your unique life goals. Whether it is wealth management or retirement planning, we are dedicated to building a partnership with you based on transparency, regulatory integrity, and excellence.&quot;</p>
-                                <p className="mt-2 text-base text-gray-800 font-semibold">- Partha Shah <br/> Head of Research & Investment Strategy <br/> SEBI Registered Research Analyst (INH000017815)</p>
+                                <p className="mt-2 text-base text-gray-800 font-semibold">- Partha Shah <br/> Head of Research & Investment Strategy <br/> SEBI Registered Research Analyst (INB010653732)</p>
                             </div>
                         </div>
                         <div className="w-full md:w-1/2 bg-[#f2f3f4] py-8 px-12 rounded-lg shadow-lg bg-[#fff]">

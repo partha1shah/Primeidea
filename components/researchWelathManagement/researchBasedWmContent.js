@@ -120,13 +120,11 @@ export default function ResearchBasedWmContent() {
               </h2>
               <p className="text-base md:text-lg text-[#4D4D4D] leading-relaxed mb-4">
                 PrimeIdea Ventures is a Vadodara-based research-led wealth management and
-                portfolio review firm serving investors across Gujarat and India. The research
-                process is guided by Partha Shah, SEBI Registered Research Analyst INH000017815.
+                portfolio review firm serving investors across Gujarat and India.
               </p>
               <p className="text-base md:text-lg text-[#4D4D4D] leading-relaxed mb-6">
                 Mutual fund and equity support follows the same method: suitability, overlap,
-                allocation, and risk first. Not a product push. Not a return promise. Not SEBI
-                RIA advice unless separately registered.
+                allocation, and risk first. Not a product push. Not a return promise.
               </p>
 
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 list-none m-0 p-0 mb-7">

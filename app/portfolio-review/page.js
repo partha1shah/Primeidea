@@ -29,9 +29,9 @@ const faqs = [
   {
     question: "Who leads the portfolio review?",
     answer:
-      "The research process is guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Investors should verify registration independently.",
+      "Research is led by a SEBI Registered Research Analyst. Investors can verify registration on the official SEBI website.",
     plainText:
-      "The research process is guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Investors should verify registration independently.",
+      "Research is led by a SEBI Registered Research Analyst. Investors can verify registration on the official SEBI website.",
   },
   {
     question: "Can I upload my portfolio instead of visiting the office?",
@@ -39,13 +39,6 @@ const faqs = [
       "Yes. Upload a CAS or holdings list on this page, or share it on WhatsApp. You can also book an office visit in Vadodara or a video consultation. The review method is the same.",
     plainText:
       "Yes. Upload a CAS or holdings list on this page, or share it on WhatsApp. You can also book an office visit in Vadodara or a video consultation. The review method is the same.",
-  },
-  {
-    question: "Is this the same as SEBI Registered Investment Adviser advice?",
-    answer:
-      "No. PrimeIdea operates under SEBI Registered Research Analyst registration. It does not present itself as a SEBI Registered Investment Adviser unless separately registered.",
-    plainText:
-      "No. PrimeIdea operates under SEBI Registered Research Analyst registration. It does not present itself as a SEBI Registered Investment Adviser unless separately registered.",
   },
   {
     question: "Does a portfolio review guarantee better returns?",
@@ -66,9 +59,9 @@ const faqs = [
 export const metadata = {
   title: "Portfolio Review",
   description:
-    "PrimeIdea Ventures offers a research-led portfolio review for investors across Gujarat and India, guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Upload holdings or book an office or video review. No guaranteed returns.",
+    "PrimeIdea Ventures offers a research-led portfolio review for investors across Gujarat and India. Upload holdings or book an office or video review. No guaranteed returns.",
   keywords:
-    "portfolio review, portfolio review Gujarat India, upload portfolio for review, SEBI RA INH000017815, Partha Shah, PrimeIdea Ventures",
+    "portfolio review, portfolio review Gujarat India, upload portfolio for review, PrimeIdea Ventures",
   author: "Partha Shah",
   robots: "index, follow",
   openGraph: {
@@ -78,7 +71,7 @@ export const metadata = {
     site_name: "PrimeIdea Ventures",
     title: "Portfolio Review | PrimeIdea Ventures",
     description:
-      "Research-led portfolio review for investors across Gujarat and India, guided by Partha Shah, SEBI Registered Research Analyst INH000017815.",
+      "Research-led portfolio review for investors across Gujarat and India.",
   },
   twitter: {
     handle: "@primeidea",
@@ -98,7 +91,7 @@ const serviceSchema = {
   "@type": "Service",
   name: "Portfolio Review",
   description:
-    "Research-led portfolio review services, guided by Partha Shah, SEBI Registered Research Analyst INH000017815.",
+    "Research-led portfolio review services.",
   provider: {
     "@type": "FinancialService",
     name: "PrimeIdea Ventures",
@@ -131,7 +124,7 @@ export default function PortfolioReviewPage() {
         mainBannerImage="/images/home/banner.png"
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="Portfolio Review"
-        mainSubTitle="Upload your holdings or book an office or video review. PrimeIdea Ventures is a Vadodara-based research-led wealth management firm serving investors across Gujarat and India, with a research process guided by Partha Shah, SEBI Registered Research Analyst INH000017815. No product pushing. No guaranteed returns."
+        mainSubTitle="Upload your holdings or book an office or video review. PrimeIdea Ventures is a Vadodara-based research-led wealth management firm serving investors across Gujarat and India, with a research process No product pushing. No guaranteed returns."
         mainLinkTitle="Upload Portfolio"
         mainLink="#upload-portfolio"
         usePrimaryAsLink={true}
@@ -142,11 +135,10 @@ export default function PortfolioReviewPage() {
 
       <ScopePageMetaStrip
         stats={[
-          { label: "Base Location", value: "Vadodara", Icon: MapPinIcon },
-          { label: "Registration No.", value: "INH000017815", Icon: CheckBadgeIcon },
+          { label: "Base Location", value: "Vadodara", Icon: MapPinIcon },
           { label: "Start here", value: "Upload holdings", Icon: ArrowUpTrayIcon },
         ]}
-        disclaimer="A portfolio review is a structured analysis of current holdings. Investments in securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns and does not present itself as a SEBI Registered Investment Adviser unless separately registered."
+        disclaimer="A portfolio review is a structured analysis of current holdings. Investments in securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns."
       />
 
       <ScopeBreadcrumbs items={[{ label: "Portfolio Review" }]} />
@@ -161,9 +153,7 @@ export default function PortfolioReviewPage() {
 
       <ScopeDisclaimerBar ctaHref="#upload-portfolio" ctaLabel="Upload Portfolio for Review">
         Investments in securities market are subject to market risks. PrimeIdea Ventures does
-        not guarantee returns. Partha Shah is a SEBI Registered Research Analyst
-        (INH000017815). PrimeIdea does not act as a SEBI Registered Investment Adviser unless
-        separately registered. Investors should verify registration independently and read all
+        not guarantee returns. Investors should verify registration independently and read all
         scheme-related documents carefully before investing.
       </ScopeDisclaimerBar>
 

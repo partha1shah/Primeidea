@@ -22,9 +22,9 @@ const faqs = [
   {
     question: "What is mutual fund investment support at PrimeIdea?",
     answer:
-      "It is research-led review of the mutual funds you already hold — overlap, SIP fit, cost, tax, and allocation — guided by Partha Shah, SEBI Registered Research Analyst INH000017815. It is not a product push and does not guarantee returns.",
+      "It is research-led review of the mutual funds you already hold — overlap, SIP fit, cost, tax, and allocation — it is not a product push and does not guarantee returns.",
     plainText:
-      "It is research-led review of the mutual funds you already hold — overlap, SIP fit, cost, tax, and allocation — guided by Partha Shah, SEBI Registered Research Analyst INH000017815. It is not a product push and does not guarantee returns.",
+      "It is research-led review of the mutual funds you already hold — overlap, SIP fit, cost, tax, and allocation — it is not a product push and does not guarantee returns.",
   },
   {
     question: "How are mutual fund portfolios reviewed?",
@@ -32,13 +32,6 @@ const faqs = [
       "Holdings are mapped for overlap and concentration. Expense ratios, exit loads, rolling returns, and the role of each scheme in the book are checked before any change is discussed.",
     plainText:
       "Holdings are mapped for overlap and concentration. Expense ratios, exit loads, rolling returns, and the role of each scheme in the book are checked before any change is discussed.",
-  },
-  {
-    question: "Is this SEBI Registered Investment Adviser advice?",
-    answer:
-      "No. PrimeIdea operates under SEBI Registered Research Analyst registration. It does not present itself as a SEBI Registered Investment Adviser unless separately registered.",
-    plainText:
-      "No. PrimeIdea operates under SEBI Registered Research Analyst registration. It does not present itself as a SEBI Registered Investment Adviser unless separately registered.",
   },
   {
     question: "Do mutual funds guarantee returns?",
@@ -66,9 +59,9 @@ const faqs = [
 export const metadata = {
   title: "Mutual Fund Investment Support",
   description:
-    "PrimeIdea Ventures offers research-led mutual fund investment support for investors across Gujarat and India, guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Mutual fund investments are subject to market risks. Read all scheme-related documents carefully.",
+    "PrimeIdea Ventures offers research-led mutual fund investment support for investors across Gujarat and India. Mutual fund investments are subject to market risks. Read all scheme-related documents carefully.",
   keywords:
-    "mutual fund investment support, SIP review, mutual fund overlap analysis, Partha Shah SEBI RA INH000017815, PrimeIdea Ventures",
+    "mutual fund investment support, SIP review, mutual fund overlap analysis, PrimeIdea Ventures",
   author: "Partha Shah",
   robots: "index, follow",
   openGraph: {
@@ -78,7 +71,7 @@ export const metadata = {
     site_name: "PrimeIdea Ventures",
     title: "Mutual Fund Investment Support | PrimeIdea Ventures",
     description:
-      "Research-led mutual fund review, guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Market risks apply.",
+      "Research-led mutual fund review, Market risks apply.",
   },
   twitter: {
     handle: "@primeidea",
@@ -98,7 +91,7 @@ const serviceSchema = {
   "@type": "Service",
   name: "Mutual Fund Investment Support",
   description:
-    "Research-led mutual fund review and SIP support, guided by Partha Shah, SEBI Registered Research Analyst INH000017815.",
+    "Research-led mutual fund review and SIP support.",
   provider: {
     "@type": "FinancialService",
     name: "PrimeIdea Ventures",
@@ -128,7 +121,7 @@ export default function MutualFundInvestmentSupportPage() {
         mainBannerImage="/images/home/banner.png"
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="Mutual Fund Investment Support"
-        mainSubTitle="Research-led SIP and scheme review from a Vadodara office, serving investors across Gujarat and India. Guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Mutual fund investments are subject to market risks. Read all scheme-related documents carefully. No guaranteed returns."
+        mainSubTitle="Research-led SIP and scheme review from a Vadodara office, serving investors across Gujarat and India. Mutual fund investments are subject to market risks. Read all scheme-related documents carefully. No guaranteed returns."
         mainLinkTitle="Upload Portfolio"
         mainLink="/portfolio-review"
         usePrimaryAsLink={true}
@@ -140,10 +133,9 @@ export default function MutualFundInvestmentSupportPage() {
       <ScopePageMetaStrip
         stats={[
           { label: "Base Location", value: "Vadodara", Icon: MapPinIcon },
-          { label: "Focus", value: "Scheme review", Icon: Squares2X2Icon },
-          { label: "Registration No.", value: "INH000017815", Icon: CheckBadgeIcon },
+          { label: "Focus", value: "Scheme review", Icon: Squares2X2Icon },
         ]}
-        disclaimer="Mutual fund investments are subject to market risks. Read all scheme-related documents carefully. PrimeIdea Ventures does not guarantee returns and does not present itself as a SEBI Registered Investment Adviser unless separately registered."
+        disclaimer="Mutual fund investments are subject to market risks. Read all scheme-related documents carefully. PrimeIdea Ventures does not guarantee returns."
       />
 
       <ScopeBreadcrumbs items={[{ label: "Mutual Fund Investment Support" }]} />
@@ -158,9 +150,7 @@ export default function MutualFundInvestmentSupportPage() {
 
       <ScopeDisclaimerBar ctaHref="/portfolio-review" ctaLabel="Upload Portfolio for Review">
         Mutual fund investments are subject to market risks. Read all scheme-related documents
-        carefully. PrimeIdea Ventures does not guarantee returns. Partha Shah is a SEBI
-        Registered Research Analyst (INH000017815). PrimeIdea does not act as a SEBI Registered
-        Investment Adviser unless separately registered. Investors should verify registration
+        carefully. PrimeIdea Ventures does not guarantee returns. Investors should verify registration
         independently.
       </ScopeDisclaimerBar>
 

@@ -36,7 +36,7 @@ export const metadata = {
     default: "PrimeIdea Ventures",
     template: "%s | PrimeIdea Ventures"
   },
-  description: "Research-led wealth management and portfolio review from Vadodara for investors across Gujarat and India. Guided by Partha Shah, SEBI Registered Research Analyst INH000017815.",
+  description: "Research-led wealth management and portfolio review from Vadodara for investors across Gujarat and India.",
   keywords: [
     "portfolio review",
     "research-led wealth management",
@@ -45,7 +45,7 @@ export const metadata = {
     "insurance planning",
     "wealth management",
     "retirement planning",
-    "SEBI Registered Research Analyst INH000017815"
+    "SEBI Registered Research Analyst INB010653732"
   ],
   authors: [{ name: "Partha Shah" }],
   creator: "PrimeIdea Ventures",

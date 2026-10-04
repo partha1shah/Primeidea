@@ -44,16 +44,9 @@ const faqs = [
   {
     question: "Who leads research at PrimeIdea?",
     answer:
-      "The research process is guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Investors should verify registration independently.",
+      "Research is led by a SEBI Registered Research Analyst. Investors can verify registration on the official SEBI website.",
     plainText:
-      "The research process is guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Investors should verify registration independently.",
-  },
-  {
-    question: "Is this SEBI Registered Investment Adviser advice?",
-    answer:
-      "No. PrimeIdea operates under SEBI Registered Research Analyst registration. It does not present itself as a SEBI Registered Investment Adviser unless separately registered.",
-    plainText:
-      "No. PrimeIdea operates under SEBI Registered Research Analyst registration. It does not present itself as a SEBI Registered Investment Adviser unless separately registered.",
+      "Research is led by a SEBI Registered Research Analyst. Investors can verify registration on the official SEBI website.",
   },
   {
     question: "Does succession planning guarantee investment returns?",
@@ -67,9 +60,9 @@ const faqs = [
 export const metadata = {
   title: "Legacy, Succession and Estate Planning in India",
   description:
-    "PrimeIdea Ventures helps families across India with partner-enabled legacy, succession and estate planning coordination through a research-led process guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Legal drafting by qualified professionals. No partner name or pricing.",
+    "PrimeIdea Ventures helps families across India with partner-enabled legacy, succession and estate planning coordination through a research-led process Legal drafting by qualified professionals. No partner name or pricing.",
   keywords:
-    "succession planning India, estate planning India, will planning coordination, family trust support, probate coordination, Partha Shah SEBI RA INH000017815, PrimeIdea Ventures",
+    "succession planning India, estate planning India, will planning coordination, family trust support, probate coordination, PrimeIdea Ventures",
   author: "Partha Shah",
   robots: "index, follow",
   openGraph: {
@@ -79,7 +72,7 @@ export const metadata = {
     site_name: "PrimeIdea Ventures",
     title: "Legacy, Succession and Estate Planning in India | PrimeIdea Ventures",
     description:
-      "Partner-enabled succession and estate coordination across India. Legal documents by qualified professionals. Guided by Partha Shah, SEBI Registered Research Analyst INH000017815.",
+      "Partner-enabled succession and estate coordination across India. Legal documents by qualified professionals.",
   },
   twitter: {
     handle: "@primeidea",
@@ -129,7 +122,7 @@ export default function LegacySuccessionEstatePlanningPage() {
         mainBannerImage="/images/legacy-inheritance-planning/banner.png"
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="Legacy, Succession and Estate Planning in India"
-        mainSubTitle="Partner-enabled will, trust, probate and estate documentation coordination from a Vadodara base, across India. Guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Legal drafting by qualified professionals. No partner name or pricing. No guaranteed returns."
+        mainSubTitle="Partner-enabled will, trust, probate and estate documentation coordination from a Vadodara base, across India. Legal drafting by qualified professionals. No partner name or pricing. No guaranteed returns."
         mainLinkTitle="Book Succession Planning Consultation"
         mainLink="#lead-form"
         usePrimaryAsLink={true}
@@ -141,10 +134,9 @@ export default function LegacySuccessionEstatePlanningPage() {
       <ScopePageMetaStrip
         stats={[
           { label: "Geography", value: "India", Icon: GlobeAltIcon },
-          { label: "Role", value: "Coordination", Icon: ScaleIcon },
-          { label: "Registration No.", value: "INH000017815", Icon: CheckBadgeIcon },
+          { label: "Role", value: "Coordination", Icon: ScaleIcon },
         ]}
-        disclaimer="PrimeIdea Ventures does not act as an independent law firm. Partner name and pricing are not shown. Investments in securities market are subject to market risks. PrimeIdea does not guarantee returns and does not present itself as a SEBI Registered Investment Adviser unless separately registered."
+        disclaimer="PrimeIdea Ventures does not act as an independent law firm. Partner name and pricing are not shown. Investments in securities market are subject to market risks. PrimeIdea does not guarantee returns."
       />
 
       <ScopeBreadcrumbs items={[{ label: "Legacy, Succession and Estate Planning" }]} />
@@ -166,9 +158,7 @@ export default function LegacySuccessionEstatePlanningPage() {
         transfer, trust deed, gift deed, power of attorney and legal opinions must be handled
         by qualified legal professionals. PrimeIdea Ventures does not act as an independent law
         firm. Partner name and pricing are not listed. Investments in securities market are
-        subject to market risks. Partha Shah is a SEBI Registered Research Analyst
-        (INH000017815).
-      </ScopeDisclaimerBar>
+        subject to market risks. </ScopeDisclaimerBar>
 
       <Footer />
     </div>

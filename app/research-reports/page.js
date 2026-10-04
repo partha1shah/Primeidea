@@ -43,9 +43,9 @@ const faqs = [
   {
     question: "Who guides the research behind these notes?",
     answer:
-      "The research process is guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Investors should verify registration independently.",
+      "Research is led by a SEBI Registered Research Analyst. Investors can verify registration on the official SEBI website.",
     plainText:
-      "The research process is guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Investors should verify registration independently.",
+      "Research is led by a SEBI Registered Research Analyst. Investors can verify registration on the official SEBI website.",
   },
   {
     question: "Why do some reports say On request?",
@@ -54,21 +54,14 @@ const faqs = [
     plainText:
       "Some editions are shared on request so the latest approved PDF can be provided. Use the request link to contact the team for the current note.",
   },
-  {
-    question: "Is this SEBI Registered Investment Adviser advice?",
-    answer:
-      "No. PrimeIdea operates under SEBI Registered Research Analyst registration. It does not present itself as a SEBI Registered Investment Adviser unless separately registered.",
-    plainText:
-      "No. PrimeIdea operates under SEBI Registered Research Analyst registration. It does not present itself as a SEBI Registered Investment Adviser unless separately registered.",
-  },
 ];
 
 export const metadata = {
   title: "PrimeIdea Research Reports",
   description:
-    "PrimeIdea Research Reports — monthly market outlook, equity notes, mutual fund category notes, fixed income, asset allocation, sector research, portfolio strategy, and SIF/PMS/AIF education notes. Separate from blogs. Guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Educational only; no guaranteed returns.",
+    "PrimeIdea Research Reports — monthly market outlook, equity notes, mutual fund category notes, fixed income, asset allocation, sector research, portfolio strategy, and SIF/PMS/AIF education notes. Separate from blogs. Educational only; no guaranteed returns.",
   keywords:
-    "PrimeIdea research reports, market outlook PDF, mutual fund category notes, portfolio strategy notes, SEBI RA INH000017815, Partha Shah",
+    "PrimeIdea research reports, market outlook PDF, mutual fund category notes, portfolio strategy notes",
   author: "Partha Shah",
   robots: "index, follow",
   openGraph: {
@@ -132,7 +125,7 @@ export default function ResearchReportsPage() {
         mainBannerImage="/images/home/banner.png"
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="PrimeIdea Research Reports"
-        mainSubTitle="Monthly market outlook, equity notes, mutual fund category notes, fixed income, asset allocation, sector research, portfolio strategy, and SIF/PMS/AIF education notes — downloadable research PDFs separate from general blogs. Guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Educational content only. No guaranteed returns."
+        mainSubTitle="Monthly market outlook, equity notes, mutual fund category notes, fixed income, asset allocation, sector research, portfolio strategy, and SIF/PMS/AIF education notes — downloadable research PDFs separate from general blogs. Educational content only. No guaranteed returns."
         mainLinkTitle="Browse Report Library"
         mainLink="#report-library"
         usePrimaryAsLink={true}
@@ -144,10 +137,9 @@ export default function ResearchReportsPage() {
       <ScopePageMetaStrip
         stats={[
           { label: "Library type", value: "Research PDFs", Icon: FolderOpenIcon },
-          { label: "Separate from", value: "General blogs", Icon: DocumentTextIcon },
-          { label: "Registration No.", value: "INH000017815", Icon: CheckBadgeIcon },
+          { label: "Separate from", value: "General blogs", Icon: DocumentTextIcon },
         ]}
-        disclaimer="Research reports are educational and illustrative. They do not constitute investment advice for a specific security or guaranteed returns. Investments in the securities market are subject to market risks. PrimeIdea Ventures does not present itself as a SEBI Registered Investment Adviser unless separately registered."
+        disclaimer="Research reports are educational and illustrative. They do not constitute investment advice for a specific security or guaranteed returns. Investments in the securities market are subject to market risks. "
       />
 
       <ScopeBreadcrumbs items={[{ label: "Research Reports" }]} />
@@ -163,9 +155,7 @@ export default function ResearchReportsPage() {
       <ScopeDisclaimerBar ctaHref="/portfolio-review" ctaLabel="Book Portfolio Review">
         Research Reports content is for investor education only. Investments in the
         securities market are subject to market risks. PrimeIdea Ventures does not
-        guarantee returns. Partha Shah is a SEBI Registered Research Analyst
-        (INH000017815). PrimeIdea does not act as a SEBI Registered Investment Adviser
-        unless separately registered. Investors should verify registration independently
+        guarantee returns. Investors should verify registration independently
         and read all scheme-related documents carefully before investing. SIF/PMS/AIF
         notes are educational and not a product offer.
       </ScopeDisclaimerBar>

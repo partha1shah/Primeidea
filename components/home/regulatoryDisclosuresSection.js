@@ -18,6 +18,12 @@ const protectionLinks = [
     href: "/regulatory-disclosures#investor-charter",
   },
   {
+    title: "AMFI Code of Conduct",
+    description: "AMFI standards for mutual fund selling and distribution.",
+    Icon: DocumentTextIcon,
+    href: "/regulatory-disclosures#amfi-code-of-conduct",
+  },
+  {
     title: "Complaint Status",
     description: "How complaints are logged, reviewed, and closed.",
     Icon: TableCellsIcon,
@@ -38,7 +44,7 @@ const protectionLinks = [
   },
   {
     title: "Role Clarification",
-    description: "No guaranteed returns. Not an RIA unless separately registered.",
+    description: "No guaranteed returns. Market risks apply.",
     Icon: ExclamationTriangleIcon,
     href: "/regulatory-disclosures#role-clarification",
   },
@@ -75,15 +81,14 @@ const RegulatoryDisclosuresSection = () => {
           </FadeUpOneByOneAnimation>
 
           <FadeUpOneByOneAnimation className="mx-auto max-w-[560px] rounded-[20px] border border-white/15 bg-[#293C7D]/50 px-6 py-6 md:px-8 md:py-7">
-            <p className="text-white/70 text-sm mb-2">SEBI Registered Research Analyst</p>
-            <p className="text-white text-xl md:text-2xl font-semibold mb-1">
-              Partha Shah
-            </p>
-            <p className="text-[#FFC300] text-2xl md:text-3xl font-light tracking-wide tabular-nums mb-4">
-              INH000017815
+            <p className="text-white/70 text-sm mb-2">Registration &amp; disclosures</p>
+            <p className="text-white text-xl md:text-2xl font-semibold mb-4">
+              Verify credentials independently
             </p>
             <p className="text-white/75 text-sm md:text-base leading-relaxed">
-              Investors should verify SEBI registration independently. Investments in securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns.
+              Full SEBI registration details are in the site footer and on the Regulatory
+              Disclosures page. Investments in securities market are subject to market risks.
+              PrimeIdea Ventures does not guarantee returns.
             </p>
           </FadeUpOneByOneAnimation>
         </div>

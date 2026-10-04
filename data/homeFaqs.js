@@ -6,22 +6,22 @@ const homeFaqs = [
   {
     question: "What does PrimeIdea Ventures do?",
     answer:
-      "PrimeIdea Ventures is a Vadodara-based research-led wealth management and portfolio review firm serving investors across Gujarat and India. Support covers portfolio review, mutual fund investment support, direct equity research support, fixed income, retirement planning, insurance planning, tax planning support, NRI investment support, private wealth, family wealth office, and partner-enabled legacy, succession and estate planning. The research process is guided by Partha Shah, SEBI Registered Research Analyst INH000017815.",
+      "PrimeIdea Ventures is a Vadodara-based research-led wealth management firm and distributor of financial products — mutual funds, PMS, AIF, and SIF — serving investors across Gujarat, India, and worldwide. Support also covers portfolio review, retirement, insurance planning, NRI investing, private wealth, and partner-enabled succession coordination.",
   },
   {
     question: "Is PrimeIdea Ventures SEBI registered?",
     answer:
-      "Partha Shah is a SEBI Registered Research Analyst, registration number INH000017815. Investors should verify this independently on the official SEBI website. PrimeIdea does not present itself as a SEBI Registered Investment Adviser unless separately registered.",
+      "Yes. PrimeIdea holds SEBI Registered Research Analyst registration INB010653732 (Validity – Apr 05, 2024 - Jan 01, 2027), plus AMFI and PMS distribution credentials published on this site. Investors should verify independently.",
   },
   {
     question: "Who leads the PrimeIdea research process?",
     answer:
-      "Partha Shah leads the research process as SEBI Registered Research Analyst INH000017815. Portfolio reviews start from goals, holdings, asset allocation, and risk. Consultations are available at the Vadodara office and online for investors across Gujarat and India.",
+      "Partha Shah leads the research process. Portfolio reviews start from goals, holdings, asset allocation, and risk. Consultations are available at the Vadodara office and online for investors across Gujarat and India.",
   },
   {
-    question: "What is the difference between a Research Analyst and an Investment Adviser?",
+    question: "Does PrimeIdea distribute mutual funds and other products?",
     answer:
-      "A SEBI Registered Research Analyst provides research and analysis on securities and markets. A SEBI Registered Investment Adviser provides personalised investment advice under a separate registration. PrimeIdea’s public positioning is research-led portfolio review under the Research Analyst registration, not Investment Adviser advice unless separately registered.",
+      "Yes. PrimeIdea Ventures is a registered distributor of mutual funds, PMS, AIF, and SIF, alongside research-led portfolio review. Full registration numbers and validity dates are published in the site footer and on Regulatory Disclosures.",
   },
   {
     question: "Does PrimeIdea provide portfolio review?",

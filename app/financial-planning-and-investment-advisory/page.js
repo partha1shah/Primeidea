@@ -15,8 +15,8 @@ import graphqlRequest from "@/lib/graphqlRequest";
 
 export const metadata = {
     title: 'Financial Planning',
-    description: 'PrimeIdea writes a financial plan from goals, cash flow, and current holdings for investors in Vadodara and across Gujarat and India. Research is guided by Partha Shah, SEBI Registered Research Analyst INH000017815. This is not SEBI Registered Investment Adviser advice and does not guarantee returns.',
-    keywords: 'financial planning, portfolio review, wealth management, Partha Shah, PrimeIdea Ventures, SEBI Registered Research Analyst INH000017815, Vadodara',
+    description: 'PrimeIdea writes a financial plan from goals, cash flow, and current holdings for investors in Vadodara and across Gujarat and India. Research is This does not guarantee returns.',
+    keywords: 'financial planning, portfolio review, wealth management, PrimeIdea Ventures, SEBI Registered Research Analyst INH000017815, Vadodara',
     author: 'Partha Shah',
     robots: 'index, follow',
     canonical: 'https://www.primeidea.in/financial-planning-and-investment-advisory/',
@@ -26,7 +26,7 @@ export const metadata = {
       url: 'https://www.primeidea.in/financial-planning-and-investment-advisory/',
       site_name: 'PrimeIdea Ventures',
       title: 'Financial Planning | PrimeIdea Ventures',
-      description: 'PrimeIdea writes a financial plan from goals, cash flow, and current holdings for investors in Vadodara and across Gujarat and India. Research is guided by Partha Shah, SEBI Registered Research Analyst INH000017815. This is not SEBI Registered Investment Adviser advice and does not guarantee returns.',
+      description: 'PrimeIdea writes a financial plan from goals, cash flow, and current holdings for investors in Vadodara and across Gujarat and India. Research is This does not guarantee returns.',
     },
     twitter: {
       handle: '@primeidea',
@@ -108,7 +108,7 @@ export default async function FinancialPlanningAndInvestmentAdvisory() {
              mainLinkTitle={"Book a portfolio review"}
              mainLink={"/book-portfolio-review"}
              usePrimaryAsLink={true}
-             subSectionContent={"PrimeIdea is based in Vadodara and serves investors across Gujarat and India. Research is guided by Partha Shah, SEBI RA INH000017815. No guaranteed returns."}
+             subSectionContent={"PrimeIdea is based in Vadodara and serves investors across Gujarat and India. Research is guided by Partha Shah. No guaranteed returns."}
              subSectionTitle1={"Based in"}
              subSectionSubTitle1={"Vadodara"}
              subSectionTitle2={"Registration"}

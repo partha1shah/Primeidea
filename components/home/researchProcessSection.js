@@ -20,7 +20,7 @@ const steps = [
   {
     title: "Research-Led Recommendations",
     description:
-      "Guidance is anchored by Partha Shah, SEBI Registered Research Analyst (INH000017815), with process-first reasoning — not product pushing.",
+      "Guidance is process-first — suitability, allocation, and risk clarity — not product pushing.",
   },
   {
     title: "Review, Implement & Monitor",
@@ -83,9 +83,8 @@ const ResearchProcessSection = () => {
               Partha Shah
             </p>
             <p className="text-white/75 text-sm md:text-base leading-relaxed">
-              SEBI Registered Research Analyst{" "}
-              <span className="text-[#FFC300] font-semibold">INH000017815</span>
-              {" — "}process-first research guiding every portfolio review.
+              SEBI Registered Research Analyst — process-first research guiding every
+              portfolio review.
             </p>
           </div>
         </div>

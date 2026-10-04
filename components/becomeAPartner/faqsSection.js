@@ -13,7 +13,7 @@ const FaqsSection = () => {
     const faqItems = [
         {
             question: "Who can become a partner with Primeidea Ventures?",
-            answer: "Professionals who work with investors on portfolios, planning, or research support can ask about a partnership. PrimeIdea is a SEBI Registered Research Analyst practice. It does not present itself as a SEBI Registered Investment Adviser unless separately registered."
+            answer: "Professionals who work with investors on portfolios, planning, or research support can ask about a partnership. PrimeIdea is a SEBI Registered Research Analyst practice. "
         },
         {
             question: "What are the eligibility criteria to join Primeidea Ventures as a financial advisor?",
@@ -41,7 +41,7 @@ const FaqsSection = () => {
         },
         {
             question: "How is PrimeIdea Ventures different from an investment-advisory platform?",
-            answer: "PrimeIdea works as a SEBI Registered Research Analyst practice. Research notes support a partner’s client conversations. They are not SEBI Registered Investment Adviser advice unless PrimeIdea is separately registered for that."
+            answer: "PrimeIdea works as a SEBI Registered Research Analyst practice. Research notes support a partner’s client conversations."
         },
         {
             question: "Can I earn passive income as a financial advisor with Primeidea Ventures?",

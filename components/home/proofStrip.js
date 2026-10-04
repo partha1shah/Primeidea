@@ -9,7 +9,7 @@ const proofItems = [
   {
     title: "SEBI RA-Led Research",
     description:
-      "SEBI Registered Research Analyst-led research guided by Partha Shah (INH000017815).",
+      "Research-led portfolio review under SEBI Registered Research Analyst registration.",
   },
   {
     title: "Portfolio Review Process",

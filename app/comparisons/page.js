@@ -69,7 +69,7 @@ export default function ComparisonsHubPage() {
         mainBannerImage="/images/home/banner.png"
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="Investment Comparison Guides"
-        mainSubTitle="Educational comparisons of roles and products — RA vs IA vs MFD, PMS vs mutual funds, AIF vs PMS vs MF, SIP vs lumpsum vs STP. Research-led context from a Vadodara base. Guided by Partha Shah, SEBI Registered Research Analyst INH000017815. No guaranteed returns."
+        mainSubTitle="Educational comparisons of roles and products — RA vs IA vs MFD, PMS vs mutual funds, AIF vs PMS vs MF, SIP vs lumpsum vs STP. Research-led context from a Vadodara base. No guaranteed returns."
         mainLinkTitle="Browse guides"
         mainLink="#guides"
         usePrimaryAsLink={true}
@@ -95,10 +95,7 @@ export default function ComparisonsHubPage() {
 
       <ScopeDisclaimerBar ctaHref="/book-portfolio-review" ctaLabel="Book Portfolio Review">
         Educational content only. Investments in the securities market are subject to market
-        risks. PrimeIdea Ventures does not guarantee returns. Partha Shah is a SEBI Registered
-        Research Analyst (INH000017815). PrimeIdea does not act as a SEBI Registered Investment
-        Adviser unless separately registered.
-      </ScopeDisclaimerBar>
+        risks. PrimeIdea Ventures does not guarantee returns. </ScopeDisclaimerBar>
 
       <Footer />
     </div>

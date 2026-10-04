@@ -11,7 +11,7 @@ const PAGE_URL = `https://www.primeidea.in${PAGE_PATH}`;
 export const metadata = {
   title: "Privacy Policy",
   description:
-    "How PrimeIdea Ventures collects, uses, and protects personal information shared through the website, forms, and consultations. Vadodara-based research-led firm guided by Partha Shah, SEBI RA INH000017815.",
+    "How PrimeIdea Ventures collects, uses, and protects personal information shared through the website, forms, and consultations. Vadodara-based research-led firm guided by Partha Shah.",
   robots: "index, follow",
   openGraph: {
     type: "website",
@@ -36,7 +36,7 @@ export const metadata = {
 const sections = [
   {
     title: "Who we are",
-    body: "PrimeIdea Ventures is a Vadodara-based research-led wealth management and portfolio review firm serving investors across Gujarat and India, with a research process guided by Partha Shah, SEBI Registered Research Analyst INH000017815.",
+    body: "PrimeIdea Ventures is a Vadodara-based research-led wealth management and portfolio review firm serving investors across Gujarat and India, with a research process",
   },
   {
     title: "Information we collect",
@@ -73,7 +73,7 @@ export default function PrivacyPolicyPage() {
         mainBannerImage="/images/home/banner.png"
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="Privacy Policy"
-        mainSubTitle="How PrimeIdea Ventures handles personal information shared through the website and consultations. Guided by Partha Shah, SEBI Registered Research Analyst INH000017815."
+        mainSubTitle="How PrimeIdea Ventures handles personal information shared through the website and consultations."
         mainLinkTitle="Contact Us"
         mainLink="/contact-us"
         usePrimaryAsLink={true}

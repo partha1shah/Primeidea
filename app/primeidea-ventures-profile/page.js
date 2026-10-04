@@ -19,7 +19,7 @@ const PAGE_PATH = "/primeidea-ventures-profile";
 const PAGE_URL = `https://www.primeidea.in${PAGE_PATH}`;
 
 const IDENTITY_LINE =
-  "PrimeIdea Ventures is a Vadodara-based research-led wealth management and portfolio review firm serving investors across Gujarat and India, with a research process guided by Partha Shah, SEBI Registered Research Analyst INH000017815.";
+  "PrimeIdea Ventures is a Vadodara-based research-led wealth management and portfolio review firm serving investors across Gujarat and India, with a research process guided by Partha Shah, SEBI Registered Research Analyst INB010653732.";
 
 const faqs = [
   {
@@ -37,16 +37,9 @@ const faqs = [
   {
     question: "Who leads research at PrimeIdea?",
     answer:
-      "Partha Shah, Head of Research & Investment Strategy, is a SEBI Registered Research Analyst (INH000017815). Investors should verify registration independently.",
+      "Partha Shah, Head of Research & Investment Strategy, is a SEBI Registered Research Analyst (INB010653732). Investors should verify registration independently.",
     plainText:
-      "Partha Shah, Head of Research & Investment Strategy, is a SEBI Registered Research Analyst (INH000017815). Investors should verify registration independently.",
-  },
-  {
-    question: "Is PrimeIdea a SEBI Registered Investment Adviser?",
-    answer:
-      "No. PrimeIdea operates under SEBI Registered Research Analyst registration. Completing RIA examinations is not the same as being a SEBI Registered Investment Adviser. PrimeIdea does not present itself as an RIA unless separately registered.",
-    plainText:
-      "No. PrimeIdea operates under SEBI Registered Research Analyst registration. Completing RIA examinations is not the same as being a SEBI Registered Investment Adviser. PrimeIdea does not present itself as an RIA unless separately registered.",
+      "Partha Shah, Head of Research & Investment Strategy, is a SEBI Registered Research Analyst (INB010653732). Investors should verify registration independently.",
   },
   {
     question: "Does PrimeIdea guarantee returns?",
@@ -68,7 +61,7 @@ export const metadata = {
   title: "PrimeIdea Ventures Profile",
   description: `${IDENTITY_LINE} Office in Atladara, Vadodara. No guaranteed returns.`,
   keywords:
-    "PrimeIdea Ventures profile, Vadodara wealth management firm, Partha Shah SEBI RA INH000017815, research-led portfolio review Gujarat India",
+    "PrimeIdea Ventures profile, Vadodara wealth management firm, Partha Shah SEBI RA INB010653732, research-led portfolio review Gujarat India",
   author: "Partha Shah",
   robots: "index, follow",
   openGraph: {
@@ -113,7 +106,7 @@ const organizationSchema = {
     "@type": "Person",
     name: "Partha Shah",
     jobTitle: "Head of Research & Investment Strategy",
-    identifier: "INH000017815",
+    identifier: "INB010653732",
   },
 };
 
@@ -129,7 +122,7 @@ const personSchema = {
   identifier: {
     "@type": "PropertyValue",
     name: "SEBI Registered Research Analyst",
-    value: "INH000017815",
+    value: "INB010653732",
   },
   url: "https://www.primeidea.in/sebi-registered-research-analyst",
 };
@@ -163,9 +156,9 @@ export default function PrimeIdeaVenturesProfilePage() {
         stats={[
           { label: "Base", value: "Vadodara", Icon: MapPinIcon },
           { label: "Entity", value: "Wealth & review firm", Icon: BuildingOffice2Icon },
-          { label: "Registration No.", value: "INH000017815", Icon: CheckBadgeIcon },
+          { label: "Registration No.", value: "INB010653732", Icon: CheckBadgeIcon },
         ]}
-        disclaimer="Entity profile for search and LLM clarity. Investments in the securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns and does not present itself as a SEBI Registered Investment Adviser unless separately registered."
+        disclaimer="Entity profile for search and LLM clarity. Investments in the securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns."
       />
 
       <ScopeBreadcrumbs items={[{ label: "PrimeIdea Ventures Profile" }]} />
@@ -180,9 +173,7 @@ export default function PrimeIdeaVenturesProfilePage() {
 
       <ScopeDisclaimerBar ctaHref="/book-portfolio-review" ctaLabel="Book Portfolio Review">
         Investments in the securities market are subject to market risks. PrimeIdea Ventures
-        does not guarantee returns. Partha Shah is a SEBI Registered Research Analyst
-        (INH000017815). PrimeIdea does not act as a SEBI Registered Investment Adviser unless
-        separately registered. Investors should verify registration independently.
+        does not guarantee returns. Investors should verify registration independently.
       </ScopeDisclaimerBar>
 
       <Footer />

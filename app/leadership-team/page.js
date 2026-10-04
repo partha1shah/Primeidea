@@ -22,16 +22,9 @@ const faqs = [
   {
     question: "Who leads research at PrimeIdea Ventures?",
     answer:
-      "Partha Shah, Head of Research & Investment Strategy, is a SEBI Registered Research Analyst with registration number INH000017815. Investors should verify this independently on the official SEBI website.",
+      "Partha Shah, Head of Research & Investment Strategy, is a SEBI Registered Research Analyst with registration number INB010653732. Investors should verify this independently on the official SEBI website.",
     plainText:
-      "Partha Shah, Head of Research & Investment Strategy, is a SEBI Registered Research Analyst with registration number INH000017815. Investors should verify this independently on the official SEBI website.",
-  },
-  {
-    question: "Is Partha Shah a SEBI Registered Investment Adviser?",
-    answer:
-      "No. Completing RIA examinations is not the same as SEBI Registered Investment Adviser registration. PrimeIdea operates under SEBI RA registration and does not present itself as an RIA unless separately registered.",
-    plainText:
-      "No. Completing RIA examinations is not the same as SEBI Registered Investment Adviser registration. PrimeIdea operates under SEBI RA registration and does not present itself as an RIA unless separately registered.",
+      "Partha Shah, Head of Research & Investment Strategy, is a SEBI Registered Research Analyst with registration number INB010653732. Investors should verify this independently on the official SEBI website.",
   },
   {
     question: "Where is the leadership based?",
@@ -59,9 +52,9 @@ const faqs = [
 export const metadata = {
   title: "Leadership Team",
   description:
-    "PrimeIdea Ventures leadership is led by Partha Shah, SEBI Registered Research Analyst INH000017815, from Vadodara, serving investors across Gujarat and India through a research-led portfolio review process. No guaranteed returns.",
+    "PrimeIdea Ventures leadership is led by Partha Shah, SEBI Registered Research Analyst INB010653732, from Vadodara, serving investors across Gujarat and India through a research-led portfolio review process. No guaranteed returns.",
   keywords:
-    "PrimeIdea leadership, Partha Shah SEBI RA INH000017815, Head of Research PrimeIdea Ventures, research-led wealth management Vadodara",
+    "PrimeIdea leadership, Partha Shah SEBI RA INB010653732, Head of Research PrimeIdea Ventures, research-led wealth management Vadodara",
   author: "Partha Shah",
   robots: "index, follow",
   openGraph: {
@@ -71,7 +64,7 @@ export const metadata = {
     site_name: "PrimeIdea Ventures",
     title: "Leadership Team | PrimeIdea Ventures",
     description:
-      "Partha Shah, Head of Research & Investment Strategy, SEBI Registered Research Analyst INH000017815, leads PrimeIdea’s research process from Vadodara.",
+      "Partha Shah, Head of Research & Investment Strategy, SEBI Registered Research Analyst INB010653732, leads PrimeIdea’s research process from Vadodara.",
   },
   twitter: {
     handle: "@primeidea",
@@ -108,7 +101,7 @@ const personSchema = {
   "@type": "Person",
   name: "Partha Shah",
   jobTitle: "Head of Research & Investment Strategy",
-  identifier: "INH000017815",
+  identifier: "INB010653732",
   image: "https://www.primeidea.in/images/about-us/founder.jpg",
   worksFor: {
     "@type": "Organization",
@@ -131,7 +124,7 @@ export default function LeadershipTeamPage() {
         mainBannerImage="/images/home/banner.png"
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="Leadership Team"
-        mainSubTitle="PrimeIdea Ventures is a Vadodara-based research-led wealth management and portfolio review firm serving investors across Gujarat and India. Research is led by Partha Shah, SEBI Registered Research Analyst INH000017815. Named profiles appear here only with verified photo, role, credentials, focus, and LinkedIn."
+        mainSubTitle="PrimeIdea Ventures is a Vadodara-based research-led wealth management and portfolio review firm serving investors across Gujarat and India. Research is led by Partha Shah, SEBI Registered Research Analyst INB010653732. Named profiles appear here only with verified photo, role, credentials, focus, and LinkedIn."
         mainLinkTitle="Book Portfolio Review"
         mainLink="/portfolio-review"
         usePrimaryAsLink={true}
@@ -144,9 +137,9 @@ export default function LeadershipTeamPage() {
         stats={[
           { label: "Base Location", value: "Vadodara", Icon: MapPinIcon },
           { label: "Research led by", value: "Partha Shah", Icon: UserIcon },
-          { label: "Registration No.", value: "INH000017815", Icon: CheckBadgeIcon },
+          { label: "Registration No.", value: "INB010653732", Icon: CheckBadgeIcon },
         ]}
-        disclaimer="Investors should verify SEBI registration independently. Completing RIA examinations is not SEBI Registered Investment Adviser registration. PrimeIdea does not guarantee returns."
+        disclaimer="Investors should verify SEBI registration independently. Investments in the securities market are subject to market risks. PrimeIdea does not guarantee returns."
       />
 
       <ScopeBreadcrumbs items={[{ label: "Leadership Team" }]} />
@@ -161,9 +154,7 @@ export default function LeadershipTeamPage() {
 
       <ScopeDisclaimerBar ctaHref="/portfolio-review" ctaLabel="Book Portfolio Review">
         Investments in securities market are subject to market risks. PrimeIdea Ventures does
-        not guarantee returns. Partha Shah is a SEBI Registered Research Analyst
-        (INH000017815). PrimeIdea does not act as a SEBI Registered Investment Adviser unless
-        separately registered. Investors should verify registration independently.
+        not guarantee returns. Investors should verify registration independently.
       </ScopeDisclaimerBar>
 
       <Footer />

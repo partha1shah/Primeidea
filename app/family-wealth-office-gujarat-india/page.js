@@ -43,9 +43,9 @@ const faqs = [
   {
     question: "Who leads the research?",
     answer:
-      "The research process is guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Investors should verify registration independently.",
+      "Research is led by a SEBI Registered Research Analyst. Investors can verify registration on the official SEBI website.",
     plainText:
-      "The research process is guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Investors should verify registration independently.",
+      "Research is led by a SEBI Registered Research Analyst. Investors can verify registration on the official SEBI website.",
   },
   {
     question: "Does PrimeIdea draft wills and trust deeds?",
@@ -53,13 +53,6 @@ const faqs = [
       "No. Legal drafting, registration, probate, succession certificates, property transfer, trust deeds, gift deeds, powers of attorney and legal opinions must be handled by qualified legal professionals. PrimeIdea coordinates through partners and does not act as a law firm.",
     plainText:
       "No. Legal drafting, registration, probate, succession certificates, property transfer, trust deeds, gift deeds, powers of attorney and legal opinions must be handled by qualified legal professionals. PrimeIdea coordinates through partners and does not act as a law firm.",
-  },
-  {
-    question: "Is this SEBI Registered Investment Adviser advice?",
-    answer:
-      "No. PrimeIdea operates under SEBI Registered Research Analyst registration. It does not present itself as a SEBI Registered Investment Adviser unless separately registered.",
-    plainText:
-      "No. PrimeIdea operates under SEBI Registered Research Analyst registration. It does not present itself as a SEBI Registered Investment Adviser unless separately registered.",
   },
   {
     question: "Are returns guaranteed for family portfolios?",
@@ -73,9 +66,9 @@ const faqs = [
 export const metadata = {
   title: "Family Wealth Office in Gujarat and India",
   description:
-    "PrimeIdea Ventures helps business families across Gujarat and India with a research-led family wealth office process guided by Partha Shah, SEBI Registered Research Analyst INH000017815 — multi-generational review and partner-enabled succession coordination, without guaranteed returns.",
+    "PrimeIdea Ventures helps business families across Gujarat and India with a research-led family wealth office process — multi-generational review and partner-enabled succession coordination, without guaranteed returns.",
   keywords:
-    "family wealth office Gujarat, family wealth office India, multi-generational portfolio review, succession coordination, Partha Shah SEBI RA INH000017815, PrimeIdea Ventures",
+    "family wealth office Gujarat, family wealth office India, multi-generational portfolio review, succession coordination, PrimeIdea Ventures",
   author: "Partha Shah",
   robots: "index, follow",
   openGraph: {
@@ -85,7 +78,7 @@ export const metadata = {
     site_name: "PrimeIdea Ventures",
     title: "Family Wealth Office in Gujarat and India | PrimeIdea Ventures",
     description:
-      "PrimeIdea Ventures helps business families across Gujarat and India with research-led family wealth coordination guided by Partha Shah, SEBI Registered Research Analyst INH000017815.",
+      "PrimeIdea Ventures helps business families across Gujarat and India with research-led family wealth coordination",
   },
   twitter: {
     handle: "@primeidea",
@@ -105,7 +98,7 @@ const serviceSchema = {
   "@type": "Service",
   name: "Family Wealth Office in Gujarat and India",
   description:
-    "Research-led family wealth coordination for business families across Gujarat and India, guided by Partha Shah, SEBI Registered Research Analyst INH000017815.",
+    "Research-led family wealth coordination for business families across Gujarat and India.",
   provider: {
     "@type": "FinancialService",
     name: "PrimeIdea Ventures",
@@ -135,7 +128,7 @@ export default function FamilyWealthOfficePage() {
         mainBannerImage="/images/home/banner.png"
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="Family Wealth Office in Gujarat and India"
-        mainSubTitle="Multi-generational portfolio review and partner-enabled succession coordination for business families — from a Vadodara base, across Gujarat and India. Guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Legal documents by qualified legal professionals. No guaranteed returns."
+        mainSubTitle="Multi-generational portfolio review and partner-enabled succession coordination for business families — from a Vadodara base, across Gujarat and India. Legal documents by qualified legal professionals. No guaranteed returns."
         mainLinkTitle="Book Family Consultation"
         mainLink="/contact-us"
         usePrimaryAsLink={true}
@@ -147,10 +140,9 @@ export default function FamilyWealthOfficePage() {
       <ScopePageMetaStrip
         stats={[
           { label: "Reach", value: "Gujarat & India", Icon: GlobeAltIcon },
-          { label: "Focus", value: "Family books", Icon: UsersIcon },
-          { label: "Registration No.", value: "INH000017815", Icon: CheckBadgeIcon },
+          { label: "Focus", value: "Family books", Icon: UsersIcon },
         ]}
-        disclaimer="Family wealth office describes coordinated family review and planning. PrimeIdea does not act as an independent law firm. Investments in securities market are subject to market risks. PrimeIdea does not guarantee returns and does not present itself as a SEBI Registered Investment Adviser unless separately registered."
+        disclaimer="Family wealth office describes coordinated family review and planning. PrimeIdea does not act as an independent law firm. Investments in securities market are subject to market risks. PrimeIdea does not guarantee returns."
       />
 
       <ScopeBreadcrumbs items={[{ label: "Family Wealth Office" }]} />
@@ -165,9 +157,7 @@ export default function FamilyWealthOfficePage() {
 
       <ScopeDisclaimerBar ctaHref="/contact-us" ctaLabel="Book Family Consultation">
         Investments in securities market are subject to market risks. PrimeIdea Ventures does
-        not guarantee returns. Partha Shah is a SEBI Registered Research Analyst
-        (INH000017815). PrimeIdea does not act as a SEBI Registered Investment Adviser unless
-        separately registered. Succession and estate support is partner-enabled coordination,
+        not guarantee returns. Succession and estate support is partner-enabled coordination,
         not independent legal practice. Partner name and pricing are not listed here.
       </ScopeDisclaimerBar>
 

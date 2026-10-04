@@ -127,13 +127,11 @@ export default function PrivateWealthContent() {
               </h2>
               <p className="text-base md:text-lg text-[#4D4D4D] leading-relaxed mb-4">
                 PrimeIdea Ventures is a Vadodara-based research-led wealth management and
-                portfolio review firm serving investors across Gujarat and India. Private wealth
-                work is guided by Partha Shah, SEBI Registered Research Analyst INH000017815.
+                portfolio review firm serving investors across Gujarat and India.
               </p>
               <p className="text-base md:text-lg text-[#4D4D4D] leading-relaxed">
                 The starting point is still a structured review — not a product list, and not a
-                return promise. PrimeIdea does not present itself as a SEBI Registered Investment
-                Adviser unless separately registered.
+                return promise.
               </p>
             </div>
             <ul className="lg:col-span-7 grid grid-cols-1 gap-3 list-none m-0 p-0">

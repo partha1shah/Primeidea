@@ -30,10 +30,9 @@ const BannerSection = () => {
                   About PrimeIdea Ventures
                 </h1>
                 <p className="text-base xl:text-lg 2xl:text-xl font-medium text-white mb-6 leading-relaxed">
-                  PrimeIdea Ventures is a Vadodara-based research-led wealth management and
-                  portfolio review firm serving investors across Gujarat and India, with a
-                  research process guided by Partha Shah, SEBI Registered Research Analyst
-                  INH000017815.
+                  A Vadodara-based research-led wealth management and portfolio review firm —
+                  helping investors across Gujarat, India, and worldwide grow hard-earned money
+                  with full understanding and expert guidance.
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <Link

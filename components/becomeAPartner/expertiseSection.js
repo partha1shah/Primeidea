@@ -22,7 +22,7 @@ const ExpertiseSection = () => {
                 Why Partner with <br/> PrimeIdea Ventures?
               </h2>
               <p className="text-lg xl:text-xl mb-3 font-medium text-black">
-                Partners use PrimeIdea’s research process with their own clients. PrimeIdea is a SEBI Registered Research Analyst practice based in Vadodara. It is not a SEBI Registered Investment Adviser unless separately registered, and it does not guarantee returns for a partner’s clients.
+                Partners use PrimeIdea’s research process with their own clients. PrimeIdea is a SEBI Registered Research Analyst practice based in Vadodara., and it does not guarantee returns for a partner’s clients.
               </p>              
               <a
                 href="/contact-us"

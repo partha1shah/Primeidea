@@ -116,8 +116,7 @@ function ThankYouInner() {
           </div>
 
           <p className="text-center text-xs text-[#6B7C8A] mt-6 leading-relaxed">
-            Partha Shah · SEBI Registered Research Analyst INH000017815 · Investments
-            are subject to market risks.
+            Investments in the securities market are subject to market risks.
           </p>
         </div>
       </div>

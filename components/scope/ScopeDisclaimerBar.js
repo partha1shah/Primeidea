@@ -28,9 +28,6 @@ export default function ScopeDisclaimerBar({
                   <p className="text-white text-lg md:text-xl font-semibold leading-snug">
                     Market risks apply
                   </p>
-                  <p className="text-[#FFC300] text-base md:text-lg font-light tracking-wide tabular-nums mt-1">
-                    INH000017815
-                  </p>
                 </div>
               </div>
 

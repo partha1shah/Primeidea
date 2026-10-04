@@ -122,7 +122,7 @@ export default function SuccessionPlanningContent() {
             <p className="text-base md:text-lg text-[#4D4D4D] leading-relaxed mb-4">
               PrimeIdea Ventures is a Vadodara-based research-led wealth management and
               portfolio review firm serving investors across Gujarat and India. Research is
-              guided by Partha Shah, SEBI Registered Research Analyst INH000017815.
+             
             </p>
             <p className="text-base md:text-lg text-[#4D4D4D] leading-relaxed">
               This page is about coordinating wills, trusts, succession, and estate

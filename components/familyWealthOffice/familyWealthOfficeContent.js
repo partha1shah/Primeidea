@@ -125,13 +125,11 @@ export default function FamilyWealthOfficeContent() {
               </h2>
               <p className="text-base md:text-lg text-[#4D4D4D] leading-relaxed mb-4">
                 PrimeIdea Ventures is a Vadodara-based research-led wealth management and
-                portfolio review firm serving investors across Gujarat and India. Family wealth
-                work is guided by Partha Shah, SEBI Registered Research Analyst INH000017815.
+                portfolio review firm serving investors across Gujarat and India.
               </p>
               <p className="text-base md:text-lg text-[#4D4D4D] leading-relaxed">
                 This is family investment clarity and coordination — not a licensed “family
-                office” licence claim, not SEBI RIA advice unless separately registered, and not
-                a return promise.
+                office” licence claim, and not a return promise.
               </p>
             </div>
             <ul className="lg:col-span-7 grid grid-cols-1 gap-3 list-none m-0 p-0">

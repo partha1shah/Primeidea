@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Header from "../header";
+import Header from "./header";
 import FadeUpOneByOneAnimation from "@/animations/FadeUpOneByOneAnimation";
 import FadeUpOneByOneLeftAnimation from "@/animations/FadeUpOneByOneLeftAnimation";
 
@@ -29,7 +29,7 @@ const BannerSection = () => {
                   Partner with Us for Growth & Success
                 </h1>
                 <p className="text-base xl:text-lg 2xl:text-xl font-medium text-white mb-3">
-                  Work with PrimeIdea’s Vadodara research desk. Partners use the research process with their clients. PrimeIdea is a SEBI Registered Research Analyst practice, not an investment adviser unless separately registered.
+                  Work with PrimeIdea’s Vadodara research desk. Partners use the research process with their clients.
                 </p>
                 {/* <a
                   href="https://api.whatsapp.com/send?phone=918141027000&text=Hello, I'm interested in becoming a partner with Primeidea. Could you please provide me with some details on how I can get started? Looking forward to hearing from you!"

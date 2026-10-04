@@ -23,9 +23,9 @@ const faqs = [
   {
     question: "What is NRI investment support at PrimeIdea?",
     answer:
-      "It is research-led review of India-based holdings for non-resident investors — overlap, allocation, account context, and next steps — guided by Partha Shah, SEBI Registered Research Analyst INH000017815. The firm is based in Vadodara and serves clients across Gujarat and India by video.",
+      "It is research-led review of India-based holdings for non-resident investors — overlap, allocation, account context, and next steps — The firm is based in Vadodara and serves clients across Gujarat and India by video.",
     plainText:
-      "It is research-led review of India-based holdings for non-resident investors — overlap, allocation, account context, and next steps — guided by Partha Shah, SEBI Registered Research Analyst INH000017815. The firm is based in Vadodara and serves clients across Gujarat and India by video.",
+      "It is research-led review of India-based holdings for non-resident investors — overlap, allocation, account context, and next steps — The firm is based in Vadodara and serves clients across Gujarat and India by video.",
   },
   {
     question: "Does PrimeIdea have offices outside India?",
@@ -40,13 +40,6 @@ const faqs = [
       "No. Tax, banking, and FEMA compliance should be confirmed with a qualified tax professional and your bank. PrimeIdea flags practical investment implications; it does not replace specialised legal or tax advice.",
     plainText:
       "No. Tax, banking, and FEMA compliance should be confirmed with a qualified tax professional and your bank. PrimeIdea flags practical investment implications; it does not replace specialised legal or tax advice.",
-  },
-  {
-    question: "Is this SEBI Registered Investment Adviser advice?",
-    answer:
-      "No. PrimeIdea operates under SEBI Registered Research Analyst registration. It does not present itself as a SEBI Registered Investment Adviser unless separately registered.",
-    plainText:
-      "No. PrimeIdea operates under SEBI Registered Research Analyst registration. It does not present itself as a SEBI Registered Investment Adviser unless separately registered.",
   },
   {
     question: "Can NRIs get succession planning support for India assets?",
@@ -67,9 +60,9 @@ const faqs = [
 export const metadata = {
   title: "NRI Investment Support in India",
   description:
-    "PrimeIdea Ventures helps NRIs with research-led India investment support from a Vadodara base, serving investors across Gujarat and India through a process guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Video review available. No guaranteed returns. Not tax or FEMA legal advice.",
+    "PrimeIdea Ventures helps NRIs with research-led India investment support from a Vadodara base, serving investors across Gujarat and India through a process Video review available. No guaranteed returns. Not tax or FEMA legal advice.",
   keywords:
-    "NRI investment support India, NRI portfolio review Gujarat, NRI mutual fund review Vadodara, Partha Shah SEBI RA INH000017815, PrimeIdea Ventures",
+    "NRI investment support India, NRI portfolio review Gujarat, NRI mutual fund review Vadodara, PrimeIdea Ventures",
   author: "Partha Shah",
   robots: "index, follow",
   openGraph: {
@@ -79,7 +72,7 @@ export const metadata = {
     site_name: "PrimeIdea Ventures",
     title: "NRI Investment Support in India | PrimeIdea Ventures",
     description:
-      "Research-led India portfolio review for NRIs from Vadodara, guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Video review available.",
+      "Research-led India portfolio review for NRIs from Vadodara, Video review available.",
   },
   twitter: {
     handle: "@primeidea",
@@ -99,7 +92,7 @@ const serviceSchema = {
   "@type": "Service",
   name: "NRI Investment Support in India",
   description:
-    "Research-led India investment and portfolio review support for NRIs, based in Vadodara and serving Gujarat and India, guided by Partha Shah, SEBI Registered Research Analyst INH000017815.",
+    "Research-led India investment and portfolio review support for NRIs, based in Vadodara and serving Gujarat and India.",
   provider: {
     "@type": "FinancialService",
     name: "PrimeIdea Ventures",
@@ -129,7 +122,7 @@ export default function NriInvestmentSupportPage() {
         mainBannerImage="/images/home/banner.png"
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="NRI Investment Support in India"
-        mainSubTitle="Research-led review of India holdings for NRIs — from a Vadodara office serving investors across Gujarat and India by video. Guided by Partha Shah, SEBI Registered Research Analyst INH000017815. No guaranteed returns. Not tax or FEMA legal advice."
+        mainSubTitle="Research-led review of India holdings for NRIs — from a Vadodara office serving investors across Gujarat and India by video. No guaranteed returns. Not tax or FEMA legal advice."
         mainLinkTitle="Book Video Review"
         mainLink="/portfolio-review"
         usePrimaryAsLink={true}
@@ -141,10 +134,9 @@ export default function NriInvestmentSupportPage() {
       <ScopePageMetaStrip
         stats={[
           { label: "Base Location", value: "Vadodara", Icon: MapPinIcon },
-          { label: "Reach", value: "India / NRI", Icon: GlobeAsiaAustraliaIcon },
-          { label: "Registration No.", value: "INH000017815", Icon: CheckBadgeIcon },
+          { label: "Reach", value: "India / NRI", Icon: GlobeAsiaAustraliaIcon },
         ]}
-        disclaimer="Investments in the securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns, does not provide FEMA or cross-border tax legal advice, and does not present itself as a SEBI Registered Investment Adviser unless separately registered."
+        disclaimer="Investments in the securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns, does not provide FEMA or cross-border tax legal advice."
       />
 
       <ScopeBreadcrumbs items={[{ label: "NRI Investment Support" }]} />
@@ -162,8 +154,8 @@ export default function NriInvestmentSupportPage() {
       <ScopeDisclaimerBar ctaHref="/portfolio-review" ctaLabel="Book Video Portfolio Review">
         Investments in the securities market are subject to market risks. PrimeIdea Ventures does
         not guarantee returns. Tax, banking, and FEMA matters should be confirmed with qualified
-        professionals. Partha Shah is a SEBI Registered Research Analyst (INH000017815). PrimeIdea
-        does not act as a SEBI Registered Investment Adviser unless separately registered.
+        professionals. PrimeIdea
+        
         Investors should verify registration independently.
       </ScopeDisclaimerBar>
 

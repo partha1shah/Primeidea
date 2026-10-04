@@ -45,7 +45,7 @@ const ExpertiseSection = () => {
               ​Our Research & Investment Expertise
             </h2>
             <p className="text-lg xl:text-xl mb-4 xl:mb-6 font-medium text-black">
-              ​Our investment strategies are anchored by <strong>Mr. Partha Shah</strong>, a key member of our leadership team who spearheads our Research division. A <strong>SEBI Registered Research Analyst (INH000017815)</strong> with a robust academic foundation, Mr. Shah is an Engineering Graduate (BE) with a Master’s in Finance (MS Finance). 
+              ​Our investment strategies are anchored by <strong>Mr. Partha Shah</strong>, a key member of our leadership team who spearheads our Research division. A <strong>SEBI Registered Research Analyst (INB010653732)</strong> with a robust academic foundation, Mr. Shah is an Engineering Graduate (BE) with a Master’s in Finance (MS Finance). 
             </p>
             <p className="text-lg xl:text-xl font-medium text-black">
               He has successfully qualified for CFA (Chartered Financial Analyst) Level 2 and the RIA (Registered Investment Advisor) Level 1 & 2 examinations, bringing deep technical expertise to our portfolio construction. <strong>His rigorous analysis supports Primeidea’s specialized offerings, including Portfolio Management Services (PMS), Specialized Investment Funds (SIF), and Alternate Investment Funds (AIF).</strong> To ensure consistent excellence and 100% regulatory adherence across the organization, our <strong>entire team of Relationship Managers is NISM Certified and fully compliant</strong>, making us a trusted partner for your wealth creation.

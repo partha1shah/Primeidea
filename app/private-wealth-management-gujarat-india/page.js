@@ -36,9 +36,9 @@ const faqs = [
   {
     question: "Who leads the research behind private wealth work?",
     answer:
-      "The research process is guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Investors should verify registration independently.",
+      "Research is led by a SEBI Registered Research Analyst. Investors can verify registration on the official SEBI website.",
     plainText:
-      "The research process is guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Investors should verify registration independently.",
+      "Research is led by a SEBI Registered Research Analyst. Investors can verify registration on the official SEBI website.",
   },
   {
     question: "Does PrimeIdea offer PMS, AIF, or SIF to every client?",
@@ -46,13 +46,6 @@ const faqs = [
       "No. PMS, AIF, and SIF are discussed only where they may be suitable and where distribution and compliance rights exist. Many private wealth reviews stay with mutual funds, equity, and fixed income.",
     plainText:
       "No. PMS, AIF, and SIF are discussed only where they may be suitable and where distribution and compliance rights exist. Many private wealth reviews stay with mutual funds, equity, and fixed income.",
-  },
-  {
-    question: "Is this SEBI Registered Investment Adviser advice?",
-    answer:
-      "No. PrimeIdea operates under SEBI Registered Research Analyst registration. It does not present itself as a SEBI Registered Investment Adviser unless separately registered.",
-    plainText:
-      "No. PrimeIdea operates under SEBI Registered Research Analyst registration. It does not present itself as a SEBI Registered Investment Adviser unless separately registered.",
   },
   {
     question: "Does private wealth management guarantee better returns?",
@@ -73,9 +66,9 @@ const faqs = [
 export const metadata = {
   title: "Private Wealth Management in Gujarat and India",
   description:
-    "PrimeIdea Ventures helps high net worth investors across Gujarat and India with research-led private wealth management through a process guided by Partha Shah, SEBI Registered Research Analyst INH000017815 — portfolio review first, without guaranteed returns.",
+    "PrimeIdea Ventures helps high net worth investors across Gujarat and India with research-led private wealth management through a research-led process — portfolio review first, without guaranteed returns.",
   keywords:
-    "private wealth management Gujarat, private wealth India, HNI portfolio review, Partha Shah SEBI RA INH000017815, PrimeIdea Ventures Vadodara",
+    "private wealth management Gujarat, private wealth India, HNI portfolio review, PrimeIdea Ventures Vadodara",
   author: "Partha Shah",
   robots: "index, follow",
   openGraph: {
@@ -85,7 +78,7 @@ export const metadata = {
     site_name: "PrimeIdea Ventures",
     title: "Private Wealth Management in Gujarat and India | PrimeIdea Ventures",
     description:
-      "PrimeIdea Ventures helps high net worth investors across Gujarat and India with research-led private wealth management guided by Partha Shah, SEBI Registered Research Analyst INH000017815.",
+      "PrimeIdea Ventures helps high net worth investors across Gujarat and India with research-led private wealth management",
   },
   twitter: {
     handle: "@primeidea",
@@ -105,7 +98,7 @@ const serviceSchema = {
   "@type": "Service",
   name: "Private Wealth Management in Gujarat and India",
   description:
-    "Research-led private wealth support for high net worth investors across Gujarat and India, guided by Partha Shah, SEBI Registered Research Analyst INH000017815.",
+    "Research-led private wealth support for high net worth investors across Gujarat and India.",
   provider: {
     "@type": "FinancialService",
     name: "PrimeIdea Ventures",
@@ -135,7 +128,7 @@ export default function PrivateWealthPage() {
         mainBannerImage="/images/home/banner.png"
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="Private Wealth Management in Gujarat and India"
-        mainSubTitle="Research-led private wealth support for HNI and family portfolios — from a Vadodara base, across Gujarat and India. Guided by Partha Shah, SEBI Registered Research Analyst INH000017815. No product pushing. No guaranteed returns."
+        mainSubTitle="Research-led private wealth support for HNI and family portfolios — from a Vadodara base, across Gujarat and India. No product pushing. No guaranteed returns."
         mainLinkTitle="Book Consultation"
         mainLink="/contact-us"
         usePrimaryAsLink={true}
@@ -147,10 +140,9 @@ export default function PrivateWealthPage() {
       <ScopePageMetaStrip
         stats={[
           { label: "Reach", value: "Gujarat & India", Icon: GlobeAltIcon },
-          { label: "Who we help", value: "HNI & families", Icon: UserGroupIcon },
-          { label: "Registration No.", value: "INH000017815", Icon: CheckBadgeIcon },
+          { label: "Who we help", value: "HNI & families", Icon: UserGroupIcon },
         ]}
-        disclaimer="Private wealth support is a research-led review and planning process. Investments in securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns and does not present itself as a SEBI Registered Investment Adviser unless separately registered."
+        disclaimer="Private wealth support is a research-led review and planning process. Investments in securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns."
       />
 
       <ScopeBreadcrumbs items={[{ label: "Private Wealth Management" }]} />
@@ -165,9 +157,7 @@ export default function PrivateWealthPage() {
 
       <ScopeDisclaimerBar ctaHref="/contact-us" ctaLabel="Book Private Wealth Consultation">
         Investments in securities market are subject to market risks. PrimeIdea Ventures does
-        not guarantee returns. Partha Shah is a SEBI Registered Research Analyst
-        (INH000017815). PrimeIdea does not act as a SEBI Registered Investment Adviser unless
-        separately registered. Succession and estate support is partner-enabled coordination,
+        not guarantee returns. Succession and estate support is partner-enabled coordination,
         not independent legal practice. Investors should verify registration independently.
       </ScopeDisclaimerBar>
 

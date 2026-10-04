@@ -24,9 +24,9 @@ const faqs = [
   {
     question: "What is retirement planning support at PrimeIdea?",
     answer:
-      "It is research-led review of retirement age, lifestyle spend, corpus gap, allocation path, inflation assumptions, and withdrawal design — guided by Partha Shah, SEBI Registered Research Analyst INH000017815. It does not guarantee retirement income or investment returns.",
+      "It is research-led review of retirement age, lifestyle spend, corpus gap, allocation path, inflation assumptions, and withdrawal design — It does not guarantee retirement income or investment returns.",
     plainText:
-      "It is research-led review of retirement age, lifestyle spend, corpus gap, allocation path, inflation assumptions, and withdrawal design — guided by Partha Shah, SEBI Registered Research Analyst INH000017815. It does not guarantee retirement income or investment returns.",
+      "It is research-led review of retirement age, lifestyle spend, corpus gap, allocation path, inflation assumptions, and withdrawal design — It does not guarantee retirement income or investment returns.",
   },
   {
     question: "Does PrimeIdea guarantee a retirement corpus or income?",
@@ -34,13 +34,6 @@ const faqs = [
       "No. Investments in the securities market are subject to market risks. Any corpus or withdrawal figures used in planning are working assumptions, not promises. PrimeIdea does not guarantee returns.",
     plainText:
       "No. Investments in the securities market are subject to market risks. Any corpus or withdrawal figures used in planning are working assumptions, not promises. PrimeIdea does not guarantee returns.",
-  },
-  {
-    question: "Is this SEBI Registered Investment Adviser advice?",
-    answer:
-      "No. PrimeIdea operates under SEBI Registered Research Analyst registration. It does not present itself as a SEBI Registered Investment Adviser unless separately registered.",
-    plainText:
-      "No. PrimeIdea operates under SEBI Registered Research Analyst registration. It does not present itself as a SEBI Registered Investment Adviser unless separately registered.",
   },
   {
     question: "How does retirement planning connect to insurance and succession?",
@@ -68,9 +61,9 @@ const faqs = [
 export const metadata = {
   title: "Retirement Planning",
   description:
-    "PrimeIdea Ventures offers research-led retirement planning for investors across Gujarat and India, guided by Partha Shah, SEBI Registered Research Analyst INH000017815. No guaranteed corpus or returns. Market risks apply.",
+    "PrimeIdea Ventures offers research-led retirement planning for investors across Gujarat and India. No guaranteed corpus or returns. Market risks apply.",
   keywords:
-    "retirement planning, retirement corpus review, NPS retirement planning India, Partha Shah SEBI RA INH000017815, PrimeIdea Ventures",
+    "retirement planning, retirement corpus review, NPS retirement planning India, PrimeIdea Ventures",
   author: "Partha Shah",
   robots: "index, follow",
   openGraph: {
@@ -80,7 +73,7 @@ export const metadata = {
     site_name: "PrimeIdea Ventures",
     title: "Retirement Planning | PrimeIdea Ventures",
     description:
-      "Research-led retirement planning, guided by Partha Shah, SEBI Registered Research Analyst INH000017815. No guaranteed income or returns.",
+      "Research-led retirement planning, No guaranteed income or returns.",
   },
   twitter: {
     handle: "@primeidea",
@@ -100,7 +93,7 @@ const serviceSchema = {
   "@type": "Service",
   name: "Retirement Planning",
   description:
-    "Research-led retirement corpus, allocation, and withdrawal planning support, guided by Partha Shah, SEBI Registered Research Analyst INH000017815.",
+    "Research-led retirement corpus, allocation, and withdrawal planning support.",
   provider: {
     "@type": "FinancialService",
     name: "PrimeIdea Ventures",
@@ -130,7 +123,7 @@ export default function RetirementPlanningPage() {
         mainBannerImage="/images/home/banner.png"
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="Retirement Planning"
-        mainSubTitle="Research-led corpus, allocation, and withdrawal review from a Vadodara office, serving investors across Gujarat and India. Guided by Partha Shah, SEBI Registered Research Analyst INH000017815. No guaranteed retirement income or investment returns. Market risks apply."
+        mainSubTitle="Research-led corpus, allocation, and withdrawal review from a Vadodara office, serving investors across Gujarat and India. No guaranteed retirement income or investment returns. Market risks apply."
         mainLinkTitle="Start Retirement Form"
         mainLink="#lead-form"
         usePrimaryAsLink={true}
@@ -143,9 +136,8 @@ export default function RetirementPlanningPage() {
         stats={[
           { label: "Base Location", value: "Vadodara", Icon: MapPinIcon },
           { label: "Focus", value: "Corpus & income", Icon: SunIcon },
-          { label: "Registration No.", value: "INH000017815", Icon: CheckBadgeIcon },
         ]}
-        disclaimer="Retirement projections are working assumptions, not promises. Investments in the securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns and does not present itself as a SEBI Registered Investment Adviser unless separately registered."
+        disclaimer="Retirement projections are working assumptions, not promises. Investments in the securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns."
       />
 
       <ScopeBreadcrumbs items={[{ label: "Retirement Planning" }]} />
@@ -164,10 +156,7 @@ export default function RetirementPlanningPage() {
 
       <ScopeDisclaimerBar ctaHref="/portfolio-review" ctaLabel="Book Portfolio Review">
         Investments in the securities market are subject to market risks. PrimeIdea Ventures does
-        not guarantee retirement corpus size, withdrawal rates, or investment returns. Partha Shah
-        is a SEBI Registered Research Analyst (INH000017815). PrimeIdea does not act as a SEBI
-        Registered Investment Adviser unless separately registered. Investors should verify
-        registration independently.
+        not guarantee retirement corpus size, withdrawal rates, or investment returns.
       </ScopeDisclaimerBar>
 
       <Footer />

@@ -37,16 +37,16 @@ const faqs = [
   {
     question: "Are these tools the same as investment advice?",
     answer:
-      "No. Calculators are educational planning utilities. Suitability-based next steps come through a research-led portfolio review. PrimeIdea operates under SEBI Registered Research Analyst registration and does not present itself as a SEBI Registered Investment Adviser unless separately registered.",
+      "No. Calculators are educational planning utilities. Suitability-based next steps come through a research-led portfolio review. PrimeIdea operates under SEBI Registered Research Analyst registration.",
     plainText:
-      "No. Calculators are educational planning utilities. Suitability-based next steps come through a research-led portfolio review. PrimeIdea operates under SEBI Registered Research Analyst registration and does not present itself as a SEBI Registered Investment Adviser unless separately registered.",
+      "No. Calculators are educational planning utilities. Suitability-based next steps come through a research-led portfolio review. PrimeIdea operates under SEBI Registered Research Analyst registration.",
   },
   {
     question: "Who guides the research process behind portfolio reviews?",
     answer:
-      "The research process is guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Investors should verify registration independently.",
+      "Research is led by a SEBI Registered Research Analyst. Investors can verify registration on the official SEBI website.",
     plainText:
-      "The research process is guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Investors should verify registration independently.",
+      "Research is led by a SEBI Registered Research Analyst. Investors can verify registration on the official SEBI website.",
   },
   {
     question: "How should I use a calculator result?",
@@ -67,9 +67,9 @@ const faqs = [
 export const metadata = {
   title: "Wealth Tools",
   description:
-    "PrimeIdea Ventures Wealth Tools — SIP, lumpsum, retirement corpus, education, insurance need, asset allocation, emergency fund, SWP, CAGR/XIRR, and EMI vs investment calculators. Illustrative estimates only. Research process guided by Partha Shah, SEBI Registered Research Analyst INH000017815.",
+    "PrimeIdea Ventures Wealth Tools — SIP, lumpsum, retirement corpus, education, insurance need, asset allocation, emergency fund, SWP, CAGR/XIRR, and EMI vs investment calculators. Illustrative estimates only. Research process",
   keywords:
-    "wealth tools, SIP calculator, retirement corpus calculator, SWP calculator, portfolio planning tools Vadodara, PrimeIdea Ventures, Partha Shah SEBI RA INH000017815",
+    "wealth tools, SIP calculator, retirement corpus calculator, SWP calculator, portfolio planning tools Vadodara, PrimeIdea Ventures",
   author: "Partha Shah",
   robots: "index, follow",
   openGraph: {
@@ -133,7 +133,7 @@ export default function WealthToolsPage() {
         mainBannerImage="/images/home/banner.png"
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="Wealth Tools"
-        mainSubTitle="Practical calculators to explore SIP growth, corpus needs, insurance cover, allocation starting points, and withdrawal trade-offs — then continue with a research-led portfolio review. Outputs are illustrative estimates only. Guided by Partha Shah, SEBI Registered Research Analyst INH000017815. No guaranteed returns."
+        mainSubTitle="Practical calculators to explore SIP growth, corpus needs, insurance cover, allocation starting points, and withdrawal trade-offs — then continue with a research-led portfolio review. Outputs are illustrative estimates only. No guaranteed returns."
         mainLinkTitle="Book Portfolio Review"
         mainLink="/portfolio-review"
         usePrimaryAsLink={true}
@@ -145,10 +145,9 @@ export default function WealthToolsPage() {
       <ScopePageMetaStrip
         stats={[
           { label: "Tool type", value: "Planning calculators", Icon: CalculatorIcon },
-          { label: "Purpose", value: "Illustrative estimates", Icon: LightBulbIcon },
-          { label: "Registration No.", value: "INH000017815", Icon: CheckBadgeIcon },
+          { label: "Purpose", value: "Illustrative estimates", Icon: LightBulbIcon },
         ]}
-        disclaimer="Calculator outputs depend on your assumptions and do not constitute advice or guaranteed returns. Investments in the securities market are subject to market risks. PrimeIdea Ventures does not present itself as a SEBI Registered Investment Adviser unless separately registered."
+        disclaimer="Calculator outputs depend on your assumptions and do not constitute advice or guaranteed returns. Investments in the securities market are subject to market risks. "
       />
 
       <ScopeBreadcrumbs items={[{ label: "Wealth Tools" }]} />
@@ -166,9 +165,7 @@ export default function WealthToolsPage() {
       <ScopeDisclaimerBar ctaHref="/portfolio-review" ctaLabel="Book Portfolio Review">
         Wealth Tools provide illustrative estimates only. Investments in the securities market
         are subject to market risks. PrimeIdea Ventures does not guarantee returns, corpus size,
-        insurance adequacy, or withdrawal sustainability. Partha Shah is a SEBI Registered
-        Research Analyst (INH000017815). PrimeIdea does not act as a SEBI Registered Investment
-        Adviser unless separately registered. Investors should verify registration independently
+        insurance adequacy, or withdrawal sustainability. Investors should verify registration independently
         and read all scheme-related documents carefully before investing.
       </ScopeDisclaimerBar>
 

@@ -8,7 +8,6 @@ const disclaimer = [
   "This note is education. It is not a forecast, a product offer, or a promise of returns.",
   "PrimeIdea Ventures does not guarantee returns.",
   "Partha Shah, SEBI Registered Research Analyst INH000017815.",
-  "Not a SEBI Registered Investment Adviser unless separately registered.",
 ];
 
 const notes = [
@@ -125,9 +124,7 @@ function buildPdf(title, bodyLines) {
     "",
     "SEBI Registered Research Analyst: Partha Shah  INH000017815",
     "Education note. No guaranteed returns.",
-    "",
-    ...bodyLines,
-    ...disclaimer,
+    "".bodyLines.disclaimer,
   ];
   let y = 760;
   const ops = [];

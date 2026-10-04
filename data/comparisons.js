@@ -6,7 +6,7 @@ export const COMPARISON_HUB = {
   path: "/comparisons",
   title: "Investment Comparison Guides",
   description:
-    "Educational comparisons — Research Analyst vs Investment Adviser vs MFD, direct apps vs portfolio review, regular vs direct mutual funds, PMS vs mutual funds, and financial planner vs wealth manager. Guided by Partha Shah, SEBI Registered Research Analyst INH000017815. No guaranteed returns.",
+    "Educational comparisons — Research Analyst vs Investment Adviser vs MFD, direct apps vs portfolio review, regular vs direct mutual funds, PMS vs mutual funds, and financial planner vs wealth manager. No guaranteed returns.",
 };
 
 export const COMPARISONS = [
@@ -18,52 +18,7 @@ export const COMPARISONS = [
     summary:
       "Three different SEBI / distribution roles. Understanding the difference helps you know what PrimeIdea is — and what it is not.",
     metaDescription:
-      "Compare SEBI Registered Research Analyst, SEBI Registered Investment Adviser, and Mutual Fund Distributor roles. PrimeIdea operates as research-led under SEBI RA INH000017815 — not as an RIA unless separately registered.",
-    keywords:
-      "research analyst vs investment adviser, RA vs RIA vs MFD, SEBI RA INH000017815, PrimeIdea Ventures",
-    columns: [
-      {
-        id: "ra",
-        name: "Research Analyst (RA)",
-        tagline: "Research & analysis",
-        highlight: true,
-      },
-      {
-        id: "ia",
-        name: "Investment Adviser (IA / RIA)",
-        tagline: "Personalised advice",
-        highlight: false,
-      },
-      {
-        id: "mfd",
-        name: "Mutual Fund Distributor (MFD)",
-        tagline: "Distribution / sales",
-        highlight: false,
-      },
-    ],
-    rows: [
-      {
-        lens: "Primary role",
-        ra: "Research and analysis on securities / markets",
-        ia: "Personalised investment advice under IA regulations",
-        mfd: "Distributes mutual fund schemes; earns distribution fees",
-      },
-      {
-        lens: "Registration",
-        ra: "SEBI Registered Research Analyst",
-        ia: "SEBI Registered Investment Adviser (separate category)",
-        mfd: "AMFI / ARN registration for mutual fund distribution",
-      },
-      {
-        lens: "What you typically get",
-        ra: "Research notes, process-led portfolio review context",
-        ia: "Advice tailored to your situation under IA rules",
-        mfd: "Scheme recommendations tied to distribution offerings",
-      },
-      {
-        lens: "PrimeIdea positioning",
-        ra: "Yes — Partha Shah, SEBI RA INH000017815",
-        ia: "No — not presented as RIA unless separately registered",
+      "Compare SEBI Registered Research Analyst, SEBI Registered Investment Adviser, and Mutual Fund Distributor roles.",
         mfd: "Distinct from a product-push distributor pitch",
       },
     ],
@@ -91,7 +46,7 @@ export const COMPARISONS = [
       {
         question: "Is a Research Analyst the same as an Investment Adviser?",
         answer:
-          "No. A SEBI Registered Research Analyst provides research and analysis. A SEBI Registered Investment Adviser provides personalised investment advice under a separate registration. PrimeIdea operates under SEBI RA registration (INH000017815) and does not present itself as an RIA unless separately registered.",
+          "No. A SEBI Registered Research Analyst provides research and analysis. A SEBI Registered Investment Adviser provides personalised investment advice under a separate registration. PrimeIdea operates under SEBI RA registration (INH000017815).",
       },
       {
         question: "Is PrimeIdea a Mutual Fund Distributor?",
@@ -108,7 +63,7 @@ export const COMPARISONS = [
     summary:
       "Portfolio Management Services and mutual funds can both hold securities — but costs, liquidity, minimums, and concentration often differ. Education only; not a ranking.",
     metaDescription:
-      "Educational comparison of PMS vs mutual funds — mandate, fees, liquidity, and suitability. Research-led review guided by Partha Shah, SEBI RA INH000017815. No guaranteed returns.",
+      "Educational comparison of PMS vs mutual funds — mandate, fees, liquidity, and suitability. Research-led review guided by Partha Shah. No guaranteed returns.",
     keywords:
       "PMS vs mutual funds, portfolio management services vs MF, PMS suitability India, PrimeIdea Ventures",
     columns: [
@@ -202,7 +157,7 @@ export const COMPARISONS = [
     summary:
       "Alternative Investment Funds, Portfolio Management Services, and mutual funds sit in different structural and liquidity buckets. Compare lenses — not return promises.",
     metaDescription:
-      "Educational comparison of AIF vs PMS vs mutual funds — structure, liquidity, costs, and who should pause. Guided by Partha Shah, SEBI RA INH000017815. No guaranteed returns.",
+      "Educational comparison of AIF vs PMS vs mutual funds — structure, liquidity, costs, and who should pause. Guided by Partha Shah. No guaranteed returns.",
     keywords:
       "AIF vs PMS vs mutual funds, alternative investment funds comparison, PMS suitability, PrimeIdea Ventures",
     columns: [
@@ -406,7 +361,7 @@ export const COMPARISONS = [
     summary:
       "A direct mutual fund app is a place to transact. A portfolio review is a process that checks overlap, allocation, cost, and whether existing holdings still fit the goal.",
     metaDescription:
-      "Educational comparison of direct mutual fund apps and a research-led portfolio review. PrimeIdea Ventures, Vadodara. Guided by Partha Shah, SEBI RA INH000017815. No guaranteed returns.",
+      "Educational comparison of direct mutual fund apps and a research-led portfolio review. PrimeIdea Ventures, Vadodara. Guided by Partha Shah. No guaranteed returns.",
     keywords:
       "direct mutual fund app vs portfolio review, direct mutual funds, portfolio overlap, PrimeIdea Ventures Vadodara",
     columns: [
@@ -587,59 +542,7 @@ export const COMPARISONS = [
     summary:
       "The titles are used loosely in Vadodara and across India. What matters is the registration, the process, and whether the conversation starts with your existing portfolio — not with a product list.",
     metaDescription:
-      "Educational comparison of a financial planner and a wealth manager for investors in Vadodara. Research-led context from PrimeIdea Ventures. SEBI RA INH000017815. No guaranteed returns.",
-    keywords:
-      "financial planner vs wealth manager Vadodara, portfolio review Vadodara, SEBI RA INH000017815, PrimeIdea Ventures",
-    columns: [
-      {
-        id: "planner",
-        name: "Financial planner",
-        tagline: "Goals and cash flow",
-        highlight: false,
-      },
-      {
-        id: "manager",
-        name: "Wealth manager",
-        tagline: "Portfolio and products",
-        highlight: false,
-      },
-      {
-        id: "primeidea",
-        name: "PrimeIdea",
-        tagline: "Research-led review",
-        highlight: true,
-      },
-    ],
-    rows: [
-      {
-        lens: "Usual focus",
-        planner: "Goals, savings rate, insurance gaps, and retirement corpus",
-        manager: "Existing investments, product mix, and ongoing portfolio oversight",
-        primeidea: "Portfolio review first, then planning support across products",
-      },
-      {
-        lens: "Registration to check",
-        planner: "Ask which SEBI or distribution registration applies",
-        manager: "The label alone is not a SEBI category",
-        primeidea: "Partha Shah, SEBI Registered Research Analyst INH000017815",
-      },
-      {
-        lens: "Where work happens",
-        planner: "Office or online, depending on the firm",
-        manager: "Often positioned for larger or multi-product books",
-        primeidea: "Vadodara office, plus online consultations across Gujarat and India",
-      },
-      {
-        lens: "What to ask",
-        planner: "How goals, risk, and existing products are mapped",
-        manager: "How overlap, cost, and concentration are reviewed",
-        primeidea: "Request the research process and the written review steps",
-      },
-      {
-        lens: "What neither title guarantees",
-        planner: "A title does not guarantee returns",
-        manager: "A title does not mean SEBI Investment Adviser registration",
-        primeidea: "PrimeIdea is not an RIA unless separately registered, and does not guarantee returns",
+      "Educational comparison of a financial planner and a wealth manager for investors in Vadodara. Research-led context from PrimeIdea Ventures. SEBI RA INH000017815. No guaranteed returns., and does not guarantee returns",
       },
     ],
     takeaways: [
@@ -669,7 +572,7 @@ export const COMPARISONS = [
       {
         question: "Is a wealth manager the same as a SEBI Registered Investment Adviser?",
         answer:
-          "No. Wealth manager and financial planner are descriptions, not SEBI registration categories. A Research Analyst and an Investment Adviser are separate registrations. PrimeIdea operates under SEBI RA INH000017815 and does not present itself as an Investment Adviser unless separately registered.",
+          "No. Wealth manager and financial planner are descriptions, not SEBI registration categories. A Research Analyst and an Investment Adviser are separate registrations.",
       },
       {
         question: "Does this comparison apply only in Vadodara?",

@@ -25,9 +25,9 @@ const faqs = [
   {
     question: "What is research-based wealth management at PrimeIdea?",
     answer:
-      "It is wealth management that starts with a structured portfolio review — suitability, overlap, allocation, and risk — guided by Partha Shah, SEBI Registered Research Analyst INH000017815. It is not a product-push process and does not guarantee returns.",
+      "It is wealth management that starts with a structured portfolio review — suitability, overlap, allocation, and risk — it is not a product-push process and does not guarantee returns.",
     plainText:
-      "It is wealth management that starts with a structured portfolio review — suitability, overlap, allocation, and risk — guided by Partha Shah, SEBI Registered Research Analyst INH000017815. It is not a product-push process and does not guarantee returns.",
+      "It is wealth management that starts with a structured portfolio review — suitability, overlap, allocation, and risk — it is not a product-push process and does not guarantee returns.",
   },
   {
     question: "How is this different from a sales-only approach?",
@@ -39,9 +39,9 @@ const faqs = [
   {
     question: "Who leads the research?",
     answer:
-      "The research process is guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Investors should verify registration independently.",
+      "Research is led by a SEBI Registered Research Analyst. Investors can verify registration on the official SEBI website.",
     plainText:
-      "The research process is guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Investors should verify registration independently.",
+      "Research is led by a SEBI Registered Research Analyst. Investors can verify registration on the official SEBI website.",
   },
   {
     question: "Does research-based wealth management guarantee growth?",
@@ -49,13 +49,6 @@ const faqs = [
       "No. Investments in securities market are subject to market risks. PrimeIdea does not guarantee returns or market-beating performance.",
     plainText:
       "No. Investments in securities market are subject to market risks. PrimeIdea does not guarantee returns or market-beating performance.",
-  },
-  {
-    question: "Is this SEBI Registered Investment Adviser advice?",
-    answer:
-      "No. PrimeIdea operates under SEBI Registered Research Analyst registration. It does not present itself as a SEBI Registered Investment Adviser unless separately registered.",
-    plainText:
-      "No. PrimeIdea operates under SEBI Registered Research Analyst registration. It does not present itself as a SEBI Registered Investment Adviser unless separately registered.",
   },
   {
     question: "How do I start?",
@@ -69,9 +62,9 @@ const faqs = [
 export const metadata = {
   title: "Research-Based Wealth Management",
   description:
-    "PrimeIdea Ventures helps investors with research-based wealth management through a research-led process guided by Partha Shah, SEBI Registered Research Analyst INH000017815 — portfolio review, mutual funds, and equity support without guaranteed returns.",
+    "PrimeIdea Ventures helps investors with research-based wealth management through a research-led process — portfolio review, mutual funds, and equity support without guaranteed returns.",
   keywords:
-    "research-based wealth management, portfolio review, SEBI RA INH000017815, Partha Shah, mutual fund review, equity research support, PrimeIdea Ventures",
+    "research-based wealth management, portfolio review, mutual fund review, equity research support, PrimeIdea Ventures",
   author: "Partha Shah",
   robots: "index, follow",
   openGraph: {
@@ -81,7 +74,7 @@ export const metadata = {
     site_name: "PrimeIdea Ventures",
     title: "Research-Based Wealth Management | PrimeIdea Ventures",
     description:
-      "PrimeIdea Ventures helps investors with research-based wealth management through a research-led process guided by Partha Shah, SEBI Registered Research Analyst INH000017815.",
+      "PrimeIdea Ventures helps investors with research-based wealth management through a research-led process",
   },
   twitter: {
     handle: "@primeidea",
@@ -101,7 +94,7 @@ const serviceSchema = {
   "@type": "Service",
   name: "Research-Based Wealth Management",
   description:
-    "Research-led wealth management and portfolio review guided by Partha Shah, SEBI Registered Research Analyst INH000017815.",
+    "Research-led wealth management and portfolio review",
   provider: {
     "@type": "FinancialService",
     name: "PrimeIdea Ventures",
@@ -178,7 +171,7 @@ export default async function ResearchBasedWealthManagementPage() {
         mainBannerImage="/images/research-wealth-management/banner.png"
         bannerRightImg="/images/research-wealth-management/bannerright.png"
         mainTitle="Research-Based Wealth Management"
-        mainSubTitle="A research-led approach to mutual funds, equity, and portfolio construction — guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Suitability, risk, and allocation first. No product pushing. No guaranteed returns."
+        mainSubTitle="A research-led approach to mutual funds, equity, and portfolio construction — Suitability, risk, and allocation first. No product pushing. No guaranteed returns."
         mainLinkTitle="Book Portfolio Review"
         mainLink="/portfolio-review"
         usePrimaryAsLink={true}
@@ -193,7 +186,7 @@ export default async function ResearchBasedWealthManagementPage() {
           { label: "Led by", value: "SEBI RA", Icon: CheckBadgeIcon },
           { label: "Starts with", value: "Portfolio review", Icon: ClipboardDocumentCheckIcon },
         ]}
-        disclaimer="Research-based wealth management is a structured review and analysis process. Investments in securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns and does not present itself as a SEBI Registered Investment Adviser unless separately registered."
+        disclaimer="Research-based wealth management is a structured review and analysis process. Investments in securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns."
       />
 
       <ScopeBreadcrumbs items={[{ label: "Research-Based Wealth Management" }]} />
@@ -212,9 +205,7 @@ export default async function ResearchBasedWealthManagementPage() {
 
       <ScopeDisclaimerBar ctaHref="/portfolio-review" ctaLabel="Book Portfolio Review">
         Investments in securities market are subject to market risks. PrimeIdea Ventures does
-        not guarantee returns. Partha Shah is a SEBI Registered Research Analyst
-        (INH000017815). PrimeIdea does not act as a SEBI Registered Investment Adviser unless
-        separately registered. Investors should verify registration independently and read all
+        not guarantee returns. Investors should verify registration independently and read all
         scheme-related documents carefully before investing.
       </ScopeDisclaimerBar>
 

@@ -13,7 +13,7 @@ import {
 } from "@heroicons/react/24/outline";
 
 const credentials = [
-  "SEBI Registered Research Analyst INH000017815",
+  "SEBI Registered Research Analyst INB010653732",
   "Engineering graduate (BE) and Master’s in Finance (MS Finance)",
   "CFA Level 2 examination completed",
   "RIA Level 1 & 2 examinations completed (not SEBI RIA registration)",
@@ -74,7 +74,7 @@ const relatedPages = [
   {
     title: "SEBI RA credentials",
     href: "/sebi-registered-research-analyst",
-    description: "How to verify registration number INH000017815.",
+    description: "How to verify registration number INB010653732.",
   },
   {
     title: "Research Process",
@@ -130,7 +130,7 @@ export default function LeadershipContent() {
 
             <div className="lg:col-span-7 p-6 md:p-8 lg:p-10">
               <p className="text-base font-semibold text-[#293C7D] mb-4">
-                Head of Research &amp; Investment Strategy · INH000017815
+                Head of Research &amp; Investment Strategy · INB010653732
               </p>
               <p className="text-base md:text-lg text-[#4D4D4D] leading-relaxed mb-6">
                 Partha Shah leads PrimeIdea’s research process from Vadodara. The firm serves
@@ -169,8 +169,7 @@ export default function LeadershipContent() {
 
               <p className="text-sm text-[#4D4D4D] leading-relaxed mb-6">
                 Completing RIA examinations is not the same as SEBI Registered Investment
-                Adviser registration. PrimeIdea does not present itself as an RIA unless
-                separately registered, and does not guarantee returns.
+                Adviser registration. PrimeIdea does not guarantee returns.
               </p>
 
               <div className="flex flex-wrap gap-3">
@@ -233,7 +232,7 @@ export default function LeadershipContent() {
               <CheckBadgeIcon className="h-6 w-6 text-[#293C7D] mb-3" aria-hidden="true" />
               <h3 className="text-base font-bold text-[#293C7D] mb-1">Reviewed by</h3>
               <p className="text-sm text-[#4D4D4D] leading-relaxed">
-                Partha Shah, SEBI RA INH000017815
+                Partha Shah, SEBI RA INB010653732
               </p>
             </li>
             <li className="rounded-[20px] border border-[#E3ECF5] bg-[#F6FDFF] p-5">

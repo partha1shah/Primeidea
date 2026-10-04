@@ -1,4 +1,6 @@
 import FadeUpOneByOneAnimation from "@/animations/FadeUpOneByOneAnimation";
+import RegistrationsBlock from "@/components/registrations/RegistrationsBlock";
+import { PRODUCT_ACCESS, SEBI_RA } from "@/data/registrations";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -8,72 +10,82 @@ import {
   BuildingOffice2Icon,
   CheckBadgeIcon,
   ComputerDesktopIcon,
+  EyeIcon,
   GlobeAsiaAustraliaIcon,
   HomeModernIcon,
-  ScaleIcon,
+  LightBulbIcon,
+  MapPinIcon,
   ShieldExclamationIcon,
   UserGroupIcon,
 } from "@heroicons/react/24/outline";
 
-const timeline = [
+const foundingPoints = [
   {
     title: "Why the firm exists",
     description:
-      "Too many portfolios are assembled product by product. PrimeIdea was built in Vadodara so investors can start with a structured review — suitability, overlap, and allocation — before adding more.",
+      "To cater to the in-person and specific needs of individuals who want to grow by investing their hard-earned money — with full understanding and expert guidance, not a product pitch.",
+    Icon: LightBulbIcon,
   },
   {
     title: "Research before products",
     description:
-      "The process is guided by Partha Shah, SEBI Registered Research Analyst INH000017815. Recommendations follow a written review cadence, not a sales script.",
+      "Every conversation starts with your goals, cash flow, and current holdings. Suitability, overlap, and risk are reviewed first — then written next steps, not a sales script.",
+    Icon: BeakerIcon,
   },
   {
-    title: "Vadodara base, wider reach",
+    title: "Vadodara base, global reach",
     description:
-      "The office is in Atladara, Vadodara. Clients across Gujarat and India use the same process in person or on a video call.",
+      "The office is in Atladara, Vadodara. The same research-led process serves clients across Gujarat, India, and worldwide — in person at the office or on a video call.",
+    Icon: MapPinIcon,
   },
   {
     title: "Visible accountability",
     description:
-      "Regulatory disclosures stay on the site. Returns are not guaranteed. PrimeIdea does not present itself as a SEBI Registered Investment Adviser unless separately registered.",
+      "Registration details, Investor Charter, and grievance steps stay on the site. Market risks are stated clearly. Returns are never guaranteed.",
+    Icon: EyeIcon,
   },
 ];
 
 const credentials = [
-  "SEBI Registered Research Analyst INH000017815",
+  `${SEBI_RA.label} ${SEBI_RA.number}`,
   "Engineering graduate (BE) and Master’s in Finance (MS Finance)",
   "CFA Level 2 and RIA Level 1 & 2 examinations completed",
-  "Research support across mutual funds, equity, fixed income, PMS, AIF, and SIF review context",
+  "Research and distribution support across mutual funds, equity, fixed income, PMS, AIF, and SIF",
 ];
 
 const segments = [
   { label: "Salaried professionals", Icon: BriefcaseIcon },
   { label: "Business owners", Icon: BuildingOffice2Icon },
   { label: "HNIs and families", Icon: UserGroupIcon },
-  { label: "NRIs", Icon: GlobeAsiaAustraliaIcon },
+  { label: "NRIs worldwide", Icon: GlobeAsiaAustraliaIcon },
   { label: "Retirees and pre-retirees", Icon: HomeModernIcon },
   { label: "Doctors and IT professionals", Icon: ComputerDesktopIcon },
 ];
 
 const compliance = [
   {
-    title: "SEBI RA-led research",
-    description: "Verify Partha Shah’s registration independently using INH000017815.",
+    title: "Registered distributor",
+    description:
+      "AMFI mutual fund / SIF distribution and PMS distribution credentials are published with validity dates.",
     Icon: CheckBadgeIcon,
   },
   {
-    title: "Not SEBI RIA unless registered",
-    description: "Research-led portfolio review is not the same as Registered Investment Adviser advice.",
-    Icon: ScaleIcon,
+    title: "Research-led guidance",
+    description:
+      "Research and portfolio review help investors understand products before they invest.",
+    Icon: BeakerIcon,
   },
   {
-    title: "No guaranteed returns",
-    description: "Investments in securities market are subject to market risks. Process first, not promises.",
+    title: "Market risks apply",
+    description:
+      "Investments in market-linked products are subject to market risks. Read all scheme-related documents carefully.",
     Icon: ShieldExclamationIcon,
   },
   {
     title: "Disclosures on the site",
-    description: "Investor Charter, grievance process, and role clarification live on Regulatory Disclosures.",
-    Icon: BeakerIcon,
+    description:
+      "Investor Charter, grievance process, and registration details live on Regulatory Disclosures.",
+    Icon: AcademicCapIcon,
   },
 ];
 
@@ -110,55 +122,69 @@ export default function AboutContentSections() {
     <>
       <section
         aria-labelledby="why-founded-heading"
-        className="bg-white py-14 md:py-16"
+        className="relative overflow-hidden bg-[#F6FDFF] py-16 md:py-20"
       >
-        <div className="mx-auto 2xl:max-w-[1340px] xl:max-w-[1170px] lg:max-w-[1004px] px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
-            <div className="lg:col-span-5">
-              <p className="text-xs md:text-sm font-semibold tracking-[0.14em] uppercase text-[#479AD2] mb-3">
-                Why we were founded
-              </p>
-              <h2
-                id="why-founded-heading"
-                className="text-[28px] md:text-[36px] font-light text-[#2D2D2D] leading-[120%] mb-4"
-              >
-                A research desk in Vadodara —{" "}
-                <strong className="font-semibold">not a product counter</strong>
-              </h2>
-              <p className="text-base md:text-lg text-[#4D4D4D] leading-relaxed mb-6">
-                Start with a structured portfolio review. Understand risks, overlaps, asset
-                allocation, and next financial steps before investing further.
-              </p>
-              <p className="text-base md:text-lg text-[#4D4D4D] leading-relaxed">
-                PrimeIdea coordinates Legacy, Succession and Estate Planning through qualified
-                partners. Legal drafting and opinions stay with qualified legal professionals.
-                Partner names and pricing are not listed here.
-              </p>
-            </div>
+        <div
+          className="pointer-events-none absolute -right-24 top-10 h-64 w-64 rounded-full bg-[#479AD2]/10 blur-3xl"
+          aria-hidden="true"
+        />
+        <div
+          className="pointer-events-none absolute -left-16 bottom-0 h-56 w-56 rounded-full bg-[#FFC300]/15 blur-3xl"
+          aria-hidden="true"
+        />
 
-            <ol className="lg:col-span-7 relative list-none m-0 p-0">
-              <span
-                className="absolute left-[19px] top-3 bottom-3 w-px bg-[#E3ECF5] hidden sm:block"
-                aria-hidden="true"
-              />
-              {timeline.map((item, index) => (
-                <li key={item.title} className="relative sm:pl-14 pb-5 last:pb-0">
-                  <span className="hidden sm:flex absolute left-0 top-1 h-10 w-10 items-center justify-center rounded-full bg-[#293C7D] text-[#FFC300] text-sm font-bold tabular-nums">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                  <FadeUpOneByOneAnimation className="rounded-2xl border border-[#E3ECF5] bg-[#F6FDFF] p-5 md:p-6">
-                    <p className="sm:hidden text-[#479AD2] text-sm font-bold mb-1 tabular-nums">
-                      Step {String(index + 1).padStart(2, "0")}
-                    </p>
-                    <h3 className="text-lg font-bold text-[#293C7D] mb-2">{item.title}</h3>
-                    <p className="text-sm md:text-base text-[#4D4D4D] leading-relaxed">
-                      {item.description}
-                    </p>
-                  </FadeUpOneByOneAnimation>
-                </li>
-              ))}
-            </ol>
-          </div>
+        <div className="relative mx-auto 2xl:max-w-[1340px] xl:max-w-[1170px] lg:max-w-[1004px] px-4">
+          <FadeUpOneByOneAnimation className="mx-auto max-w-[760px] text-center mb-10 md:mb-14">
+            <p className="text-xs md:text-sm font-semibold tracking-[0.14em] uppercase text-[#479AD2] mb-3">
+              Why we were founded
+            </p>
+            <h2
+              id="why-founded-heading"
+              className="text-[28px] md:text-[40px] font-light text-[#2D2D2D] leading-[118%] mb-4"
+            >
+              Research, clarity, and{" "}
+              <strong className="font-semibold">access to products</strong>
+            </h2>
+            <p className="text-base md:text-lg text-[#4D4D4D] leading-relaxed">
+              Built for people who want to invest with understanding — research-led guidance
+              plus access to mutual funds, PMS, AIF, SIF, and related solutions.
+            </p>
+          </FadeUpOneByOneAnimation>
+
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5 list-none m-0 p-0 mb-8 md:mb-10">
+            {foundingPoints.map(({ title, description, Icon }, index) => (
+              <li key={title}>
+                <FadeUpOneByOneAnimation className="group relative h-full overflow-hidden rounded-[24px] border border-[#D6E4EE] bg-white p-6 md:p-7 transition-all duration-300 hover:border-[#293C7D]/40 hover:shadow-[0_20px_40px_-28px_rgba(41,60,125,0.45)]">
+                  <div className="mb-5 flex items-start justify-between gap-4">
+                    <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#F6FDFF] border border-[#E3ECF5] transition-colors group-hover:bg-[#293C7D] group-hover:border-[#293C7D]">
+                      <Icon
+                        className="h-6 w-6 text-[#293C7D] transition-colors group-hover:text-[#FFC300]"
+                        aria-hidden="true"
+                      />
+                    </span>
+                    <span
+                      className="text-3xl font-light tabular-nums leading-none text-[#293C7D]/20 group-hover:text-[#FFC300]/80 transition-colors"
+                      aria-hidden="true"
+                    >
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-bold text-[#293C7D] mb-2.5">{title}</h3>
+                  <p className="text-sm md:text-base text-[#4D4D4D] leading-relaxed m-0">
+                    {description}
+                  </p>
+                </FadeUpOneByOneAnimation>
+              </li>
+            ))}
+          </ul>
+
+          <FadeUpOneByOneAnimation className="rounded-2xl border border-[#E3ECF5] bg-white/80 px-5 py-4 md:px-6 md:py-5">
+            <p className="text-sm md:text-base text-[#5A5A5A] leading-relaxed m-0 text-center md:text-left">
+              Legacy, succession and estate planning is coordinated through qualified legal
+              partners. Legal drafting and opinions stay with those professionals. Partner names
+              and pricing are not listed here.
+            </p>
+          </FadeUpOneByOneAnimation>
         </div>
       </section>
 
@@ -191,12 +217,11 @@ export default function AboutContentSections() {
                 Partha <strong className="font-semibold">Shah</strong>
               </h2>
               <p className="text-base md:text-lg font-semibold text-[#293C7D] mb-4">
-                Head of Research &amp; Investment Strategy · SEBI RA INH000017815
+                Head of Research &amp; Investment Strategy · SEBI RA {SEBI_RA.number}
               </p>
               <p className="text-base md:text-lg text-[#4D4D4D] leading-relaxed mb-6">
                 Research and portfolio-review work at PrimeIdea is guided by Partha Shah from
-                Vadodara. Investors should verify SEBI registration independently. Completing RIA
-                examinations is not the same as SEBI Registered Investment Adviser registration.
+                Vadodara. Investors should verify SEBI registration independently.
               </p>
               <ul className="grid grid-cols-1 gap-2 list-none m-0 p-0 mb-6">
                 {credentials.map((item) => (
@@ -237,11 +262,11 @@ export default function AboutContentSections() {
               className="text-[28px] md:text-[36px] font-light text-[#2D2D2D] leading-[120%] mb-3"
             >
               Built for real portfolios{" "}
-              <strong className="font-semibold">across Gujarat and India</strong>
+              <strong className="font-semibold">across Gujarat, India, and the world</strong>
             </h2>
             <p className="text-base md:text-lg text-[#4D4D4D] leading-relaxed">
-              The same research-led review applies whether you visit the Vadodara office or
-              continue online.
+              The same research-led review applies whether you visit the Vadodara office or join
+              from anywhere online — including NRIs investing in India from overseas.
             </p>
           </FadeUpOneByOneAnimation>
 
@@ -257,6 +282,43 @@ export default function AboutContentSections() {
               </li>
             ))}
           </ul>
+        </div>
+      </section>
+
+      <section
+        aria-labelledby="products-heading"
+        className="bg-[#F6FDFF] py-14 md:py-16"
+      >
+        <div className="mx-auto 2xl:max-w-[1340px] xl:max-w-[1170px] lg:max-w-[1004px] px-4">
+          <FadeUpOneByOneAnimation className="max-w-[720px] mb-8 md:mb-10">
+            <p className="text-xs md:text-sm font-semibold tracking-[0.14em] uppercase text-[#479AD2] mb-3">
+              What we do
+            </p>
+            <h2
+              id="products-heading"
+              className="text-[28px] md:text-[36px] font-light text-[#2D2D2D] leading-[120%] mb-3"
+            >
+              We help you understand products —{" "}
+              <strong className="font-semibold">and access them</strong>
+            </h2>
+            <p className="text-base md:text-lg text-[#4D4D4D] leading-relaxed">
+              PrimeIdea Ventures is a distributor of financial products. Our role is to
+              facilitate access and help investors understand features and risks before
+              investing.
+            </p>
+          </FadeUpOneByOneAnimation>
+
+          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 list-none m-0 p-0 mb-10">
+            {PRODUCT_ACCESS.map((item) => (
+              <li key={item}>
+                <FadeUpOneByOneAnimation className="h-full rounded-[20px] border border-[#E3ECF5] bg-white px-5 py-4 text-base font-semibold text-[#293C7D]">
+                  {item}
+                </FadeUpOneByOneAnimation>
+              </li>
+            ))}
+          </ul>
+
+          <RegistrationsBlock />
         </div>
       </section>
 

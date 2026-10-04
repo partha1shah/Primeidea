@@ -18,9 +18,9 @@ const faqs = [
   {
     question: "Where can I verify PrimeIdea’s SEBI registration?",
     answer:
-      "Partha Shah is a SEBI Registered Research Analyst with registration number INH000017815. Investors should verify this independently on the official SEBI website.",
+      "Partha Shah is a SEBI Registered Research Analyst with registration number INB010653732. Investors should verify this independently on the official SEBI website.",
     plainText:
-      "Partha Shah is a SEBI Registered Research Analyst with registration number INH000017815. Investors should verify this independently on the official SEBI website.",
+      "Partha Shah is a SEBI Registered Research Analyst with registration number INB010653732. Investors should verify this independently on the official SEBI website.",
   },
   {
     question: "Does PrimeIdea guarantee returns?",
@@ -28,13 +28,6 @@ const faqs = [
       "No. Investments in securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns, market-beating performance, or risk-free outcomes.",
     plainText:
       "No. Investments in securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns, market-beating performance, or risk-free outcomes.",
-  },
-  {
-    question: "Is PrimeIdea a SEBI Registered Investment Adviser?",
-    answer:
-      "PrimeIdea operates under SEBI Registered Research Analyst registration. It does not present itself as a SEBI Registered Investment Adviser unless separately registered.",
-    plainText:
-      "PrimeIdea operates under SEBI Registered Research Analyst registration. It does not present itself as a SEBI Registered Investment Adviser unless separately registered.",
   },
   {
     question: "How do I raise a complaint or grievance?",
@@ -62,9 +55,9 @@ const faqs = [
 export const metadata = {
   title: "Regulatory Disclosures",
   description:
-    "PrimeIdea Ventures helps investors review SEBI RA registration, Investor Charter, complaint status, grievance redressal, and SCORES through a research-led process guided by Partha Shah, SEBI Registered Research Analyst INH000017815.",
+    "PrimeIdea Ventures helps investors review SEBI RA registration, Investor Charter, complaint status, grievance redressal, and SCORES through a research-led process guided by Partha Shah, SEBI Registered Research Analyst INB010653732.",
   keywords:
-    "PrimeIdea regulatory disclosures, SEBI RA INH000017815, Investor Charter, SEBI SCORES, grievance redressal, complaint status",
+    "PrimeIdea regulatory disclosures, SEBI RA INB010653732, Investor Charter, SEBI SCORES, grievance redressal, complaint status",
   author: "Partha Shah",
   robots: "index, follow",
   openGraph: {
@@ -74,7 +67,7 @@ export const metadata = {
     site_name: "PrimeIdea Ventures",
     title: "Regulatory Disclosures | PrimeIdea Ventures",
     description:
-      "PrimeIdea Ventures helps investors review SEBI RA registration, Investor Charter, complaint status, grievance redressal, and SCORES through a research-led process guided by Partha Shah, SEBI Registered Research Analyst INH000017815.",
+      "PrimeIdea Ventures helps investors review SEBI RA registration, Investor Charter, complaint status, grievance redressal, and SCORES through a research-led process guided by Partha Shah, SEBI Registered Research Analyst INB010653732.",
   },
   twitter: {
     handle: "@primeidea",
@@ -99,7 +92,7 @@ const serviceSchema = {
   about: {
     "@type": "Person",
     name: "Partha Shah",
-    identifier: "INH000017815",
+    identifier: "INB010653732",
     jobTitle: "SEBI Registered Research Analyst",
   },
 };
@@ -131,7 +124,7 @@ export default async function RegulatoryDisclosuresPage() {
       />
 
       <ScopePageMetaStrip
-        disclaimer="Investors should verify SEBI registration independently. Investments in securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns and does not present itself as a SEBI Registered Investment Adviser unless separately registered."
+        disclaimer="Investors should verify SEBI registration independently. Investments in securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns."
       />
 
       <ScopeBreadcrumbs items={[{ label: "Regulatory Disclosures" }]} />
@@ -146,9 +139,7 @@ export default async function RegulatoryDisclosuresPage() {
 
       <ScopeDisclaimerBar ctaHref="/sebi-registered-research-analyst" ctaLabel="View SEBI RA page">
         Investments in securities market are subject to market risks. PrimeIdea Ventures does
-        not guarantee returns. Partha Shah is a SEBI Registered Research Analyst
-        (INH000017815). PrimeIdea does not act as a SEBI Registered Investment Adviser unless
-        separately registered. Investors should verify registration independently and read
+        not guarantee returns. Investors should verify registration independently and read
         all scheme-related documents carefully before investing.
       </ScopeDisclaimerBar>
 
