@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Header from "./header";
+import Header from "../header";
 import FadeUpOneByOneAnimation from "@/animations/FadeUpOneByOneAnimation";
 import FadeUpOneByOneLeftAnimation from "@/animations/FadeUpOneByOneLeftAnimation";
 

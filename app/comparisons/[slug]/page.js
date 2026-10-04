@@ -69,7 +69,7 @@ export default async function ComparisonPage({ params }) {
   const PAGE_URL = `https://www.primeidea.in${PAGE_PATH}`;
 
   const faqs = (comparison.faqs || []).map((faq) => ({
-    .faq,
+    ...faq,
     plainText: faq.answer,
   }));
 
