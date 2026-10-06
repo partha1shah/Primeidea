@@ -771,7 +771,7 @@ export default function WealthToolsContent() {
   return (
     <>
       {/* Page tabs: Overview | Calculators */}
-      <div className="sticky top-16 z-40 border-b border-[#D6E4EE] bg-[#F6FDFF]/95 backdrop-blur-md">
+      <div className="border-b border-[#D6E4EE] bg-[#F6FDFF]">
         <div className="mx-auto 2xl:max-w-[1340px] xl:max-w-[1170px] lg:max-w-[1004px] px-4">
           <div
             role="tablist"

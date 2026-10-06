@@ -539,8 +539,8 @@ export default function KnowledgeCentreContent({ posts = [] }) {
             </p>
           </div>
 
-          <div className="sticky top-16 z-20 -mx-4 px-4 mb-6">
-            <div className="rounded-2xl border border-[#D0E0EC] bg-white/95 backdrop-blur-md p-2 shadow-[0_12px_30px_-20px_rgba(41,60,125,0.45)]">
+          <div className="-mx-4 px-4 mb-6">
+            <div className="rounded-2xl border border-[#D0E0EC] bg-white p-2 shadow-[0_12px_30px_-20px_rgba(41,60,125,0.45)]">
               <div
                 role="tablist"
                 aria-label="Filter knowledge resources"

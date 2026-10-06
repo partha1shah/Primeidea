@@ -36,9 +36,19 @@ export default function BlogListing({ posts, categoriesList = [] }) {
     ? pathname.slice("/blogs/category/".length).split("/")[0]
     : null;
   const allActive = pathname === "/blogs";
-  const categories = (categoriesList || []).filter(
-    (item) => item?.slug && Number(item.count) >= 1
-  );
+  const categories = (categoriesList || [])
+    .filter((item) => item?.slug && Number(item.count) >= 1)
+    .slice()
+    .sort((a, b) => {
+      const isPrimeProspective = (item) => {
+        const name = String(item?.name || "").toLowerCase();
+        const slug = String(item?.slug || "").toLowerCase();
+        return name === "prime prospective" || slug === "prime-prospective";
+      };
+      if (isPrimeProspective(a) && !isPrimeProspective(b)) return -1;
+      if (!isPrimeProspective(a) && isPrimeProspective(b)) return 1;
+      return String(a.name || "").localeCompare(String(b.name || ""));
+    });
   return (
     <section className="2xl:max-w-[1320px] xl:max-w-[1170px] lg:max-w-[1004px] my-16 mx-auto flex flex-wrap">
       {/* <div className="flex flex-wrap">
