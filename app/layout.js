@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "./globals.css";
 import Script from "next/script";
 import StickyMobileCta from "@/components/StickyMobileCta";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const manrope = Manrope({
   subsets: ["latin", "latin-ext"],
@@ -94,6 +95,7 @@ export default function RootLayout({ children }) {
       <body className={manrope.className} suppressHydrationWarning>
         <main>{children}</main>
         <StickyMobileCta />
+        <SpeedInsights />
          <Script
           id="tawk-to"
           strategy="lazyOnload"
