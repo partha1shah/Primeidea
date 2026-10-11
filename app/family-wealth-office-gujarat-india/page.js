@@ -128,7 +128,8 @@ export default function FamilyWealthOfficePage() {
         mainBannerImage="/images/home/banner.png"
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="Family Wealth Office in Gujarat and India"
-        mainSubTitle="Multi-generational portfolio review and partner-enabled succession coordination for business families — from a Vadodara base, across Gujarat and India. Legal documents by qualified legal professionals. No guaranteed returns."
+        mainSubTitle="Multi-generational portfolio review and partner-enabled succession coordination for business families — from a Vadodara base, across Gujarat and India."
+        mainDisclaimer="Legal documents by qualified legal professionals. No guaranteed returns."
         mainLinkTitle="Book Family Consultation"
         mainLink="/contact-us"
         usePrimaryAsLink={true}
@@ -140,7 +141,7 @@ export default function FamilyWealthOfficePage() {
       <ScopePageMetaStrip
         stats={[
           { label: "Reach", value: "Gujarat & India", Icon: GlobeAltIcon },
-          { label: "Focus", value: "Family books", Icon: UsersIcon },
+          { label: "Focus", value: "Family books", Icon: UsersIcon },
         ]}
         disclaimer="Family wealth office describes coordinated family review and planning. PrimeIdea does not act as an independent law firm. Investments in securities market are subject to market risks. PrimeIdea does not guarantee returns."
       />

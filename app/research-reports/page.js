@@ -125,7 +125,8 @@ export default function ResearchReportsPage() {
         mainBannerImage="/images/home/banner.png"
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="PrimeIdea Research Reports"
-        mainSubTitle="Monthly market outlook, equity notes, mutual fund category notes, fixed income, asset allocation, sector research, portfolio strategy, and SIF/PMS/AIF education notes — downloadable research PDFs separate from general blogs. Educational content only. No guaranteed returns."
+        mainSubTitle="Monthly market outlook, equity notes, mutual fund category notes, fixed income, asset allocation, sector research, portfolio strategy, and SIF/PMS/AIF education notes — downloadable research PDFs separate from general blogs."
+        mainDisclaimer="Educational content only. No guaranteed returns."
         mainLinkTitle="Browse Report Library"
         mainLink="#report-library"
         usePrimaryAsLink={true}
@@ -137,7 +138,7 @@ export default function ResearchReportsPage() {
       <ScopePageMetaStrip
         stats={[
           { label: "Library type", value: "Research PDFs", Icon: FolderOpenIcon },
-          { label: "Separate from", value: "General blogs", Icon: DocumentTextIcon },
+          { label: "Separate from", value: "General blogs", Icon: DocumentTextIcon },
         ]}
         disclaimer="Research reports are educational and illustrative. They do not constitute investment advice for a specific security or guaranteed returns. Investments in the securities market are subject to market risks. "
       />

@@ -48,11 +48,11 @@ const faqs = [
       "No. Investments in the securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns.",
   },
   {
-    question: "Who leads the research process?",
+    question: "Where can I find registration details?",
     answer:
-      "Research is led by a SEBI Registered Research Analyst. Investors can verify registration on the official SEBI website.",
+      "Registration and disclosure details are published on Contact Us and Regulatory Disclosures. Investors can verify registration on the official SEBI website.",
     plainText:
-      "Research is led by a SEBI Registered Research Analyst. Investors can verify registration on the official SEBI website.",
+      "Registration and disclosure details are published on Contact Us and Regulatory Disclosures. Investors can verify registration on the official SEBI website.",
   },
 ];
 
@@ -128,7 +128,8 @@ export default async function BookPortfolioReviewPage({ searchParams }) {
         mainBannerImage="/images/home/banner.png"
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="Book Portfolio Review"
-        mainSubTitle="Choose your service, preferred date and time, and office visit or video call. Opt in for WhatsApp confirmation. Research process Educational consultation — no guaranteed returns."
+        mainSubTitle="Choose your service, preferred date and time, and office visit or video call. Opt in for WhatsApp confirmation."
+        mainDisclaimer="Educational consultation — no guaranteed returns."
         mainLinkTitle="Start booking"
         mainLink="#booking-form"
         usePrimaryAsLink={true}

@@ -121,7 +121,8 @@ export default function FixedIncomeInvestmentsPage() {
         mainBannerImage="/images/home/banner.png"
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="Fixed Income Investments"
-        mainSubTitle="Research-led review of debt funds, bonds, and stability allocation from a Vadodara office, serving investors across Gujarat and India. Fixed income does not mean guaranteed returns. Market risks apply."
+        mainSubTitle="Research-led review of debt funds, bonds, and stability allocation from a Vadodara office, serving investors across Gujarat and India."
+        mainDisclaimer="Fixed income does not mean guaranteed returns. Market risks apply."
         mainLinkTitle="Upload Portfolio"
         mainLink="/portfolio-review"
         usePrimaryAsLink={true}
@@ -133,7 +134,7 @@ export default function FixedIncomeInvestmentsPage() {
       <ScopePageMetaStrip
         stats={[
           { label: "Base Location", value: "Vadodara", Icon: MapPinIcon },
-          { label: "Focus", value: "Debt & bonds", Icon: BuildingLibraryIcon },
+          { label: "Focus", value: "Debt & bonds", Icon: BuildingLibraryIcon },
         ]}
         disclaimer="Fixed income does not mean fixed or guaranteed returns. Investments in the securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns."
       />

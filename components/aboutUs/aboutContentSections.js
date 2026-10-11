@@ -8,14 +8,11 @@ import {
   BeakerIcon,
   BriefcaseIcon,
   BuildingOffice2Icon,
-  CheckBadgeIcon,
   ComputerDesktopIcon,
-  EyeIcon,
   GlobeAsiaAustraliaIcon,
   HomeModernIcon,
   LightBulbIcon,
   MapPinIcon,
-  ShieldExclamationIcon,
   UserGroupIcon,
 } from "@heroicons/react/24/outline";
 
@@ -23,34 +20,27 @@ const foundingPoints = [
   {
     title: "Why the firm exists",
     description:
-      "To cater to the in-person and specific needs of individuals who want to grow by investing their hard-earned money — with full understanding and expert guidance, not a product pitch.",
+      "To cater to the in-person and specific needs of individuals who want to grow by investing their hard-earned money — with full understanding and experienced guidance.",
     Icon: LightBulbIcon,
   },
   {
-    title: "Research before products",
+    title: "Clarity before products",
     description:
-      "Every conversation starts with your goals, cash flow, and current holdings. Suitability, overlap, and risk are reviewed first — then written next steps, not a sales script.",
+      "Investing should begin with awareness: goals, holdings, risk, and suitability — then access to the right solutions, not a sales script.",
     Icon: BeakerIcon,
   },
   {
     title: "Vadodara base, global reach",
     description:
-      "The office is in Atladara, Vadodara. The same research-led process serves clients across Gujarat, India, and worldwide — in person at the office or on a video call.",
+      "Meet at the Atladara office or join by video from anywhere in Gujarat, India, or across the globe.",
     Icon: MapPinIcon,
   },
   {
-    title: "Visible accountability",
+    title: "Understand, then access",
     description:
-      "Registration details, Investor Charter, and grievance steps stay on the site. Market risks are stated clearly. Returns are never guaranteed.",
-    Icon: EyeIcon,
+      "We help you understand mutual funds, equity, fixed income, PMS, AIF, and SIF — and facilitate access through published distribution credentials.",
+    Icon: AcademicCapIcon,
   },
-];
-
-const credentials = [
-  `${SEBI_RA.label} ${SEBI_RA.number}`,
-  "Engineering graduate (BE) and Master’s in Finance (MS Finance)",
-  "CFA Level 2 and RIA Level 1 & 2 examinations completed",
-  "Research and distribution support across mutual funds, equity, fixed income, PMS, AIF, and SIF",
 ];
 
 const segments = [
@@ -60,33 +50,6 @@ const segments = [
   { label: "NRIs worldwide", Icon: GlobeAsiaAustraliaIcon },
   { label: "Retirees and pre-retirees", Icon: HomeModernIcon },
   { label: "Doctors and IT professionals", Icon: ComputerDesktopIcon },
-];
-
-const compliance = [
-  {
-    title: "Registered distributor",
-    description:
-      "AMFI mutual fund / SIF distribution and PMS distribution credentials are published with validity dates.",
-    Icon: CheckBadgeIcon,
-  },
-  {
-    title: "Research-led guidance",
-    description:
-      "Research and portfolio review help investors understand products before they invest.",
-    Icon: BeakerIcon,
-  },
-  {
-    title: "Market risks apply",
-    description:
-      "Investments in market-linked products are subject to market risks. Read all scheme-related documents carefully.",
-    Icon: ShieldExclamationIcon,
-  },
-  {
-    title: "Disclosures on the site",
-    description:
-      "Investor Charter, grievance process, and registration details live on Regulatory Disclosures.",
-    Icon: AcademicCapIcon,
-  },
 ];
 
 const relatedPages = [
@@ -101,19 +64,14 @@ const relatedPages = [
     description: "Upload holdings or book an office or video review.",
   },
   {
-    title: "SEBI RA credentials",
-    href: "/sebi-registered-research-analyst",
-    description: "How PrimeIdea is registered and what that means.",
-  },
-  {
     title: "Leadership Team",
     href: "/leadership-team",
-    description: "Partha Shah — photo, role, credentials, focus, and LinkedIn.",
+    description: "Research leadership profile and credentials.",
   },
   {
-    title: "Entity Profile",
-    href: "/primeidea-ventures-profile",
-    description: "Structured facts for search, LLMs, and investor clarity.",
+    title: "Contact Us",
+    href: "/contact-us",
+    description: "Office, phone, and registration details.",
   },
 ];
 
@@ -134,7 +92,7 @@ export default function AboutContentSections() {
         />
 
         <div className="relative mx-auto 2xl:max-w-[1340px] xl:max-w-[1170px] lg:max-w-[1004px] px-4">
-          <FadeUpOneByOneAnimation className="mx-auto max-w-[760px] text-center mb-10 md:mb-14">
+          <FadeUpOneByOneAnimation className="mx-auto max-w-[720px] text-center mb-10 md:mb-12">
             <p className="text-xs md:text-sm font-semibold tracking-[0.14em] uppercase text-[#479AD2] mb-3">
               Why we were founded
             </p>
@@ -142,16 +100,16 @@ export default function AboutContentSections() {
               id="why-founded-heading"
               className="text-[28px] md:text-[40px] font-light text-[#2D2D2D] leading-[118%] mb-4"
             >
-              Research, clarity, and{" "}
-              <strong className="font-semibold">access to products</strong>
+              Why the firm{" "}
+              <strong className="font-semibold">exists</strong>
             </h2>
             <p className="text-base md:text-lg text-[#4D4D4D] leading-relaxed">
-              Built for people who want to invest with understanding — research-led guidance
-              plus access to mutual funds, PMS, AIF, SIF, and related solutions.
+              Our approach combines research, education, and access to financial products —
+              so investors can grow with confidence and understanding.
             </p>
           </FadeUpOneByOneAnimation>
 
-          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5 list-none m-0 p-0 mb-8 md:mb-10">
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5 list-none m-0 p-0">
             {foundingPoints.map(({ title, description, Icon }, index) => (
               <li key={title}>
                 <FadeUpOneByOneAnimation className="group relative h-full overflow-hidden rounded-[24px] border border-[#D6E4EE] bg-white p-6 md:p-7 transition-all duration-300 hover:border-[#293C7D]/40 hover:shadow-[0_20px_40px_-28px_rgba(41,60,125,0.45)]">
@@ -177,20 +135,12 @@ export default function AboutContentSections() {
               </li>
             ))}
           </ul>
-
-          <FadeUpOneByOneAnimation className="rounded-2xl border border-[#E3ECF5] bg-white/80 px-5 py-4 md:px-6 md:py-5">
-            <p className="text-sm md:text-base text-[#5A5A5A] leading-relaxed m-0 text-center md:text-left">
-              Legacy, succession and estate planning is coordinated through qualified legal
-              partners. Legal drafting and opinions stay with those professionals. Partner names
-              and pricing are not listed here.
-            </p>
-          </FadeUpOneByOneAnimation>
         </div>
       </section>
 
       <section
         aria-labelledby="founder-heading"
-        className="bg-[#F6FDFF] py-14 md:py-16"
+        className="bg-white py-14 md:py-16"
       >
         <div className="mx-auto 2xl:max-w-[1340px] xl:max-w-[1170px] lg:max-w-[1004px] px-4">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
@@ -200,7 +150,7 @@ export default function AboutContentSections() {
                   src="/images/about-us/founder.jpg"
                   width={800}
                   height={900}
-                  alt="Partha Shah SEBI Registered Research Analyst PrimeIdea Ventures"
+                  alt="Partha Shah, Head of Research at PrimeIdea Ventures"
                   className="h-full w-full object-cover object-top"
                 />
               </div>
@@ -217,23 +167,20 @@ export default function AboutContentSections() {
                 Partha <strong className="font-semibold">Shah</strong>
               </h2>
               <p className="text-base md:text-lg font-semibold text-[#293C7D] mb-4">
-                Head of Research &amp; Investment Strategy · SEBI RA {SEBI_RA.number}
+                Head of Research &amp; Investment Strategy
               </p>
-              <p className="text-base md:text-lg text-[#4D4D4D] leading-relaxed mb-6">
-                Research and portfolio-review work at PrimeIdea is guided by Partha Shah from
-                Vadodara. Investors should verify SEBI registration independently.
+              <p className="text-base md:text-lg text-[#4D4D4D] leading-relaxed mb-4">
+                Engineering graduate (BE) with a Master’s in Finance (MS Finance). CFA Level 2
+                and RIA examinations completed. Leads research and portfolio-review work from
+                Vadodara.
               </p>
-              <ul className="grid grid-cols-1 gap-2 list-none m-0 p-0 mb-6">
-                {credentials.map((item) => (
-                  <li
-                    key={item}
-                    className="flex gap-3 rounded-xl border border-[#E3ECF5] bg-white px-4 py-3 text-sm md:text-base font-medium text-[#293C7D]"
-                  >
-                    <AcademicCapIcon className="h-5 w-5 shrink-0 text-[#479AD2] mt-0.5" aria-hidden="true" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
+              <p className="text-sm md:text-base text-[#5A5A5A] leading-relaxed mb-6">
+                {SEBI_RA.label} · {SEBI_RA.number}. Full credentials are listed below and on{" "}
+                <Link href="/contact-us" className="font-semibold text-[#293C7D] hover:text-[#479AD2]">
+                  Contact Us
+                </Link>
+                .
+              </p>
               <a
                 href="https://www.linkedin.com/in/pssays"
                 target="_blank"
@@ -250,7 +197,7 @@ export default function AboutContentSections() {
 
       <section
         aria-labelledby="segments-heading"
-        className="bg-white py-14 md:py-16"
+        className="bg-[#F6FDFF] py-14 md:py-16"
       >
         <div className="mx-auto 2xl:max-w-[1340px] xl:max-w-[1170px] lg:max-w-[1004px] px-4">
           <FadeUpOneByOneAnimation className="max-w-[680px] mb-8 md:mb-10">
@@ -261,20 +208,20 @@ export default function AboutContentSections() {
               id="segments-heading"
               className="text-[28px] md:text-[36px] font-light text-[#2D2D2D] leading-[120%] mb-3"
             >
-              Built for real portfolios{" "}
-              <strong className="font-semibold">across Gujarat, India, and the world</strong>
+              Built for real portfolios —{" "}
+              <strong className="font-semibold">locally and across the globe</strong>
             </h2>
             <p className="text-base md:text-lg text-[#4D4D4D] leading-relaxed">
-              The same research-led review applies whether you visit the Vadodara office or join
-              from anywhere online — including NRIs investing in India from overseas.
+              The same research-led review applies in the Vadodara office or on a video call —
+              including NRIs investing in India from overseas.
             </p>
           </FadeUpOneByOneAnimation>
 
           <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 list-none m-0 p-0">
             {segments.map(({ label, Icon }) => (
               <li key={label}>
-                <FadeUpOneByOneAnimation className="flex h-full items-center gap-3 rounded-[20px] border border-[#E3ECF5] bg-[#F6FDFF] p-5">
-                  <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white border border-[#E3ECF5]">
+                <FadeUpOneByOneAnimation className="flex h-full items-center gap-3 rounded-[20px] border border-[#E3ECF5] bg-white p-5">
+                  <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#F6FDFF] border border-[#E3ECF5]">
                     <Icon className="h-5 w-5 text-[#293C7D]" aria-hidden="true" />
                   </span>
                   <h3 className="text-base font-bold text-[#293C7D]">{label}</h3>
@@ -287,7 +234,7 @@ export default function AboutContentSections() {
 
       <section
         aria-labelledby="products-heading"
-        className="bg-[#F6FDFF] py-14 md:py-16"
+        className="bg-white py-14 md:py-16"
       >
         <div className="mx-auto 2xl:max-w-[1340px] xl:max-w-[1170px] lg:max-w-[1004px] px-4">
           <FadeUpOneByOneAnimation className="max-w-[720px] mb-8 md:mb-10">
@@ -311,7 +258,7 @@ export default function AboutContentSections() {
           <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 list-none m-0 p-0 mb-10">
             {PRODUCT_ACCESS.map((item) => (
               <li key={item}>
-                <FadeUpOneByOneAnimation className="h-full rounded-[20px] border border-[#E3ECF5] bg-white px-5 py-4 text-base font-semibold text-[#293C7D]">
+                <FadeUpOneByOneAnimation className="h-full rounded-[20px] border border-[#E3ECF5] bg-[#F6FDFF] px-5 py-4 text-base font-semibold text-[#293C7D]">
                   {item}
                 </FadeUpOneByOneAnimation>
               </li>
@@ -319,44 +266,6 @@ export default function AboutContentSections() {
           </ul>
 
           <RegistrationsBlock />
-        </div>
-      </section>
-
-      <section
-        aria-labelledby="compliance-heading"
-        className="bg-[#232D63] py-14 md:py-16 bg-[url('/images/insurance/risk-management/bg.png')] bg-repeat bg-contain bg-center"
-      >
-        <div className="mx-auto 2xl:max-w-[1340px] xl:max-w-[1170px] lg:max-w-[1004px] px-4">
-          <FadeUpOneByOneAnimation className="max-w-[720px] mb-8 md:mb-10">
-            <p className="text-xs md:text-sm font-semibold tracking-[0.14em] uppercase text-[#FFC300] mb-3">
-              Ethics and compliance
-            </p>
-            <h2
-              id="compliance-heading"
-              className="text-[28px] md:text-[36px] font-light text-white leading-[120%] mb-3"
-            >
-              How we stay{" "}
-              <strong className="font-semibold">accountable</strong>
-            </h2>
-            <p className="text-base md:text-lg !text-white/80 leading-relaxed">
-              Process, registration, and disclosures are meant to be readable — not hidden in a
-              footer only.
-            </p>
-          </FadeUpOneByOneAnimation>
-
-          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 list-none m-0 p-0">
-            {compliance.map(({ title, description, Icon }) => (
-              <li key={title}>
-                <FadeUpOneByOneAnimation className="h-full rounded-[20px] border border-white/15 bg-[#293C7D]/45 p-5 md:p-6">
-                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-[#232D63] border border-white/10 mb-4">
-                    <Icon className="h-5 w-5 text-[#FFC300]" aria-hidden="true" />
-                  </span>
-                  <h3 className="text-lg font-bold text-white mb-2">{title}</h3>
-                  <p className="text-sm !text-white/75 leading-relaxed">{description}</p>
-                </FadeUpOneByOneAnimation>
-              </li>
-            ))}
-          </ul>
         </div>
       </section>
 
@@ -373,7 +282,7 @@ export default function AboutContentSections() {
               Related pages
             </h2>
             <p className="text-[#4D4D4D] text-sm md:text-base max-w-[640px]">
-              Process, review, registration, and disclosures that sit alongside this page.
+              Process, review, and contact details that sit alongside this page.
             </p>
           </FadeUpOneByOneAnimation>
 

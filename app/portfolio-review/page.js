@@ -124,7 +124,8 @@ export default function PortfolioReviewPage() {
         mainBannerImage="/images/home/banner.png"
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="Portfolio Review"
-        mainSubTitle="Upload your holdings or book an office or video review. PrimeIdea Ventures is a Vadodara-based research-led wealth management firm serving investors across Gujarat and India, with a research process No product pushing. No guaranteed returns."
+        mainSubTitle="Upload your holdings or book an office or video review. A research-led health check of suitability, overlap, and allocation — from Vadodara for investors across Gujarat, India, and worldwide."
+        mainDisclaimer="No product pushing. No guaranteed returns."
         mainLinkTitle="Upload Portfolio"
         mainLink="#upload-portfolio"
         usePrimaryAsLink={true}
@@ -135,7 +136,7 @@ export default function PortfolioReviewPage() {
 
       <ScopePageMetaStrip
         stats={[
-          { label: "Base Location", value: "Vadodara", Icon: MapPinIcon },
+          { label: "Base Location", value: "Vadodara", Icon: MapPinIcon },
           { label: "Start here", value: "Upload holdings", Icon: ArrowUpTrayIcon },
         ]}
         disclaimer="A portfolio review is a structured analysis of current holdings. Investments in securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns."

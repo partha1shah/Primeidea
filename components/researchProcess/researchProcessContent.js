@@ -1,6 +1,5 @@
 import FadeUpOneByOneAnimation from "@/animations/FadeUpOneByOneAnimation";
 import WhatWeReviewSection from "@/components/researchProcess/WhatWeReviewSection";
-import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowDownTrayIcon,
@@ -35,7 +34,7 @@ const steps = [
   {
     title: "Research-led recommendations",
     description:
-      "Guidance is anchored by Partha Shah, SEBI Registered Research Analyst (INH000017815), with process-first reasoning — not product pushing.",
+      "Guidance follows process-first reasoning and published research standards — not product pushing.",
   },
   {
     title: "Review, implement & monitor",
@@ -130,28 +129,9 @@ export default function ResearchProcessContent() {
                 </h2>
                 <p className="text-base md:text-lg text-[#4D4D4D] leading-relaxed mb-6">
                   PrimeIdea Ventures is a Vadodara-based research-led wealth management and
-                  portfolio review firm serving investors across Gujarat and India. The
-                  research process is guided by Partha Shah, SEBI Registered Research Analyst
-                  INH000017815.
+                  portfolio review firm serving investors across Gujarat, India, and worldwide.
+                  Registration details are on Contact Us and Regulatory Disclosures.
                 </p>
-
-                <div className="flex items-center gap-4 rounded-2xl border border-[#E3ECF5] bg-[#F6FDFF] p-4 mb-6">
-                  <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full ring-2 ring-[#FFC300]/50">
-                    <Image
-                      src="/images/about-us/founder.jpg"
-                      width={128}
-                      height={128}
-                      alt="Partha Shah SEBI Registered Research Analyst PrimeIdea Ventures"
-                      className="h-full w-full object-cover object-top"
-                    />
-                  </div>
-                  <div>
-                    <p className="text-base font-semibold text-[#293C7D]">Partha Shah</p>
-                    <p className="text-sm text-[#4D4D4D] leading-snug">
-                      SEBI RA · <span className="font-semibold text-[#293C7D]">INH000017815</span>
-                    </p>
-                  </div>
-                </div>
 
                 <a
                   href="/docs/portfolio-review-framework.pdf"

@@ -133,7 +133,8 @@ export default function WealthToolsPage() {
         mainBannerImage="/images/home/banner.png"
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="Wealth Tools"
-        mainSubTitle="Practical calculators to explore SIP growth, corpus needs, insurance cover, allocation starting points, and withdrawal trade-offs — then continue with a research-led portfolio review. Outputs are illustrative estimates only. No guaranteed returns."
+        mainSubTitle="Practical calculators to explore SIP growth, corpus needs, insurance cover, allocation starting points, and withdrawal trade-offs — then continue with a research-led portfolio review."
+        mainDisclaimer="Outputs are illustrative estimates only. No guaranteed returns."
         mainLinkTitle="Book Portfolio Review"
         mainLink="/portfolio-review"
         usePrimaryAsLink={true}
@@ -145,7 +146,7 @@ export default function WealthToolsPage() {
       <ScopePageMetaStrip
         stats={[
           { label: "Tool type", value: "Planning calculators", Icon: CalculatorIcon },
-          { label: "Purpose", value: "Illustrative estimates", Icon: LightBulbIcon },
+          { label: "Purpose", value: "Illustrative estimates", Icon: LightBulbIcon },
         ]}
         disclaimer="Calculator outputs depend on your assumptions and do not constitute advice or guaranteed returns. Investments in the securities market are subject to market risks. "
       />

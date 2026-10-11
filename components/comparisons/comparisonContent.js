@@ -148,8 +148,7 @@ export default function ComparisonArticleContent({ comparison }) {
             </h2>
             <p className="text-base text-[#4D4D4D] leading-relaxed m-0">
               Educational content only. Investments are subject to market risks. PrimeIdea
-              Ventures does not guarantee returns. Research process guided by Partha Shah,
-              SEBI Registered Research Analyst INH000017815.
+              Ventures does not guarantee returns.
             </p>
           </FadeUpOneByOneAnimation>
 

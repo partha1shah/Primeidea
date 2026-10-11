@@ -69,7 +69,8 @@ export default function ComparisonsHubPage() {
         mainBannerImage="/images/home/banner.png"
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="Investment Comparison Guides"
-        mainSubTitle="Educational comparisons of roles and products — RA vs IA vs MFD, PMS vs mutual funds, AIF vs PMS vs MF, SIP vs lumpsum vs STP. Research-led context from a Vadodara base. No guaranteed returns."
+        mainSubTitle="Educational comparisons of roles and products — RA vs IA vs MFD, PMS vs mutual funds, AIF vs PMS vs MF, SIP vs lumpsum vs STP. Research-led context from a Vadodara base."
+        mainDisclaimer="No guaranteed returns."
         mainLinkTitle="Browse guides"
         mainLink="#guides"
         usePrimaryAsLink={true}

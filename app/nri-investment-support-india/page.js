@@ -122,7 +122,8 @@ export default function NriInvestmentSupportPage() {
         mainBannerImage="/images/home/banner.png"
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="NRI Investment Support in India"
-        mainSubTitle="Research-led review of India holdings for NRIs — from a Vadodara office serving investors across Gujarat and India by video. No guaranteed returns. Not tax or FEMA legal advice."
+        mainSubTitle="Research-led review of India holdings for NRIs — from a Vadodara office, with video consultation across Gujarat, India, and worldwide."
+        mainDisclaimer="No guaranteed returns. Not tax or FEMA legal advice."
         mainLinkTitle="Book Video Review"
         mainLink="/portfolio-review"
         usePrimaryAsLink={true}
@@ -134,7 +135,7 @@ export default function NriInvestmentSupportPage() {
       <ScopePageMetaStrip
         stats={[
           { label: "Base Location", value: "Vadodara", Icon: MapPinIcon },
-          { label: "Reach", value: "India / NRI", Icon: GlobeAsiaAustraliaIcon },
+          { label: "Reach", value: "India / NRI", Icon: GlobeAsiaAustraliaIcon },
         ]}
         disclaimer="Investments in the securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns, does not provide FEMA or cross-border tax legal advice."
       />

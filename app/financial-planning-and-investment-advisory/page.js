@@ -108,7 +108,8 @@ export default async function FinancialPlanningAndInvestmentAdvisory() {
              mainLinkTitle={"Book a portfolio review"}
              mainLink={"/book-portfolio-review"}
              usePrimaryAsLink={true}
-             subSectionContent={"PrimeIdea is based in Vadodara and serves investors across Gujarat and India. Research is guided by Partha Shah. No guaranteed returns."}
+             subSectionContent={"PrimeIdea is based in Vadodara and serves investors across Gujarat, India, and worldwide with research-led planning support."}
+             mainDisclaimer="No guaranteed returns."
              subSectionTitle1={"Based in"}
              subSectionSubTitle1={"Vadodara"}
              subSectionTitle2={"Registration"}

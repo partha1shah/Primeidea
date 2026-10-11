@@ -46,10 +46,12 @@ export default function BookPortfolioReviewContent({ defaultService }) {
                   Schedule a{" "}
                   <strong className="font-semibold">research-led review</strong>
                 </h2>
-                <p className="text-base text-[#4D4D4D] leading-relaxed mb-6">
-                  Request a slot for portfolio review or a specialist consultation.
-                  Research process guided by Partha Shah, SEBI Registered Research
-                  Analyst INH000017815. No guaranteed returns.
+                <p className="text-base text-[#4D4D4D] leading-relaxed mb-3">
+                  Request a slot for portfolio review or a specialist consultation —
+                  research-led sessions at the Vadodara office or by video.
+                </p>
+                <p className="text-[11px] md:text-xs text-[#6B7C8A] leading-relaxed mb-6">
+                  * Educational consultation. No guaranteed returns.
                 </p>
               </FadeUpOneByOneAnimation>
 

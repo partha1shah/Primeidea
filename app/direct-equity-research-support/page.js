@@ -114,7 +114,8 @@ export default function DirectEquityResearchSupportPage() {
         mainBannerImage="/images/home/banner.png"
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="Direct Equity Research Support"
-        mainSubTitle="Research-led review of the shares you already hold, from a Vadodara office, for investors across Gujarat and India. Not a stock tip. No guaranteed returns."
+        mainSubTitle="Research-led review of the shares you already hold, from a Vadodara office, for investors across Gujarat and India."
+        mainDisclaimer="Not a stock tip. No guaranteed returns."
         mainLinkTitle="Book Portfolio Review"
         mainLink="/book-portfolio-review"
         usePrimaryAsLink={true}

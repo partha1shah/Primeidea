@@ -61,7 +61,7 @@ const faqs = [
 export const metadata = {
   title: "Insurance Planning",
   description:
-    "PrimeIdea Ventures offers research-led insurance planning for investors across Gujarat and India. Cover review without product push. Policy terms apply. No guaranteed claim outcomes.",
+    "Research-led life and health cover review from Vadodara — gaps, policy mix, premiums versus need, and nominations for investors across Gujarat and India.",
   keywords:
     "insurance planning, term insurance review, health cover gap analysis, PrimeIdea Ventures",
   author: "Partha Shah",
@@ -73,7 +73,7 @@ export const metadata = {
     site_name: "PrimeIdea Ventures",
     title: "Insurance Planning | PrimeIdea Ventures",
     description:
-      "Research-led insurance cover review, Not product push. Policy terms apply.",
+      "Research-led life and health cover review — gaps, policy mix, and nominations from Vadodara.",
   },
   twitter: {
     handle: "@primeidea",
@@ -123,7 +123,8 @@ export default function InsurancePlanningPage() {
         mainBannerImage="/images/home/banner.png"
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="Insurance Planning"
-        mainSubTitle="Research-led life and health cover review from a Vadodara office, serving investors across Gujarat and India. Cover first — not product push. Policy terms apply. No guaranteed claim outcomes."
+        mainSubTitle="Research-led life and health cover review from Vadodara — gaps, policy mix, premiums versus need, and nominations for investors across Gujarat and India."
+        mainDisclaimer="Cover first — not product push. Policy terms apply. No guaranteed claim outcomes."
         mainLinkTitle="Start Insurance Review"
         mainLink="#lead-form"
         usePrimaryAsLink={true}

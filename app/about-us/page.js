@@ -142,10 +142,10 @@ export default function AboutUs() {
       <ScopePageMetaStrip
         stats={[
           { label: "Base Location", value: "Vadodara", Icon: MapPinIcon },
-          { label: "Research led by", value: "Partha Shah", Icon: UserIcon },
-          { label: "Registration No.", value: "INB010653732", Icon: CheckBadgeIcon },
+          { label: "Reach", value: "India & worldwide", Icon: UserIcon },
+          { label: "Approach", value: "Research-led", Icon: CheckBadgeIcon },
         ]}
-        disclaimer="PrimeIdea Ventures is a research-led firm and distributor of financial products. Investments are subject to market risks. Investors should verify registrations independently."
+        disclaimer="PrimeIdea Ventures is a research-led firm and distributor of financial products. Investments are subject to market risks. Read all scheme-related documents carefully."
       />
 
       <ScopeBreadcrumbs items={[{ label: "About PrimeIdea" }]} />
@@ -161,9 +161,9 @@ export default function AboutUs() {
       <ClientTestimonial />
 
       <ScopeDisclaimerBar ctaHref="/portfolio-review" ctaLabel="Book Portfolio Review">
-        Investments in securities market are subject to market risks. PrimeIdea Ventures does
-        not guarantee returns. Investors should verify registration independently and read all
-        scheme-related documents carefully before investing.
+        Investments in market-linked products are subject to market risks. Please read all
+        scheme-related documents carefully before investing. PrimeIdea Ventures does not
+        guarantee returns.
       </ScopeDisclaimerBar>
 
       <Footer />

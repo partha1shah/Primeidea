@@ -137,7 +137,8 @@ export default async function KnowledgeCentrePage() {
         mainBannerImage="/images/home/banner.png"
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="Knowledge Centre"
-        mainSubTitle="Blogs, research notes, market outlooks, portfolio checklists, FAQs, downloadable guides, and seminar materials — research-led investor education for Vadodara, Gujarat, and India. Educational content only. No guaranteed returns."
+        mainSubTitle="Blogs, research notes, market outlooks, portfolio checklists, FAQs, downloadable guides, and seminar materials — research-led investor education for Vadodara, Gujarat, and India."
+        mainDisclaimer="Educational content only. No guaranteed returns."
         mainLinkTitle="Explore Library"
         mainLink="#library"
         usePrimaryAsLink={true}
@@ -149,7 +150,7 @@ export default async function KnowledgeCentrePage() {
       <ScopePageMetaStrip
         stats={[
           { label: "Hub type", value: "Investor education", Icon: AcademicCapIcon },
-          { label: "Content", value: "Notes · guides · FAQs", Icon: BookOpenIcon },
+          { label: "Content", value: "Notes · guides · FAQs", Icon: BookOpenIcon },
         ]}
         disclaimer="Knowledge Centre materials are educational and illustrative. They do not constitute investment advice, research recommendations for a specific security, or guaranteed returns. Investments in the securities market are subject to market risks. "
       />

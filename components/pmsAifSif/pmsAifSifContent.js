@@ -28,9 +28,9 @@ const BOOK_HREF =
 
 const trustChips = [
   "Suitability first",
+  "Costs & liquidity clarity",
   "Where permitted only",
-  "No return promises",
-  "SEBI RA INH000017815",
+  "Written next steps",
 ];
 
 const sectionAnchors = [
@@ -332,7 +332,7 @@ export default function PmsAifSifContent() {
             {[
               { label: "Geography", value: "Gujarat & India" },
               { label: "Base office", value: "Vadodara" },
-              { label: "Registration", value: "INH000017815" },
+              { label: "Focus", value: "Suitability first" },
             ].map(({ label, value }) => (
               <div
                 key={label}
@@ -376,15 +376,13 @@ export default function PmsAifSifContent() {
                 <strong className="font-semibold">not a product push</strong>
               </h2>
               <p className="text-base md:text-lg text-[#4D4D4D] leading-relaxed mb-4">
-                PrimeIdea Ventures is a Vadodara-based research-led wealth management and
-                portfolio review firm serving investors across Gujarat and India. PMS, AIF,
-                and SIF investment support is guided by Partha Shah, SEBI Registered Research
-                Analyst INH000017815.
+                Understand costs, liquidity, concentration, and fit before adding a managed or
+                alternate sleeve. Reviews start from your goals and existing book — mutual funds,
+                equity, and fixed income included.
               </p>
-              <p className="text-base md:text-lg text-[#4D4D4D] leading-relaxed mb-6">
-                These products are discussed only where they may be suitable and where
-                distribution and compliance rights exist. Many reviews stay with mutual funds,
-                equity, and fixed income — without return promises.
+              <p className="text-[11px] md:text-xs text-[#6B7C8A] leading-relaxed mb-6">
+                * Discussed only where suitable and where distribution rights exist. Many reviews
+                stay with mutual funds, equity, and fixed income. No guaranteed returns.
               </p>
               <ul className="flex flex-wrap gap-2 list-none m-0 p-0 mb-6">
                 {trustChips.map((chip) => (
@@ -664,8 +662,8 @@ export default function PmsAifSifContent() {
               </tbody>
             </table>
           </div>
-          <p className="mt-4 text-xs text-[#6B7C8A] leading-relaxed m-0">
-            Investments are subject to market risks. Read all scheme / offer documents carefully.
+          <p className="mt-4 text-[11px] md:text-xs text-[#6B7C8A] leading-relaxed m-0">
+            * Investments are subject to market risks. Read all scheme / offer documents carefully.
             PrimeIdea does not guarantee returns.
           </p>
         </div>
@@ -998,7 +996,10 @@ export default function PmsAifSifContent() {
                 </h2>
                 <p className="text-sm md:text-[15px] !text-white/75 leading-relaxed m-0 max-w-[560px]">
                   Share your goals, liquidity needs, and any existing PMS, AIF, or SIF exposure.
-                  Review first — from Vadodara, across Gujarat and India. No guaranteed returns.
+                  Review first — from Vadodara, across Gujarat and India.
+                </p>
+                <p className="mt-3 text-[11px] !text-white/50 leading-relaxed m-0 max-w-[560px]">
+                  * No guaranteed returns. Market risks apply.
                 </p>
                 <ul className="mt-5 flex flex-wrap gap-2 list-none m-0 p-0">
                   {["Office or video", "Where permitted only", "Market risks apply"].map(

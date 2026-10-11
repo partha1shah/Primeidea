@@ -123,7 +123,8 @@ export default function RetirementPlanningPage() {
         mainBannerImage="/images/home/banner.png"
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="Retirement Planning"
-        mainSubTitle="Research-led corpus, allocation, and withdrawal review from a Vadodara office, serving investors across Gujarat and India. No guaranteed retirement income or investment returns. Market risks apply."
+        mainSubTitle="Research-led corpus, allocation, and withdrawal review from a Vadodara office, serving investors across Gujarat and India."
+        mainDisclaimer="No guaranteed retirement income or investment returns. Market risks apply."
         mainLinkTitle="Start Retirement Form"
         mainLink="#lead-form"
         usePrimaryAsLink={true}

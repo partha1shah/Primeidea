@@ -1,7 +1,6 @@
 import {
   CheckBadgeIcon,
   MapPinIcon,
-  ShieldExclamationIcon,
 } from "@heroicons/react/24/outline";
 
 const defaultStats = [
@@ -24,8 +23,14 @@ const defaultStats = [
 
 export default function ScopePageMetaStrip({
   stats = defaultStats,
-  disclaimer = "Investors should verify SEBI registration independently. Investments in the securities market are subject to market risks. PrimeIdea does not guarantee returns.",
+  disclaimer = "Investments in the securities market are subject to market risks. PrimeIdea does not guarantee returns.",
 }) {
+  const footnote = disclaimer
+    ? String(disclaimer).trim().startsWith("*")
+      ? String(disclaimer).trim()
+      : `* ${String(disclaimer).trim()}`
+    : null;
+
   return (
     <section
       aria-label="Page credentials"
@@ -34,7 +39,7 @@ export default function ScopePageMetaStrip({
       <div className="absolute inset-0 bg-gradient-to-b from-[#293C7D]/40 to-[#232D63]/90 pointer-events-none" />
 
       <div className="relative mx-auto 2xl:max-w-[1340px] xl:max-w-[1170px] lg:max-w-[1004px] px-4 py-8 md:py-10">
-        <ul className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-5 list-none m-0 p-0 mb-5 md:mb-6">
+        <ul className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-5 list-none m-0 p-0">
           {stats.map(({ label, value, Icon }) => (
             <li key={label}>
               <div className="h-full rounded-2xl border border-white/15 bg-[#293C7D]/55 px-5 py-5 md:px-6 md:py-6 backdrop-blur-sm transition-colors hover:border-[#FFC300]/35">
@@ -54,16 +59,10 @@ export default function ScopePageMetaStrip({
           ))}
         </ul>
 
-        {disclaimer && (
-          <div className="flex gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3.5 md:px-5 md:py-4">
-            <ShieldExclamationIcon
-              className="h-5 w-5 shrink-0 text-[#FFC300] mt-0.5"
-              aria-hidden="true"
-            />
-            <p className="text-sm md:text-[15px] text-white/80 leading-relaxed">
-              {disclaimer}
-            </p>
-          </div>
+        {footnote && (
+          <p className="mt-4 md:mt-5 m-0 text-[11px] md:text-xs leading-relaxed text-white/55">
+            {footnote}
+          </p>
         )}
       </div>
     </section>

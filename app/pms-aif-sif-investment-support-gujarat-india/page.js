@@ -129,7 +129,8 @@ export default function PmsAifSifInvestmentSupportPage() {
         mainBannerImage="/images/home/banner.png"
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="PMS, AIF & SIF Investment Support in Gujarat and India"
-        mainSubTitle="Research-led suitability support for Portfolio Management Services, Alternative Investment Funds, and Specialized Investment Funds — from a Vadodara base, across Gujarat and India. Discussed only where suitable and where distribution rights exist. No guaranteed returns."
+        mainSubTitle="Research-led suitability support for Portfolio Management Services, Alternative Investment Funds, and Specialized Investment Funds — costs, liquidity, concentration, and fit, from a Vadodara base across Gujarat and India."
+        mainDisclaimer="Discussed only where suitable and where distribution rights exist. No guaranteed returns."
         mainLinkTitle="Book Suitability Review"
         mainLink="/book-portfolio-review?service=PMS%20%2F%20AIF%20%2F%20SIF%20Suitability%20Review"
         usePrimaryAsLink={true}
@@ -138,17 +139,17 @@ export default function PmsAifSifInvestmentSupportPage() {
         secondaryLink="/research-reports"
       />
 
-      <ScopePageMetaStrip
-        stats={[
-          { label: "Reach", value: "Gujarat & India", Icon: GlobeAltIcon },
-          { label: "Focus", value: "Suitability first", Icon: ScaleIcon },
-        ]}
-        disclaimer="PMS, AIF, and SIF products carry market, liquidity, and concentration risks. Availability depends on eligibility, empanelment, and compliance. PrimeIdea Ventures does not guarantee returns. Many reviews stay with mutual funds, equity, and fixed income."
-      />
-
       <ScopeBreadcrumbs items={[{ label: "PMS, AIF & SIF Investment Support" }]} />
 
       <PmsAifSifContent />
+
+      <ScopePageMetaStrip
+        stats={[
+          { label: "Reach", value: "Gujarat & India", Icon: GlobeAltIcon },
+          { label: "Focus", value: "Suitability first", Icon: ScaleIcon },
+        ]}
+        disclaimer="PMS, AIF, and SIF products carry market, liquidity, and concentration risks. Availability depends on eligibility, empanelment, and compliance. PrimeIdea Ventures does not guarantee returns. Many reviews stay with mutual funds, equity, and fixed income."
+      />
 
       <ScopeFaqsSection
         title="PMS, AIF & SIF — Frequently Asked Questions"
@@ -163,8 +164,7 @@ export default function PmsAifSifInvestmentSupportPage() {
         Investments in the securities market are subject to market risks. PMS, AIF, and SIF
         products can lose value and may have limited liquidity. Read all offer documents
         carefully. PrimeIdea Ventures does not guarantee returns. Distribution support is provided only
-        where empanelment and compliance rights exist. Investors should verify registration
-        independently.
+        where empanelment and compliance rights exist.
       </ScopeDisclaimerBar>
 
       <Footer />

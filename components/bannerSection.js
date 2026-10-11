@@ -131,6 +131,13 @@ const BannerSection = (props) => {
                 )}
               </div>
               }
+              {props.mainDisclaimer && (
+                <p className="mt-4 max-w-[520px] text-[11px] md:text-xs leading-relaxed text-[#5A5A5A]/90 font-normal">
+                  {String(props.mainDisclaimer).trim().startsWith("*")
+                    ? props.mainDisclaimer
+                    : `* ${props.mainDisclaimer}`}
+                </p>
+              )}
             </FadeUpAnimation>
             
             {props.bannerRightImg &&

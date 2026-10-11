@@ -110,13 +110,13 @@ export default function InsurancePlanningContent() {
                 <strong className="font-semibold">not product push</strong>
               </h2>
               <p className="text-base md:text-lg text-[#4D4D4D] leading-relaxed mb-4">
-                PrimeIdea Ventures is a Vadodara-based research-led wealth management and
-                portfolio review firm serving investors across Gujarat and India.
+                Review life and health cover for gaps, policy mix, premiums versus need, and
+                nominations — from Vadodara for investors across Gujarat and India.
               </p>
-              <p className="text-base md:text-lg text-[#4D4D4D] leading-relaxed">
-                This is cover-gap and suitability-oriented review — not a claim that PrimeIdea
-                is an insurer, and not “best insurance” marketing. Policy issuance and claims
-                remain with the insurer and applicable intermediaries.
+              <p className="text-[11px] md:text-xs text-[#6B7C8A] leading-relaxed m-0">
+                * Cover-gap and suitability review — not insurer marketing or “best policy”
+                claims. Policy issuance and claims remain with the insurer. Policy terms apply.
+                No guaranteed claim outcomes.
               </p>
             </div>
             <ul className="lg:col-span-6 grid grid-cols-1 gap-3 list-none m-0 p-0">

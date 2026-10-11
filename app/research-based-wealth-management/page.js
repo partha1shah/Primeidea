@@ -171,7 +171,8 @@ export default async function ResearchBasedWealthManagementPage() {
         mainBannerImage="/images/research-wealth-management/banner.png"
         bannerRightImg="/images/research-wealth-management/bannerright.png"
         mainTitle="Research-Based Wealth Management"
-        mainSubTitle="A research-led approach to mutual funds, equity, and portfolio construction — Suitability, risk, and allocation first. No product pushing. No guaranteed returns."
+        mainSubTitle="A research-led approach to mutual funds, equity, and portfolio construction — suitability, risk, and allocation first."
+        mainDisclaimer="No product pushing. No guaranteed returns."
         mainLinkTitle="Book Portfolio Review"
         mainLink="/portfolio-review"
         usePrimaryAsLink={true}

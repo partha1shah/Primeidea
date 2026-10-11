@@ -18,9 +18,9 @@ export const COMPARISONS = [
     summary:
       "Three different SEBI / distribution roles. Understanding the difference helps you know what PrimeIdea is — and what it is not.",
     metaDescription:
-      "Compare SEBI Registered Research Analyst, SEBI Registered Investment Adviser, and Mutual Fund Distributor roles. PrimeIdea operates as research-led under SEBI RA INH000017815 — not as an RIA unless separately registered.",
+      "Compare SEBI Registered Research Analyst, SEBI Registered Investment Adviser, and Mutual Fund Distributor roles. PrimeIdea operates as a research-led firm under SEBI RA registration.",
     keywords:
-      "research analyst vs investment adviser, RA vs RIA vs MFD, SEBI RA INH000017815, PrimeIdea Ventures",
+      "research analyst vs investment adviser, RA vs RIA vs MFD, SEBI Research Analyst, PrimeIdea Ventures",
     columns: [
       {
         id: "ra",
@@ -62,9 +62,9 @@ export const COMPARISONS = [
       },
       {
         lens: "PrimeIdea positioning",
-        ra: "Yes — Partha Shah, SEBI RA INH000017815",
-        ia: "No — not presented as RIA unless separately registered",
-        mfd: "Distinct from a product-push distributor pitch",
+        ra: "Yes — research-led under SEBI RA registration",
+        ia: "Separate SEBI registration category",
+        mfd: "Also distributes products with published AMFI credentials",
       },
     ],
     takeaways: [
@@ -91,7 +91,7 @@ export const COMPARISONS = [
       {
         question: "Is a Research Analyst the same as an Investment Adviser?",
         answer:
-          "No. A SEBI Registered Research Analyst provides research and analysis. A SEBI Registered Investment Adviser provides personalised investment advice under a separate registration. PrimeIdea operates under SEBI RA registration (INH000017815).",
+          "No. A SEBI Registered Research Analyst provides research and analysis. A SEBI Registered Investment Adviser provides personalised investment advice under a separate registration. PrimeIdea operates under SEBI RA registration.",
       },
       {
         question: "Is PrimeIdea a Mutual Fund Distributor?",
@@ -621,13 +621,13 @@ export const COMPARISONS = [
         lens: "Registration to check",
         planner: "Ask which SEBI or distribution registration applies",
         manager: "The label alone is not a SEBI category",
-        primeidea: "Partha Shah, SEBI Registered Research Analyst INH000017815",
+        primeidea: "SEBI Registered Research Analyst — details on Contact Us and Regulatory Disclosures",
       },
       {
         lens: "Where work happens",
         planner: "Office or online, depending on the firm",
         manager: "Often positioned for larger or multi-product books",
-        primeidea: "Vadodara office, plus online consultations across Gujarat and India",
+        primeidea: "Vadodara office, plus online consultations across Gujarat, India, and worldwide",
       },
       {
         lens: "What to ask",
@@ -639,7 +639,7 @@ export const COMPARISONS = [
         lens: "What neither title guarantees",
         planner: "A title does not guarantee returns",
         manager: "A title does not mean SEBI Investment Adviser registration",
-        primeidea: "PrimeIdea is not an RIA unless separately registered, and does not guarantee returns",
+        primeidea: "PrimeIdea does not guarantee returns",
       },
     ],
     takeaways: [

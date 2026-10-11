@@ -143,7 +143,8 @@ export default function PrimeIdeaVenturesProfilePage() {
         mainBannerImage="/images/home/banner.png"
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="PrimeIdea Ventures Profile"
-        mainSubTitle={`${IDENTITY_LINE} No guaranteed returns.`}
+        mainSubTitle={IDENTITY_LINE}
+        mainDisclaimer="No guaranteed returns."
         mainLinkTitle="Book Portfolio Review"
         mainLink="/book-portfolio-review"
         usePrimaryAsLink={true}

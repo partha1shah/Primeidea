@@ -122,7 +122,8 @@ export default function LegacySuccessionEstatePlanningPage() {
         mainBannerImage="/images/legacy-inheritance-planning/banner.png"
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="Legacy, Succession and Estate Planning in India"
-        mainSubTitle="Partner-enabled will, trust, probate and estate documentation coordination from a Vadodara base, across India. Legal drafting by qualified professionals. No partner name or pricing. No guaranteed returns."
+        mainSubTitle="Partner-enabled will, trust, probate and estate documentation coordination from a Vadodara base, across India."
+        mainDisclaimer="Legal drafting by qualified professionals. No partner name or pricing. No guaranteed returns."
         mainLinkTitle="Book Succession Planning Consultation"
         mainLink="#lead-form"
         usePrimaryAsLink={true}
@@ -134,7 +135,7 @@ export default function LegacySuccessionEstatePlanningPage() {
       <ScopePageMetaStrip
         stats={[
           { label: "Geography", value: "India", Icon: GlobeAltIcon },
-          { label: "Role", value: "Coordination", Icon: ScaleIcon },
+          { label: "Role", value: "Coordination", Icon: ScaleIcon },
         ]}
         disclaimer="PrimeIdea Ventures does not act as an independent law firm. Partner name and pricing are not shown. Investments in securities market are subject to market risks. PrimeIdea does not guarantee returns."
       />

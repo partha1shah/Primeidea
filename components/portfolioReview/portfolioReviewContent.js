@@ -1,6 +1,5 @@
 import FadeUpOneByOneAnimation from "@/animations/FadeUpOneByOneAnimation";
 import PortfolioReviewForm from "@/components/portfolioReview/PortfolioReviewForm";
-import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowUpTrayIcon,
@@ -78,7 +77,7 @@ const relatedPages = [
   {
     title: "SEBI RA credentials",
     href: "/sebi-registered-research-analyst",
-    description: "Partha Shah, SEBI Registered Research Analyst INH000017815.",
+    description: "How PrimeIdea is registered and what that means.",
   },
   {
     title: "Mutual Fund Investment Support",
@@ -121,35 +120,13 @@ export default function PortfolioReviewContent() {
               </h2>
               <p className="text-base md:text-lg text-[#4D4D4D] leading-relaxed mb-4">
                 PrimeIdea Ventures is a Vadodara-based research-led wealth management and
-                portfolio review firm serving investors across Gujarat and India. Reviews are
-               
+                portfolio review firm serving investors across Gujarat, India, and worldwide.
               </p>
               <p className="text-base md:text-lg text-[#4D4D4D] leading-relaxed mb-6">
                 Meet at the Vadodara office or continue on a video call. The work is the same:
                 suitability, overlap, allocation, and next steps — not a product push, and not a
                 return promise.
               </p>
-
-              <div className="flex items-center gap-4 rounded-2xl border border-[#E3ECF5] bg-[#F6FDFF] p-4">
-                <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full ring-2 ring-[#FFC300]/50">
-                  <Image
-                    src="/images/about-us/founder.jpg"
-                    width={128}
-                    height={128}
-                    alt="Partha Shah SEBI Registered Research Analyst PrimeIdea Ventures"
-                    className="h-full w-full object-cover object-top"
-                  />
-                </div>
-                <div>
-                  <p className="text-base font-semibold text-[#293C7D]">Partha Shah</p>
-                  <p className="text-sm text-[#4D4D4D] leading-snug">
-                    SEBI RA · <span className="font-semibold text-[#293C7D]">INH000017815</span>
-                  </p>
-                  <p className="text-sm text-[#4D4D4D] mt-1">
-                    Research-led review from Vadodara, including office and online consultation.
-                  </p>
-                </div>
-              </div>
             </div>
 
             <ul className="lg:col-span-5 grid grid-cols-1 gap-3 list-none m-0 p-0">

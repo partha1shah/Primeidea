@@ -107,7 +107,8 @@ export default async function ComparisonPage({ params }) {
         mainBannerImage="/images/home/banner.png"
         bannerRightImg="/images/home/banner-right.png"
         mainTitle={comparison.h1}
-        mainSubTitle={`${comparison.summary} Educational only. No guaranteed returns.`}
+        mainSubTitle={comparison.summary}
+        mainDisclaimer="Educational only. No guaranteed returns."
         mainLinkTitle="Book Portfolio Review"
         mainLink="/book-portfolio-review"
         usePrimaryAsLink={true}

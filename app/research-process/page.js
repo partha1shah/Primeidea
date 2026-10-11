@@ -116,7 +116,8 @@ export default function ResearchProcessPage() {
         mainBannerImage="/images/home/banner.png"
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="PrimeIdea Research Process"
-        mainSubTitle="A structured, research-led portfolio review process: suitability, risk, overlap, and allocation first — No product pushing. No guaranteed returns."
+        mainSubTitle="A structured, research-led portfolio review process: suitability, risk, overlap, and allocation first."
+        mainDisclaimer="No product pushing. No guaranteed returns."
         mainLinkTitle="Book Portfolio Review"
         mainLink="/portfolio-review"
         usePrimaryAsLink={true}
@@ -128,7 +129,8 @@ export default function ResearchProcessPage() {
       <ScopePageMetaStrip
         stats={[
           { label: "Process", value: "5 steps", Icon: QueueListIcon },
-          { label: "Led by", value: "SEBI RA", Icon: BeakerIcon },
+          { label: "Led by", value: "SEBI RA", Icon: BeakerIcon },
+
         ]}
         disclaimer="The research process is for structured review and analysis. Investments in securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns."
       />

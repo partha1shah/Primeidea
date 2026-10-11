@@ -43,7 +43,12 @@ export default function BlogListing({ posts, categoriesList = [] }) {
       const isPrimeProspective = (item) => {
         const name = String(item?.name || "").toLowerCase();
         const slug = String(item?.slug || "").toLowerCase();
-        return name === "prime prospective" || slug === "prime-prospective";
+        return (
+          name === "prime prospective" ||
+          slug === "prime-prospective" ||
+          name.includes("prime prospective") ||
+          slug.includes("prime-prospective")
+        );
       };
       if (isPrimeProspective(a) && !isPrimeProspective(b)) return -1;
       if (!isPrimeProspective(a) && isPrimeProspective(b)) return 1;
