@@ -13,6 +13,7 @@ const manrope = Manrope({
   weight: ["300", "400", "500", "600", "700", "800"],
   display: "swap",
   preload: true,
+  adjustFontFallback: true,
   variable: "--font-manrope",
 });
 
@@ -81,7 +82,11 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${manrope.variable}`} suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${manrope.variable} ${manrope.className}`}
+      suppressHydrationWarning
+    >
       {/* <Script
           defer="defer"
           type="text/javascript"
@@ -92,7 +97,7 @@ export default function RootLayout({ children }) {
           type="text/javascript"
           src="https://primeidea-ventures.odoo.com/im_livechat/assets_embed.js"
         /> */}
-      <body className={manrope.className} suppressHydrationWarning>
+      <body suppressHydrationWarning>
         <GtmNoscript />
         <AnalyticsScripts />
         <main>{children}</main>

@@ -400,7 +400,7 @@ export default function Header() {
               width={184}
               height={40}
               alt="PrimeIdea Ventures"
-              className="h-8 w-auto object-contain xl:h-10"
+              className="h-8 w-[147px] object-contain xl:h-10 xl:w-[184px]"
               priority
             />
           </Link>

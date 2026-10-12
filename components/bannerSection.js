@@ -61,7 +61,7 @@ const BannerSection = (props) => {
           >
 
             <FadeUpAnimation
-              className={`lg:max-w-[400px] xl:max-w-[520px] w-full ${
+              className={`order-2 sm:order-1 lg:max-w-[400px] xl:max-w-[520px] w-full ${
                 hasSubSection
                   ? "mb-[4%] md:mb-0 mt-0 sm:mt-[10%]"
                   : "mb-0 flex flex-col justify-center"
@@ -143,18 +143,21 @@ const BannerSection = (props) => {
               )}
             </FadeUpAnimation>
             
-            {props.bannerRightImg &&
-              <div className="max-w-[740px] w-full">
-                <Image
-                  src={props.bannerRightImg}
-                  // src="/images/insurance/banner-right.png"
-                  width={802}
-                  height={642}
-                  alt={props.mainTitle}
-                  className="max-h-[300px] sm:max-h-[555px] object-contain m-auto sm:m-0"
-                />
+            {props.bannerRightImg && (
+              <div className="order-1 sm:order-2 mx-auto sm:mx-0 w-full max-w-[min(100%,375px)] sm:max-w-[min(100%,693px)]">
+                {/* Aspect box reserves space before the image paints — prevents mobile CLS */}
+                <div className="relative w-full aspect-[802/642]">
+                  <Image
+                    src={props.bannerRightImg}
+                    alt={props.mainTitle || ""}
+                    fill
+                    priority
+                    sizes="(max-width: 640px) 90vw, 693px"
+                    className="object-contain object-center sm:object-left"
+                  />
+                </div>
               </div>
-            }
+            )}
           </div>
         </div>
         <Header />
