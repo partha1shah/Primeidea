@@ -22,7 +22,7 @@ const JoinCommunity = () => {
                 <p className="mb-4 text-lg">
                   Be a part of a dynamic network of like-minded individuals and
                   forward-thinking professionals. At Primeidea, we’re more than
-                  just a financial advisory service; we’re a community dedicated
+                  just a research-led wealth desk; we’re a community dedicated
                   to shared success and growth.
                 </p>
                 <p className="mb-4 text-lg">Connect with us to:</p>

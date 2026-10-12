@@ -28,7 +28,7 @@ const entityFacts = [
   },
   { label: "Phone / WhatsApp", value: "+91 81410 27000" },
   { label: "Research leadership", value: "Partha Shah — Head of Research & Investment Strategy" },
-  { label: "SEBI RA", value: "INB010653732" },
+  { label: "SEBI RA", value: "INH000017815" },
   { label: "AMFI MF ARN", value: "ARN-109345" },
   { label: "Returns policy", value: "No guaranteed / market-beating / risk-free return claims" },
 ];
@@ -88,7 +88,7 @@ export default function ProfileContent() {
                 {[
                   "Vadodara base",
                   "Gujarat & India reach",
-                  "SEBI RA INB010653732",
+                  "SEBI RA INH000017815",
                   "No return guarantees",
                 ].map((chip) => (
                   <li
@@ -156,7 +156,7 @@ export default function ProfileContent() {
                   <p className="text-[11px] font-semibold uppercase tracking-[0.14em] !text-white/55 m-0 mb-1">
                     SEBI registration
                   </p>
-                  <p className="text-xl font-bold tabular-nums !text-[#FFC300] m-0">INB010653732</p>
+                  <p className="text-xl font-bold tabular-nums !text-[#FFC300] m-0">INH000017815</p>
                 </div>
                 <div className="relative flex flex-col gap-2.5">
                   <Link
@@ -211,7 +211,7 @@ export default function ProfileContent() {
             {[
               { Icon: MapPinIcon, label: "Base", value: "Vadodara" },
               { Icon: GlobeAltIcon, label: "Reach", value: "Gujarat & India" },
-              { Icon: CheckBadgeIcon, label: "SEBI RA", value: "INB010653732" },
+              { Icon: CheckBadgeIcon, label: "SEBI RA", value: "INH000017815" },
             ].map(({ Icon, label, value }) => (
               <div
                 key={label}

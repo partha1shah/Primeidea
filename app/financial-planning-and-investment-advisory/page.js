@@ -1,6 +1,5 @@
 import BannerSection from "@/components/bannerSection";
 import ClientTestimonial from "@/components/clientTestimonial";
-import FaqsSection from "@/components/financialPlanning&Investment/faqsSection";
 import FinancialPlanning from "@/components/financialPlanning&Investment/financialPlanning";
 import GetStarted from "@/components/financialPlanning&Investment/getStarted";
 import HelpWealthCreation from "@/components/financialPlanning&Investment/helpWealthCreation";
@@ -11,11 +10,17 @@ import ReportSection from "@/components/financialPlanning&Investment/reportSecti
 import StepperSection from "@/components/financialPlanning&Investment/steppers";
 import Footer from "@/components/footer";
 import InsightsSection from "@/components/insightsSection";
+import ScopeFaqsSection from "@/components/scope/ScopeFaqsSection";
+import ScopePageJsonLd, {
+  buildBreadcrumbJsonLd,
+  buildFaqJsonLd,
+} from "@/components/scope/ScopePageJsonLd";
+import financialPlanningFaqs from "@/data/financialPlanningFaqs";
 import graphqlRequest from "@/lib/graphqlRequest";
 
 export const metadata = {
     title: 'Financial Planning',
-    description: 'PrimeIdea writes a financial plan from goals, cash flow, and current holdings for investors in Vadodara and across Gujarat and India. Research is This does not guarantee returns.',
+    description: 'PrimeIdea writes a financial plan from goals, cash flow, and current holdings for investors in Vadodara and across Gujarat and India. Research-led support — no guaranteed returns.',
     keywords: 'financial planning, portfolio review, wealth management, PrimeIdea Ventures, SEBI Registered Research Analyst INH000017815, Vadodara',
     author: 'Partha Shah',
     robots: 'index, follow',
@@ -26,7 +31,7 @@ export const metadata = {
       url: 'https://www.primeidea.in/financial-planning-and-investment-advisory/',
       site_name: 'PrimeIdea Ventures',
       title: 'Financial Planning | PrimeIdea Ventures',
-      description: 'PrimeIdea writes a financial plan from goals, cash flow, and current holdings for investors in Vadodara and across Gujarat and India. Research is This does not guarantee returns.',
+      description: 'PrimeIdea writes a financial plan from goals, cash flow, and current holdings for investors in Vadodara and across Gujarat and India. Research-led support — no guaranteed returns.',
     },
     twitter: {
       handle: '@primeidea',
@@ -98,8 +103,14 @@ export default async function FinancialPlanningAndInvestmentAdvisory() {
     const categorySlug= 'Finance Planning';
     const posts = await getData(categorySlug);
 
+    const breadcrumbSchema = buildBreadcrumbJsonLd([
+      { name: "Financial Planning", url: "/financial-planning-and-investment-advisory" },
+    ]);
+    const faqSchema = buildFaqJsonLd(financialPlanningFaqs);
+
     return (
         <div className="bg-[#F6FDFF]">
+            <ScopePageJsonLd data={[breadcrumbSchema, faqSchema]} />
             <BannerSection 
              mainBannerImage={"/images/financial-planning/banner.png"}
              bannerRightImg={"/images/financial-planning/bannerright.png"}
@@ -134,7 +145,11 @@ export default async function FinancialPlanningAndInvestmentAdvisory() {
                 <InsightsSection blogsListing={posts.posts.nodes} />
             </div>
 
-            <FaqsSection />
+            <ScopeFaqsSection
+              title="Financial Planning — Frequently Asked Questions"
+              description="What planning means here, SEBI RA vs IA, and how to start a review."
+              faqs={financialPlanningFaqs}
+            />
 
             <ClientTestimonial />
 

@@ -119,7 +119,7 @@ const personSchema = {
   "@type": "Person",
   name: "Partha Shah",
   jobTitle: "Head of Research & Investment Strategy",
-  identifier: "INB010653732",
+  identifier: "INH000017815",
   worksFor: {
     "@type": "Organization",
     name: "PrimeIdea Ventures",

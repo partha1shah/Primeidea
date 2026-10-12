@@ -5,7 +5,7 @@
 
 export const SEBI_RA = {
   label: "SEBI Registered Research Analyst",
-  number: "INB010653732",
+  number: "INH000017815",
   validity: "Apr 05, 2024 - Jan 01, 2027",
 };
 

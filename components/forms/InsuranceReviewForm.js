@@ -74,6 +74,7 @@ export default function InsuranceReviewForm() {
       submitLabel="Submit Insurance Review Request"
       successMessage="Thank you. Your insurance review request has been received. We will get back to you soon."
       eventName="insurance_review_form_submit"
+      thankYouPath="/insurance-planning/thank-you"
       extraFields={EXTRA_FIELDS}
     />
   );

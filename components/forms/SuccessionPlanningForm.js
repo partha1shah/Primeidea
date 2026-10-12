@@ -53,6 +53,7 @@ export default function SuccessionPlanningForm() {
       submitLabel="Book Succession Planning Consultation"
       successMessage="Thank you. Your succession planning request has been received. We will get back to you soon."
       eventName="succession_planning_form_submit"
+      thankYouPath="/legacy-succession-estate-planning-india/thank-you"
       extraFields={EXTRA_FIELDS}
     />
   );

@@ -61,6 +61,7 @@ export default function RetirementPlanningForm() {
       submitLabel="Submit Retirement Planning Request"
       successMessage="Thank you. Your retirement planning request has been received. We will get back to you soon."
       eventName="retirement_planning_form_submit"
+      thankYouPath="/retirement-planning/thank-you"
       extraFields={EXTRA_FIELDS}
     />
   );

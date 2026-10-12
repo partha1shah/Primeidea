@@ -4,6 +4,9 @@ import "slick-carousel/slick/slick-theme.css";
 import "./globals.css";
 import Script from "next/script";
 import StickyMobileCta from "@/components/StickyMobileCta";
+import AnalyticsScripts, { GtmNoscript } from "@/components/AnalyticsScripts";
+
+const googleSiteVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
 
 const manrope = Manrope({
   subsets: ["latin", "latin-ext"],
@@ -45,7 +48,7 @@ export const metadata = {
     "insurance planning",
     "wealth management",
     "retirement planning",
-    "SEBI Registered Research Analyst INB010653732"
+    "SEBI Registered Research Analyst INH000017815"
   ],
   authors: [{ name: "Partha Shah" }],
   creator: "PrimeIdea Ventures",
@@ -60,15 +63,13 @@ export const metadata = {
     shortcut: '/favicon-16x16.png',
     apple: '/apple-touch-icon.png',
   },
-  // verification: {
-  //   google: 'your-google-verification-code',
-  //   yandex: 'your-yandex-verification-code',
-  //   yahoo: 'your-yahoo-verification-code',
-  // },
-  // other: {
-  //   'google-site-verification': 'your-verification-code',
-  //   'msvalidate.01': 'your-ms-validation-code',
-  // },
+  ...(googleSiteVerification
+    ? {
+        verification: {
+          google: googleSiteVerification,
+        },
+      }
+    : {}),
   assets: ['https://www.primeidea.in'],
 };
 
@@ -92,6 +93,8 @@ export default function RootLayout({ children }) {
           src="https://primeidea-ventures.odoo.com/im_livechat/assets_embed.js"
         /> */}
       <body className={manrope.className} suppressHydrationWarning>
+        <GtmNoscript />
+        <AnalyticsScripts />
         <main>{children}</main>
         <StickyMobileCta />
          <Script

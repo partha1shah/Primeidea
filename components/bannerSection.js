@@ -94,6 +94,7 @@ const BannerSection = (props) => {
                         width={21}
                         height={21}
                         alt=""
+                        aria-hidden="true"
                         className="ml-2"
                       />
                     </Link>
@@ -109,6 +110,7 @@ const BannerSection = (props) => {
                         width={21}
                         height={21}
                         alt=""
+                        aria-hidden="true"
                         className="ml-2"
                       />
                     </button>
@@ -125,6 +127,7 @@ const BannerSection = (props) => {
                       width={21}
                       height={21}
                       alt=""
+                      aria-hidden="true"
                       className="ml-2"
                     />
                   </Link>

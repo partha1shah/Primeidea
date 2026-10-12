@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { Notyf } from "notyf";
 import "notyf/notyf.min.css";
 import { pushLeadEvent, submitCf7Form } from "@/lib/cf7Submit";
@@ -26,7 +27,9 @@ export default function ScopeLeadForm({
   eventName = "scope_lead_form_submit",
   extraFields = [],
   disclaimer,
+  thankYouPath,
 }) {
+  const router = useRouter();
   const initialState = {
     fullName: "",
     city: "",
@@ -84,9 +87,13 @@ export default function ScopeLeadForm({
     try {
       const result = await submitCf7Form(formId, formData);
       if (result.ok) {
-        pushLeadEvent(eventName, { form: title, form_id: formId });
-        notyf.success(successMessage);
+        pushLeadEvent(eventName, { form: String(title), form_id: formId });
         setFormData(initialState);
+        if (thankYouPath) {
+          router.push(thankYouPath);
+          return;
+        }
+        notyf.success(successMessage);
       } else {
         notyf.error(result.message);
       }

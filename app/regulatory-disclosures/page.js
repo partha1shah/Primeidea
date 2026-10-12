@@ -18,9 +18,9 @@ const faqs = [
   {
     question: "Where can I verify PrimeIdea’s SEBI registration?",
     answer:
-      "Partha Shah is a SEBI Registered Research Analyst with registration number INB010653732. Investors should verify this independently on the official SEBI website.",
+      "Partha Shah is a SEBI Registered Research Analyst with registration number INH000017815. Investors should verify this independently on the official SEBI website.",
     plainText:
-      "Partha Shah is a SEBI Registered Research Analyst with registration number INB010653732. Investors should verify this independently on the official SEBI website.",
+      "Partha Shah is a SEBI Registered Research Analyst with registration number INH000017815. Investors should verify this independently on the official SEBI website.",
   },
   {
     question: "Does PrimeIdea guarantee returns?",
@@ -55,9 +55,9 @@ const faqs = [
 export const metadata = {
   title: "Regulatory Disclosures",
   description:
-    "PrimeIdea Ventures helps investors review SEBI RA registration, Investor Charter, complaint status, grievance redressal, and SCORES through a research-led process guided by Partha Shah, SEBI Registered Research Analyst INB010653732.",
+    "PrimeIdea Ventures helps investors review SEBI RA registration, Investor Charter, complaint status, grievance redressal, and SCORES through a research-led process guided by Partha Shah, SEBI Registered Research Analyst INH000017815.",
   keywords:
-    "PrimeIdea regulatory disclosures, SEBI RA INB010653732, Investor Charter, SEBI SCORES, grievance redressal, complaint status",
+    "PrimeIdea regulatory disclosures, SEBI RA INH000017815, Investor Charter, SEBI SCORES, grievance redressal, complaint status",
   author: "Partha Shah",
   robots: "index, follow",
   openGraph: {
@@ -67,7 +67,7 @@ export const metadata = {
     site_name: "PrimeIdea Ventures",
     title: "Regulatory Disclosures | PrimeIdea Ventures",
     description:
-      "PrimeIdea Ventures helps investors review SEBI RA registration, Investor Charter, complaint status, grievance redressal, and SCORES through a research-led process guided by Partha Shah, SEBI Registered Research Analyst INB010653732.",
+      "PrimeIdea Ventures helps investors review SEBI RA registration, Investor Charter, complaint status, grievance redressal, and SCORES through a research-led process guided by Partha Shah, SEBI Registered Research Analyst INH000017815.",
   },
   twitter: {
     handle: "@primeidea",
@@ -92,7 +92,7 @@ const serviceSchema = {
   about: {
     "@type": "Person",
     name: "Partha Shah",
-    identifier: "INB010653732",
+    identifier: "INH000017815",
     jobTitle: "SEBI Registered Research Analyst",
   },
 };

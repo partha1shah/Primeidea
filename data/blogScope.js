@@ -1,7 +1,22 @@
 /**
  * Blog author box and related service links.
- * Blog categories come from WordPress. Add or rename them in the WordPress admin.
+ * Blog categories come from WordPress. Create/rename them in WP to match SCOPE_BLOG_CATEGORIES.
  */
+
+/** Scope-required category taxonomy (create these in WordPress admin). */
+export const SCOPE_BLOG_CATEGORIES = [
+  { name: "Mutual Funds", slug: "mutual-funds" },
+  { name: "Equity", slug: "equity" },
+  { name: "Portfolio Review", slug: "portfolio-review" },
+  { name: "Retirement", slug: "retirement" },
+  { name: "Insurance", slug: "insurance" },
+  { name: "Tax", slug: "tax" },
+  { name: "Fixed Income", slug: "fixed-income" },
+  { name: "NRI", slug: "nri" },
+  { name: "PMS / AIF / SIF", slug: "pms-aif-sif" },
+  { name: "Behaviour", slug: "behaviour" },
+  { name: "Outlook", slug: "outlook" },
+];
 
 export const SERVICE_LINKS = [
   { title: "Research Process", href: "/research-process" },

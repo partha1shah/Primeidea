@@ -52,13 +52,13 @@ const ExpertiseSection = () => {
                 src="/images/landing/icons/investment-advisory.png"
                 width={100}
                 height={103}
-                alt="Investment Advisory"
+                alt="Research-led portfolio review"
                 className="w-[85px] h-[85px] 2xl:h-[100px] object-contain mt-3 mb-4 lg:my-4"
               />
-              <h2 className="text-xl font-bold mb-2">Investment Advisory</h2>
+              <h2 className="text-xl font-bold mb-2">Portfolio Review</h2>
               <p className="font-normal text-black">
-                We use research-driven strategies to maximize returns and
-                minimize risk, keeping your portfolio optimized for growth.
+                We use a research-led process to review holdings, goals, and
+                risk — without guaranteed or market-beating return claims.
               </p>
             </div>
           </div>

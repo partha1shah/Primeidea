@@ -17,9 +17,9 @@ const faqs = [
   {
     question: "Who is the SEBI Registered Research Analyst at PrimeIdea Ventures?",
     answer:
-      "Partha Shah leads PrimeIdea’s research process as a SEBI Registered Research Analyst with registration number INB010653732. Investors should verify this registration independently on the official SEBI website.",
+      "Partha Shah leads PrimeIdea’s research process as a SEBI Registered Research Analyst with registration number INH000017815. Investors should verify this registration independently on the official SEBI website.",
     plainText:
-      "Partha Shah leads PrimeIdea’s research process as a SEBI Registered Research Analyst with registration number INB010653732. Investors should verify this registration independently on the official SEBI website.",
+      "Partha Shah leads PrimeIdea’s research process as a SEBI Registered Research Analyst with registration number INH000017815. Investors should verify this registration independently on the official SEBI website.",
   },
   {
     question: "Does PrimeIdea also distribute financial products?",
@@ -38,9 +38,9 @@ const faqs = [
   {
     question: "How can I verify the SEBI registration?",
     answer:
-      "Use registration number INB010653732 on the official SEBI website to verify Partha Shah’s status as a SEBI Registered Research Analyst. PrimeIdea is based in Vadodara and serves investors across Gujarat and India through office and online consultation.",
+      "Use registration number INH000017815 on the official SEBI website to verify Partha Shah’s status as a SEBI Registered Research Analyst. PrimeIdea is based in Vadodara and serves investors across Gujarat and India through office and online consultation.",
     plainText:
-      "Use registration number INB010653732 on the official SEBI website to verify Partha Shah’s status as a SEBI Registered Research Analyst. PrimeIdea is based in Vadodara and serves investors across Gujarat and India through office and online consultation.",
+      "Use registration number INH000017815 on the official SEBI website to verify Partha Shah’s status as a SEBI Registered Research Analyst. PrimeIdea is based in Vadodara and serves investors across Gujarat and India through office and online consultation.",
   },
   {
     question: "How do I start working with PrimeIdea?",
@@ -54,9 +54,9 @@ const faqs = [
 export const metadata = {
   title: "SEBI Registered Research Analyst",
   description:
-    "PrimeIdea Ventures explains its SEBI Registered Research Analyst-led portfolio review for investors across Gujarat and India, through a research-led process guided by Partha Shah, SEBI Registered Research Analyst INB010653732.",
+    "PrimeIdea Ventures explains its SEBI Registered Research Analyst-led portfolio review for investors across Gujarat and India, through a research-led process guided by Partha Shah, SEBI Registered Research Analyst INH000017815.",
   keywords:
-    "SEBI Registered Research Analyst, Partha Shah INB010653732, research analyst Gujarat India, portfolio review, PrimeIdea Ventures",
+    "SEBI Registered Research Analyst, Partha Shah INH000017815, research analyst Gujarat India, portfolio review, PrimeIdea Ventures",
   author: "Partha Shah",
   robots: "index, follow",
   openGraph: {
@@ -66,7 +66,7 @@ export const metadata = {
     site_name: "PrimeIdea Ventures",
     title: "SEBI Registered Research Analyst | PrimeIdea Ventures",
     description:
-      "PrimeIdea Ventures explains its SEBI Registered Research Analyst-led portfolio review for investors across Gujarat and India, through a research-led process guided by Partha Shah, SEBI Registered Research Analyst INB010653732.",
+      "PrimeIdea Ventures explains its SEBI Registered Research Analyst-led portfolio review for investors across Gujarat and India, through a research-led process guided by Partha Shah, SEBI Registered Research Analyst INH000017815.",
   },
   twitter: {
     handle: "@primeidea",
@@ -86,7 +86,7 @@ const serviceSchema = {
   "@type": "Service",
   name: "SEBI Registered Research Analyst Services",
   description:
-    "Research-led portfolio review and analysis guided by Partha Shah, SEBI Registered Research Analyst INB010653732.",
+    "Research-led portfolio review and analysis guided by Partha Shah, SEBI Registered Research Analyst INH000017815.",
   provider: {
     "@type": "FinancialService",
     name: "PrimeIdea Ventures",
@@ -117,7 +117,7 @@ export default function SebiRegisteredResearchAnalystPage() {
         mainBannerImage="/images/home/banner.png"
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="SEBI Registered Research Analyst"
-        mainSubTitle="PrimeIdea Ventures is a Vadodara-based research-led firm and distributor of financial products — mutual funds, PMS, AIF, and SIF — with SEBI Registered Research Analyst registration INB010653732."
+        mainSubTitle="PrimeIdea Ventures is a Vadodara-based research-led firm and distributor of financial products — mutual funds, PMS, AIF, and SIF — with SEBI Registered Research Analyst registration INH000017815."
         mainLinkTitle="Book Portfolio Review"
         mainLink="/portfolio-review"
         usePrimaryAsLink={true}

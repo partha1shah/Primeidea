@@ -11,7 +11,7 @@ const homeFaqs = [
   {
     question: "Is PrimeIdea Ventures SEBI registered?",
     answer:
-      "Yes. PrimeIdea holds SEBI Registered Research Analyst registration INB010653732 (Validity – Apr 05, 2024 - Jan 01, 2027), plus AMFI and PMS distribution credentials published on this site. Investors should verify independently.",
+      "Yes. PrimeIdea holds SEBI Registered Research Analyst registration INH000017815 (Validity – Apr 05, 2024 - Jan 01, 2027), plus AMFI and PMS distribution credentials published on this site. Investors should verify independently.",
   },
   {
     question: "Who leads the PrimeIdea research process?",

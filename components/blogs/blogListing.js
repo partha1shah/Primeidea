@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
-import { getWordPressCategory } from "@/data/blogScope";
+import { getWordPressCategory, SCOPE_BLOG_CATEGORIES } from "@/data/blogScope";
 
 function topicChipClass(active) {
   return [
@@ -36,10 +36,16 @@ export default function BlogListing({ posts, categoriesList = [] }) {
     ? pathname.slice("/blogs/category/".length).split("/")[0]
     : null;
   const allActive = pathname === "/blogs";
+  const scopeOrder = new Map(
+    SCOPE_BLOG_CATEGORIES.map((item, index) => [item.slug, index])
+  );
   const categories = (categoriesList || [])
     .filter((item) => item?.slug && Number(item.count) >= 1)
     .slice()
     .sort((a, b) => {
+      const aScope = scopeOrder.has(a.slug) ? scopeOrder.get(a.slug) : 1000;
+      const bScope = scopeOrder.has(b.slug) ? scopeOrder.get(b.slug) : 1000;
+      if (aScope !== bScope) return aScope - bScope;
       const isPrimeProspective = (item) => {
         const name = String(item?.name || "").toLowerCase();
         const slug = String(item?.slug || "").toLowerCase();

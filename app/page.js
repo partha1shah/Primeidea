@@ -16,7 +16,6 @@ import FaqsSection from "@/components/home/faqsSection";
 import WhatWeDoSection from "@/components/home/whatWeDoSection";
 import InsightsSection from "@/components/insightsSection";
 import { getPostList } from "@/lib/posts";
-import AppInstall from "@/components/appInstall";
 import homeFaqs from "@/data/homeFaqs";
 import ScopePageJsonLd, {
   buildBreadcrumbJsonLd,
@@ -25,7 +24,7 @@ import ScopePageJsonLd, {
 
 const BASE_URL = "https://www.primeidea.in";
 const IDENTITY_LINE =
-  "PrimeIdea Ventures is a Vadodara-based research-led wealth management and portfolio review firm serving investors across Gujarat and India, with a research process";
+  "PrimeIdea Ventures is a Vadodara-based research-led wealth management and portfolio review firm serving investors across Gujarat and India, with a research process guided by Partha Shah, SEBI Registered Research Analyst INH000017815.";
 
 const postalAddress = {
   "@type": "PostalAddress",
@@ -103,14 +102,14 @@ const personSchema = {
   name: "Partha Shah",
   jobTitle: "Head of Research & Investment Strategy",
   description:
-    "SEBI Registered Research Analyst INB010653732. Guides the research process at PrimeIdea Ventures.",
+    "SEBI Registered Research Analyst INH000017815. Guides the research process at PrimeIdea Ventures.",
   url: `${BASE_URL}/sebi-registered-research-analyst`,
   image: `${BASE_URL}/images/about-us/founder.jpg`,
   worksFor: { "@id": `${BASE_URL}/#organization` },
   identifier: {
     "@type": "PropertyValue",
     name: "SEBI Registered Research Analyst",
-    value: "INB010653732",
+    value: "INH000017815",
   },
   sameAs: ["https://www.linkedin.com/in/pssays"],
 };
@@ -183,6 +182,7 @@ export default async function Home() {
 
       <BannerSection
         mainBannerImage="/images/home/banner.png"
+        mainBannerAlt="PrimeIdea Ventures Vadodara office — research-led wealth management"
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="Research-Led Wealth Management in Vadodara"
         mainSubTitle="PrimeIdea Ventures is a Vadodara-based research-led firm serving investors across Gujarat and India. We support portfolio review and goal-based wealth management across mutual funds, equity, ETFs, PMS, fixed income, SIPs, NPS, insurance, retirement, tax, and succession planning."
@@ -215,8 +215,6 @@ export default async function Home() {
       <FounderCredibilitySection />
 
       <WealthToolsSection />
-
-      <AppInstall />
 
       <InsightsSection blogsListing={blogsListing.allPosts.nodes} />
 

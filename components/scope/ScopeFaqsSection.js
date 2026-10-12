@@ -50,6 +50,7 @@ export default function ScopeFaqsSection({
                       width={30}
                       height={30}
                       alt=""
+                      aria-hidden="true"
                       className={`w-[24px] sm:w-[30px] h-[24px] sm:h-[30px] ml-2 shrink-0 transition-transform ${
                         activeTab === index ? "rotate-180" : ""
                       }`}

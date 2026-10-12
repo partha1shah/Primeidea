@@ -1,12 +1,17 @@
 import BannerSection from "@/components/bannerSection";
 import ClientTestimonial from "@/components/clientTestimonial";
-import FaqsSection from "@/components/tax-planning/faqsSection";
 import Footer from "@/components/footer";
 import InsightsSection from "@/components/insightsSection";
 import StepperSection from "@/components/steppers";
 import GiftCitySection from "@/components/tax-planning/giftCitySection";
 import TaxPlanning from "@/components/tax-planning/taxPlanning";
 import YouIHereSection from "@/components/tax-planning/you-i-here";
+import ScopeFaqsSection from "@/components/scope/ScopeFaqsSection";
+import ScopePageJsonLd, {
+  buildBreadcrumbJsonLd,
+  buildFaqJsonLd,
+} from "@/components/scope/ScopePageJsonLd";
+import taxPlanningFaqs from "@/data/taxPlanningFaqs";
 import graphqlRequest from "@/lib/graphqlRequest";
 
 // export const metadata = {
@@ -125,8 +130,14 @@ export default async function TaxPlanningPage() {
     },
   ];
 
+    const breadcrumbSchema = buildBreadcrumbJsonLd([
+      { name: "Tax Planning Support", url: "/tax-planning-savings" },
+    ]);
+    const faqSchema = buildFaqJsonLd(taxPlanningFaqs);
+
     return (
         <div className="bg-[#F6FDFF]">
+            <ScopePageJsonLd data={[breadcrumbSchema, faqSchema]} />
 
             <BannerSection 
                 mainBannerImage={"/images/tax-planning/banner.png"}
@@ -136,6 +147,7 @@ export default async function TaxPlanningPage() {
                 mainLinkTitle={"Book a portfolio review"}
                 mainLink={"/book-portfolio-review"}
                 usePrimaryAsLink={true}
+                mainDisclaimer="Educational support only — not CA advice. No guaranteed tax outcomes or returns."
                 subSectionContent={"PrimeIdea looks at tax alongside the investments you already hold. It does not promise the best tax-saving plan, and it does not replace a chartered accountant."}
                 subSectionTitle1={"Based in"}
                 subSectionSubTitle1={"Vadodara"}
@@ -149,7 +161,11 @@ export default async function TaxPlanningPage() {
             <YouIHereSection />
             <GiftCitySection />
             <InsightsSection blogsListing={posts.posts.nodes} />
-            <FaqsSection />
+            <ScopeFaqsSection
+              title="Tax Planning — Frequently Asked Questions"
+              description="How tax is reviewed with the portfolio, what is not guaranteed, and who leads the research process."
+              faqs={taxPlanningFaqs}
+            />
             <ClientTestimonial />
             <Footer />
         </div>

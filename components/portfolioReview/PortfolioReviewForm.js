@@ -1,9 +1,10 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 import { Notyf } from "notyf";
 import { ArrowUpTrayIcon, DocumentArrowUpIcon, XMarkIcon } from "@heroicons/react/24/outline";
-import { CF7_FORM_IDS, submitCf7Form } from "@/lib/cf7Submit";
+import { CF7_FORM_IDS, pushLeadEvent, submitCf7Form } from "@/lib/cf7Submit";
 
 const PRODUCT_OPTIONS = [
   "Mutual funds",
@@ -35,6 +36,7 @@ const MAX_FILE_MB = 5;
 const ACCEPTED = ".pdf,.xls,.xlsx,.csv,.png,.jpg,.jpeg";
 
 export default function PortfolioReviewForm() {
+  const router = useRouter();
   const fileInputRef = useRef(null);
   const [formData, setFormData] = useState({
     fullName: "",
@@ -110,10 +112,10 @@ export default function PortfolioReviewForm() {
       });
 
       if (result.ok) {
-        const message =
-          "Thank you. We have received your portfolio review request and will get back to you.";
-        setSubmitStatus({ success: true, message });
-        notyf.success(message);
+        pushLeadEvent("portfolio_review_form_submit", {
+          form: "Portfolio Review",
+          form_id: CF7_FORM_IDS.portfolioReview,
+        });
         setFormData({
           fullName: "",
           city: "",
@@ -126,6 +128,8 @@ export default function PortfolioReviewForm() {
         setProducts([]);
         setFile(null);
         e.target.reset();
+        router.push("/portfolio-review/thank-you");
+        return;
       } else {
         const message =
           result.message || "There was an error sending your request. Please try again.";

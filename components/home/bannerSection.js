@@ -33,7 +33,11 @@ const BannerSection = (props) => {
           {!props.isMobileBanner && props.mainBannerImage ? (
             <Image
               src={props.mainBannerImage}
-              alt=""
+              alt={
+                props.mainBannerAlt ||
+                props.mainTitle ||
+                "PrimeIdea Ventures — research-led wealth management in Vadodara"
+              }
               fill
               priority
               fetchPriority="high"
