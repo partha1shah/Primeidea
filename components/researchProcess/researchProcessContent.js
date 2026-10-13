@@ -134,8 +134,9 @@ export default function ResearchProcessContent() {
                 </p>
 
                 <a
-                  href="/docs/portfolio-review-framework.pdf"
-                  download
+                  href="/docs/research/primeidea-portfolio-review-process.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-md border-2 border-[#293C7D] px-5 py-3 text-base font-bold text-[#293C7D] hover:bg-[#F6FDFF] transition-colors"
                 >
                   <ArrowDownTrayIcon className="h-5 w-5" aria-hidden="true" />

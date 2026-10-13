@@ -119,6 +119,9 @@ const BannerSection = (props) => {
                 {props.secondaryLinkTitle && props.secondaryLink && (
                   <Link
                     href={props.secondaryLink}
+                    {...(props.secondaryLinkNewTab
+                      ? { target: "_blank", rel: "noopener noreferrer" }
+                      : {})}
                     className="border-2 border-[#293C7D] md:text-md xl:text-lg font-bold rounded-md text-[#293C7D] px-6 py-3 inline-flex items-center bg-white/90 hover:bg-white transition-colors"
                   >
                     {props.secondaryLinkTitle}

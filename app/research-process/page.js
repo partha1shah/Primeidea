@@ -123,7 +123,8 @@ export default function ResearchProcessPage() {
         usePrimaryAsLink={true}
         formTitle="Book Portfolio Review"
         secondaryLinkTitle="View Framework"
-        secondaryLink="#review-framework"
+        secondaryLink="/docs/research/primeidea-portfolio-review-process.pdf"
+        secondaryLinkNewTab
       />
 
       <ScopePageMetaStrip
