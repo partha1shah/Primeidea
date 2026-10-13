@@ -39,25 +39,26 @@ export default function BlogListing({ posts, categoriesList = [] }) {
   const scopeOrder = new Map(
     SCOPE_BLOG_CATEGORIES.map((item, index) => [item.slug, index])
   );
+  const isPrimeProspective = (item) => {
+    const name = String(item?.name || "").toLowerCase();
+    const slug = String(item?.slug || "").toLowerCase();
+    return (
+      name === "prime prospective" ||
+      slug === "prime-prospective" ||
+      name.includes("prime prospective") ||
+      slug.includes("prime-prospective")
+    );
+  };
   const categories = (categoriesList || [])
     .filter((item) => item?.slug && Number(item.count) >= 1)
     .slice()
     .sort((a, b) => {
+      // Always pin PRIME Prospective first after "All categories"
+      if (isPrimeProspective(a) && !isPrimeProspective(b)) return -1;
+      if (!isPrimeProspective(a) && isPrimeProspective(b)) return 1;
       const aScope = scopeOrder.has(a.slug) ? scopeOrder.get(a.slug) : 1000;
       const bScope = scopeOrder.has(b.slug) ? scopeOrder.get(b.slug) : 1000;
       if (aScope !== bScope) return aScope - bScope;
-      const isPrimeProspective = (item) => {
-        const name = String(item?.name || "").toLowerCase();
-        const slug = String(item?.slug || "").toLowerCase();
-        return (
-          name === "prime prospective" ||
-          slug === "prime-prospective" ||
-          name.includes("prime prospective") ||
-          slug.includes("prime-prospective")
-        );
-      };
-      if (isPrimeProspective(a) && !isPrimeProspective(b)) return -1;
-      if (!isPrimeProspective(a) && isPrimeProspective(b)) return 1;
       return String(a.name || "").localeCompare(String(b.name || ""));
     });
   return (
