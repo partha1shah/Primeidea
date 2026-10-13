@@ -83,23 +83,23 @@ const resourceCategories = [
   {
     id: "market-outlooks",
     group: "learn",
-    title: "Market outlooks",
+    title: "Market outlooks & monthly notes",
     description:
-      "Monthly market outlook notes for planning context — without return guarantees or product-push language.",
+      "Monthly market outlooks and planning notes — themes to watch for context, without return guarantees or product-push language.",
     href: "/research-reports",
     cta: "View outlooks",
     Icon: ChartBarIcon,
     status: "live",
   },
   {
-    id: "monthly-note",
+    id: "sip-calculator",
     group: "learn",
-    title: "Monthly market note",
+    title: "SIP Calculator",
     description:
-      "A monthly planning note that summarises themes to watch — educational context, not a return forecast.",
-    href: "/research-reports",
-    cta: "See research library",
-    Icon: BookOpenIcon,
+      "Estimate the future value of monthly SIPs over your chosen tenure — illustrative only, not a return promise.",
+    href: "/wealth-tools?tool=sip",
+    cta: "Open SIP Calculator",
+    Icon: CalculatorIcon,
     status: "live",
   },
   {
@@ -284,9 +284,9 @@ const relatedPages = [
   {
     step: "03",
     title: "Wealth Tools",
-    href: "/wealth-tools",
-    description: "SIP, corpus, SWP, and planning calculators with clear assumptions.",
-    cta: "Open calculators",
+    href: "/wealth-tools?tool=sip",
+    description: "SIP Calculator plus corpus, SWP, and other planning tools with clear assumptions.",
+    cta: "Open SIP Calculator",
     Icon: CalculatorIcon,
   },
   {
