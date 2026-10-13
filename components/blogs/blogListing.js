@@ -109,6 +109,7 @@ export default function BlogListing({ posts, categoriesList = [] }) {
               </li>
               {categories.map((items) => {
                 const active = activeSlug === items.slug;
+                const count = Number(items.count) || 0;
                 return (
                   <li key={items.slug}>
                     <Link
@@ -116,10 +117,21 @@ export default function BlogListing({ posts, categoriesList = [] }) {
                       aria-current={active ? "page" : undefined}
                       className={sideLinkClass(active)}
                     >
-                      {items.name}
-                      {active ? (
-                        <span className="h-2 w-2 shrink-0 rounded-full bg-[#FFC300]" aria-hidden="true" />
-                      ) : null}
+                      <span className="min-w-0 truncate">{items.name}</span>
+                      <span className="flex shrink-0 items-center gap-2">
+                        <span
+                          className={
+                            active
+                              ? "text-sm font-semibold tabular-nums !text-white/85"
+                              : "text-sm font-semibold tabular-nums !text-[#6B7C8A]"
+                          }
+                        >
+                          {count}
+                        </span>
+                        {active ? (
+                          <span className="h-2 w-2 shrink-0 rounded-full bg-[#FFC300]" aria-hidden="true" />
+                        ) : null}
+                      </span>
                     </Link>
                   </li>
                 );
@@ -145,6 +157,7 @@ export default function BlogListing({ posts, categoriesList = [] }) {
                   </Link>
                   {categories.map((items) => {
                     const active = activeSlug === items.slug;
+                    const count = Number(items.count) || 0;
                     return (
                       <Link
                         key={items.slug}
@@ -153,6 +166,7 @@ export default function BlogListing({ posts, categoriesList = [] }) {
                         className={topicChipClass(active)}
                       >
                         {items.name}
+                        <span className="ml-1.5 tabular-nums opacity-80">({count})</span>
                       </Link>
                     );
                   })}
