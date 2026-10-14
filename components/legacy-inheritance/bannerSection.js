@@ -34,7 +34,7 @@ const BannerSection = () => {
                   src="/images/icons/arrow-square-right.png"
                   width={21}
                   height={21}
-                  alt="Read All"
+                  alt="" aria-hidden="true"
                   className="ml-2"
                 />
               </a>
@@ -55,25 +55,25 @@ const BannerSection = () => {
             <div className="flex justify-between">
               <div className="w-full flex justify-between">
                 <FadeUpOneByOneAnimation className="flex flex-col	items-start px-2 w-1/4">
-                    <Image src="/images/legacy-inheritance-planning/icons/1.png" width={50} height={50} alt="1" className="mb-4" />
+                    <Image src="/images/legacy-inheritance-planning/icons/1.png" width={50} height={50} alt="Illustration supporting this section" className="mb-4" />
                     <p className="md:text-lg xl:text-xl font-medium mb-4 text-white">
                         Designed by estate planning experts with 50+ years of experience.
                     </p>
                 </FadeUpOneByOneAnimation>
                 <FadeUpOneByOneAnimation className="flex flex-col	items-start px-2 w-1/4">
-                    <Image src="/images/legacy-inheritance-planning/icons/2.png" width={50} height={50} alt="2" className="mb-4" />
+                    <Image src="/images/legacy-inheritance-planning/icons/2.png" width={50} height={50} alt="Illustration supporting this section" className="mb-4" />
                     <p className="md:text-lg xl:text-xl font-medium mb-4 text-white">
                         We offer full assistance with optional will registration and other offline procedures
                     </p>
                 </FadeUpOneByOneAnimation>
                 <FadeUpOneByOneAnimation className="flex flex-col	items-start px-2 w-1/4">
-                    <Image src="/images/legacy-inheritance-planning/icons/3.png" width={50} height={50} alt="3" className="mb-4" />
+                    <Image src="/images/legacy-inheritance-planning/icons/3.png" width={50} height={50} alt="Illustration supporting this section" className="mb-4" />
                     <p className="md:text-lg xl:text-xl font-medium mb-4 text-white">
                         We encrypt and protect your data so nobody has access to it, but you
                     </p>
                 </FadeUpOneByOneAnimation>
                 <FadeUpOneByOneAnimation className="flex flex-col	items-start px-2 w-1/4">
-                    <Image src="/images/legacy-inheritance-planning/icons/4.png" width={50} height={50} alt="4" className="mb-4" />
+                    <Image src="/images/legacy-inheritance-planning/icons/4.png" width={50} height={50} alt="Illustration supporting this section" className="mb-4" />
                     <p className="md:text-lg xl:text-xl font-medium mb-4 text-white">
                         Backed by <br/> institutional Investors
                     </p>

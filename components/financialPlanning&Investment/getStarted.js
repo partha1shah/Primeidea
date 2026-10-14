@@ -44,7 +44,7 @@ const GetStarted = () => {
                   src="/images/icons/arrow-right-light.png"
                   width={22}
                   height={12}
-                  alt="Arrow Right"                  
+                  alt="" aria-hidden="true"                  
                   className="ml-3"
                 />
               </button>

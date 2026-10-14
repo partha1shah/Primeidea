@@ -13,7 +13,7 @@ const YouIHereSection = () => {
                   src="/images/icons/users.png"
                   width={50}
                   height={50}
-                  alt="Users"
+                  alt="Investor and advisor collaboration illustration"
                 />
               </div>
               <h3 className="text-[28px] mb-4 text-white">
@@ -29,7 +29,7 @@ const YouIHereSection = () => {
                   src="/images/icons/user.png"
                   width={50}
                   height={50}
-                  alt="Users"
+                  alt="Investor and advisor collaboration illustration"
                 />
               </div>
               <h3 className="text-[28px] mb-4 text-white">

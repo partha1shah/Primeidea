@@ -16,7 +16,7 @@ const FinancialPlanning = () => {
               src="/images/financial-planning/without-plan.png"
               width="397"
               height="285"
-              alt="Without Plan"
+              alt="Financial outcomes without a structured plan"
               className="w-full"
             />
           </FadeUpOneByOneAnimation>
@@ -25,7 +25,7 @@ const FinancialPlanning = () => {
               src="/images/financial-planning/with-plan.png"
               width="397"
               height="285"
-              alt="With Plan"
+              alt="Financial outcomes with a structured plan"
               className="w-full"
             />
           </FadeUpOneByOneAnimation>
@@ -41,7 +41,8 @@ const FinancialPlanning = () => {
                 src="/images/icons/p.png"
                 width={110}
                 height={105}
-                alt="PrimeIdea"
+                alt=""
+                aria-hidden="true"
             />
             </FadeUpOneByOneAnimation>
         </div>

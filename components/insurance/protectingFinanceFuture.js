@@ -61,7 +61,7 @@ const ProtectingFinanceFuture = () => {
                     src="/images/icons/arrow-square-right.png"
                     width={21}
                     height={21}
-                    alt="Read All"
+                    alt="" aria-hidden="true"
                     className="ml-2"
                   />
                 </a>

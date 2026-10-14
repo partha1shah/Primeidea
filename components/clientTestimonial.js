@@ -157,7 +157,7 @@ const ClientTestimonial = () => {
                           src={item.imageUrl}
                           width={61}
                           height={43}
-                          alt="Commas"
+                          alt="" aria-hidden="true"
                           className="mb-6"
                         />
                         <p className="mb-10 text-lg">{item.description}</p>
@@ -184,7 +184,7 @@ const ClientTestimonial = () => {
                   src="/images/icons/stars.png"
                   width={100}
                   height={22}
-                  alt="Ratings"
+                  alt="" aria-hidden="true"
                 />
               </div>
               <div className="mt-2 max-w-[80%] mx-auto block text-sm text-[#4D4D4D]">
@@ -201,7 +201,7 @@ const ClientTestimonial = () => {
                     src="/images/icons/arrow-s-left.png"
                     width={31}
                     height={31}
-                    alt="Left"
+                    alt="" aria-hidden="true"
                   />
                 </button>
                 <button
@@ -212,7 +212,7 @@ const ClientTestimonial = () => {
                     src="/images/icons/arrow-s-right.png"
                     width={31}
                     height={31}
-                    alt="Right"
+                    alt="" aria-hidden="true"
                   />
                 </button>
               </div>

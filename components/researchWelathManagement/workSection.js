@@ -27,7 +27,7 @@ const WorkSection = () => {
                   src="/images/research-wealth-management/work.png"
                   width={425}
                   height={312}
-                  alt="Work"
+                  alt="Research-led wealth management illustration"
                 />
               </FadeUpOneByOneAnimation>
             </div>
@@ -99,7 +99,7 @@ const WorkSection = () => {
                     src="/images/research-wealth-management/potential.png"
                     width={387}
                     height={159}
-                    alt="3"
+                    alt="Illustration supporting this section"
                   />
                   <h3 className="my-[10px] text-xl font-bold text-center">
                     <FadeUpOneByOneAnimation>

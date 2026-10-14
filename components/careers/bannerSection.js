@@ -12,7 +12,7 @@ const BannerSection = () => {
             src="/images/careers/careers.jpg"
             width={1601}
             height={726}
-            alt="Careers"
+            alt="Careers at PrimeIdea Ventures in Vadodara"
             className="h-full w-full object-cover"
           />
           <div className="main-section mx-auto 2xl:max-w-[1340px] xl:max-w-[1170px] lg:max-w-[1004px] px-4 flex justify-between absolute w-full top-[30%] left-[50%] translate-x-[-50%]">

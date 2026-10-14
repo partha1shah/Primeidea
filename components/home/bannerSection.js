@@ -30,41 +30,52 @@ const BannerSection = (props) => {
               : "flex flex-col min-h-0 md:min-h-[85vh]"
           }`}
         >
-          {!props.isMobileBanner && props.mainBannerImage ? (
-            <Image
-              src={props.mainBannerImage}
-              alt={
-                props.mainBannerAlt ||
-                props.mainTitle ||
-                "PrimeIdea Ventures — research-led wealth management in Vadodara"
-              }
-              fill
-              priority
-              fetchPriority="high"
-              sizes="100vw"
-              className="object-cover object-center"
-            />
-          ) : null}
-          {props.isMobileBanner && (
-            <>
-              <div
-                className="absolute inset-0 hidden sm:block bg-cover bg-center bg-no-repeat"
-                style={{
-                  backgroundImage: props.mainBannerImage
-                    ? `url(${props.mainBannerImage})`
-                    : undefined,
-                }}
+          {(() => {
+            const heroAlt =
+              props.mainBannerAlt ||
+              props.mainTitle ||
+              "PrimeIdea Ventures Vadodara office — research-led wealth management";
+            if (!props.mainBannerImage && !props.mainMobileBannerImage) return null;
+            if (props.isMobileBanner) {
+              return (
+                <>
+                  {props.mainBannerImage ? (
+                    <Image
+                      src={props.mainBannerImage}
+                      alt={heroAlt}
+                      fill
+                      priority
+                      fetchPriority="high"
+                      sizes="100vw"
+                      className="object-cover object-center hidden sm:block"
+                    />
+                  ) : null}
+                  {props.mainMobileBannerImage ? (
+                    <Image
+                      src={props.mainMobileBannerImage}
+                      alt={heroAlt}
+                      fill
+                      priority
+                      fetchPriority="high"
+                      sizes="100vw"
+                      className="object-cover object-center block sm:hidden"
+                    />
+                  ) : null}
+                </>
+              );
+            }
+            return props.mainBannerImage ? (
+              <Image
+                src={props.mainBannerImage}
+                alt={heroAlt}
+                fill
+                priority
+                fetchPriority="high"
+                sizes="100vw"
+                className="object-cover object-center"
               />
-              {props.mainMobileBannerImage && (
-                <div
-                  className="absolute inset-0 block sm:hidden bg-cover bg-center bg-no-repeat"
-                  style={{
-                    backgroundImage: `url(${props.mainMobileBannerImage})`,
-                  }}
-                />
-              )}
-            </>
-          )}
+            ) : null;
+          })()}
           <div
             className={`main-section relative z-[1] mx-auto 2xl:max-w-[1340px] xl:max-w-[1170px] lg:max-w-[1004px] px-4 flex justify-between flex-col sm:flex-row gap-6 sm:gap-8 w-full ${
               hasSubSection
@@ -147,7 +158,13 @@ const BannerSection = (props) => {
                 <div className="relative w-full aspect-[802/642]">
                   <Image
                     src={props.bannerRightImg}
-                    alt={props.mainTitle || ""}
+                    alt={
+                      props.bannerRightAlt ||
+                      props.mainBannerAlt ||
+                      (props.mainTitle
+                        ? `${props.mainTitle} — illustration`
+                        : "PrimeIdea Ventures research-led wealth management illustration")
+                    }
                     fill
                     priority
                     sizes="(max-width: 640px) 90vw, 693px"

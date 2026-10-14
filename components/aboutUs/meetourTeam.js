@@ -20,7 +20,7 @@ const MeetOurTeam = () => {
                     </FadeUpOneByOneAnimation>
                     <div className="flex flex-wrap mx-[-10px]">
                         <FadeUpOneByOneAnimation className="mb-4 md:mb-0 w-1/2 md:w-1/4 px-[10px] text-center">
-                            <Image src="/images/about-us/meet-our-team/1.png" width={314} height={447} alt="1" className="mb-2" />
+                            <Image src="/images/about-us/meet-our-team/1.png" width={314} height={447} alt="Aman Jeoy, Co-ordinator at PrimeIdea Ventures" className="mb-2" sizes="(max-width: 768px) 50vw, 314px" />
                             <h2 className="leading-[130%] text-xl xl:text-2xl font-semibold mb-1 xl:mb-2 text-[#222222]">
                                 Aman Jeoy
                             </h2>
@@ -29,7 +29,7 @@ const MeetOurTeam = () => {
                             </h3>
                         </FadeUpOneByOneAnimation>
                         <FadeUpOneByOneAnimation className="mb-4 md:mb-0 w-1/2 md:w-1/4 px-[10px] text-center">
-                            <Image src="/images/about-us/meet-our-team/2.png" width={314} height={447} alt="2" className="mb-2" />
+                            <Image src="/images/about-us/meet-our-team/2.png" width={314} height={447} alt="PrimeIdea Ventures consultation team member" className="mb-2" sizes="(max-width: 768px) 50vw, 314px" />
                             <h2 className="leading-[130%] text-xl xl:text-2xl font-semibold mb-1 xl:mb-2 text-[#222222]">
                                 Aman Jeoy
                             </h2>
@@ -38,7 +38,7 @@ const MeetOurTeam = () => {
                             </h3>
                         </FadeUpOneByOneAnimation>
                         <FadeUpOneByOneAnimation className="mb-4 md:mb-0 w-1/2 md:w-1/4 px-[10px] text-center">
-                            <Image src="/images/about-us/meet-our-team/3.png" width={314} height={447} alt="3" className="mb-2" />
+                            <Image src="/images/about-us/meet-our-team/3.png" width={314} height={447} alt="PrimeIdea Ventures consultation team member" className="mb-2" sizes="(max-width: 768px) 50vw, 314px" />
                             <h2 className="leading-[130%] text-xl xl:text-2xl font-semibold mb-1 xl:mb-2 text-[#222222]">
                                 Aman Jeoy
                             </h2>
@@ -47,7 +47,7 @@ const MeetOurTeam = () => {
                             </h3>
                         </FadeUpOneByOneAnimation>
                         <FadeUpOneByOneAnimation className="mb-4 md:mb-0 w-1/2 md:w-1/4 px-[10px] text-center">
-                            <Image src="/images/about-us/meet-our-team/4.png" width={314} height={447} alt="4" className="mb-2" />
+                            <Image src="/images/about-us/meet-our-team/4.png" width={314} height={447} alt="PrimeIdea Ventures consultation team member" className="mb-2" sizes="(max-width: 768px) 50vw, 314px" />
                             <h2 className="leading-[130%] text-xl xl:text-2xl font-semibold mb-1 xl:mb-2 text-[#222222]">
                                 Aman Jeoy
                             </h2>

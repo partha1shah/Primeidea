@@ -25,7 +25,7 @@ const FaqsSection = () => {
                       <span>
                         What is financial planning and why is it important?
                       </span>
-                      <Image src="/images/icons/circle-down-arrow.png" width={30} height={30} alt="Arrow" className="w-[24px] sm:w-[30px] h-[24px] sm:h-[30px] ml-2" />
+                      <Image src="/images/icons/circle-down-arrow.png" width={30} height={30} alt="" aria-hidden="true" className="w-[24px] sm:w-[30px] h-[24px] sm:h-[30px] ml-2" />
                     </h2>
                     <div className={`content mt-4 text-base md:text-lg max-w-full md:max-w-[85%] text-[#222222] ${activeTab === 0 ? 'block' : 'hidden'}`}>
                       <p>
@@ -40,7 +40,7 @@ const FaqsSection = () => {
                       <span>
                         How does PrimeIdea approach financial planning?
                       </span>
-                      <Image src="/images/icons/circle-down-arrow.png" width={30} height={30} alt="Arrow" className="w-[24px] sm:w-[30px] h-[24px] sm:h-[30px] ml-2" />
+                      <Image src="/images/icons/circle-down-arrow.png" width={30} height={30} alt="" aria-hidden="true" className="w-[24px] sm:w-[30px] h-[24px] sm:h-[30px] ml-2" />
                     </h2>
                     <div className={`content mt-4 text-base md:text-lg max-w-full md:max-w-[85%] text-[#222222] ${activeTab === 1 ? 'block' : 'hidden'}`}>
                       <p>
@@ -55,7 +55,7 @@ const FaqsSection = () => {
                       <span>
                       How can financial planning help me achieve my goals?
                       </span>
-                      <Image src="/images/icons/circle-down-arrow.png" width={30} height={30} alt="Arrow" className="w-[24px] sm:w-[30px] h-[24px] sm:h-[30px] ml-2" />
+                      <Image src="/images/icons/circle-down-arrow.png" width={30} height={30} alt="" aria-hidden="true" className="w-[24px] sm:w-[30px] h-[24px] sm:h-[30px] ml-2" />
                     </h2>
                     <div className={`content mt-4 text-base md:text-lg max-w-full md:max-w-[85%] text-[#222222] ${activeTab === 2 ? 'block' : 'hidden'}`}>
                       <p>
@@ -70,7 +70,7 @@ const FaqsSection = () => {
                       <span>
                         How do I choose the right investment options?
                       </span>
-                      <Image src="/images/icons/circle-down-arrow.png" width={30} height={30} alt="Arrow" className="w-[24px] sm:w-[30px] h-[24px] sm:h-[30px] ml-2" />
+                      <Image src="/images/icons/circle-down-arrow.png" width={30} height={30} alt="" aria-hidden="true" className="w-[24px] sm:w-[30px] h-[24px] sm:h-[30px] ml-2" />
                     </h2>
                     <div className={`content mt-4 text-base md:text-lg max-w-full md:max-w-[85%] text-[#222222] ${activeTab === 3 ? 'block' : 'hidden'}`}>
                       <p>
@@ -85,7 +85,7 @@ const FaqsSection = () => {
                       <span>
                         What is the difference between active and passive investing?
                       </span>
-                      <Image src="/images/icons/circle-down-arrow.png" width={30} height={30} alt="Arrow" className="w-[24px] sm:w-[30px] h-[24px] sm:h-[30px] ml-2" />
+                      <Image src="/images/icons/circle-down-arrow.png" width={30} height={30} alt="" aria-hidden="true" className="w-[24px] sm:w-[30px] h-[24px] sm:h-[30px] ml-2" />
                     </h2>
                     <div className={`content mt-4 text-base md:text-lg max-w-full md:max-w-[85%] text-[#222222] ${activeTab === 4 ? 'block' : 'hidden'}`}>
                       <p>
@@ -100,7 +100,7 @@ const FaqsSection = () => {
                       <span>
                         Can financial planning help in managing debt?
                       </span>
-                      <Image src="/images/icons/circle-down-arrow.png" width={30} height={30} alt="Arrow" className="w-[24px] sm:w-[30px] h-[24px] sm:h-[30px] ml-2" />
+                      <Image src="/images/icons/circle-down-arrow.png" width={30} height={30} alt="" aria-hidden="true" className="w-[24px] sm:w-[30px] h-[24px] sm:h-[30px] ml-2" />
                     </h2>
                     <div className={`content mt-4 text-base md:text-lg max-w-full md:max-w-[85%] text-[#222222] ${activeTab === 5 ? 'block' : 'hidden'}`}>
                       <p>

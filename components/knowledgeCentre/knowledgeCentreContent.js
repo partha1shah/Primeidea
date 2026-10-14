@@ -666,10 +666,10 @@ export default function KnowledgeCentreContent({ posts = [] }) {
                       <div className="relative aspect-[16/10] overflow-hidden bg-[#E8F4FB]">
                         <Image
                           src={imageUrl}
-                          alt=""
+                          alt={post.title || "PrimeIdea Knowledge Centre article"}
                           fill
-                          className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                           sizes="(max-width: 768px) 100vw, 33vw"
+                          className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                         />
                         <span className="absolute left-3 top-3 rounded-full bg-[#293C7D] px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider !text-white">
                           {category}

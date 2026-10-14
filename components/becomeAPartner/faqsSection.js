@@ -64,7 +64,7 @@ const FaqsSection = () => {
                                 <FadeUpOneByOneAnimation>
                                     <h2 className="flex items-center justify-between text-[18px] md:text-[20px] 2xl:text-[22px] font-semibold text-[#222222]">
                                         <span>{item.question}</span>
-                                        <Image src="/images/icons/circle-down-arrow.png" width={30} height={30} alt="Arrow" className="w-[24px] sm:w-[30px] h-[24px] sm:h-[30px] ml-2" />
+                                        <Image src="/images/icons/circle-down-arrow.png" width={30} height={30} alt="" aria-hidden="true" className="w-[24px] sm:w-[30px] h-[24px] sm:h-[30px] ml-2" />
                                     </h2>
                                     <div className={`content mt-4 text-base md:text-lg max-w-full md:max-w-[85%] text-[#222222] ${activeTab === index ? 'block' : 'hidden'}`}>
                                         <p>{item.answer}</p>

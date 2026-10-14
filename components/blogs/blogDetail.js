@@ -88,7 +88,7 @@ const BlogDetail = (props) => {
                         <PopoverGroup className="lg:flex lg:gap-x-12">
                             <Popover className="relative">
                                 <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900 outline-0">
-                                <Image src="/images/blogs/icons/share.png" width={24} height={24} className="opacity-60" alt="Share" />
+                                <Image src="/images/blogs/icons/share.png" width={24} height={24} className="opacity-60" alt="" aria-hidden="true" />
                                 </PopoverButton>
 
                                 <PopoverPanel
@@ -136,7 +136,19 @@ const BlogDetail = (props) => {
                 <div className="flex flex-col lg:flex-row lg:items-start lg:gap-8">
                     <div className="w-full lg:min-w-0 lg:flex-1 mb-[40px] lg:mb-0">
                         <div className="mb-4">
-                            <Image src={`${post?.featuredImage?.node.sourceUrl ? post?.featuredImage?.node.sourceUrl  : '/images/blogs/single-blog.jpg'}`} width={1920} height={600} alt="Single Blog" className="rounded-[10px]"/>
+                            <Image
+                              src={`${post?.featuredImage?.node.sourceUrl ? post?.featuredImage?.node.sourceUrl  : '/images/blogs/single-blog.jpg'}`}
+                              width={1920}
+                              height={600}
+                              alt={
+                                post?.featuredImage?.node?.altText ||
+                                post?.title ||
+                                "PrimeIdea Ventures research article"
+                              }
+                              sizes="(max-width: 1024px) 100vw, 900px"
+                              className="rounded-[10px]"
+                              priority
+                            />
                         </div>
                         <div className="single-blog-content">
                             <div dangerouslySetInnerHTML={{ __html: post.content}}></div>

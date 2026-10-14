@@ -28,7 +28,7 @@ const FaqsSection = () => {
                       <span>
                         What is research-based wealth management?
                       </span>
-                      <Image src="/images/icons/circle-down-arrow.png" width={30} height={30} alt="Arrow" className="w-[24px] sm:w-[30px] h-[24px] sm:h-[30px] ml-2" />
+                      <Image src="/images/icons/circle-down-arrow.png" width={30} height={30} alt="" aria-hidden="true" className="w-[24px] sm:w-[30px] h-[24px] sm:h-[30px] ml-2" />
                     </h2>
                     <div className={`content mt-4 text-base md:text-lg max-w-full md:max-w-[85%] text-[#222222] ${activeTab === 0 ? 'block' : 'hidden'}`}>
                       <p>
@@ -43,7 +43,7 @@ const FaqsSection = () => {
                       <span>
                         How it is different from traditional wealth management?
                       </span>
-                      <Image src="/images/icons/circle-down-arrow.png" width={30} height={30} alt="Arrow" className="w-[24px] sm:w-[30px] h-[24px] sm:h-[30px] ml-2" />
+                      <Image src="/images/icons/circle-down-arrow.png" width={30} height={30} alt="" aria-hidden="true" className="w-[24px] sm:w-[30px] h-[24px] sm:h-[30px] ml-2" />
                     </h2>
                     <div className={`content mt-4 text-base md:text-lg max-w-full md:max-w-[85%] text-[#222222] ${activeTab === 1 ? 'block' : 'hidden'}`}>
                       <p>
@@ -58,7 +58,7 @@ const FaqsSection = () => {
                       <span>
                         Who can benefit from wealth management services?
                       </span>
-                      <Image src="/images/icons/circle-down-arrow.png" width={30} height={30} alt="Arrow" className="w-[24px] sm:w-[30px] h-[24px] sm:h-[30px] ml-2" />
+                      <Image src="/images/icons/circle-down-arrow.png" width={30} height={30} alt="" aria-hidden="true" className="w-[24px] sm:w-[30px] h-[24px] sm:h-[30px] ml-2" />
                     </h2>
                     <div className={`content mt-4 text-base md:text-lg max-w-full md:max-w-[85%] text-[#222222] ${activeTab === 2 ? 'block' : 'hidden'}`}>
                       <p>
@@ -73,7 +73,7 @@ const FaqsSection = () => {
                       <span>
                         What types of investment products are included in wealth management?
                       </span>
-                      <Image src="/images/icons/circle-down-arrow.png" width={30} height={30} alt="Arrow" className="w-[24px] sm:w-[30px] h-[24px] sm:h-[30px] ml-2" />
+                      <Image src="/images/icons/circle-down-arrow.png" width={30} height={30} alt="" aria-hidden="true" className="w-[24px] sm:w-[30px] h-[24px] sm:h-[30px] ml-2" />
                     </h2>
                     <div className={`content mt-4 text-base md:text-lg max-w-full md:max-w-[85%] text-[#222222] ${activeTab === 3 ? 'block' : 'hidden'}`}>
                       <p>
@@ -88,7 +88,7 @@ const FaqsSection = () => {
                       <span>
                         Can research-based wealth management help with tax optimization?
                       </span>
-                      <Image src="/images/icons/circle-down-arrow.png" width={30} height={30} alt="Arrow" className="w-[24px] sm:w-[30px] h-[24px] sm:h-[30px] ml-2" />
+                      <Image src="/images/icons/circle-down-arrow.png" width={30} height={30} alt="" aria-hidden="true" className="w-[24px] sm:w-[30px] h-[24px] sm:h-[30px] ml-2" />
                     </h2>
                     <div className={`content mt-4 text-base md:text-lg max-w-full md:max-w-[85%] text-[#222222] ${activeTab === 4 ? 'block' : 'hidden'}`}>
                       <p>
@@ -103,7 +103,7 @@ const FaqsSection = () => {
                       <span>
                         How does it ensure long-term financial growth?
                       </span>
-                      <Image src="/images/icons/circle-down-arrow.png" width={30} height={30} alt="Arrow" className="w-[24px] sm:w-[30px] h-[24px] sm:h-[30px] ml-2" />
+                      <Image src="/images/icons/circle-down-arrow.png" width={30} height={30} alt="" aria-hidden="true" className="w-[24px] sm:w-[30px] h-[24px] sm:h-[30px] ml-2" />
                     </h2>
                     <div className={`content mt-4 text-base md:text-lg max-w-full md:max-w-[85%] text-[#222222] ${activeTab === 5 ? 'block' : 'hidden'}`}>
                       <p>

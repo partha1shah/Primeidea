@@ -95,7 +95,8 @@ const InsightsSection = (props) => {
                               src={item.featuredImage?.node.sourceUrl ? item.featuredImage?.node.sourceUrl : '/images/blogs/single-blog.jpg'}
                               width={132}
                               height={88}
-                              alt={item.title}
+                              alt={item.title || "PrimeIdea Ventures article"}
+                              sizes="132px"
                               className="object-contain rounded"
                             />
                             <h3 className="flex flex-col justify-center items-center mt-3 leading-[100%] text-sm md:text-base hidden">
@@ -123,7 +124,7 @@ const InsightsSection = (props) => {
                             </div>
                           </div>
                           <a href={`/blogs/${item.slug}`} className="ml-auto inline-flex justify-end items-baseline w-full lg:w-[36px]">
-                            <Image src="/images/blogs/right-arrow.png" width={36} height={36} alt="Arrow" 
+                            <Image src="/images/blogs/right-arrow.png" width={36} height={36} alt="" aria-hidden="true" 
                             className="w-[32px] sm:w-[36px] h-[32px] sm:h-[36px]"
                             />
                           </a>

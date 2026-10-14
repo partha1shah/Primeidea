@@ -24,7 +24,8 @@ const AboutInsurance = () => {
                   src="/images/icons/p.png"
                   width={110}
                   height={105}
-                  alt="PrimeIdea"
+                  alt=""
+                  aria-hidden="true"
                 />
               </FadeUpOneByOneAnimation>
             </div>
@@ -49,7 +50,7 @@ const AboutInsurance = () => {
                     src="/images/insurance/wealth-management/image.jpg"
                     width={387}
                     height={159}
-                    alt="1"
+                    alt="Illustration supporting this section"
                     className="w-full"
                   />
                   <h3 className="mb-[5px] sm:mb-[10px] mt-[10px] text-xl sm:text-2xl font-bold">
@@ -67,7 +68,7 @@ const AboutInsurance = () => {
                     src="/images/insurance/wealth-management/image1.jpg"
                     width={387}
                     height={159}
-                    alt="2"
+                    alt="Illustration supporting this section"
                     className="w-full"
                   />
                   <h3 className="mb-[5px] sm:mb-[10px] mt-[10px] text-xl sm:text-2xl font-bold">
@@ -85,7 +86,7 @@ const AboutInsurance = () => {
                     src="/images/insurance/wealth-management/image3.jpg"
                     width={387}
                     height={159}
-                    alt="3"
+                    alt="Illustration supporting this section"
                     className="w-full"
                   />
                   <h3 className="mb-[5px] sm:mb-[10px] mt-[10px] text-xl sm:text-2xl font-bold">

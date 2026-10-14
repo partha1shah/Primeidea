@@ -76,7 +76,7 @@ const TaxPlanning = () => {
                       src="/images/legacy-inheritance-planning/service/will.png"
                       width="331"
                       height="198"
-                      alt="1"
+                      alt="Illustration supporting this section"
                       className="max-w-[190px] object-contain ml-auto"
                     />
                   </div>

@@ -12,7 +12,7 @@ const BannerSection = () => {
             src="/images/become-a-partner/banner-bg.png"
             width={1601}
             height={726}
-            alt="Become A Partner"
+            alt="Become a PrimeIdea Ventures partner"
             className="h-full w-full object-cover"
           />
           <div className="main-section mx-auto 2xl:max-w-[1340px] xl:max-w-[1170px] lg:max-w-[1004px] px-4 flex justify-between absolute w-full top-[30%] left-[50%] translate-x-[-50%]">
@@ -41,7 +41,7 @@ const BannerSection = () => {
                     src="/images/icons/arrow-square-right.png"
                     width={21}
                     height={21}
-                    alt="Read All"
+                    alt="" aria-hidden="true"
                     className="ml-2"
                   />
                 </a> */}

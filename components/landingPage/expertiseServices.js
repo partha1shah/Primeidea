@@ -21,7 +21,8 @@ const ExpertiseSection = () => {
               src="/images/icons/p.png"
               width={110}
               height={105}
-              alt="PrimeIdea"
+              alt=""
+              aria-hidden="true"
             />
           </div>
         </div>

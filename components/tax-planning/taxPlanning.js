@@ -79,7 +79,7 @@ const TaxPlanning = () => {
                       src="/images/tax-planning/1.png"
                       width="331"
                       height="198"
-                      alt="1"
+                      alt="Illustration supporting this section"
                     />
                   </div>
                 </div>
@@ -93,7 +93,7 @@ const TaxPlanning = () => {
                         src="/images/tax-planning/invest-tax-saving/elss.png"
                         width={387}
                         height={159}
-                        alt="1"
+                        alt="Illustration supporting this section"
                       />
                       <h3 className="my-[10px] text-lg text-[#222222] font-bold">
                         Equity-Linked Savings Scheme (ELSS)
@@ -111,7 +111,7 @@ const TaxPlanning = () => {
                         src="/images/tax-planning/invest-tax-saving/ppf.png"
                         width={387}
                         height={159}
-                        alt="2"
+                        alt="Illustration supporting this section"
                       />
                       <h3 className="my-[10px] text-lg text-[#222222] font-bold">
                         Public Provident Fund (PPF)
@@ -129,7 +129,7 @@ const TaxPlanning = () => {
                         src="/images/tax-planning/invest-tax-saving/nps.png"
                         width={387}
                         height={159}
-                        alt="3"
+                        alt="Illustration supporting this section"
                       />
                       <h3 className="my-[10px] text-lg text-[#222222] font-bold">
                         National Pension System (NPS)
@@ -248,7 +248,7 @@ const TaxPlanning = () => {
                         src="/images/tax-planning/invest-tax-saving/service31.png"
                         width={387}
                         height={159}
-                        alt="1"
+                        alt="Illustration supporting this section"
                       />
                       <h3 className="my-[10px] text-lg text-[#222222] font-bold">
                         House Rent Allowance (HRA)

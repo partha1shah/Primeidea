@@ -34,7 +34,14 @@ const BannerSection = (props) => {
             src={props.mainBannerImage?props.mainBannerImage:''}
             width={1920}
             height={1280}
-            alt={props.mainTitle}
+            alt={
+              props.mainBannerAlt ||
+              props.mainTitle ||
+              "PrimeIdea Ventures — research-led wealth management in Vadodara"
+            }
+            priority
+            fetchPriority="high"
+            sizes="100vw"
             className={`w-full object-cover ${
               hasSubSection
                 ? `h-full ${props.isMobileBanner ? "hidden sm:block" : ""}`
@@ -46,7 +53,14 @@ const BannerSection = (props) => {
             src={props.mainMobileBannerImage?props.mainMobileBannerImage:''}
             width={550}
             height={920}
-            alt={props.mainTitle}
+            alt={
+              props.mainBannerAlt ||
+              props.mainTitle ||
+              "PrimeIdea Ventures — research-led wealth management in Vadodara"
+            }
+            priority
+            fetchPriority="high"
+            sizes="100vw"
             className={`w-full object-cover ${props.isMobileBanner ? 'block sm:hidden' : ''} ${
               hasSubSection ? "h-full" : "absolute inset-0 h-full -z-10"
             }`}
@@ -152,7 +166,13 @@ const BannerSection = (props) => {
                 <div className="relative w-full aspect-[802/642]">
                   <Image
                     src={props.bannerRightImg}
-                    alt={props.mainTitle || ""}
+                    alt={
+                      props.bannerRightAlt ||
+                      props.mainBannerAlt ||
+                      (props.mainTitle
+                        ? `${props.mainTitle} — illustration`
+                        : "PrimeIdea Ventures service illustration")
+                    }
                     fill
                     priority
                     sizes="(max-width: 640px) 90vw, 693px"

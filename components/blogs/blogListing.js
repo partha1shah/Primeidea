@@ -81,7 +81,8 @@ export default function BlogListing({ posts, categoriesList = [] }) {
               src="/images/blogs/blog.png"
               width={258}
               height={100}
-              alt="Blog"
+              alt=""
+              aria-hidden="true"
               className="max-w-[240px] mx-auto mb-4"
             />
             <h2 className="text-3xl font-semibold text-center mb-3">Blogs</h2>
@@ -192,7 +193,7 @@ export default function BlogListing({ posts, categoriesList = [] }) {
                     <div className="relative h-[72px] w-[96px] shrink-0 overflow-hidden rounded-xl bg-[#E8F4FB] md:h-[88px] md:w-[132px]">
                       <Image
                         src={imageUrl}
-                        alt=""
+                        alt={item.title || "PrimeIdea Ventures blog article"}
                         fill
                         sizes="132px"
                         className="object-cover"

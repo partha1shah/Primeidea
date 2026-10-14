@@ -10,7 +10,7 @@ const BannerSection = () => {
             src="/images/landing/banner.png"
             width={1920}
             height={1280}
-            alt="Landing Page"
+            alt="PrimeIdea Ventures landing page hero"
             className="h-full w-full object-cover"
           />
           <div className="main-section mx-auto 2xl:max-w-[1340px] xl:max-w-[1170px] lg:max-w-[1004px] px-4 flex justify-between absolute w-full top-[20%] left-[50%] translate-x-[-50%]">
@@ -32,7 +32,7 @@ const BannerSection = () => {
                   src="/images/icons/arrow-square-right.png"
                   width={21}
                   height={21}
-                  alt="Read All"
+                  alt="" aria-hidden="true"
                   className="ml-2"
                 />
               </a>
@@ -42,7 +42,7 @@ const BannerSection = () => {
                 src="/images/landing/banner-right.png"
                 width={802}
                 height={642}
-                alt="landing"
+                alt="PrimeIdea Ventures service illustration"
               />
             </div>
           </div>
