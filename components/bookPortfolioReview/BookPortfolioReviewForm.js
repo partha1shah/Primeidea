@@ -10,9 +10,12 @@ import {
   CheckCircleIcon,
   VideoCameraIcon,
 } from "@heroicons/react/24/outline";
+import TurnstileWidget from "@/components/TurnstileWidget";
+import { CF7_FORM_IDS, submitCf7Form } from "@/lib/cf7Submit";
+import { useTurnstile } from "@/lib/useTurnstile";
 
 /** Dedicated CF7 form — must never fall back to Contact (48). */
-const CF7_BOOK_PORTFOLIO_REVIEW_ID = "421";
+const CF7_BOOK_PORTFOLIO_REVIEW_ID = String(CF7_FORM_IDS.bookPortfolioReview);
 
 const SERVICES = [
   "Portfolio Review",
@@ -121,6 +124,7 @@ export default function BookPortfolioReviewForm({
   });
   const [products, setProducts] = useState([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const turnstile = useTurnstile();
 
   const toggleProduct = (item) => {
     setProducts((current) =>
@@ -160,6 +164,11 @@ export default function BookPortfolioReviewForm({
       return;
     }
 
+    if (!turnstile.token) {
+      notyf.error("Please complete the security check before submitting.");
+      return;
+    }
+
     setIsSubmitting(true);
 
     const meetingMode =
@@ -167,30 +176,6 @@ export default function BookPortfolioReviewForm({
     // Keep en-dash — CF7 select options use U+2013, not ASCII hyphen.
     const preferredTime = String(formData.preferredTime).trim();
 
-    const endpoint =
-      "https://admin.primeidea.in/wp-json/contact-form-7/v1/contact-forms/421/feedback";
-
-    const body = new FormData();
-    body.append("_wpcf7", CF7_BOOK_PORTFOLIO_REVIEW_ID);
-    body.append("_wpcf7_version", "5.7.7");
-    body.append("_wpcf7_locale", "en_US");
-    body.append(
-      "_wpcf7_unit_tag",
-      `wpcf7-f${CF7_BOOK_PORTFOLIO_REVIEW_ID}-p${Date.now()}`
-    );
-    body.append("_wpcf7_container_post", "0");
-    body.append("fullName", formData.fullName);
-    body.append("city", formData.city);
-    body.append("email", formData.email);
-    body.append("phone", formData.phone);
-    body.append("service", formData.service);
-    body.append("preferredDate", formData.preferredDate);
-    body.append("preferredTime", preferredTime);
-    body.append("meetingMode", meetingMode);
-    body.append("whatsappConfirm", formData.whatsappConfirm ? "Yes" : "No");
-    body.append("portfolioSize", formData.portfolioSize);
-    products.forEach((product) => body.append("products", product));
-    body.append("concern", formData.concern);
     // Form 421 already mails [notes]. Size, products, and concern are written
     // there so the booking email carries them even if WordPress has no extra tags.
     const briefing = [
@@ -201,19 +186,29 @@ export default function BookPortfolioReviewForm({
     ]
       .filter(Boolean)
       .join("\n");
-    body.append("notes", briefing);
 
     try {
-      const response = await fetch(endpoint, {
-        method: "POST",
-        body,
-        headers: { Accept: "application/json" },
-        mode: "cors",
-      });
+      const result = await submitCf7Form(
+        CF7_BOOK_PORTFOLIO_REVIEW_ID,
+        {
+          fullName: formData.fullName,
+          city: formData.city,
+          email: formData.email,
+          phone: formData.phone,
+          service: formData.service,
+          preferredDate: formData.preferredDate,
+          preferredTime,
+          meetingMode,
+          whatsappConfirm: formData.whatsappConfirm ? "Yes" : "No",
+          portfolioSize: formData.portfolioSize,
+          products,
+          concern: formData.concern,
+          notes: briefing,
+        },
+        { turnstileToken: turnstile.token }
+      );
 
-      const data = await response.json().catch(() => null);
-
-      if (data?.status === "mail_sent") {
+      if (result.ok) {
         pushConversionEvent({
           service: formData.service,
           meeting_mode: formData.meetingMode,
@@ -235,18 +230,13 @@ export default function BookPortfolioReviewForm({
         return;
       }
 
-      const invalid =
-        Array.isArray(data?.invalid_fields) && data.invalid_fields.length
-          ? data.invalid_fields.map((f) => f.message || f.field).join(" ")
-          : "";
-
+      turnstile.reset();
       notyf.error(
-        invalid ||
-          data?.message ||
-          "There was an error booking your review. Please try again."
+        result.message || "There was an error booking your review. Please try again."
       );
     } catch (error) {
       console.error("Booking submission error:", error);
+      turnstile.reset();
       notyf.error("There was an error booking your review. Please try again.");
     } finally {
       setIsSubmitting(false);
@@ -541,9 +531,15 @@ export default function BookPortfolioReviewForm({
         />
       </div>
 
+      <TurnstileWidget
+        onToken={turnstile.onToken}
+        resetKey={turnstile.resetKey}
+        className="min-h-[65px]"
+      />
+
       <button
         type="submit"
-        disabled={isSubmitting}
+        disabled={isSubmitting || !turnstile.token}
         className="w-full rounded-xl bg-[#FFC300] px-5 py-4 text-base font-bold text-[#232D63] hover:bg-[#293C7D] hover:!text-white transition-colors disabled:opacity-60"
       >
         {isSubmitting ? "Booking…" : "Confirm booking request →"}

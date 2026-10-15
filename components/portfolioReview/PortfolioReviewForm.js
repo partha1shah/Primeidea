@@ -4,7 +4,9 @@ import { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Notyf } from "notyf";
 import { ArrowUpTrayIcon, DocumentArrowUpIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import TurnstileWidget from "@/components/TurnstileWidget";
 import { CF7_FORM_IDS, pushLeadEvent, submitCf7Form } from "@/lib/cf7Submit";
+import { useTurnstile } from "@/lib/useTurnstile";
 
 const PRODUCT_OPTIONS = [
   "Mutual funds",
@@ -52,6 +54,7 @@ export default function PortfolioReviewForm() {
   const [isDragging, setIsDragging] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState({ success: false, message: "" });
+  const turnstile = useTurnstile();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -95,21 +98,30 @@ export default function PortfolioReviewForm() {
       return;
     }
 
+    if (!turnstile.token) {
+      notyf.error("Please complete the security check before submitting.");
+      return;
+    }
+
     setIsSubmitting(true);
     setSubmitStatus({ success: false, message: "" });
 
     try {
-      const result = await submitCf7Form(CF7_FORM_IDS.portfolioReview, {
-        fullName: formData.fullName,
-        city: formData.city,
-        email: formData.email,
-        phone: formData.phone,
-        portfolioSize: formData.portfolioSize,
-        callbackTime: formData.callbackTime,
-        products,
-        concern: formData.concern,
-        portfolio: file || undefined,
-      });
+      const result = await submitCf7Form(
+        CF7_FORM_IDS.portfolioReview,
+        {
+          fullName: formData.fullName,
+          city: formData.city,
+          email: formData.email,
+          phone: formData.phone,
+          portfolioSize: formData.portfolioSize,
+          callbackTime: formData.callbackTime,
+          products,
+          concern: formData.concern,
+          portfolio: file || undefined,
+        },
+        { turnstileToken: turnstile.token }
+      );
 
       if (result.ok) {
         pushLeadEvent("portfolio_review_form_submit", {
@@ -127,10 +139,12 @@ export default function PortfolioReviewForm() {
         });
         setProducts([]);
         setFile(null);
+        turnstile.reset();
         e.target.reset();
         router.push("/portfolio-review/thank-you");
         return;
       } else {
+        turnstile.reset();
         const message =
           result.message || "There was an error sending your request. Please try again.";
         setSubmitStatus({ success: false, message });
@@ -138,6 +152,7 @@ export default function PortfolioReviewForm() {
       }
     } catch (error) {
       console.error("Submission error:", error);
+      turnstile.reset();
       const message = "There was an error sending your request. Please try again.";
       setSubmitStatus({ success: false, message });
       notyf.error(message);
@@ -364,6 +379,12 @@ export default function PortfolioReviewForm() {
         </p>
       </div>
 
+      <TurnstileWidget
+        onToken={turnstile.onToken}
+        resetKey={turnstile.resetKey}
+        className="min-h-[65px]"
+      />
+
       {submitStatus.message && (
         <div
           className={`p-3 rounded-xl text-sm ${
@@ -376,7 +397,7 @@ export default function PortfolioReviewForm() {
 
       <button
         type="submit"
-        disabled={isSubmitting}
+        disabled={isSubmitting || !turnstile.token}
         className="w-full rounded-xl bg-[#FFC300] px-6 py-3.5 text-base font-bold text-[#232D63] hover:bg-[#293C7D] hover:text-white transition-colors disabled:opacity-50"
       >
         {isSubmitting ? "Submitting..." : "Upload Portfolio for Review"}

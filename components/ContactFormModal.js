@@ -2,6 +2,9 @@
 import { useState } from "react";
 import { Notyf } from 'notyf';
 import 'notyf/notyf.min.css';
+import TurnstileWidget from "@/components/TurnstileWidget";
+import { CF7_FORM_IDS, submitCf7Form } from "@/lib/cf7Submit";
+import { useTurnstile } from "@/lib/useTurnstile";
 
 const ContactFormModal = ({ isOpen, onClose, formTitle }) => {
   const [formData, setFormData] = useState({
@@ -12,6 +15,7 @@ const ContactFormModal = ({ isOpen, onClose, formTitle }) => {
     description: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const turnstile = useTurnstile();
 
   const handleChange = (e) => {
     setFormData({
@@ -36,42 +40,30 @@ const ContactFormModal = ({ isOpen, onClose, formTitle }) => {
       return;
     }
 
+    if (!turnstile.token) {
+      notyf.error('Please complete the security check before submitting.');
+      return;
+    }
+
     setIsSubmitting(true);
 
-    const formDataObj = new FormData();
-    formDataObj.append('_wpcf7', '48');
-    formDataObj.append('_wpcf7_version', '5.7.7');
-    formDataObj.append('_wpcf7_locale', 'en_US');
-    formDataObj.append('_wpcf7_unit_tag', `wpcf7-f48-p${Date.now()}`);
-    formDataObj.append('_wpcf7_container_post', '0');
-    formDataObj.append('fullName', formData.fullName);
-    formDataObj.append('city', formData.city);
-    formDataObj.append('email', formData.email);
-    formDataObj.append('phone', formData.phone);
-    formDataObj.append('description', formData.description);
-
     try {
-      const path = 'https://admin.primeidea.in';
-      const response = await fetch(`${path}/wp-json/contact-form-7/v1/contact-forms/48/feedback`, {
-        method: 'POST',
-        body: formDataObj,
-        headers: { 'Accept': 'application/json' },
-        mode: 'cors',
+      const result = await submitCf7Form(CF7_FORM_IDS.contact, formData, {
+        turnstileToken: turnstile.token,
       });
 
-      if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-      
-      const data = await response.json();
-
-      if (data.status === 'mail_sent') {
+      if (result.ok) {
         notyf.success('Thank you for your message. We will get back to you soon!');
         setFormData({ fullName: '', city: '', email: '', phone: '', description: '' });
+        turnstile.reset();
         onClose();
       } else {
-        throw new Error(data.message || 'Submission failed');
+        turnstile.reset();
+        notyf.error(result.message || 'There was an error sending your message. Please try again.');
       }
     } catch (error) {
       console.error('Submission error:', error);
+      turnstile.reset();
       notyf.error('There was an error sending your message. Please try again.');
     } finally {
       setIsSubmitting(false);
@@ -173,9 +165,16 @@ const ContactFormModal = ({ isOpen, onClose, formTitle }) => {
               ></textarea>
             </div>
 
+            <TurnstileWidget
+              onToken={turnstile.onToken}
+              resetKey={turnstile.resetKey}
+              theme="dark"
+              className="min-h-[65px]"
+            />
+
             <button 
               type="submit"
-              disabled={isSubmitting}
+              disabled={isSubmitting || !turnstile.token}
               className="w-full h-12 mt-8 text-[#14606E] bg-white rounded-xl
                 disabled:opacity-50 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5
                 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 font-medium text-lg

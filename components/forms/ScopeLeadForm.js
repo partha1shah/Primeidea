@@ -4,7 +4,9 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Notyf } from "notyf";
 import "notyf/notyf.min.css";
+import TurnstileWidget from "@/components/TurnstileWidget";
 import { pushLeadEvent, submitCf7Form } from "@/lib/cf7Submit";
+import { useTurnstile } from "@/lib/useTurnstile";
 
 const fieldClass =
   "block w-full rounded-xl border border-[#D0E0EC] bg-[#F8FCFF] px-4 py-3.5 text-[15px] md:text-base font-medium text-[#2D2D2D] outline-none transition-all focus:border-[#293C7D] focus:bg-white focus:ring-4 focus:ring-[#293C7D]/10";
@@ -43,6 +45,7 @@ export default function ScopeLeadForm({
 
   const [formData, setFormData] = useState(initialState);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const turnstile = useTurnstile();
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -82,23 +85,33 @@ export default function ScopeLeadForm({
       }
     }
 
+    if (!turnstile.token) {
+      notyf.error("Please complete the security check before submitting.");
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
-      const result = await submitCf7Form(formId, formData);
+      const result = await submitCf7Form(formId, formData, {
+        turnstileToken: turnstile.token,
+      });
       if (result.ok) {
         pushLeadEvent(eventName, { form: String(title), form_id: formId });
         setFormData(initialState);
+        turnstile.reset();
         if (thankYouPath) {
           router.push(thankYouPath);
           return;
         }
         notyf.success(successMessage);
       } else {
+        turnstile.reset();
         notyf.error(result.message);
       }
     } catch (error) {
       console.error("Lead form submission error:", error);
+      turnstile.reset();
       notyf.error("There was an error sending your request. Please try again.");
     } finally {
       setIsSubmitting(false);
@@ -287,9 +300,15 @@ export default function ScopeLeadForm({
                 />
               </div>
 
+              <TurnstileWidget
+                onToken={turnstile.onToken}
+                resetKey={turnstile.resetKey}
+                className="min-h-[65px]"
+              />
+
               <button
                 type="submit"
-                disabled={isSubmitting}
+                disabled={isSubmitting || !turnstile.token}
                 className="inline-flex w-full items-center justify-center rounded-xl bg-[#293C7D] px-5 py-3.5 text-base font-bold text-white transition-colors hover:bg-[#232D63] disabled:opacity-50"
               >
                 {isSubmitting ? "Submitting…" : submitLabel}

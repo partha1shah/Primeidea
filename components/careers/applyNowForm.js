@@ -3,7 +3,9 @@ import { useState } from "react";
 import { usePathname } from 'next/navigation';
 import { Notyf } from 'notyf';
 import 'notyf/notyf.min.css';
-import { convertBase64 } from '@/lib/convertBase64';
+import TurnstileWidget from "@/components/TurnstileWidget";
+import { CF7_FORM_IDS, submitCf7Form } from "@/lib/cf7Submit";
+import { useTurnstile } from "@/lib/useTurnstile";
 
 const ApplyNowForm = ({jobOpeningName}) => {
     const pathname = usePathname();
@@ -17,6 +19,7 @@ const ApplyNowForm = ({jobOpeningName}) => {
         cv: null
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const turnstile = useTurnstile();
 
     const handleChange = (e) => {
         if (e.target.type === 'file') {
@@ -39,50 +42,33 @@ const ApplyNowForm = ({jobOpeningName}) => {
             duration: 5000,
         });
 
-        // Add position to required fields validation
         if (!formData.fullName || !formData.email || !formData.phone || !formData.cv || (isSubmitResumePage && !formData.position)) {
             notyf.error('Please fill in all required fields');
+            return;
+        }
+
+        if (!turnstile.token) {
+            notyf.error('Please complete the security check before submitting.');
             return;
         }
 
         setIsSubmitting(true);
 
         try {
-            const formDataObj = new FormData();
-            formDataObj.append('_wpcf7', '109');
-            formDataObj.append('_wpcf7_version', '5.7.7');
-            formDataObj.append('_wpcf7_locale', 'en_US');
-            formDataObj.append('_wpcf7_unit_tag', `wpcf7-f109-p${Date.now()}`);
-            formDataObj.append('_wpcf7_container_post', '0');
-            
-            // Use the correct field names and values
-            formDataObj.append('fullName', formData.fullName);
-            formDataObj.append('email', formData.email);
-            formDataObj.append('phone', formData.phone);
-            // Use formData.position for submit-resume page, otherwise use jobOpeningName
-            formDataObj.append('position', isSubmitResumePage ? formData.position : (jobOpeningName || ''));
-            
-            if (formData.cv) {
-                formDataObj.append('cv', formData.cv, formData.cv.name);
-            }
-
-            const path = 'https://admin.primeidea.in';
-            const response = await fetch(`${path}/wp-json/contact-form-7/v1/contact-forms/109/feedback`, {
-                method: 'POST',
-                body: formDataObj,
-                headers: {
-                    'Accept': 'application/json',
+            const result = await submitCf7Form(
+                CF7_FORM_IDS.resume,
+                {
+                    fullName: formData.fullName,
+                    email: formData.email,
+                    phone: formData.phone,
+                    position: isSubmitResumePage ? formData.position : (jobOpeningName || ''),
+                    cv: formData.cv,
                 },
-                mode: 'cors',
-            });
+                { turnstileToken: turnstile.token }
+            );
 
-            const data = await response.json();
-
-            // Contact Form 7 sometimes returns status 500 but still processes the form
-            // Check if we received any kind of response from the server
-            if (data) {
+            if (result.ok) {
                 notyf.success('Thank you for your application. We will get back to you soon!');
-                // Reset form
                 setFormData({
                     fullName: '',
                     email: '',
@@ -90,7 +76,7 @@ const ApplyNowForm = ({jobOpeningName}) => {
                     position: '',
                     cv: null
                 });
-                // Reset file input
+                turnstile.reset();
                 const fileInput = document.getElementById('cv');
                 if (fileInput) {
                     fileInput.value = '';
@@ -98,13 +84,12 @@ const ApplyNowForm = ({jobOpeningName}) => {
                 return;
             }
 
-            throw new Error('Failed to submit form');
+            turnstile.reset();
+            notyf.error(result.message || 'There was an error sending your application. Please try again.');
         } catch (error) {
             console.error('Submission error:', error);
-            // Don't show error if we already showed success message
-            if (!document.getElementById('cv').value === '') {
-                notyf.error('There was an error sending your application. Please try again.');
-            }
+            turnstile.reset();
+            notyf.error('There was an error sending your application. Please try again.');
         } finally {
             setIsSubmitting(false);
         }
@@ -168,9 +153,14 @@ const ApplyNowForm = ({jobOpeningName}) => {
                         className="w-full p-3 border-2 border-[#8a8a8a] rounded-lg font-medium text-gray-800 focus:border-[#0C2D48] outline-none transition-all bg-transparent file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-medium file:bg-[#0C2D48] file:text-white hover:file:bg-[#0a2339]"
                     />
                 </div>
+                <TurnstileWidget
+                    onToken={turnstile.onToken}
+                    resetKey={turnstile.resetKey}
+                    className="min-h-[65px]"
+                />
                 <button
                     type="submit"
-                    disabled={isSubmitting}
+                    disabled={isSubmitting || !turnstile.token}
                     className="w-full bg-[#0C2D48] text-white py-3.5 rounded-lg font-semibold hover:bg-[#0a2339] transition-colors duration-300 mt-8 text-lg disabled:opacity-50"
                 >
                     {isSubmitting ? (
