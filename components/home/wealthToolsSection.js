@@ -12,6 +12,7 @@ import {
   PresentationChartLineIcon,
   ScaleIcon,
   HomeModernIcon,
+  FireIcon,
 } from "@heroicons/react/24/outline";
 
 const tools = [
@@ -32,6 +33,12 @@ const tools = [
     title: "Retirement Corpus",
     description: "Approximate the corpus needed for retirement income goals and planning gaps.",
     Icon: HomeModernIcon,
+  },
+  {
+    id: "fire",
+    title: "FIRE Calculator",
+    description: "Estimate a financial-independence corpus, funding gap, and monthly investment need.",
+    Icon: FireIcon,
   },
   {
     id: "education",

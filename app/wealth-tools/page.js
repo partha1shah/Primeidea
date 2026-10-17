@@ -23,9 +23,9 @@ const faqs = [
   {
     question: "What are PrimeIdea Wealth Tools?",
     answer:
-      "They are free planning calculators for SIP growth, lumpsum value, retirement corpus, education goals, insurance need, asset allocation, emergency funds, SWP, CAGR/XIRR, and EMI versus investment trade-offs. Outputs are illustrative estimates only.",
+      "They are free planning calculators for SIP growth, lumpsum value, retirement corpus, FIRE (financial independence), education goals, insurance need, asset allocation, emergency funds, SWP, CAGR/XIRR, and EMI versus investment trade-offs. Outputs are illustrative estimates only.",
     plainText:
-      "They are free planning calculators for SIP growth, lumpsum value, retirement corpus, education goals, insurance need, asset allocation, emergency funds, SWP, CAGR/XIRR, and EMI versus investment trade-offs. Outputs are illustrative estimates only.",
+      "They are free planning calculators for SIP growth, lumpsum value, retirement corpus, FIRE (financial independence), education goals, insurance need, asset allocation, emergency funds, SWP, CAGR/XIRR, and EMI versus investment trade-offs. Outputs are illustrative estimates only.",
   },
   {
     question: "Do calculator results guarantee returns or corpus size?",
@@ -67,9 +67,9 @@ const faqs = [
 export const metadata = {
   title: "Wealth Tools",
   description:
-    "PrimeIdea Ventures Wealth Tools — SIP, lumpsum, retirement corpus, education, insurance need, asset allocation, emergency fund, SWP, CAGR/XIRR, and EMI vs investment calculators. Illustrative estimates only. Research process",
+    "PrimeIdea Ventures Wealth Tools — SIP, lumpsum, retirement corpus, FIRE, education, insurance need, asset allocation, emergency fund, SWP, CAGR/XIRR, and EMI vs investment calculators. Illustrative estimates only. Research process",
   keywords:
-    "wealth tools, SIP calculator, retirement corpus calculator, SWP calculator, portfolio planning tools Vadodara, PrimeIdea Ventures",
+    "wealth tools, SIP calculator, retirement corpus calculator, FIRE calculator, SWP calculator, portfolio planning tools Vadodara, PrimeIdea Ventures",
   author: "Partha Shah",
   robots: "index, follow",
   openGraph: {

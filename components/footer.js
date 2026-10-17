@@ -44,6 +44,8 @@ const EXPLORE_LINKS = [
   { href: "/portfolio-review", label: "Portfolio Review" },
   { href: "/book-portfolio-review", label: "Book Portfolio Review" },
   { href: "/wealth-tools", label: "Wealth Tools" },
+  { href: "/risk-assessment", label: "Risk Assessment" },
+  { href: "/financial-profile", label: "Financial Profile" },
   { href: "/knowledge-centre", label: "Knowledge Centre" },
   { href: "/comparisons", label: "Comparisons" },
   { href: "/research-reports", label: "Research Reports" },

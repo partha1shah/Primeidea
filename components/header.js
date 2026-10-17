@@ -136,6 +136,16 @@ const serviceGroups = [
         description: "Efficiency across your investments",
         href: "/tax-planning-savings",
       },
+      {
+        name: "Risk Assessment",
+        description: "Indicative risk profile for suitability discussion",
+        href: "/risk-assessment",
+      },
+      {
+        name: "Financial Profile",
+        description: "Structured goals, holdings, and succession questionnaire",
+        href: "/financial-profile",
+      },
     ],
   },
 ];

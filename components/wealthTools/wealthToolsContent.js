@@ -14,6 +14,7 @@ import {
   ChevronDownIcon,
   ChevronLeftIcon,
   ChevronRightIcon,
+  FireIcon,
   HomeModernIcon,
   PresentationChartLineIcon,
   ScaleIcon,
@@ -31,6 +32,7 @@ import {
   calcChildEducation,
   calcEmiVsInvestment,
   calcEmergencyFund,
+  calcFire,
   calcInsuranceNeed,
   calcLumpsumFv,
   calcRetirementCorpus,
@@ -59,6 +61,12 @@ export const WEALTH_TOOLS = [
     title: "Retirement Corpus",
     short: "Corpus needed for retirement spend",
     Icon: HomeModernIcon,
+  },
+  {
+    id: "fire",
+    title: "FIRE Calculator",
+    short: "Financial independence & early retirement",
+    Icon: FireIcon,
   },
   {
     id: "education",
@@ -277,6 +285,237 @@ function RetirementCalculator() {
       <NumberField id="ret-inflation" label="Assumed inflation" value={inflationPct} onChange={setInflationPct} min={0} max={15} step={0.5} suffix="%" />
       <NumberField id="ret-swr" label="Withdrawal rate assumption" value={withdrawalRatePct} onChange={setWithdrawalRatePct} min={2} max={8} step={0.25} suffix="%" hint="Common planning range is about 3–5%. Higher rates raise sequence-of-returns risk." />
       <NumberField id="ret-existing" label="Existing retirement corpus" value={existingCorpus} onChange={setExistingCorpus} min={0} step={50000} suffix="₹" />
+    </CalculatorShell>
+  );
+}
+
+function FireCalculator() {
+  const [currentAge, setCurrentAge] = useState(35);
+  const [retirementAge, setRetirementAge] = useState(50);
+  const [lifeExpectancy, setLifeExpectancy] = useState(90);
+  const [monthlyExpenses, setMonthlyExpenses] = useState(50000);
+  const [currentSavings, setCurrentSavings] = useState(2000000);
+  const [currentSIP, setCurrentSIP] = useState(25000);
+  const [retirementIncome, setRetirementIncome] = useState(0);
+  const [preReturn, setPreReturn] = useState(10);
+  const [postReturn, setPostReturn] = useState(7);
+  const [inflation, setInflation] = useState(6);
+  const [lifestyle, setLifestyle] = useState("comfortable");
+  const [comfortRate, setComfortRate] = useState(4);
+
+  const result = useMemo(
+    () =>
+      calcFire({
+        currentAge,
+        retirementAge,
+        lifeExpectancy,
+        monthlyExpenses,
+        currentSavings,
+        currentSIP,
+        retirementIncome,
+        preReturn,
+        postReturn,
+        inflation,
+        lifestyle,
+        comfortRate,
+      }),
+    [
+      currentAge,
+      retirementAge,
+      lifeExpectancy,
+      monthlyExpenses,
+      currentSavings,
+      currentSIP,
+      retirementIncome,
+      preReturn,
+      postReturn,
+      inflation,
+      lifestyle,
+      comfortRate,
+    ]
+  );
+
+  const fundingLabel =
+    result.fundingRatioPercent === null
+      ? "Not applicable"
+      : formatPercent(result.fundingRatioPercent, 1);
+
+  return (
+    <CalculatorShell
+      title="FIRE Calculator"
+      explanation="Estimate a financial-independence corpus from today’s expenses, savings, and monthly investments — then see the core target, projected wealth, and any extra SIP needed. FIRE means Financial Independence, Retire Early; the same model works for conventional retirement. Figures are educational estimates, not forecasts."
+      results={
+        <ResultCard
+          title="Illustrative result"
+          rows={[
+            {
+              label: "Core FIRE target",
+              value: formatInr(result.coreCorpus),
+              emphasize: true,
+            },
+            {
+              label: "Projected wealth at retirement",
+              value: formatInr(result.projectedWealth),
+            },
+            {
+              label:
+                result.coreShortfall > 0
+                  ? "Core funding shortfall"
+                  : "Projected surplus over core",
+              value: formatInr(
+                result.coreShortfall > 0
+                  ? result.coreShortfall
+                  : result.coreSurplus
+              ),
+            },
+            {
+              label: "Total monthly investment needed",
+              value:
+                result.requiredTotalSIP === null
+                  ? "Retiring now"
+                  : formatInr(result.requiredTotalSIP),
+            },
+            {
+              label: "Extra monthly investment",
+              value:
+                result.requiredExtraSIP === null
+                  ? "Capital needed"
+                  : formatInr(result.requiredExtraSIP),
+            },
+            { label: "Projected core funding", value: fundingLabel },
+            {
+              label: "Coast FIRE (savings needed today)",
+              value: formatInr(result.coastCorpus),
+            },
+            {
+              label: "Higher planning benchmark",
+              value: formatInr(result.planningBenchmark),
+            },
+          ]}
+        />
+      }
+    >
+      <NumberField
+        id="fire-age"
+        label="Current age"
+        value={currentAge}
+        onChange={setCurrentAge}
+        min={18}
+        max={100}
+        suffix="yrs"
+      />
+      <NumberField
+        id="fire-retire"
+        label="Target retirement age"
+        value={retirementAge}
+        onChange={setRetirementAge}
+        min={18}
+        max={110}
+        suffix="yrs"
+        hint="Use your current age if you are retiring now."
+      />
+      <NumberField
+        id="fire-life"
+        label="Plan until age"
+        value={lifeExpectancy}
+        onChange={setLifeExpectancy}
+        min={19}
+        max={120}
+        suffix="yrs"
+        hint="A planning horizon, not a prediction of lifespan."
+      />
+      <NumberField
+        id="fire-expense"
+        label="Monthly household expenses today"
+        value={monthlyExpenses}
+        onChange={setMonthlyExpenses}
+        min={0}
+        step={1000}
+        suffix="₹"
+      />
+      <NumberField
+        id="fire-savings"
+        label="Retirement savings today"
+        value={currentSavings}
+        onChange={setCurrentSavings}
+        min={0}
+        step={50000}
+        suffix="₹"
+        hint="Exclude home equity, emergency fund, and money earmarked for other goals."
+      />
+      <NumberField
+        id="fire-sip"
+        label="Current monthly retirement investment"
+        value={currentSIP}
+        onChange={setCurrentSIP}
+        min={0}
+        step={1000}
+        suffix="₹"
+      />
+      <NumberField
+        id="fire-income"
+        label="Expected monthly retirement income"
+        value={retirementIncome}
+        onChange={setRetirementIncome}
+        min={0}
+        step={1000}
+        suffix="₹"
+        hint="Pension, rent, or other dependable income from retirement onward. Enter 0 if none."
+      />
+      <SelectField
+        id="fire-lifestyle"
+        label="Retirement lifestyle vs today’s budget"
+        value={lifestyle}
+        onChange={setLifestyle}
+        options={[
+          { value: "lean", label: "Lean (60%)" },
+          { value: "modest", label: "Modest (80%)" },
+          { value: "comfortable", label: "Same budget (100%)" },
+          { value: "luxurious", label: "More comfortable (120%)" },
+          { value: "fat", label: "Higher spending (150%)" },
+        ]}
+      />
+      <NumberField
+        id="fire-pre"
+        label="Assumed return before retirement"
+        value={preReturn}
+        onChange={setPreReturn}
+        min={0}
+        max={20}
+        step={0.5}
+        suffix="%"
+      />
+      <NumberField
+        id="fire-post"
+        label="Assumed return during retirement"
+        value={postReturn}
+        onChange={setPostReturn}
+        min={0}
+        max={20}
+        step={0.5}
+        suffix="%"
+      />
+      <NumberField
+        id="fire-inflation"
+        label="Assumed expense inflation"
+        value={inflation}
+        onChange={setInflation}
+        min={0}
+        max={20}
+        step={0.5}
+        suffix="%"
+      />
+      <NumberField
+        id="fire-comfort"
+        label="Comfort withdrawal rate"
+        value={comfortRate}
+        onChange={setComfortRate}
+        min={0.5}
+        max={10}
+        step={0.25}
+        suffix="%"
+        hint="Cross-check only — not a guaranteed safe withdrawal rate."
+      />
     </CalculatorShell>
   );
 }
@@ -632,6 +871,7 @@ const CALCULATOR_MAP = {
   sip: SipCalculator,
   lumpsum: LumpsumCalculator,
   retirement: RetirementCalculator,
+  fire: FireCalculator,
   education: EducationCalculator,
   insurance: InsuranceCalculator,
   allocation: AllocationCalculator,
@@ -1189,6 +1429,11 @@ export default function WealthToolsContent() {
           <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 list-none m-0 p-0">
             {[
               {
+                title: "Risk Assessment",
+                href: "/risk-assessment",
+                description: "Indicative risk profile for a suitability discussion.",
+              },
+              {
                 title: "Portfolio Review",
                 href: "/portfolio-review",
                 description: "Upload holdings or book an office / video review.",
@@ -1202,11 +1447,6 @@ export default function WealthToolsContent() {
                 title: "Retirement Planning",
                 href: "/retirement-planning",
                 description: "Corpus, allocation, and withdrawal review.",
-              },
-              {
-                title: "Insurance Planning",
-                href: "/insurance-planning",
-                description: "Term and health cover review without product push.",
               },
             ].map((item) => (
               <li key={item.href}>

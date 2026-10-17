@@ -103,6 +103,17 @@ const resourceCategories = [
     status: "live",
   },
   {
+    id: "risk-assessment",
+    group: "learn",
+    title: "Risk Assessment",
+    description:
+      "A short suitability questionnaire on volatility comfort, horizon, and market familiarity — indicative score only.",
+    href: "/risk-assessment",
+    cta: "Start risk assessment",
+    Icon: ShieldCheckIcon,
+    status: "live",
+  },
+  {
     id: "research-notes",
     group: "process",
     title: "Research notes",
