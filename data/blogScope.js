@@ -20,6 +20,7 @@ export const SCOPE_BLOG_CATEGORIES = [
 
 export const SERVICE_LINKS = [
   { title: "Research Process", href: "/research-process" },
+  { title: "Research Privilege Club", href: "/primeidea-research-privilege-club" },
   { title: "Portfolio Review", href: "/portfolio-review" },
   { title: "Mutual Fund Investment Support", href: "/mutual-fund-investment-support" },
   { title: "Retirement Planning", href: "/retirement-planning" },

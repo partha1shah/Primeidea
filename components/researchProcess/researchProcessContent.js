@@ -286,6 +286,12 @@ export default function ResearchProcessContent() {
               >
                 SEBI RA credentials
               </Link>
+              <Link
+                href="/primeidea-research-privilege-club"
+                className="inline-flex items-center gap-2 rounded-xl border border-white/30 px-5 py-3 text-base font-bold text-white hover:border-[#FFC300] hover:text-[#FFC300] transition-colors"
+              >
+                Research Privilege Club
+              </Link>
             </div>
           </div>
         </div>

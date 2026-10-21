@@ -53,18 +53,27 @@ const ResearchProcessSection = () => {
             </p>
           </div>
 
-          <Link
-            href="/research-process"
-            className="inline-flex items-center gap-2 text-base font-semibold text-white hover:text-[#FFC300] transition-colors group shrink-0"
-          >
-            <span
-              className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-[#FFC300] text-[#232D63] text-sm leading-none group-hover:translate-x-0.5 transition-transform"
-              aria-hidden="true"
+          <div className="flex flex-col sm:items-end gap-3 shrink-0">
+            <Link
+              href="/research-process"
+              className="inline-flex items-center gap-2 text-base font-semibold text-white hover:text-[#FFC300] transition-colors group"
             >
-              →
-            </span>
-            View Research Process
-          </Link>
+              <span
+                className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-[#FFC300] text-[#232D63] text-sm leading-none group-hover:translate-x-0.5 transition-transform"
+                aria-hidden="true"
+              >
+                →
+              </span>
+              View Research Process
+            </Link>
+            <Link
+              href="/primeidea-research-privilege-club"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-white/85 hover:text-[#FFC300] transition-colors"
+            >
+              Research Privilege Club — annual subscription
+              <span aria-hidden="true">→</span>
+            </Link>
+          </div>
         </div>
 
         {/* Founder credibility */}

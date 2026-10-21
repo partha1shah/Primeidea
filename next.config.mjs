@@ -82,6 +82,10 @@ const nextConfig = {
         "/financial-planner-vs-wealth-manager-vadodara",
         "/comparisons/financial-planner-vs-wealth-manager-vadodara",
       ],
+      [
+        "/research-privilege-club",
+        "/primeidea-research-privilege-club",
+      ],
     ];
 
     return permanentPairs.flatMap(([source, destination]) => [

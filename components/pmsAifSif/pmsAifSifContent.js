@@ -297,6 +297,14 @@ const relatedPages = [
     cta: "See the method",
     Icon: BeakerIcon,
   },
+  {
+    step: "05",
+    title: "Research Privilege Club",
+    href: "/primeidea-research-privilege-club",
+    description: "PMS, SIF, and AIF research notes via annual subscription.",
+    cta: "View subscription",
+    Icon: DocumentTextIcon,
+  },
 ];
 
 export default function PmsAifSifContent() {

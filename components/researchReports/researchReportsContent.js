@@ -874,6 +874,13 @@ export default function ResearchReportsContent() {
                 cta: "Verify RA",
                 Icon: ShieldCheckIcon,
               },
+              {
+                title: "Research Privilege Club",
+                href: "/primeidea-research-privilege-club",
+                description: "Annual retail research subscription — INR 18,000 per annum.",
+                cta: "View subscription",
+                Icon: DocumentTextIcon,
+              },
             ].map(({ title, href, description, cta, Icon }) => (
               <li key={href}>
                 <Link

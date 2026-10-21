@@ -308,6 +308,14 @@ const relatedPages = [
     cta: "Open profile",
     Icon: CheckBadgeIcon,
   },
+  {
+    step: "05",
+    title: "Research Privilege Club",
+    href: "/primeidea-research-privilege-club",
+    description: "Annual retail research subscription — ideas, review, and email support.",
+    cta: "View subscription",
+    Icon: DocumentTextIcon,
+  },
 ];
 
 const startSteps = [

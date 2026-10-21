@@ -149,6 +149,14 @@ const BannerSection = (props) => {
                     />
                   </Link>
                 )}
+                {props.tertiaryLinkTitle && props.tertiaryLink && (
+                  <Link
+                    href={props.tertiaryLink}
+                    className="border border-[#479AD2]/40 md:text-md xl:text-lg font-bold rounded-md text-[#293C7D] px-6 py-3 inline-flex items-center bg-[#F6FDFF]/90 hover:bg-white transition-colors"
+                  >
+                    {props.tertiaryLinkTitle}
+                  </Link>
+                )}
               </div>
               }
               {props.mainDisclaimer && (

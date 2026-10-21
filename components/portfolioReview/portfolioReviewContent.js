@@ -89,6 +89,11 @@ const relatedPages = [
     href: "/fixed-income-investments",
     description: "Debt, bonds, and stability allocation — risk before yield.",
   },
+  {
+    title: "Research Privilege Club",
+    href: "/primeidea-research-privilege-club",
+    description: "Annual retail research subscription with portfolio review support.",
+  },
 ];
 
 const WHATSAPP_HREF =

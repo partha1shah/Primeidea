@@ -54,12 +54,82 @@ const insightLinks = [
     description: "Published research and market notes",
     href: "/research-reports",
   },
+  {
+    name: "Research Privilege Club",
+    description: "Annual retail research subscription",
+    href: "/primeidea-research-privilege-club",
+  },
 ];
 
-const quickLinks = [
-  { name: "Research Process", href: "/research-process" },
-  { name: "Wealth Tools", href: "/wealth-tools" },
-  { name: "Blogs", href: "/blogs" },
+const wealthToolLinks = [
+  {
+    name: "SIP Calculator",
+    description: "Future value of monthly SIPs",
+    href: "/wealth-tools?tool=sip",
+  },
+  {
+    name: "Lumpsum Future Value",
+    description: "Growth of a one-time investment",
+    href: "/wealth-tools?tool=lumpsum",
+  },
+  {
+    name: "Retirement Corpus",
+    description: "Corpus needed for retirement spend",
+    href: "/wealth-tools?tool=retirement",
+  },
+  {
+    name: "FIRE Calculator",
+    description: "Financial independence and early retirement",
+    href: "/wealth-tools?tool=fire",
+  },
+  {
+    name: "Child Education",
+    description: "Inflation-aware education goal",
+    href: "/wealth-tools?tool=education",
+  },
+  {
+    name: "Insurance Need",
+    description: "Directional life-cover estimate",
+    href: "/wealth-tools?tool=insurance",
+  },
+  {
+    name: "Asset Allocation Checker",
+    description: "Risk-aligned mix starting point",
+    href: "/wealth-tools?tool=allocation",
+  },
+  {
+    name: "Emergency Fund",
+    description: "Cash buffer from monthly spend",
+    href: "/wealth-tools?tool=emergency",
+  },
+  {
+    name: "SWP Calculator",
+    description: "Systematic withdrawal sustainability",
+    href: "/wealth-tools?tool=swp",
+  },
+  {
+    name: "CAGR & XIRR",
+    description: "Return consistency across periods",
+    href: "/wealth-tools?tool=cagr-xirr",
+  },
+  {
+    name: "EMI vs Investment",
+    description: "Debt repayment vs investing trade-off",
+    href: "/wealth-tools?tool=emi-vs-invest",
+  },
+];
+
+const wealthPlanningLinks = [
+  {
+    name: "Risk Assessment",
+    description: "Indicative risk profile for suitability discussion",
+    href: "/risk-assessment",
+  },
+  {
+    name: "Financial Profile",
+    description: "Structured goals, holdings, and succession questionnaire",
+    href: "/financial-profile",
+  },
 ];
 
 const serviceGroups = [
@@ -350,18 +420,22 @@ export default function Header() {
   const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isInsightsOpen, setIsInsightsOpen] = useState(false);
+  const [isWealthToolsOpen, setIsWealthToolsOpen] = useState(false);
   const [isMobileAboutOpen, setIsMobileAboutOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const [isMobileInsightsOpen, setIsMobileInsightsOpen] = useState(false);
+  const [isMobileWealthToolsOpen, setIsMobileWealthToolsOpen] = useState(false);
 
   useEffect(() => {
     setIsMenuOpen(false);
     setIsAboutOpen(false);
     setIsServicesOpen(false);
     setIsInsightsOpen(false);
+    setIsWealthToolsOpen(false);
     setIsMobileAboutOpen(false);
     setIsMobileServicesOpen(false);
     setIsMobileInsightsOpen(false);
+    setIsMobileWealthToolsOpen(false);
   }, [pathname]);
 
   const isActive = (href) => {
@@ -382,11 +456,16 @@ export default function Header() {
   const aboutActive = isAboutOpen || isGroupActive(aboutLinks);
   const servicesActive = isServicesOpen || isGroupActive(allServices);
   const insightsActive = isInsightsOpen || isGroupActive(insightLinks);
+  const wealthToolsActive =
+    isWealthToolsOpen ||
+    pathname === "/wealth-tools" ||
+    isGroupActive(wealthPlanningLinks);
 
   const closeDesktopMenus = () => {
     setIsAboutOpen(false);
     setIsServicesOpen(false);
     setIsInsightsOpen(false);
+    setIsWealthToolsOpen(false);
   };
 
   return (
@@ -426,6 +505,7 @@ export default function Header() {
                   setIsAboutOpen(true);
                   setIsServicesOpen(false);
                   setIsInsightsOpen(false);
+                  setIsWealthToolsOpen(false);
                 }}
                 onMouseLeave={() => setIsAboutOpen(false)}
               >
@@ -438,6 +518,7 @@ export default function Header() {
                     setIsAboutOpen((open) => !open);
                     setIsServicesOpen(false);
                     setIsInsightsOpen(false);
+                    setIsWealthToolsOpen(false);
                   }}
                 >
                   About
@@ -473,6 +554,7 @@ export default function Header() {
                   setIsServicesOpen(true);
                   setIsAboutOpen(false);
                   setIsInsightsOpen(false);
+                  setIsWealthToolsOpen(false);
                 }}
               >
                 <button
@@ -484,6 +566,7 @@ export default function Header() {
                     setIsServicesOpen((open) => !open);
                     setIsAboutOpen(false);
                     setIsInsightsOpen(false);
+                    setIsWealthToolsOpen(false);
                   }}
                 >
                   Services
@@ -497,6 +580,7 @@ export default function Header() {
                   setIsInsightsOpen(true);
                   setIsAboutOpen(false);
                   setIsServicesOpen(false);
+                  setIsWealthToolsOpen(false);
                 }}
                 onMouseLeave={() => setIsInsightsOpen(false)}
               >
@@ -509,6 +593,7 @@ export default function Header() {
                     setIsInsightsOpen((open) => !open);
                     setIsAboutOpen(false);
                     setIsServicesOpen(false);
+                    setIsWealthToolsOpen(false);
                   }}
                 >
                   Insights
@@ -522,17 +607,130 @@ export default function Header() {
 
               <li aria-hidden="true" className="mx-1.5 h-4 w-px shrink-0 self-center bg-[#D7E1EE]" />
 
-              {quickLinks.map((item) => (
-                <li key={item.name} className="relative z-[1] shrink-0">
-                  <Link
-                    href={item.href}
-                    className={navItemClass(isActive(item.href))}
-                    onMouseEnter={closeDesktopMenus}
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
+              <li className="relative z-[1] shrink-0">
+                <Link
+                  href="/research-process"
+                  className={navItemClass(isActive("/research-process"))}
+                  onMouseEnter={closeDesktopMenus}
+                >
+                  Research Process
+                </Link>
+              </li>
+
+              <li
+                className={`relative shrink-0 ${isWealthToolsOpen ? "z-[130]" : ""}`}
+                onMouseEnter={() => {
+                  setIsWealthToolsOpen(true);
+                  setIsAboutOpen(false);
+                  setIsServicesOpen(false);
+                  setIsInsightsOpen(false);
+                }}
+                onMouseLeave={() => setIsWealthToolsOpen(false)}
+              >
+                <button
+                  type="button"
+                  aria-expanded={isWealthToolsOpen}
+                  aria-haspopup="true"
+                  className={navItemClass(wealthToolsActive)}
+                  onClick={() => {
+                    setIsWealthToolsOpen((open) => !open);
+                    setIsAboutOpen(false);
+                    setIsServicesOpen(false);
+                    setIsInsightsOpen(false);
+                  }}
+                >
+                  Wealth Tools
+                  <Chevron open={isWealthToolsOpen} />
+                </button>
+
+                <DropdownPanel
+                  open={isWealthToolsOpen}
+                  widthClass="w-[min(92vw,560px)]"
+                  align="right"
+                >
+                  <div className="p-3">
+                    <p className="px-3 pb-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#479AD2]">
+                      Calculators
+                    </p>
+                    <ul className="grid grid-cols-2 gap-x-1">
+                      {wealthToolLinks.map((item) => (
+                        <li key={item.name}>
+                          <Link
+                            href={item.href}
+                            className="group/item block rounded-xl px-3 py-2.5 transition-colors hover:bg-[#F2F8FF]"
+                            onClick={closeDesktopMenus}
+                          >
+                            <span className="flex items-center gap-1.5 text-[13px] font-semibold text-[#293C7D]">
+                              {item.name}
+                              <span
+                                aria-hidden="true"
+                                className="translate-x-0 text-[#FFC300] opacity-0 transition-all duration-200 group-hover/item:translate-x-1 group-hover/item:opacity-100"
+                              >
+                                →
+                              </span>
+                            </span>
+                            <span className="mt-0.5 block text-[11.5px] leading-snug text-[#6B7280]">
+                              {item.description}
+                            </span>
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                    <p className="mt-2 border-t border-[#EEF3F9] px-3 pb-1 pt-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#479AD2]">
+                      Planning
+                    </p>
+                    <ul className="grid grid-cols-2 gap-x-1">
+                      {wealthPlanningLinks.map((item) => (
+                        <li key={item.name}>
+                          <Link
+                            href={item.href}
+                            className="group/item block rounded-xl px-3 py-2.5 transition-colors hover:bg-[#F2F8FF]"
+                            onClick={closeDesktopMenus}
+                          >
+                            <span className="flex items-center gap-1.5 text-[13px] font-semibold text-[#293C7D]">
+                              {item.name}
+                              <span
+                                aria-hidden="true"
+                                className="translate-x-0 text-[#FFC300] opacity-0 transition-all duration-200 group-hover/item:translate-x-1 group-hover/item:opacity-100"
+                              >
+                                →
+                              </span>
+                            </span>
+                            <span className="mt-0.5 block text-[11.5px] leading-snug text-[#6B7280]">
+                              {item.description}
+                            </span>
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                    <div className="mt-1 border-t border-[#EEF3F9] pt-1">
+                      <Link
+                        href="/wealth-tools"
+                        className="group/item flex items-center justify-between rounded-xl px-3 py-2.5 text-[13px] font-semibold text-[#293C7D] transition-colors hover:bg-[#F2F8FF]"
+                        onClick={closeDesktopMenus}
+                      >
+                        View all Wealth Tools
+                        <span
+                          aria-hidden="true"
+                          className="text-[#FFC300] transition-transform duration-200 group-hover/item:translate-x-1"
+                        >
+                          →
+                        </span>
+                      </Link>
+                    </div>
+                  </div>
+                </DropdownPanel>
+              </li>
+
+              <li className="relative z-[1] shrink-0">
+                <Link
+                  href="/blogs"
+                  className={navItemClass(isActive("/blogs"))}
+                  onMouseEnter={closeDesktopMenus}
+                >
+                  Blogs
+                </Link>
+              </li>
 
               <li className="relative z-[1] shrink-0">
                 <Link
@@ -590,6 +788,7 @@ export default function Header() {
             setIsServicesOpen(true);
             setIsAboutOpen(false);
             setIsInsightsOpen(false);
+            setIsWealthToolsOpen(false);
           }}
           onMouseLeave={() => setIsServicesOpen(false)}
         >
@@ -664,6 +863,7 @@ export default function Header() {
                 setIsMobileAboutOpen((open) => !open);
                 setIsMobileServicesOpen(false);
                 setIsMobileInsightsOpen(false);
+                setIsMobileWealthToolsOpen(false);
               }}
               items={aboutLinks}
             />
@@ -675,6 +875,7 @@ export default function Header() {
                 setIsMobileServicesOpen((open) => !open);
                 setIsMobileAboutOpen(false);
                 setIsMobileInsightsOpen(false);
+                setIsMobileWealthToolsOpen(false);
               }}
               items={allServices}
             />
@@ -686,20 +887,48 @@ export default function Header() {
                 setIsMobileInsightsOpen((open) => !open);
                 setIsMobileAboutOpen(false);
                 setIsMobileServicesOpen(false);
+                setIsMobileWealthToolsOpen(false);
               }}
               items={insightLinks}
             />
 
-            {quickLinks.map((item) => (
-              <li key={item.name}>
-                <Link
-                  href={item.href}
-                  className="block rounded-xl px-3 py-3 text-[15px] font-semibold text-[#293C7D] transition-colors hover:bg-[#F2F8FF]"
-                >
-                  {item.name}
-                </Link>
-              </li>
-            ))}
+            <li>
+              <Link
+                href="/research-process"
+                className="block rounded-xl px-3 py-3 text-[15px] font-semibold text-[#293C7D] transition-colors hover:bg-[#F2F8FF]"
+              >
+                Research Process
+              </Link>
+            </li>
+
+            <MobileAccordion
+              label="Wealth Tools"
+              open={isMobileWealthToolsOpen}
+              onToggle={() => {
+                setIsMobileWealthToolsOpen((open) => !open);
+                setIsMobileAboutOpen(false);
+                setIsMobileServicesOpen(false);
+                setIsMobileInsightsOpen(false);
+              }}
+              items={[
+                {
+                  name: "All Wealth Tools",
+                  description: "Overview of every planning calculator",
+                  href: "/wealth-tools",
+                },
+                ...wealthToolLinks,
+                ...wealthPlanningLinks,
+              ]}
+            />
+
+            <li>
+              <Link
+                href="/blogs"
+                className="block rounded-xl px-3 py-3 text-[15px] font-semibold text-[#293C7D] transition-colors hover:bg-[#F2F8FF]"
+              >
+                Blogs
+              </Link>
+            </li>
 
             <li>
               <Link

@@ -92,6 +92,11 @@ const relatedPages = [
     href: "/pms-aif-sif-investment-support-gujarat-india",
     description: "Suitability-led review of managed and alternate strategies.",
   },
+  {
+    title: "Research Privilege Club",
+    href: "/primeidea-research-privilege-club",
+    description: "Fixed income ideas and research notes via annual subscription.",
+  },
 ];
 
 export default function FixedIncomeContent() {

@@ -30,7 +30,18 @@ export default function ScopeLeadForm({
   extraFields = [],
   disclaimer,
   thankYouPath,
+  sectionId = "lead-form",
+  messageLabel = "Message",
+  messagePlaceholder = "Share any context that will help us prepare",
+  messageRequired = false,
+  showMessageField = true,
+  consentText,
+  hiddenFields = {},
+  formEyebrow = "Lead form",
+  sectionClassName = "bg-[#F6FDFF] py-14 md:py-16 scroll-mt-28 border-t border-[#D6E4EE]",
+  formTheme = "light",
 }) {
+  const isDarkSidebar = formTheme === "dark";
   const router = useRouter();
   const initialState = {
     fullName: "",
@@ -38,6 +49,7 @@ export default function ScopeLeadForm({
     email: "",
     phone: "",
     description: "",
+    consentAgreed: false,
   };
   extraFields.forEach((field) => {
     initialState[field.name] = field.type === "checkbox" ? [] : "";
@@ -71,6 +83,11 @@ export default function ScopeLeadForm({
       return;
     }
 
+    if (showMessageField && messageRequired && !formData.description?.trim()) {
+      notyf.error(`Please complete: ${messageLabel.replace(/\s*\*$/, "")}`);
+      return;
+    }
+
     for (const field of extraFields) {
       if (!field.required) continue;
       const value = formData[field.name];
@@ -85,6 +102,11 @@ export default function ScopeLeadForm({
       }
     }
 
+    if (consentText && !formData.consentAgreed) {
+      notyf.error("Please confirm consent to continue.");
+      return;
+    }
+
     if (!turnstile.token) {
       notyf.error("Please complete the security check before submitting.");
       return;
@@ -93,7 +115,13 @@ export default function ScopeLeadForm({
     setIsSubmitting(true);
 
     try {
-      const result = await submitCf7Form(formId, formData, {
+      const payload = { ...formData, ...hiddenFields };
+      delete payload.consentAgreed;
+      if (consentText && formData.consentAgreed) {
+        payload.consent = "Yes";
+      }
+
+      const result = await submitCf7Form(formId, payload, {
         turnstileToken: turnstile.token,
       });
       if (result.ok) {
@@ -120,27 +148,51 @@ export default function ScopeLeadForm({
 
   return (
     <section
-      id="lead-form"
+      id={sectionId}
       aria-labelledby="lead-form-heading"
-      className="bg-[#F6FDFF] py-14 md:py-16 scroll-mt-28 border-t border-[#D6E4EE]"
+      className={sectionClassName}
     >
-      <div className="mx-auto 2xl:max-w-[1340px] xl:max-w-[1170px] lg:max-w-[1004px] px-4">
+      {isDarkSidebar ? (
+        <div
+          className="pointer-events-none absolute inset-0 bg-[url('/images/insurance/risk-management/bg.png')] bg-repeat bg-contain opacity-30"
+          aria-hidden="true"
+        />
+      ) : null}
+      <div className="relative mx-auto 2xl:max-w-[1340px] xl:max-w-[1170px] lg:max-w-[1004px] px-4">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           <div className="lg:col-span-5">
-            <p className="text-xs md:text-sm font-semibold tracking-[0.14em] uppercase text-[#479AD2] mb-3">
-              Lead form
+            <p
+              className={`text-xs md:text-sm font-semibold tracking-[0.14em] uppercase mb-3 ${
+                isDarkSidebar ? "!text-[#FFC300]" : "text-[#479AD2]"
+              }`}
+            >
+              {formEyebrow}
             </p>
             <h2
               id="lead-form-heading"
-              className="text-[26px] md:text-[32px] font-light text-[#2D2D2D] leading-[125%] mb-4"
+              className={`text-[26px] md:text-[32px] font-light leading-[125%] mb-4 ${
+                isDarkSidebar ? "!text-white [&_strong]:!text-white" : "text-[#2D2D2D]"
+              }`}
             >
               {title}
             </h2>
             {description ? (
-              <p className="text-base text-[#4D4D4D] leading-relaxed mb-4">{description}</p>
+              <p
+                className={`text-base leading-relaxed mb-4 ${
+                  isDarkSidebar ? "!text-white/85" : "text-[#4D4D4D]"
+                }`}
+              >
+                {description}
+              </p>
             ) : null}
             {disclaimer ? (
-              <p className="text-sm text-[#6B7C8A] leading-relaxed">{disclaimer}</p>
+              <p
+                className={`text-sm leading-relaxed ${
+                  isDarkSidebar ? "!text-white/65" : "text-[#6B7C8A]"
+                }`}
+              >
+                {disclaimer}
+              </p>
             ) : null}
           </div>
 
@@ -282,23 +334,66 @@ export default function ScopeLeadForm({
                   );
                 }
 
+                if (field.type === "textarea") {
+                  return (
+                    <div key={field.name}>
+                      <label htmlFor={`${formId}-${field.name}`} className={labelClass}>
+                        {field.label}
+                        {field.required ? " *" : ""}
+                      </label>
+                      <textarea
+                        id={`${formId}-${field.name}`}
+                        name={field.name}
+                        rows={field.rows || 4}
+                        required={field.required}
+                        value={formData[field.name]}
+                        onChange={handleChange}
+                        className={fieldClass}
+                        placeholder={field.placeholder || ""}
+                      />
+                    </div>
+                  );
+                }
+
                 return null;
               })}
 
-              <div>
-                <label htmlFor={`${formId}-description`} className={labelClass}>
-                  Message
+              {showMessageField ? (
+                <div>
+                  <label htmlFor={`${formId}-description`} className={labelClass}>
+                    {messageLabel}
+                    {messageRequired ? " *" : ""}
+                  </label>
+                  <textarea
+                    id={`${formId}-description`}
+                    name="description"
+                    rows={4}
+                    required={messageRequired}
+                    value={formData.description}
+                    onChange={handleChange}
+                    className={fieldClass}
+                    placeholder={messagePlaceholder}
+                  />
+                </div>
+              ) : null}
+
+              {consentText ? (
+                <label className="flex items-start gap-3 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    name="consentAgreed"
+                    checked={formData.consentAgreed}
+                    onChange={(e) =>
+                      setFormData((prev) => ({
+                        ...prev,
+                        consentAgreed: e.target.checked,
+                      }))
+                    }
+                    className="mt-1 h-4 w-4 shrink-0 rounded border-[#D0E0EC] text-[#293C7D] focus:ring-[#293C7D]/30"
+                  />
+                  <span className="text-sm text-[#4D4D4D] leading-relaxed">{consentText}</span>
                 </label>
-                <textarea
-                  id={`${formId}-description`}
-                  name="description"
-                  rows={4}
-                  value={formData.description}
-                  onChange={handleChange}
-                  className={fieldClass}
-                  placeholder="Share any context that will help us prepare"
-                />
-              </div>
+              ) : null}
 
               <TurnstileWidget
                 onToken={turnstile.onToken}

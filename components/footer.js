@@ -49,6 +49,10 @@ const EXPLORE_LINKS = [
   { href: "/knowledge-centre", label: "Knowledge Centre" },
   { href: "/comparisons", label: "Comparisons" },
   { href: "/research-reports", label: "Research Reports" },
+  {
+    href: "/primeidea-research-privilege-club",
+    label: "Research Privilege Club",
+  },
   { href: "/blogs", label: "Blogs" },
   { href: "/become-a-partner", label: "Become a Partner" },
   { href: "/careers", label: "Careers" },
