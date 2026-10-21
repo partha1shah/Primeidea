@@ -126,7 +126,7 @@ export default function RiskAssessmentContent() {
                 </ul>
                 <p className="mt-5 flex items-start gap-2 text-xs leading-relaxed text-[#6B7C8A]">
                   <CheckCircleIcon className="mt-0.5 h-4 w-4 shrink-0 text-[#479AD2]" />
-                  Indicative profiling only — not investment advice and no guaranteed returns.
+                  Indicative profiling only — not investment advice and 
                 </p>
               </FadeUpOneByOneAnimation>
             </aside>

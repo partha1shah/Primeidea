@@ -58,7 +58,7 @@ const faqs = [
 export const metadata = {
   title: "Financial Profile",
   description:
-    "PrimeIdea Ventures Financial Profile — a structured questionnaire on goals, risk comfort, investments, liquidity, liabilities, and succession priorities. For discussion only. No guaranteed returns.",
+    "PrimeIdea Ventures Financial Profile — a structured questionnaire on goals, risk comfort, investments, liquidity, liabilities, and succession priorities. For discussion only. ",
   keywords:
     "financial profile, investor questionnaire, financial planning profile India, PrimeIdea Ventures, suitability profiling",
   author: "Partha Shah",
@@ -159,7 +159,7 @@ export default function FinancialProfilePage() {
 
       <ScopeDisclaimerBar ctaHref="/portfolio-review" ctaLabel="Book Portfolio Review">
         This financial profile is for discussion only. Investments in the securities market
-        are subject to market risks. PrimeIdea Ventures does not guarantee returns.
+        are subject to market risks.  
         Investors should verify registration independently and read all scheme-related
         documents carefully before investing.
       </ScopeDisclaimerBar>

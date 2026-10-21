@@ -60,7 +60,7 @@ const faqs = [
 export const metadata = {
   title: "NRI Investment Support in India",
   description:
-    "PrimeIdea Ventures helps NRIs with research-led India investment support from a Vadodara base, serving investors across Gujarat and India through a process Video review available. No guaranteed returns. Not tax or FEMA legal advice.",
+    "PrimeIdea Ventures helps NRIs with research-led India investment support from a Vadodara base, serving investors across Gujarat and India through a process Video review available.  Not tax or FEMA legal advice.",
   keywords:
     "NRI investment support India, NRI portfolio review Gujarat, NRI mutual fund review Vadodara, PrimeIdea Ventures",
   author: "Partha Shah",

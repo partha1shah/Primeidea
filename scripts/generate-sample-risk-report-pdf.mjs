@@ -53,7 +53,7 @@ const page1 = buildPageContent([
   "assessment summary. It is not a real client report, not investment",
   "advice, and not a recommendation to buy or sell any product.",
   "Investments in the securities market are subject to market risks.",
-  "PrimeIdea Ventures does not guarantee returns.",
+  " ",
   "",
   "## Sample client snapshot",
   "Name: Sample Investor",

@@ -43,9 +43,9 @@ const faqs = [
   {
     question: "Does the research process guarantee returns?",
     answer:
-      "No. Investments in securities market are subject to market risks. PrimeIdea does not guarantee returns or market-beating performance.",
+      "No. Investments in securities market are subject to market risks.  ",
     plainText:
-      "No. Investments in securities market are subject to market risks. PrimeIdea does not guarantee returns or market-beating performance.",
+      "No. Investments in securities market are subject to market risks.  ",
   },
   {
     question: "How do I start?",
@@ -117,7 +117,7 @@ export default function ResearchProcessPage() {
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="PrimeIdea Research Process"
         mainSubTitle="A structured, research-led portfolio review process: suitability, risk, overlap, and allocation first."
-        mainDisclaimer="No product pushing. No guaranteed returns."
+        mainDisclaimer="No product pushing. "
         mainLinkTitle="Book Portfolio Review"
         mainLink="/portfolio-review"
         usePrimaryAsLink={true}
@@ -133,7 +133,7 @@ export default function ResearchProcessPage() {
           { label: "Led by", value: "SEBI RA", Icon: BeakerIcon },
 
         ]}
-        disclaimer="The research process is for structured review and analysis. Investments in securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns."
+        disclaimer="The research process is for structured review and analysis. Investments in securities market are subject to market risks.  "
       />
 
       <ScopeBreadcrumbs items={[{ label: "Research Process" }]} />

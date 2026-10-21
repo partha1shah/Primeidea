@@ -42,7 +42,7 @@ const lines = [
   "",
   "Disclaimer",
   "Investments in securities market are subject to market risks.",
-  "PrimeIdea Ventures does not guarantee returns.",
+  " ",
 ];
 
 function esc(s) {

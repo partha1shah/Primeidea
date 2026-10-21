@@ -53,7 +53,7 @@ export const IDENTITY_SHORT =
   "PrimeIdea Ventures is a Vadodara-based research-led wealth management firm and distributor of financial products — mutual funds, PMS, AIF, SIF, and related investment solutions — serving investors across Gujarat, India, and worldwide.";
 
 export const DISCLOSURE_SHORT =
-  "Investments in Stocks, Mutual Funds, PMS, AIF, SIF and other market-linked products are subject to market risks. Please read all scheme-related documents carefully before investing. PrimeIdea Ventures does not guarantee returns.";
+  "Investments in Stocks, Mutual Funds, PMS, AIF, SIF and other market-linked products are subject to market risks. Please read all scheme-related documents carefully before investing.  ";
 
 /** Equitywala-style plain lines for footer / disclosure copy */
 export function getRegistrationLines() {

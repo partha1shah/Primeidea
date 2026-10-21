@@ -390,7 +390,7 @@ export default function PmsAifSifContent() {
               </p>
               <p className="text-[11px] md:text-xs text-[#6B7C8A] leading-relaxed mb-6">
                 * Discussed only where suitable and where distribution rights exist. Many reviews
-                stay with mutual funds, equity, and fixed income. No guaranteed returns.
+                stay with mutual funds, equity, and fixed income. 
               </p>
               <ul className="flex flex-wrap gap-2 list-none m-0 p-0 mb-6">
                 {trustChips.map((chip) => (
@@ -1007,7 +1007,7 @@ export default function PmsAifSifContent() {
                   Review first — from Vadodara, across Gujarat and India.
                 </p>
                 <p className="mt-3 text-[11px] !text-white/50 leading-relaxed m-0 max-w-[560px]">
-                  * No guaranteed returns. Market risks apply.
+                  *  Market risks apply.
                 </p>
                 <ul className="mt-5 flex flex-wrap gap-2 list-none m-0 p-0">
                   {["Office or video", "Where permitted only", "Market risks apply"].map(

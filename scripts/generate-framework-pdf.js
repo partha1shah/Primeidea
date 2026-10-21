@@ -6,7 +6,7 @@ const lines = [
   "Portfolio Review Framework",
   "",
   "SEBI Registered Research Analyst: Partha Shah  INH000017815",
-  "Research-led process. No guaranteed returns. Market risks apply.",
+  "Research-led process.  Market risks apply.",
   "",
   "Five-step research process",
   "1. Understand goals and constraints",
@@ -30,7 +30,7 @@ const lines = [
   "",
   "Disclaimer",
   "Investments in securities market are subject to market risks.",
-  "PrimeIdea Ventures does not guarantee returns.",
+  " ",
 ];
 
 function esc(s) {

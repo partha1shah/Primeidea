@@ -577,7 +577,7 @@ export default function RegulatoryContentSections({ complaints = [] }) {
               {
                 id: "risk-disclosure",
                 title: "Risk disclosure",
-                body: "Investments in Mutual Funds, PMS, AIF, SIF and other market-linked products are subject to market risks. Read all scheme-related documents carefully. Past performance may or may not be sustained in future. PrimeIdea Ventures does not guarantee returns.",
+                body: "Investments in Mutual Funds, PMS, AIF, SIF and other market-linked products are subject to market risks. Read all scheme-related documents carefully. Past performance may or may not be sustained in future.  ",
                 Icon: ClipboardDocumentListIcon,
               },
               {

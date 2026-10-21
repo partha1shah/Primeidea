@@ -14,6 +14,11 @@ const homeFaqs = [
       "Yes. PrimeIdea holds SEBI Registered Research Analyst registration INH000017815 (Validity – Apr 05, 2024 - Jan 01, 2027), plus AMFI and PMS distribution credentials published on this site. Investors should verify independently.",
   },
   {
+    question: "Is PrimeIdea a top financial advisor in Vadodara?",
+    answer:
+      "PrimeIdea Ventures is a top research-led investment advisor and wealth management firm in Vadodara, led by Partha Shah, SEBI Registered Research Analyst INH000017815. It is not a SEBI Registered Investment Adviser (INA). See /investment-advisor-in-vadodara.",
+  },
+  {
     question: "Who leads the PrimeIdea research process?",
     answer:
       "Partha Shah leads the research process. Portfolio reviews start from goals, holdings, asset allocation, and risk. Consultations are available at the Vadodara office and online for investors across Gujarat and India.",

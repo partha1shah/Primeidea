@@ -20,7 +20,7 @@ import graphqlRequest from "@/lib/graphqlRequest";
 
 export const metadata = {
     title: 'Financial Planning',
-    description: 'PrimeIdea writes a financial plan from goals, cash flow, and current holdings for investors in Vadodara and across Gujarat and India. Research-led support — no guaranteed returns.',
+    description: 'PrimeIdea writes a financial plan from goals, cash flow, and current holdings for investors in Vadodara and across Gujarat and India. Research-led support — ',
     keywords: 'financial planning, portfolio review, wealth management, PrimeIdea Ventures, SEBI Registered Research Analyst INH000017815, Vadodara',
     author: 'Partha Shah',
     robots: 'index, follow',
@@ -31,7 +31,7 @@ export const metadata = {
       url: 'https://www.primeidea.in/financial-planning-and-investment-advisory/',
       site_name: 'PrimeIdea Ventures',
       title: 'Financial Planning | PrimeIdea Ventures',
-      description: 'PrimeIdea writes a financial plan from goals, cash flow, and current holdings for investors in Vadodara and across Gujarat and India. Research-led support — no guaranteed returns.',
+      description: 'PrimeIdea writes a financial plan from goals, cash flow, and current holdings for investors in Vadodara and across Gujarat and India. Research-led support — ',
     },
     twitter: {
       handle: '@primeidea',

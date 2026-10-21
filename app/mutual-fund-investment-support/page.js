@@ -36,9 +36,9 @@ const faqs = [
   {
     question: "Do mutual funds guarantee returns?",
     answer:
-      "No. Mutual fund investments are subject to market risks. Read all scheme-related documents carefully. PrimeIdea does not guarantee returns or market-beating performance.",
+      "No. Mutual fund investments are subject to market risks. Read all scheme-related documents carefully.  ",
     plainText:
-      "No. Mutual fund investments are subject to market risks. Read all scheme-related documents carefully. PrimeIdea does not guarantee returns or market-beating performance.",
+      "No. Mutual fund investments are subject to market risks. Read all scheme-related documents carefully.  ",
   },
   {
     question: "Can I get this review if I do not live in Vadodara?",
@@ -57,11 +57,11 @@ const faqs = [
 ];
 
 export const metadata = {
-  title: "Mutual Fund Investment Support",
+    title: "Mutual Fund Research Support in Vadodara",
   description:
-    "PrimeIdea Ventures offers research-led mutual fund investment support for investors across Gujarat and India. Mutual fund investments are subject to market risks. Read all scheme-related documents carefully.",
+    "Research-led mutual fund review from PrimeIdea’s Vadodara office — SIP fit, overlap, and allocation for investors across Gujarat and India. Market risks apply.",
   keywords:
-    "mutual fund investment support, SIP review, mutual fund overlap analysis, PrimeIdea Ventures",
+    "mutual fund research Vadodara, mutual fund investment support, SIP review Vadodara, mutual fund overlap analysis, PrimeIdea Ventures",
   author: "Partha Shah",
   robots: "index, follow",
   openGraph: {
@@ -69,7 +69,7 @@ export const metadata = {
     locale: "en_IE",
     url: PAGE_URL,
     site_name: "PrimeIdea Ventures",
-    title: "Mutual Fund Investment Support | PrimeIdea Ventures",
+    title: "Mutual Fund Research Support in Vadodara | PrimeIdea Ventures",
     description:
       "Research-led mutual fund review, Market risks apply.",
   },
@@ -122,7 +122,7 @@ export default function MutualFundInvestmentSupportPage() {
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="Mutual Fund Investment Support"
         mainSubTitle="Research-led SIP and scheme review from a Vadodara office, serving investors across Gujarat and India."
-        mainDisclaimer="Mutual fund investments are subject to market risks. Read all scheme-related documents carefully. No guaranteed returns."
+        mainDisclaimer="Mutual fund investments are subject to market risks. Read all scheme-related documents carefully. "
         mainLinkTitle="Upload Portfolio"
         mainLink="/portfolio-review"
         usePrimaryAsLink={true}
@@ -136,7 +136,7 @@ export default function MutualFundInvestmentSupportPage() {
           { label: "Base Location", value: "Vadodara", Icon: MapPinIcon },
           { label: "Focus", value: "Scheme review", Icon: Squares2X2Icon },
         ]}
-        disclaimer="Mutual fund investments are subject to market risks. Read all scheme-related documents carefully. PrimeIdea Ventures does not guarantee returns."
+        disclaimer="Mutual fund investments are subject to market risks. Read all scheme-related documents carefully.  "
       />
 
       <ScopeBreadcrumbs items={[{ label: "Mutual Fund Investment Support" }]} />
@@ -151,7 +151,7 @@ export default function MutualFundInvestmentSupportPage() {
 
       <ScopeDisclaimerBar ctaHref="/portfolio-review" ctaLabel="Upload Portfolio for Review">
         Mutual fund investments are subject to market risks. Read all scheme-related documents
-        carefully. PrimeIdea Ventures does not guarantee returns. Investors should verify registration
+        carefully.   Investors should verify registration
         independently.
       </ScopeDisclaimerBar>
 

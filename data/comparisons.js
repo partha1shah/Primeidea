@@ -6,7 +6,7 @@ export const COMPARISON_HUB = {
   path: "/comparisons",
   title: "Investment Comparison Guides",
   description:
-    "Educational comparisons — Research Analyst vs Investment Adviser vs MFD, direct apps vs portfolio review, regular vs direct mutual funds, PMS vs mutual funds, and financial planner vs wealth manager. No guaranteed returns.",
+    "Educational comparisons — Research Analyst vs Investment Adviser vs MFD, direct apps vs portfolio review, regular vs direct mutual funds, PMS vs mutual funds, and financial planner vs wealth manager. ",
 };
 
 export const COMPARISONS = [
@@ -84,7 +84,7 @@ export const COMPARISONS = [
     ],
     relatedServices: [
       { title: "SEBI RA page", href: "/sebi-registered-research-analyst" },
-      { title: "Regulatory Disclosures", href: "/regulatory-disclosures" },
+      { title: "Advisor vs Research Analyst", href: "/investment-advisor-in-vadodara" },
       { title: "Entity profile", href: "/primeidea-ventures-profile" },
     ],
     faqs: [
@@ -108,7 +108,7 @@ export const COMPARISONS = [
     summary:
       "Portfolio Management Services and mutual funds can both hold securities — but costs, liquidity, minimums, and concentration often differ. Education only; not a ranking.",
     metaDescription:
-      "Educational comparison of PMS vs mutual funds — mandate, fees, liquidity, and suitability. Research-led review guided by Partha Shah. No guaranteed returns.",
+      "Educational comparison of PMS vs mutual funds — mandate, fees, liquidity, and suitability. Research-led review guided by Partha Shah. ",
     keywords:
       "PMS vs mutual funds, portfolio management services vs MF, PMS suitability India, PrimeIdea Ventures",
     columns: [
@@ -202,7 +202,7 @@ export const COMPARISONS = [
     summary:
       "Alternative Investment Funds, Portfolio Management Services, and mutual funds sit in different structural and liquidity buckets. Compare lenses — not return promises.",
     metaDescription:
-      "Educational comparison of AIF vs PMS vs mutual funds — structure, liquidity, costs, and who should pause. Guided by Partha Shah. No guaranteed returns.",
+      "Educational comparison of AIF vs PMS vs mutual funds — structure, liquidity, costs, and who should pause. Guided by Partha Shah. ",
     keywords:
       "AIF vs PMS vs mutual funds, alternative investment funds comparison, PMS suitability, PrimeIdea Ventures",
     columns: [
@@ -307,7 +307,7 @@ export const COMPARISONS = [
     summary:
       "Systematic Investment Plans, lumpsum investments, and Systematic Transfer Plans are deployment methods — not return guarantees. Choice depends on cash flow, time horizon, and behaviour.",
     metaDescription:
-      "Educational comparison of SIP vs lumpsum vs STP for mutual fund deployment. Process-led guidance from PrimeIdea Ventures, Vadodara. No guaranteed returns. SEBI RA INH000017815.",
+      "Educational comparison of SIP vs lumpsum vs STP for mutual fund deployment. Process-led guidance from PrimeIdea Ventures, Vadodara.  SEBI RA INH000017815.",
     keywords:
       "SIP vs lumpsum vs STP, mutual fund deployment, systematic transfer plan, PrimeIdea Ventures Vadodara",
     columns: [
@@ -406,7 +406,7 @@ export const COMPARISONS = [
     summary:
       "A direct mutual fund app is a place to transact. A portfolio review is a process that checks overlap, allocation, cost, and whether existing holdings still fit the goal.",
     metaDescription:
-      "Educational comparison of direct mutual fund apps and a research-led portfolio review. PrimeIdea Ventures, Vadodara. Guided by Partha Shah. No guaranteed returns.",
+      "Educational comparison of direct mutual fund apps and a research-led portfolio review. PrimeIdea Ventures, Vadodara. Guided by Partha Shah. ",
     keywords:
       "direct mutual fund app vs portfolio review, direct mutual funds, portfolio overlap, PrimeIdea Ventures Vadodara",
     columns: [
@@ -491,7 +491,7 @@ export const COMPARISONS = [
     summary:
       "Regular and direct plans of the same scheme share a portfolio. The practical difference is cost and how advice or distribution is paid for — not a promise of higher returns.",
     metaDescription:
-      "Educational comparison of regular plan vs direct plan mutual funds — cost, advice, and review checkpoints. PrimeIdea Ventures. SEBI RA INH000017815. No guaranteed returns.",
+      "Educational comparison of regular plan vs direct plan mutual funds — cost, advice, and review checkpoints. PrimeIdea Ventures. SEBI RA INH000017815. ",
     keywords:
       "regular plan vs direct plan mutual funds, expense ratio, mutual fund review, PrimeIdea Ventures",
     columns: [
@@ -587,7 +587,7 @@ export const COMPARISONS = [
     summary:
       "The titles are used loosely in Vadodara and across India. What matters is the registration, the process, and whether the conversation starts with your existing portfolio — not with a product list.",
     metaDescription:
-      "Educational comparison of a financial planner and a wealth manager for investors in Vadodara. Research-led context from PrimeIdea Ventures. SEBI RA INH000017815. No guaranteed returns.",
+      "Educational comparison of a financial planner and a wealth manager for investors in Vadodara. Research-led context from PrimeIdea Ventures. SEBI RA INH000017815. ",
     keywords:
       "financial planner vs wealth manager Vadodara, portfolio review Vadodara, SEBI RA INH000017815, PrimeIdea Ventures",
     columns: [
@@ -659,10 +659,7 @@ export const COMPARISONS = [
     ],
     relatedServices: [
       { title: "SEBI RA page", href: "/sebi-registered-research-analyst" },
-      {
-        title: "RA vs IA vs MFD",
-        href: "/comparisons/research-analyst-vs-investment-adviser-vs-mfd",
-      },
+      { title: "Advisor vs Research Analyst", href: "/investment-advisor-in-vadodara" },
       { title: "Book Portfolio Review", href: "/book-portfolio-review" },
     ],
     faqs: [

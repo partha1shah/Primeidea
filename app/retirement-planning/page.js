@@ -138,7 +138,7 @@ export default function RetirementPlanningPage() {
           { label: "Base Location", value: "Vadodara", Icon: MapPinIcon },
           { label: "Focus", value: "Corpus & income", Icon: SunIcon },
         ]}
-        disclaimer="Retirement projections are working assumptions, not promises. Investments in the securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns."
+        disclaimer="Retirement projections are working assumptions, not promises. Investments in the securities market are subject to market risks.  "
       />
 
       <ScopeBreadcrumbs items={[{ label: "Retirement Planning" }]} />

@@ -27,6 +27,11 @@ const aboutLinks = [
     href: "/sebi-registered-research-analyst",
   },
   {
+    name: "Best Advisor in Vadodara",
+    description: "Top research-led investment advisor in Vadodara",
+    href: "/investment-advisor-in-vadodara",
+  },
+  {
     name: "Careers",
     description: "Join the PrimeIdea team",
     href: "/careers",

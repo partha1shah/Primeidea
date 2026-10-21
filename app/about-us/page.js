@@ -23,9 +23,9 @@ const faqs = [
   {
     question: "What is PrimeIdea Ventures?",
     answer:
-      "PrimeIdea Ventures is a Vadodara-based research-led wealth management and portfolio review firm. We help individuals grow hard-earned money with clear understanding and expert guidance — in person or online.",
+      "PrimeIdea Ventures is a Vadodara-based research-led wealth management and portfolio review firm. We help individuals grow hard-earned money with clear understanding and expert guidance — in person or online. It is not a SEBI Registered Investment Adviser.",
     plainText:
-      "PrimeIdea Ventures is a Vadodara-based research-led wealth management and portfolio review firm. We help individuals grow hard-earned money with clear understanding and expert guidance — in person or online.",
+      "PrimeIdea Ventures is a Vadodara-based research-led wealth management and portfolio review firm. We help individuals grow hard-earned money with clear understanding and expert guidance — in person or online. It is not a SEBI Registered Investment Adviser.",
   },
   {
     question: "Who leads research at PrimeIdea?",
@@ -37,9 +37,9 @@ const faqs = [
   {
     question: "Does PrimeIdea guarantee returns?",
     answer:
-      "No. Investments in securities market are subject to market risks. PrimeIdea does not guarantee returns or market-beating performance.",
+      "No. Investments in securities market are subject to market risks.  ",
     plainText:
-      "No. Investments in securities market are subject to market risks. PrimeIdea does not guarantee returns or market-beating performance.",
+      "No. Investments in securities market are subject to market risks.  ",
   },
   {
     question: "Where is PrimeIdea based?",
@@ -62,7 +62,7 @@ export const metadata = {
   description:
     "PrimeIdea Ventures is a Vadodara-based research-led wealth management firm helping investors across Gujarat, India, and worldwide with portfolio review and expert guidance.",
   keywords:
-    "About PrimeIdea Ventures, research-led wealth management Vadodara, portfolio review Gujarat India NRI",
+    "About PrimeIdea Ventures, research-led wealth management Vadodara, SEBI research analyst Vadodara, portfolio review Vadodara, Gujarat India NRI",
   author: "Partha Shah",
   robots: "index, follow",
   openGraph: {

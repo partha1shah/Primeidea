@@ -53,6 +53,7 @@ const serviceLinks = [
   { title: "Research Process", href: "/research-process" },
   { title: "Private Wealth", href: "/private-wealth-management-gujarat-india" },
   { title: "SEBI RA page", href: "/sebi-registered-research-analyst" },
+  { title: "Advisor vs Research Analyst", href: "/investment-advisor-in-vadodara" },
   { title: "Regulatory Disclosures", href: "/regulatory-disclosures" },
   { title: "Comparison guides", href: "/comparisons" },
   { title: "Knowledge Centre", href: "/knowledge-centre" },

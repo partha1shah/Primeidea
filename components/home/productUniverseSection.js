@@ -225,7 +225,7 @@ const ProductUniverseSection = () => {
 
         <FadeUpOneByOneAnimation className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <p className="text-sm text-white/70 leading-relaxed max-w-[640px]">
-            Investments in the securities market are subject to market risks. Product recommendations are based on suitability — PrimeIdea Ventures does not guarantee returns.
+            Investments in the securities market are subject to market risks. Product recommendations are based on suitability —  
           </p>
           <Link
             href="/contact-us"

@@ -6,7 +6,7 @@ const disclaimer = [
   "Disclaimer",
   "Investments in the securities market are subject to market risks.",
   "This note is education. It is not a forecast, a product offer, or a promise of returns.",
-  "PrimeIdea Ventures does not guarantee returns.",
+  " ",
   "Partha Shah, SEBI Registered Research Analyst INH000017815.",
 ];
 
@@ -107,7 +107,7 @@ const notes = [
       "1. Who PrimeIdea is, and the SEBI RA registration.",
       "2. What a portfolio review covers.",
       "3. Mutual funds, direct equity, and fixed income — risks first.",
-      "4. What the session does not do: no tips, no guaranteed returns.",
+      "4. What the session does not do: no tips, ",
       "5. How to book an office visit or a video review.",
     ],
   },
@@ -123,7 +123,7 @@ function buildPdf(title, bodyLines) {
     title,
     "",
     "SEBI Registered Research Analyst: Partha Shah  INH000017815",
-    "Education note. No guaranteed returns.",
+    "Education note. ",
     "".bodyLines.disclaimer,
   ];
   let y = 760;

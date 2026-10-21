@@ -43,16 +43,16 @@ const faqs = [
   {
     question: "Does leadership guarantee investment returns?",
     answer:
-      "No. Investments in securities market are subject to market risks. PrimeIdea does not guarantee returns or market-beating performance.",
+      "No. Investments in securities market are subject to market risks.  ",
     plainText:
-      "No. Investments in securities market are subject to market risks. PrimeIdea does not guarantee returns or market-beating performance.",
+      "No. Investments in securities market are subject to market risks.  ",
   },
 ];
 
 export const metadata = {
   title: "Leadership Team",
   description:
-    "PrimeIdea Ventures leadership is led by Partha Shah, SEBI Registered Research Analyst INH000017815, from Vadodara, serving investors across Gujarat and India through a research-led portfolio review process. No guaranteed returns.",
+    "PrimeIdea Ventures leadership is led by Partha Shah, SEBI Registered Research Analyst INH000017815, from Vadodara, serving investors across Gujarat and India through a research-led portfolio review process. ",
   keywords:
     "PrimeIdea leadership, Partha Shah SEBI RA INH000017815, Head of Research PrimeIdea Ventures, research-led wealth management Vadodara",
   author: "Partha Shah",

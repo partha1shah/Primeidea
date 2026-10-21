@@ -51,7 +51,7 @@ export default function BookPortfolioReviewContent({ defaultService }) {
                   research-led sessions at the Vadodara office or by video.
                 </p>
                 <p className="text-[11px] md:text-xs text-[#6B7C8A] leading-relaxed mb-6">
-                  * Educational consultation. No guaranteed returns.
+                  * Educational consultation. 
                 </p>
               </FadeUpOneByOneAnimation>
 

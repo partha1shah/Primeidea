@@ -58,7 +58,7 @@ const faqs = [
 export const metadata = {
   title: "Risk Assessment",
   description:
-    "PrimeIdea Ventures Risk Assessment — a short suitability questionnaire on volatility comfort, investment horizon, and market familiarity. Indicative score only. No guaranteed returns.",
+    "PrimeIdea Ventures Risk Assessment — a short suitability questionnaire on volatility comfort, investment horizon, and market familiarity. Indicative score only. ",
   keywords:
     "risk assessment, investor risk profile, risk questionnaire India, PrimeIdea Ventures, suitability profiling",
   author: "Partha Shah",

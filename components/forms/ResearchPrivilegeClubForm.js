@@ -81,7 +81,7 @@ export default function ResearchPrivilegeClubForm() {
         </>
       }
       description="Submit a subscription enquiry. The PrimeIdea team will contact you for offline KYC, suitability understanding, payment process, and subscription activation."
-      disclaimer="Annual subscription: INR 18,000 per annum. Taxes, invoice terms, and payment process are shared during onboarding. No guaranteed returns."
+      disclaimer="Annual subscription: INR 18,000 per annum. Taxes, invoice terms, and payment process are shared during onboarding. "
       submitLabel="Submit Subscription Enquiry"
       successMessage="Thank you. Your Research Privilege Club enquiry has been received."
       eventName="research_privilege_club_form_submit"

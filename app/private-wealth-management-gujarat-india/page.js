@@ -50,9 +50,9 @@ const faqs = [
   {
     question: "Does private wealth management guarantee better returns?",
     answer:
-      "No. Investments in securities market are subject to market risks. PrimeIdea does not guarantee returns or market-beating performance.",
+      "No. Investments in securities market are subject to market risks.  ",
     plainText:
-      "No. Investments in securities market are subject to market risks. PrimeIdea does not guarantee returns or market-beating performance.",
+      "No. Investments in securities market are subject to market risks.  ",
   },
   {
     question: "How does succession planning work with private wealth?",
@@ -129,7 +129,7 @@ export default function PrivateWealthPage() {
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="Private Wealth Management in Gujarat and India"
         mainSubTitle="Research-led private wealth support for HNI and family portfolios — from a Vadodara base, across Gujarat and India."
-        mainDisclaimer="No product pushing. No guaranteed returns."
+        mainDisclaimer="No product pushing. "
         mainLinkTitle="Book Consultation"
         mainLink="/contact-us"
         usePrimaryAsLink={true}
@@ -143,7 +143,7 @@ export default function PrivateWealthPage() {
           { label: "Reach", value: "Gujarat & India", Icon: GlobeAltIcon },
           { label: "Who we help", value: "HNI & families", Icon: UserGroupIcon },
         ]}
-        disclaimer="Private wealth support is a research-led review and planning process. Investments in securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns."
+        disclaimer="Private wealth support is a research-led review and planning process. Investments in securities market are subject to market risks.  "
       />
 
       <ScopeBreadcrumbs items={[{ label: "Private Wealth Management" }]} />

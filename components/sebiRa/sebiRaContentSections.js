@@ -314,9 +314,9 @@ export default function SebiRaContentSections() {
                 description: "Investor charter, grievance, and compliance information.",
               },
               {
-                title: "Mutual Fund Investment Support",
-                href: "/mutual-fund-investment-support",
-                description: "Research-led SIP and scheme review.",
+                title: "Advisor vs Research Analyst",
+                href: "/investment-advisor-in-vadodara",
+                description: "PrimeIdea as a top research-led investment advisor in Vadodara.",
               },
             ].map((link) => (
               <FadeUpOneByOneAnimation key={link.title}>

@@ -96,7 +96,7 @@ export default function ComparisonsHubPage() {
 
       <ScopeDisclaimerBar ctaHref="/book-portfolio-review" ctaLabel="Book Portfolio Review">
         Educational content only. Investments in the securities market are subject to market
-        risks. PrimeIdea Ventures does not guarantee returns. </ScopeDisclaimerBar>
+        risks.   </ScopeDisclaimerBar>
 
       <Footer />
     </div>

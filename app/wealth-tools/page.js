@@ -30,9 +30,9 @@ const faqs = [
   {
     question: "Do calculator results guarantee returns or corpus size?",
     answer:
-      "No. Results depend on the assumptions you enter. Investments in the securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns.",
+      "No. Results depend on the assumptions you enter. Investments in the securities market are subject to market risks.  ",
     plainText:
-      "No. Results depend on the assumptions you enter. Investments in the securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns.",
+      "No. Results depend on the assumptions you enter. Investments in the securities market are subject to market risks.  ",
   },
   {
     question: "Are these tools the same as investment advice?",
@@ -79,7 +79,7 @@ export const metadata = {
     site_name: "PrimeIdea Ventures",
     title: "Wealth Tools | PrimeIdea Ventures",
     description:
-      "Practical wealth calculators with clear assumptions, results, CTAs, and disclaimers. Illustrative only — no guaranteed returns.",
+      "Practical wealth calculators with clear assumptions, results, CTAs, and disclaimers. Illustrative only — ",
   },
   twitter: {
     handle: "@primeidea",
@@ -134,7 +134,7 @@ export default function WealthToolsPage() {
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="Wealth Tools"
         mainSubTitle="Practical calculators to explore SIP growth, corpus needs, insurance cover, allocation starting points, and withdrawal trade-offs — then continue with a research-led portfolio review."
-        mainDisclaimer="Outputs are illustrative estimates only. No guaranteed returns."
+        mainDisclaimer="Outputs are illustrative estimates only. "
         mainLinkTitle="Book Portfolio Review"
         mainLink="/portfolio-review"
         usePrimaryAsLink={true}

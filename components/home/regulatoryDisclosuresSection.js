@@ -88,7 +88,7 @@ const RegulatoryDisclosuresSection = () => {
             <p className="text-white/75 text-sm md:text-base leading-relaxed">
               Full SEBI registration details are in the site footer and on the Regulatory
               Disclosures page. Investments in securities market are subject to market risks.
-              PrimeIdea Ventures does not guarantee returns.
+               
             </p>
           </FadeUpOneByOneAnimation>
         </div>

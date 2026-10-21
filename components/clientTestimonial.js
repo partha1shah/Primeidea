@@ -220,7 +220,7 @@ const ClientTestimonial = () => {
           </div>
           <p className="mt-6 text-center text-xs text-[#3D4E5C] leading-relaxed max-w-[720px] mx-auto">
             Individual experiences vary. Investments in the securities market are subject to
-            market risks. PrimeIdea Ventures does not guarantee returns.
+            market risks.  
           </p>
         </div>
       </div>

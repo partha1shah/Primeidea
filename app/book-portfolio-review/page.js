@@ -43,9 +43,9 @@ const faqs = [
   {
     question: "Does booking guarantee investment returns?",
     answer:
-      "No. Investments in the securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns.",
+      "No. Investments in the securities market are subject to market risks.  ",
     plainText:
-      "No. Investments in the securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns.",
+      "No. Investments in the securities market are subject to market risks.  ",
   },
   {
     question: "Where can I find registration details?",
@@ -59,7 +59,7 @@ const faqs = [
 export const metadata = {
   title: "Book Portfolio Review",
   description:
-    "Book a research-led portfolio review or consultation with PrimeIdea Ventures — choose service, preferred date/time, office visit or video call, and WhatsApp confirmation. No guaranteed returns.",
+    "Book a research-led portfolio review or consultation with PrimeIdea Ventures — choose service, preferred date/time, office visit or video call, and WhatsApp confirmation. ",
   keywords:
     "book portfolio review Vadodara, schedule wealth consultation, NRI consultation booking, PrimeIdea Ventures",
   author: "Partha Shah",
@@ -71,7 +71,7 @@ export const metadata = {
     site_name: "PrimeIdea Ventures",
     title: "Book Portfolio Review | PrimeIdea Ventures",
     description:
-      "Request a portfolio review or specialist consultation — office or video. Educational, research-led process. No guaranteed returns.",
+      "Request a portfolio review or specialist consultation — office or video. Educational, research-led process. ",
   },
   twitter: {
     handle: "@primeidea",
@@ -129,7 +129,7 @@ export default async function BookPortfolioReviewPage({ searchParams }) {
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="Book Portfolio Review"
         mainSubTitle="Choose your service, preferred date and time, and office visit or video call. Opt in for WhatsApp confirmation."
-        mainDisclaimer="Educational consultation — no guaranteed returns."
+        mainDisclaimer="Educational consultation — "
         mainLinkTitle="Start booking"
         mainLink="#booking-form"
         usePrimaryAsLink={true}
@@ -143,7 +143,7 @@ export default async function BookPortfolioReviewPage({ searchParams }) {
           { label: "Booking type", value: "Review / consultation", Icon: CalendarDaysIcon },
           { label: "Modes", value: "Office or video", Icon: MapPinIcon },
         ]}
-        disclaimer="Booking requests are confirmed by the team subject to availability. Consultations are research-led and educational. Investments in the securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns."
+        disclaimer="Booking requests are confirmed by the team subject to availability. Consultations are research-led and educational. Investments in the securities market are subject to market risks.  "
       />
 
       <ScopeBreadcrumbs items={[{ label: "Book Portfolio Review" }]} />

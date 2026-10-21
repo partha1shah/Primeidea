@@ -11,7 +11,7 @@ const PAGE_URL = `https://www.primeidea.in${PAGE_PATH}`;
 export const metadata = {
   title: "Terms of Use",
   description:
-    "Terms for using the PrimeIdea Ventures website. Educational, research-led content from a Vadodara base — no guaranteed returns. Guided by Partha Shah.",
+    "Terms for using the PrimeIdea Ventures website. Educational, research-led content from a Vadodara base —  Guided by Partha Shah.",
   robots: "index, follow",
   openGraph: {
     type: "website",

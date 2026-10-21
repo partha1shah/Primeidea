@@ -52,9 +52,9 @@ const faqs = [
   {
     question: "Do you guarantee returns?",
     answer:
-      "No. PrimeIdea Ventures does not guarantee returns. Investments are subject to market risks. Research views may change based on market conditions, valuation, liquidity, regulation, taxation, and product-level risks.",
+      "No.   Investments are subject to market risks. Research views may change based on market conditions, valuation, liquidity, regulation, taxation, and product-level risks.",
     plainText:
-      "No. PrimeIdea Ventures does not guarantee returns. Investments are subject to market risks. Research views may change based on market conditions, valuation, liquidity, regulation, taxation, and product-level risks.",
+      "No.   Investments are subject to market risks. Research views may change based on market conditions, valuation, liquidity, regulation, taxation, and product-level risks.",
   },
   {
     question: "What investment categories are covered?",
@@ -132,7 +132,7 @@ export const metadata = {
     site_name: "PrimeIdea Ventures",
     title: "PrimeIdea Research Privilege Club | PrimeIdea Ventures",
     description:
-      "Annual retail research subscription — mutual fund ideas, portfolio review, rebalancing recommendations, and email-based query support. No guaranteed returns.",
+      "Annual retail research subscription — mutual fund ideas, portfolio review, rebalancing recommendations, and email-based query support. ",
   },
   twitter: {
     handle: "@primeidea",
@@ -256,7 +256,7 @@ export default function ResearchPrivilegeClubPage() {
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="PrimeIdea Research Privilege Club"
         mainSubTitle="Paid annual research subscription for retail investors — mutual fund ideas, portfolio review, rebalancing recommendations, and market research through a SEBI Registered Research Analyst-led process."
-        mainDisclaimer="PrimeIdea Ventures does not guarantee returns. Research views are subject to market risks and suitability."
+        mainDisclaimer="  Research views are subject to market risks and suitability."
         mainLinkTitle="Join Research Privilege Club"
         mainLink="#privilege-club-enquiry"
         usePrimaryAsLink={true}

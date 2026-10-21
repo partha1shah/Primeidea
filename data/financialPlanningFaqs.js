@@ -9,9 +9,9 @@ const financialPlanningFaqs = [
   {
     question: "Is PrimeIdea a SEBI Registered Investment Adviser?",
     answer:
-      "No. PrimeIdea operates as a research-led firm under SEBI Registered Research Analyst registration (Partha Shah, INH000017815). Research Analyst and Investment Adviser are separate SEBI categories.",
+      "No. PrimeIdea operates as a research-led firm under SEBI Registered Research Analyst registration (Partha Shah, INH000017815). Research Analyst and Investment Adviser are separate SEBI categories. See /investment-advisor-in-vadodara for how those Vadodara searches differ.",
     plainText:
-      "No. PrimeIdea operates as a research-led firm under SEBI Registered Research Analyst registration (Partha Shah, INH000017815). Research Analyst and Investment Adviser are separate SEBI categories.",
+      "No. PrimeIdea operates as a research-led firm under SEBI Registered Research Analyst registration (Partha Shah, INH000017815). Research Analyst and Investment Adviser are separate SEBI categories. See /investment-advisor-in-vadodara for how those Vadodara searches differ.",
   },
   {
     question: "Does a financial plan guarantee investment returns?",

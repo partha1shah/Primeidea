@@ -35,6 +35,13 @@ const faqs = [
       "The office is at V3 Landmark, 306-307, Atladara, Vadodara, Gujarat 390012. The firm serves investors across Gujarat and India through office visits and video consultation. Naming other cities does not mean PrimeIdea has offices there.",
   },
   {
+    question: "Is PrimeIdea an investment advisor in Vadodara?",
+    answer:
+      "PrimeIdea is not a SEBI Registered Investment Adviser. It is a Vadodara research-led wealth management and portfolio review firm under SEBI Research Analyst INH000017815. See /investment-advisor-in-vadodara for how those searches differ from a research-led review.",
+    plainText:
+      "PrimeIdea is not a SEBI Registered Investment Adviser. It is a Vadodara research-led wealth management and portfolio review firm under SEBI Research Analyst INH000017815. See /investment-advisor-in-vadodara for how those searches differ from a research-led review.",
+  },
+  {
     question: "Who leads research at PrimeIdea?",
     answer:
       "Partha Shah, Head of Research & Investment Strategy, is a SEBI Registered Research Analyst (INH000017815). Investors should verify registration independently.",
@@ -44,9 +51,9 @@ const faqs = [
   {
     question: "Does PrimeIdea guarantee returns?",
     answer:
-      "No. Investments in the securities market are subject to market risks. PrimeIdea does not guarantee returns or market-beating performance.",
+      "No. Investments in the securities market are subject to market risks.  ",
     plainText:
-      "No. Investments in the securities market are subject to market risks. PrimeIdea does not guarantee returns or market-beating performance.",
+      "No. Investments in the securities market are subject to market risks.  ",
   },
   {
     question: "How do I contact PrimeIdea?",
@@ -58,10 +65,10 @@ const faqs = [
 ];
 
 export const metadata = {
-  title: "PrimeIdea Ventures Profile",
-  description: `${IDENTITY_LINE} Office in Atladara, Vadodara. No guaranteed returns.`,
+    title: "PrimeIdea Ventures Profile",
+  description: `${IDENTITY_LINE} Office in Atladara, Vadodara. `,
   keywords:
-    "PrimeIdea Ventures profile, Vadodara wealth management firm, Partha Shah SEBI RA INH000017815, research-led portfolio review Gujarat India",
+    "PrimeIdea Ventures profile, research-led wealth management Vadodara, SEBI research analyst Vadodara, portfolio review Vadodara, Partha Shah SEBI RA INH000017815",
   author: "Partha Shah",
   robots: "index, follow",
   openGraph: {
@@ -159,7 +166,7 @@ export default function PrimeIdeaVenturesProfilePage() {
           { label: "Entity", value: "Wealth & review firm", Icon: BuildingOffice2Icon },
           { label: "Registration No.", value: "INH000017815", Icon: CheckBadgeIcon },
         ]}
-        disclaimer="Entity profile for search and LLM clarity. Investments in the securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns."
+        disclaimer="Entity profile for search and LLM clarity. Investments in the securities market are subject to market risks.  "
       />
 
       <ScopeBreadcrumbs items={[{ label: "PrimeIdea Ventures Profile" }]} />

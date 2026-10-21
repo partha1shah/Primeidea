@@ -124,7 +124,7 @@ export default async function RegulatoryDisclosuresPage() {
       />
 
       <ScopePageMetaStrip
-        disclaimer="Investors should verify SEBI registration independently. Investments in securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns."
+        disclaimer="Investors should verify SEBI registration independently. Investments in securities market are subject to market risks.  "
       />
 
       <ScopeBreadcrumbs items={[{ label: "Regulatory Disclosures" }]} />

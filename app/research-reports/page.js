@@ -36,9 +36,9 @@ const faqs = [
   {
     question: "Do research reports guarantee returns?",
     answer:
-      "No. Investments in the securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns. Reports are educational and illustrative only.",
+      "No. Investments in the securities market are subject to market risks.   Reports are educational and illustrative only.",
     plainText:
-      "No. Investments in the securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns. Reports are educational and illustrative only.",
+      "No. Investments in the securities market are subject to market risks.   Reports are educational and illustrative only.",
   },
   {
     question: "Who guides the research behind these notes?",
@@ -59,7 +59,7 @@ const faqs = [
 export const metadata = {
   title: "PrimeIdea Research Reports",
   description:
-    "PrimeIdea Research Reports — monthly market outlook, equity notes, mutual fund category notes, fixed income, asset allocation, sector research, portfolio strategy, and SIF/PMS/AIF education notes. Separate from blogs. Educational only; no guaranteed returns.",
+    "PrimeIdea Research Reports — monthly market outlook, equity notes, mutual fund category notes, fixed income, asset allocation, sector research, portfolio strategy, and SIF/PMS/AIF education notes. Separate from blogs. Educational only; ",
   keywords:
     "PrimeIdea research reports, market outlook PDF, mutual fund category notes, portfolio strategy notes",
   author: "Partha Shah",
@@ -71,7 +71,7 @@ export const metadata = {
     site_name: "PrimeIdea Ventures",
     title: "PrimeIdea Research Reports | PrimeIdea Ventures",
     description:
-      "Dedicated research report library — separate from blogs. Educational notes only. No guaranteed returns.",
+      "Dedicated research report library — separate from blogs. Educational notes only. ",
   },
   twitter: {
     handle: "@primeidea",
@@ -126,7 +126,7 @@ export default function ResearchReportsPage() {
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="PrimeIdea Research Reports"
         mainSubTitle="Monthly market outlook, equity notes, mutual fund category notes, fixed income, asset allocation, sector research, portfolio strategy, and SIF/PMS/AIF education notes — downloadable research PDFs separate from general blogs."
-        mainDisclaimer="Educational content only. No guaranteed returns."
+        mainDisclaimer="Educational content only. "
         mainLinkTitle="Browse Report Library"
         mainLink="#report-library"
         usePrimaryAsLink={true}

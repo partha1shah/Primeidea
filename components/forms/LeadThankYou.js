@@ -73,7 +73,7 @@ export default function LeadThankYou({
 
           <p className="text-center text-xs text-[#6B7C8A] mt-6 leading-relaxed">
             Investments in the securities market are subject to market risks.
-            PrimeIdea Ventures does not guarantee returns.
+             
           </p>
         </div>
       </div>

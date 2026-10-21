@@ -44,9 +44,9 @@ const faqs = [
   {
     question: "Does Knowledge Centre content guarantee investment returns?",
     answer:
-      "No. Investments in the securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns. Articles and notes are educational and illustrative only.",
+      "No. Investments in the securities market are subject to market risks.   Articles and notes are educational and illustrative only.",
     plainText:
-      "No. Investments in the securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns. Articles and notes are educational and illustrative only.",
+      "No. Investments in the securities market are subject to market risks.   Articles and notes are educational and illustrative only.",
   },
   {
     question: "How do I go from learning to a portfolio review?",
@@ -60,7 +60,7 @@ const faqs = [
 export const metadata = {
   title: "Knowledge Centre",
   description:
-    "PrimeIdea Ventures Knowledge Centre — blogs, research notes, market outlooks, portfolio checklists, FAQs, guides, and investor education. Research process Educational content only; no guaranteed returns.",
+    "PrimeIdea Ventures Knowledge Centre — blogs, research notes, market outlooks, portfolio checklists, FAQs, guides, and investor education. Research process Educational content only; ",
   keywords:
     "Knowledge Centre PrimeIdea, investor education Vadodara, financial blogs Gujarat, portfolio checklist",
   author: "Partha Shah",
@@ -72,7 +72,7 @@ export const metadata = {
     site_name: "PrimeIdea Ventures",
     title: "Knowledge Centre | PrimeIdea Ventures",
     description:
-      "Research-led investor education: blogs, notes, checklists, FAQs, and guides. No guaranteed returns.",
+      "Research-led investor education: blogs, notes, checklists, FAQs, and guides. ",
   },
   twitter: {
     handle: "@primeidea",
@@ -138,7 +138,7 @@ export default async function KnowledgeCentrePage() {
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="Knowledge Centre"
         mainSubTitle="Blogs, research notes, market outlooks, portfolio checklists, FAQs, downloadable guides, and seminar materials — research-led investor education for Vadodara, Gujarat, and India."
-        mainDisclaimer="Educational content only. No guaranteed returns."
+        mainDisclaimer="Educational content only. "
         mainLinkTitle="Explore Library"
         mainLink="#library"
         usePrimaryAsLink={true}

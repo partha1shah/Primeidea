@@ -8,7 +8,7 @@ export default function ScopeDisclaimerBar({
 }) {
   const disclaimerText =
     children ||
-    "Investments in securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns. Investors should verify SEBI registration independently and read all scheme-related documents carefully before investing.";
+    "Investments in securities market are subject to market risks.   Investors should verify SEBI registration independently and read all scheme-related documents carefully before investing.";
 
   return (
     <section aria-label="Financial disclaimer">

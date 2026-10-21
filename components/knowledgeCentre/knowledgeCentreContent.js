@@ -136,6 +136,17 @@ const resourceCategories = [
     status: "live",
   },
   {
+    id: "advisor-vadodara",
+    group: "learn",
+    title: "Investment advisor in Vadodara",
+    description:
+      "PrimeIdea as a top research-led investment advisor in Vadodara — and how that differs from a SEBI RIA list.",
+    href: "/investment-advisor-in-vadodara",
+    cta: "Read the guide",
+    Icon: ScaleIcon,
+    status: "live",
+  },
+  {
     id: "entity-profile",
     group: "process",
     title: "Entity profile",
@@ -288,7 +299,7 @@ const relatedPages = [
     step: "02",
     title: "Comparison Guides",
     href: "/comparisons",
-    description: "RA vs IA vs MFD, direct apps vs review, regular vs direct, PMS vs MF, planner vs wealth manager.",
+    description: "RA vs IA vs MFD, advisor vs research analyst in Vadodara, direct apps vs review, regular vs direct, PMS vs MF.",
     cta: "Browse comparisons",
     Icon: ScaleIcon,
   },

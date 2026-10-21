@@ -154,7 +154,7 @@ export function ResultCard({ title, rows }) {
 }
 
 const DEFAULT_DISCLAIMER =
-  "This calculator provides illustrative estimates only. Outputs depend on your assumptions and do not constitute investment advice, research recommendations, or guaranteed returns. Investments in the securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns.";
+  "This calculator provides illustrative estimates only. Outputs depend on your assumptions and do not constitute investment advice, research recommendations, or guaranteed returns. Investments in the securities market are subject to market risks.  ";
 
 export default function CalculatorShell({
   title,

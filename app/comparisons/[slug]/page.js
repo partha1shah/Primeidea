@@ -108,7 +108,7 @@ export default async function ComparisonPage({ params }) {
         bannerRightImg="/images/home/banner-right.png"
         mainTitle={comparison.h1}
         mainSubTitle={comparison.summary}
-        mainDisclaimer="Educational only. No guaranteed returns."
+        mainDisclaimer="Educational only. "
         mainLinkTitle="Book Portfolio Review"
         mainLink="/book-portfolio-review"
         usePrimaryAsLink={true}
@@ -131,7 +131,7 @@ export default async function ComparisonPage({ params }) {
             Icon: BookOpenIcon,
           },
         ]}
-        disclaimer="Educational comparison only — not personalised advice or a product offer. Market risks apply. PrimeIdea Ventures does not guarantee returns."
+        disclaimer="Educational comparison only — not personalised advice or a product offer. Market risks apply.  "
       />
 
       <ScopeBreadcrumbs

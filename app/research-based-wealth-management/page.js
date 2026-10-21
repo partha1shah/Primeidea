@@ -46,9 +46,9 @@ const faqs = [
   {
     question: "Does research-based wealth management guarantee growth?",
     answer:
-      "No. Investments in securities market are subject to market risks. PrimeIdea does not guarantee returns or market-beating performance.",
+      "No. Investments in securities market are subject to market risks.  ",
     plainText:
-      "No. Investments in securities market are subject to market risks. PrimeIdea does not guarantee returns or market-beating performance.",
+      "No. Investments in securities market are subject to market risks.  ",
   },
   {
     question: "How do I start?",
@@ -60,11 +60,11 @@ const faqs = [
 ];
 
 export const metadata = {
-  title: "Research-Based Wealth Management",
+    title: "Research-Based Wealth Management in Vadodara",
   description:
-    "PrimeIdea Ventures helps investors with research-based wealth management through a research-led process — portfolio review, mutual funds, and equity support without guaranteed returns.",
+    "Research-led wealth management from PrimeIdea’s Vadodara office — portfolio review, mutual funds, and equity support for investors across Gujarat and India. No guaranteed returns.",
   keywords:
-    "research-based wealth management, portfolio review, mutual fund review, equity research support, PrimeIdea Ventures",
+    "research-led wealth management Vadodara, research-based wealth management, portfolio review Vadodara, mutual fund review, PrimeIdea Ventures",
   author: "Partha Shah",
   robots: "index, follow",
   openGraph: {
@@ -72,7 +72,7 @@ export const metadata = {
     locale: "en_IE",
     url: PAGE_URL,
     site_name: "PrimeIdea Ventures",
-    title: "Research-Based Wealth Management | PrimeIdea Ventures",
+    title: "Research-Based Wealth Management in Vadodara | PrimeIdea Ventures",
     description:
       "PrimeIdea Ventures helps investors with research-based wealth management through a research-led process",
   },
@@ -172,7 +172,7 @@ export default async function ResearchBasedWealthManagementPage() {
         bannerRightImg="/images/research-wealth-management/bannerright.png"
         mainTitle="Research-Based Wealth Management"
         mainSubTitle="A research-led approach to mutual funds, equity, and portfolio construction — suitability, risk, and allocation first."
-        mainDisclaimer="No product pushing. No guaranteed returns."
+        mainDisclaimer="No product pushing. "
         mainLinkTitle="Book Portfolio Review"
         mainLink="/portfolio-review"
         usePrimaryAsLink={true}
@@ -187,7 +187,7 @@ export default async function ResearchBasedWealthManagementPage() {
           { label: "Led by", value: "SEBI RA", Icon: CheckBadgeIcon },
           { label: "Starts with", value: "Portfolio review", Icon: ClipboardDocumentCheckIcon },
         ]}
-        disclaimer="Research-based wealth management is a structured review and analysis process. Investments in securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns."
+        disclaimer="Research-based wealth management is a structured review and analysis process. Investments in securities market are subject to market risks.  "
       />
 
       <ScopeBreadcrumbs items={[{ label: "Research-Based Wealth Management" }]} />

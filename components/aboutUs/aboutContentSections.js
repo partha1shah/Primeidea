@@ -64,9 +64,9 @@ const relatedPages = [
     description: "Upload holdings or book an office or video review.",
   },
   {
-    title: "Leadership Team",
-    href: "/leadership-team",
-    description: "Research leadership profile and credentials.",
+    title: "Advisor vs Research Analyst",
+    href: "/investment-advisor-in-vadodara",
+    description: "PrimeIdea as a top research-led investment advisor in Vadodara.",
   },
   {
     title: "Contact Us",

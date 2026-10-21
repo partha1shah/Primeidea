@@ -57,9 +57,9 @@ const faqs = [
   {
     question: "Are returns guaranteed for family portfolios?",
     answer:
-      "No. Investments in securities market are subject to market risks. PrimeIdea does not guarantee returns or market-beating performance.",
+      "No. Investments in securities market are subject to market risks.  ",
     plainText:
-      "No. Investments in securities market are subject to market risks. PrimeIdea does not guarantee returns or market-beating performance.",
+      "No. Investments in securities market are subject to market risks.  ",
   },
 ];
 
@@ -129,7 +129,7 @@ export default function FamilyWealthOfficePage() {
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="Family Wealth Office in Gujarat and India"
         mainSubTitle="Multi-generational portfolio review and partner-enabled succession coordination for business families — from a Vadodara base, across Gujarat and India."
-        mainDisclaimer="Legal documents by qualified legal professionals. No guaranteed returns."
+        mainDisclaimer="Legal documents by qualified legal professionals. "
         mainLinkTitle="Book Family Consultation"
         mainLink="/contact-us"
         usePrimaryAsLink={true}

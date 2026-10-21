@@ -40,6 +40,7 @@ const SERVICE_LINKS = [
 const EXPLORE_LINKS = [
   { href: "/about-us", label: "About Us" },
   { href: "/primeidea-ventures-profile", label: "Entity Profile" },
+  { href: "/investment-advisor-in-vadodara", label: "Best Advisor in Vadodara" },
   { href: "/leadership-team", label: "Leadership" },
   { href: "/portfolio-review", label: "Portfolio Review" },
   { href: "/book-portfolio-review", label: "Book Portfolio Review" },

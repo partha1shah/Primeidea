@@ -89,7 +89,8 @@ const financialServiceSchema = {
   serviceType: [
     "Portfolio Review",
     "Research-Led Wealth Management",
-    "Mutual Fund Investment Support",
+    "SEBI Registered Research Analyst",
+    "Mutual Fund Research Support",
     "Private Wealth Management",
     "Family Wealth Office",
   ],
@@ -133,7 +134,7 @@ export const metadata = {
   description:
     "PrimeIdea Ventures helps investors across Gujarat and India with portfolio review and research-led wealth management — without guaranteed returns.",
   keywords:
-    "mutual funds, portfolio review, financial planning, wealth management, retirement planning, insurance planning, PrimeIdea Ventures",
+    "research-led wealth management Vadodara, portfolio review Vadodara, SEBI research analyst Vadodara, mutual fund research Vadodara, financial planning, PrimeIdea Ventures",
   author: "Partha Shah",
   robots: "index, follow",
   canonical: "https://www.primeidea.in/",

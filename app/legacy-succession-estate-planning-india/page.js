@@ -123,7 +123,7 @@ export default function LegacySuccessionEstatePlanningPage() {
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="Legacy, Succession and Estate Planning in India"
         mainSubTitle="Partner-enabled will, trust, probate and estate documentation coordination from a Vadodara base, across India."
-        mainDisclaimer="Legal drafting by qualified professionals. No partner name or pricing. No guaranteed returns."
+        mainDisclaimer="Legal drafting by qualified professionals. No partner name or pricing. "
         mainLinkTitle="Book Succession Planning Consultation"
         mainLink="#lead-form"
         usePrimaryAsLink={true}

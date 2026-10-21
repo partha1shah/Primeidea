@@ -55,7 +55,7 @@ const faqs = [
 export const metadata = {
   title: "Direct Equity Research Support",
   description:
-    "PrimeIdea Ventures offers research-led direct equity review for investors across Gujarat and India. No stock tips. No guaranteed returns.",
+    "PrimeIdea Ventures offers research-led direct equity review for investors across Gujarat and India. No stock tips. ",
   keywords:
     "direct equity research support, stock portfolio review Vadodara, PrimeIdea Ventures",
   author: "Partha Shah",
@@ -115,7 +115,7 @@ export default function DirectEquityResearchSupportPage() {
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="Direct Equity Research Support"
         mainSubTitle="Research-led review of the shares you already hold, from a Vadodara office, for investors across Gujarat and India."
-        mainDisclaimer="Not a stock tip. No guaranteed returns."
+        mainDisclaimer="Not a stock tip. "
         mainLinkTitle="Book Portfolio Review"
         mainLink="/book-portfolio-review"
         usePrimaryAsLink={true}
@@ -129,7 +129,7 @@ export default function DirectEquityResearchSupportPage() {
           { label: "Focus", value: "Holdings review", Icon: PresentationChartLineIcon },
           { label: "Approach", value: "Research-led", Icon: CheckBadgeIcon },
         ]}
-        disclaimer="Investments in the securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns."
+        disclaimer="Investments in the securities market are subject to market risks.  "
       />
       <ScopeBreadcrumbs items={[{ label: "Direct Equity Research Support" }]} />
       <DirectEquityContent />

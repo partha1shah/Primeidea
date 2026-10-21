@@ -43,25 +43,25 @@ const faqs = [
   {
     question: "Does a portfolio review guarantee better returns?",
     answer:
-      "No. Investments in securities market are subject to market risks. PrimeIdea does not guarantee returns or market-beating performance. The review is process-first.",
+      "No. Investments in securities market are subject to market risks.   The review is process-first.",
     plainText:
-      "No. Investments in securities market are subject to market risks. PrimeIdea does not guarantee returns or market-beating performance. The review is process-first.",
+      "No. Investments in securities market are subject to market risks.   The review is process-first.",
   },
   {
     question: "Who should book a portfolio review?",
     answer:
-      "Investors with overlapping funds, mixed products, family or inherited holdings, or NRIs with India portfolios. PrimeIdea is based in Vadodara and serves clients across Gujarat and India.",
+      "Investors with overlapping funds, mixed products, family or inherited holdings, or NRIs with India portfolios. PrimeIdea is based in Vadodara and serves clients across Gujarat and India. A portfolio review is not the same as SEBI Investment Adviser registration — see /investment-advisor-in-vadodara.",
     plainText:
-      "Investors with overlapping funds, mixed products, family or inherited holdings, or NRIs with India portfolios. PrimeIdea is based in Vadodara and serves clients across Gujarat and India.",
+      "Investors with overlapping funds, mixed products, family or inherited holdings, or NRIs with India portfolios. PrimeIdea is based in Vadodara and serves clients across Gujarat and India. A portfolio review is not the same as SEBI Investment Adviser registration — see /investment-advisor-in-vadodara.",
   },
 ];
 
 export const metadata = {
-  title: "Portfolio Review",
+    title: "Portfolio Review in Vadodara",
   description:
-    "PrimeIdea Ventures offers a research-led portfolio review for investors across Gujarat and India. Upload holdings or book an office or video review. No guaranteed returns.",
+    "Research-led portfolio review from PrimeIdea’s Vadodara office for investors across Gujarat and India. Upload holdings or book an office or video review.",
   keywords:
-    "portfolio review, portfolio review Gujarat India, upload portfolio for review, PrimeIdea Ventures",
+    "portfolio review Vadodara, portfolio review Gujarat India, upload portfolio for review, SEBI research analyst Vadodara, PrimeIdea Ventures",
   author: "Partha Shah",
   robots: "index, follow",
   openGraph: {
@@ -69,7 +69,7 @@ export const metadata = {
     locale: "en_IE",
     url: PAGE_URL,
     site_name: "PrimeIdea Ventures",
-    title: "Portfolio Review | PrimeIdea Ventures",
+    title: "Portfolio Review in Vadodara | PrimeIdea Ventures",
     description:
       "Research-led portfolio review for investors across Gujarat and India.",
   },
@@ -125,7 +125,7 @@ export default function PortfolioReviewPage() {
         bannerRightImg="/images/home/banner-right.png"
         mainTitle="Portfolio Review"
         mainSubTitle="Upload your holdings or book an office or video review. A research-led health check of suitability, overlap, and allocation — from Vadodara for investors across Gujarat, India, and worldwide."
-        mainDisclaimer="No product pushing. No guaranteed returns."
+        mainDisclaimer="No product pushing. "
         mainLinkTitle="Upload Portfolio"
         mainLink="#upload-portfolio"
         usePrimaryAsLink={true}
@@ -139,7 +139,7 @@ export default function PortfolioReviewPage() {
           { label: "Base Location", value: "Vadodara", Icon: MapPinIcon },
           { label: "Start here", value: "Upload holdings", Icon: ArrowUpTrayIcon },
         ]}
-        disclaimer="A portfolio review is a structured analysis of current holdings. Investments in securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns."
+        disclaimer="A portfolio review is a structured analysis of current holdings. Investments in securities market are subject to market risks.  "
       />
 
       <ScopeBreadcrumbs items={[{ label: "Portfolio Review" }]} />

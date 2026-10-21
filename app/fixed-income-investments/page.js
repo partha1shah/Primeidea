@@ -136,7 +136,7 @@ export default function FixedIncomeInvestmentsPage() {
           { label: "Base Location", value: "Vadodara", Icon: MapPinIcon },
           { label: "Focus", value: "Debt & bonds", Icon: BuildingLibraryIcon },
         ]}
-        disclaimer="Fixed income does not mean fixed or guaranteed returns. Investments in the securities market are subject to market risks. PrimeIdea Ventures does not guarantee returns."
+        disclaimer="Fixed income does not mean fixed or guaranteed returns. Investments in the securities market are subject to market risks.  "
       />
 
       <ScopeBreadcrumbs items={[{ label: "Fixed Income Investments" }]} />
@@ -151,7 +151,7 @@ export default function FixedIncomeInvestmentsPage() {
 
       <ScopeDisclaimerBar ctaHref="/portfolio-review" ctaLabel="Upload Portfolio for Review">
         Investments in the securities market are subject to market risks. Fixed income products
-        can lose value. PrimeIdea Ventures does not guarantee returns. Investors should verify registration
+        can lose value.   Investors should verify registration
         independently and read all related documents carefully.
       </ScopeDisclaimerBar>
 

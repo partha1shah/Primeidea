@@ -42,8 +42,10 @@ export const metadata = {
   },
   description: "Research-led wealth management and portfolio review from Vadodara for investors across Gujarat and India.",
   keywords: [
-    "portfolio review",
-    "research-led wealth management",
+    "portfolio review Vadodara",
+    "research-led wealth management Vadodara",
+    "SEBI research analyst Vadodara",
+    "mutual fund research Vadodara",
     "financial planning",
     "mutual funds",
     "insurance planning",
