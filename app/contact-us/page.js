@@ -74,7 +74,7 @@ const localBusinessSchema = {
   name: "PrimeIdea Ventures",
   url: "https://www.primeidea.in",
   telephone: "+918141027000",
-  image: "https://www.primeidea.in/images/about-us/founder.jpg",
+  image: "https://www.primeidea.in/images/about-us/partha-shah-sebi-registered-research-analyst-inh000017815.jpg",
   description:
     "Vadodara-based research-led wealth management and portfolio review firm serving investors across Gujarat and India. Research guided by Partha Shah, SEBI Registered Research Analyst INH000017815.",
   address: {

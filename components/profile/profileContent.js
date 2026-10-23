@@ -136,8 +136,8 @@ export default function ProfileContent() {
                 <div className="relative flex items-center gap-4 mb-5">
                   <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-2xl border-2 border-[#FFC300]/60 bg-[#232D63]">
                     <Image
-                      src="/images/about-us/founder.jpg"
-                      alt="Partha Shah, SEBI Registered Research Analyst"
+                      src="/images/about-us/partha-shah-sebi-registered-research-analyst-inh000017815.jpg"
+                      alt="Partha Shah, SEBI Registered Research Analyst INH000017815, PrimeIdea Ventures"
                       fill
                       sizes="80px"
                       className="object-cover object-top"

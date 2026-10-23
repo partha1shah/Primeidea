@@ -202,10 +202,10 @@ export default function SebiRaContentSections() {
             <FadeUpOneByOneAnimation className="lg:col-span-5">
               <div className="relative mx-auto lg:mx-0 w-full max-w-[420px] aspect-[4/5] overflow-hidden rounded-[20px] bg-[#293C7D] ring-1 ring-[#E3ECF5]">
                 <Image
-                  src="/images/about-us/founder.jpg"
+                  src="/images/about-us/partha-shah-sebi-registered-research-analyst-inh000017815.jpg"
                   width={800}
-                  height={1000}
-                  alt="Partha Shah SEBI Registered Research Analyst PrimeIdea Ventures Vadodara"
+                  height={800}
+                  alt="Partha Shah, SEBI Registered Research Analyst INH000017815, PrimeIdea Ventures, Vadodara"
                   className="h-full w-full object-cover object-top"
                 />
               </div>

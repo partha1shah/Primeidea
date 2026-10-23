@@ -9,6 +9,12 @@ import ScopePageJsonLd, {
   buildFaqJsonLd,
 } from "@/components/scope/ScopePageJsonLd";
 import SebiRaContentSections from "@/components/sebiRa/sebiRaContentSections";
+import {
+  FOUNDER_IMAGE_URL,
+  ogImages,
+  buildPersonSchema,
+  buildSebiCredential,
+} from "@/data/geoEntity";
 
 const PAGE_PATH = "/sebi-registered-research-analyst";
 const PAGE_URL = `https://www.primeidea.in${PAGE_PATH}`;
@@ -61,19 +67,20 @@ const faqs = [
 export const metadata = {
     title: "SEBI Registered Research Analyst in Vadodara",
   description:
-    "PrimeIdea Ventures is the Vadodara research-led firm under SEBI Registered Research Analyst INH000017815. Portfolio review for investors across Gujarat and India — not a SEBI Investment Adviser.",
+    "PrimeIdea Ventures is the Vadodara research-led firm under SEBI Registered Research Analyst INH000017815. Portfolio review for investors across Gujarat and India.",
   keywords:
     "SEBI research analyst Vadodara, SEBI Registered Research Analyst, Partha Shah INH000017815, portfolio review Vadodara, PrimeIdea Ventures",
   author: "Partha Shah",
   robots: "index, follow",
   openGraph: {
     type: "website",
-    locale: "en_IE",
+    locale: "en_IN",
     url: PAGE_URL,
-    site_name: "PrimeIdea Ventures",
+    siteName: "PrimeIdea Ventures",
     title: "SEBI Registered Research Analyst in Vadodara | PrimeIdea Ventures",
     description:
-      "PrimeIdea Ventures is the Vadodara research-led firm under SEBI Registered Research Analyst INH000017815. Not a SEBI Investment Adviser.",
+      "PrimeIdea Ventures is the Vadodara research-led firm under SEBI Registered Research Analyst INH000017815.",
+    images: ogImages,
   },
   twitter: {
     handle: "@primeidea",
@@ -94,10 +101,18 @@ const serviceSchema = {
   name: "SEBI Registered Research Analyst Services",
   description:
     "Research-led portfolio review and analysis guided by Partha Shah, SEBI Registered Research Analyst INH000017815.",
+  image: FOUNDER_IMAGE_URL,
   provider: {
     "@type": "FinancialService",
     name: "PrimeIdea Ventures",
     url: "https://www.primeidea.in",
+    image: FOUNDER_IMAGE_URL,
+    identifier: {
+      "@type": "PropertyValue",
+      name: "SEBI Registered Research Analyst",
+      value: "INH000017815",
+    },
+    hasCredential: buildSebiCredential(),
     address: {
       "@type": "PostalAddress",
       addressLocality: "Vadodara",
@@ -109,6 +124,8 @@ const serviceSchema = {
   url: PAGE_URL,
 };
 
+const personSchema = buildPersonSchema({ url: PAGE_URL });
+
 const breadcrumbSchema = buildBreadcrumbJsonLd([
   { name: "SEBI Registered Research Analyst", url: PAGE_PATH },
 ]);
@@ -118,7 +135,7 @@ const faqSchema = buildFaqJsonLd(faqs);
 export default function SebiRegisteredResearchAnalystPage() {
   return (
     <div className="bg-[#F6FDFF]">
-      <ScopePageJsonLd data={[serviceSchema, breadcrumbSchema, faqSchema]} />
+      <ScopePageJsonLd data={[serviceSchema, personSchema, breadcrumbSchema, faqSchema]} />
 
       <BannerSection
         mainBannerImage="/images/home/banner.png"

@@ -9,10 +9,10 @@ const ExpertiseSection = () => {
           <div className="flex justify-between items-center flex-col lg:flex-row mx-[-15px]">
             <div className="w-[80%] md:w-1/2 px-[15px] mb-10 lg:mb-0">
               <Image
-                src="/images/about-us/founder.jpg"
+                src="/images/about-us/partha-shah-sebi-registered-research-analyst-inh000017815.jpg"
                 width={485}
-                height={509}
-                alt="Founder - Mr. Partha Shah"
+                height={485}
+                alt="Partha Shah, SEBI Registered Research Analyst INH000017815, PrimeIdea Ventures"
               />
             </div>
             <FadeUpOneByOneAnimation className="w-full md:w-[70%] lg:w-1/2 px-[30px] md:px-[15px]">
@@ -48,7 +48,7 @@ const ExpertiseSection = () => {
               ​Our investment strategies are anchored by <strong>Mr. Partha Shah</strong>, a key member of our leadership team who spearheads our Research division. A <strong>SEBI Registered Research Analyst (INH000017815)</strong> with a robust academic foundation, Mr. Shah is an Engineering Graduate (BE) with a Master’s in Finance (MS Finance). 
             </p>
             <p className="text-lg xl:text-xl font-medium text-black">
-              He has successfully qualified for CFA (Chartered Financial Analyst) Level 2 and the RIA Level 1 & 2 examinations (examination credentials only — not SEBI Registered Investment Adviser registration), bringing deep technical expertise to our portfolio construction. <strong>His rigorous analysis supports PrimeIdea’s specialized offerings, including Portfolio Management Services (PMS), Specialized Investment Funds (SIF), and Alternate Investment Funds (AIF), where distribution and suitability review are permitted.</strong> To ensure consistent excellence and regulatory adherence across the organization, our <strong>Relationship Managers hold relevant NISM certifications</strong> and support a research-led portfolio review process.
+              He has successfully qualified for CFA (Chartered Financial Analyst) Level 2 and the RIA Level 1 & 2 examinations, bringing deep technical expertise to our portfolio construction. <strong>His rigorous analysis supports PrimeIdea’s specialized offerings, including Portfolio Management Services (PMS), Specialized Investment Funds (SIF), and Alternate Investment Funds (AIF), where distribution and suitability review are permitted.</strong> To ensure consistent excellence and regulatory adherence across the organization, our <strong>Relationship Managers hold relevant NISM certifications</strong> and support a research-led portfolio review process.
             </p>
           </FadeUpOneByOneAnimation>
         </div>

@@ -80,10 +80,10 @@ const ResearchProcessSection = () => {
         <div className="mb-10 md:mb-12 flex flex-col sm:flex-row sm:items-center gap-5 rounded-2xl border border-white/15 bg-[#293C7D]/50 p-5 md:p-6">
           <div className="relative h-16 w-16 md:h-20 md:w-20 shrink-0 overflow-hidden rounded-full ring-2 ring-[#FFC300]/40">
             <Image
-              src="/images/about-us/founder.jpg"
+              src="/images/about-us/partha-shah-sebi-registered-research-analyst-inh000017815.jpg"
               width={160}
               height={160}
-              alt="Partha Shah SEBI Registered Research Analyst PrimeIdea Ventures"
+              alt="Partha Shah, SEBI Registered Research Analyst INH000017815, PrimeIdea Ventures"
               className="h-full w-full object-cover object-top"
             />
           </div>
@@ -92,8 +92,8 @@ const ResearchProcessSection = () => {
               Partha Shah
             </p>
             <p className="text-white/75 text-sm md:text-base leading-relaxed">
-              SEBI Registered Research Analyst — process-first research guiding every
-              portfolio review.
+              SEBI Registered Research Analyst INH000017815 — process-first research
+              guiding every portfolio review.
             </p>
           </div>
         </div>

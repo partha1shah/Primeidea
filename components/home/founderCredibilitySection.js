@@ -45,10 +45,10 @@ const FounderCredibilitySection = () => {
           <FadeUpOneByOneAnimation className="lg:col-span-5">
             <div className="relative mx-auto lg:mx-0 w-full max-w-[400px] aspect-[4/5] overflow-hidden rounded-[20px] bg-[#293C7D] ring-1 ring-white/15">
               <Image
-                src="/images/about-us/founder.jpg"
+                src="/images/about-us/partha-shah-sebi-registered-research-analyst-inh000017815.jpg"
                 width={800}
-                height={1000}
-                alt="Partha Shah SEBI Registered Research Analyst PrimeIdea Ventures"
+                height={800}
+                alt="Partha Shah, SEBI Registered Research Analyst INH000017815, PrimeIdea Ventures, Vadodara"
                 className="h-full w-full object-cover object-top"
               />
             </div>
@@ -65,7 +65,7 @@ const FounderCredibilitySection = () => {
               Partha <strong className="font-semibold">Shah</strong>
             </h2>
             <p className="text-[#FFC300] text-base md:text-lg font-semibold mb-4">
-              SEBI Registered Research Analyst
+              SEBI Registered Research Analyst INH000017815
             </p>
             <p className="text-base md:text-lg text-white/80 leading-relaxed mb-6 max-w-[560px]">
               PrimeIdea Ventures is a Vadodara-based research-led wealth management and portfolio review firm serving investors across Gujarat and India, with a research process guided by Partha Shah.

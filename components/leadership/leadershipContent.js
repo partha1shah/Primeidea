@@ -110,10 +110,10 @@ export default function LeadershipContent() {
           <div className="overflow-hidden rounded-[28px] border border-[#E3ECF5] bg-white grid grid-cols-1 lg:grid-cols-12">
             <div className="lg:col-span-5 relative min-h-[420px] lg:min-h-[560px]">
               <Image
-                src="/images/about-us/founder.jpg"
+                src="/images/about-us/partha-shah-sebi-registered-research-analyst-inh000017815.jpg"
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"
-                alt="Partha Shah SEBI Registered Research Analyst PrimeIdea Ventures"
+                alt="Partha Shah, SEBI Registered Research Analyst INH000017815, PrimeIdea Ventures"
                 className="object-cover object-top"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#232D63] via-[#232D63]/25 to-transparent" />

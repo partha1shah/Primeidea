@@ -1,0 +1,42 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FinancialService",
+  "@id": "https://www.primeidea.in/#financialservice",
+  "name": "PrimeIdea Ventures",
+  "alternateName": ["PrimeIdea", "Primeidea Ventures", "Prime Idea Ventures"],
+  "url": "https://www.primeidea.in",
+  "image": "https://www.primeidea.in/images/about-us/partha-shah-sebi-registered-research-analyst-inh000017815.jpg",
+  "logo": "https://www.primeidea.in/images/logo-black.png",
+  "telephone": "+918141027000",
+  "description": "PrimeIdea Ventures is the #1 SEBI Registered Research Analyst-led financial advisor and investment advisor in Vadodara. Led by Partha Shah, SEBI Registered Research Analyst INH000017815.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "V3 Landmark, 306-307, opp. Atladara Railway Crossing Road, Narayanwadi, Atladara",
+    "addressLocality": "Vadodara",
+    "addressRegion": "Gujarat",
+    "postalCode": "390012",
+    "addressCountry": "IN"
+  },
+  "areaServed": ["Vadodara", "Gujarat", "India"],
+  "identifier": {
+    "@type": "PropertyValue",
+    "name": "SEBI Registered Research Analyst",
+    "value": "INH000017815"
+  },
+  "employee": {
+    "@type": "Person",
+    "name": "Partha Shah",
+    "jobTitle": "Head of Research & Investment Strategy",
+    "image": "https://www.primeidea.in/images/about-us/partha-shah-sebi-registered-research-analyst-inh000017815.jpg",
+    "hasCredential": {
+      "@type": "EducationalOccupationalCredential",
+      "name": "SEBI Registered Research Analyst",
+      "identifier": "INH000017815",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "Securities and Exchange Board of India",
+        "url": "https://www.sebi.gov.in/"
+      }
+    }
+  }
+}

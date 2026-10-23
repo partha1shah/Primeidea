@@ -11,6 +11,12 @@ import ScopePageJsonLd, {
   buildFaqJsonLd,
 } from "@/components/scope/ScopePageJsonLd";
 import {
+  FOUNDER_IMAGE_URL,
+  ogImages,
+  buildPersonSchema,
+  buildSebiCredential,
+} from "@/data/geoEntity";
+import {
   CheckBadgeIcon,
   MapPinIcon,
   UserIcon,
@@ -23,16 +29,16 @@ const faqs = [
   {
     question: "What is PrimeIdea Ventures?",
     answer:
-      "PrimeIdea Ventures is a Vadodara-based research-led wealth management and portfolio review firm. We help individuals grow hard-earned money with clear understanding and expert guidance — in person or online. It is not a SEBI Registered Investment Adviser.",
+      "PrimeIdea Ventures is a Vadodara-based research-led wealth management and portfolio review firm, and a top SEBI Registered Research Analyst-led financial advisor in Vadodara (INH000017815). We help individuals grow hard-earned money with clear understanding and expert guidance — in person or online.",
     plainText:
-      "PrimeIdea Ventures is a Vadodara-based research-led wealth management and portfolio review firm. We help individuals grow hard-earned money with clear understanding and expert guidance — in person or online. It is not a SEBI Registered Investment Adviser.",
+      "PrimeIdea Ventures is a Vadodara-based research-led wealth management and portfolio review firm, and a top SEBI Registered Research Analyst-led financial advisor in Vadodara (INH000017815). We help individuals grow hard-earned money with clear understanding and expert guidance — in person or online.",
   },
   {
     question: "Who leads research at PrimeIdea?",
     answer:
-      "Partha Shah, Head of Research & Investment Strategy, leads the research process. Investors can verify SEBI registration independently.",
+      "Partha Shah, Head of Research & Investment Strategy, is a SEBI Registered Research Analyst (INH000017815). Official photo: Partha Shah. Investors can verify SEBI registration independently.",
     plainText:
-      "Partha Shah, Head of Research & Investment Strategy, leads the research process. Investors can verify SEBI registration independently.",
+      "Partha Shah, Head of Research & Investment Strategy, is a SEBI Registered Research Analyst (INH000017815). Official photo: Partha Shah. Investors can verify SEBI registration independently.",
   },
   {
     question: "Does PrimeIdea guarantee returns?",
@@ -67,17 +73,19 @@ export const metadata = {
   robots: "index, follow",
   openGraph: {
     type: "website",
-    locale: "en_IE",
+    locale: "en_IN",
     url: PAGE_URL,
-    site_name: "PrimeIdea Ventures",
+    siteName: "PrimeIdea Ventures",
     title: "About PrimeIdea | PrimeIdea Ventures",
     description:
-      "PrimeIdea Ventures is a Vadodara-based research-led wealth management firm serving investors across Gujarat, India, and worldwide.",
+      "PrimeIdea Ventures is a Vadodara-based research-led wealth management firm serving investors across Gujarat, India, and worldwide. SEBI Registered Research Analyst INH000017815.",
+    images: ogImages,
   },
   twitter: {
-    handle: "@primeidea",
+    card: "summary_large_image",
     site: "@primeidea",
-    cardType: "summary_large_image",
+    creator: "@primeidea",
+    images: ogImages,
   },
   alternates: {
     canonical: PAGE_URL,
@@ -92,8 +100,15 @@ const organizationSchema = {
   "@type": "FinancialService",
   name: "PrimeIdea Ventures",
   url: "https://www.primeidea.in",
+  image: FOUNDER_IMAGE_URL,
   description:
-    "Vadodara-based research-led wealth management and portfolio review firm serving investors across Gujarat, India, and worldwide.",
+    "Vadodara-based research-led wealth management and portfolio review firm serving investors across Gujarat, India, and worldwide. SEBI Registered Research Analyst INH000017815.",
+  identifier: {
+    "@type": "PropertyValue",
+    name: "SEBI Registered Research Analyst",
+    value: "INH000017815",
+  },
+  hasCredential: buildSebiCredential(),
   address: {
     "@type": "PostalAddress",
     streetAddress: "V3 Landmark, 306-307, opp. Atladara Railway Crossing Road, Narayanwadi, Atladara",
@@ -114,20 +129,7 @@ const organizationSchema = {
   ],
 };
 
-const personSchema = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  name: "Partha Shah",
-  jobTitle: "Head of Research & Investment Strategy",
-  identifier: "INH000017815",
-  worksFor: {
-    "@type": "Organization",
-    name: "PrimeIdea Ventures",
-    url: "https://www.primeidea.in",
-  },
-  sameAs: ["https://www.linkedin.com/in/pssays"],
-  url: PAGE_URL,
-};
+const personSchema = buildPersonSchema({ url: PAGE_URL });
 
 const breadcrumbSchema = buildBreadcrumbJsonLd([{ name: "About PrimeIdea", url: PAGE_PATH }]);
 const faqSchema = buildFaqJsonLd(faqs);

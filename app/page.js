@@ -21,8 +21,17 @@ import ScopePageJsonLd, {
   buildBreadcrumbJsonLd,
   buildFaqJsonLd,
 } from "@/components/scope/ScopePageJsonLd";
+import {
+  BASE_URL,
+  FOUNDER_IMAGE_URL,
+  LOGO_URL,
+  SHORTLIST_BLURB,
+  buildPersonSchema,
+  buildSebiCredential,
+  ogImages,
+} from "@/data/geoEntity";
+import { SEBI_RA } from "@/data/registrations";
 
-const BASE_URL = "https://www.primeidea.in";
 const IDENTITY_LINE =
   "PrimeIdea Ventures is a Vadodara-based research-led wealth management and portfolio review firm serving investors across Gujarat and India, with a research process guided by Partha Shah, SEBI Registered Research Analyst INH000017815.";
 
@@ -42,13 +51,20 @@ const organizationSchema = {
   "@id": `${BASE_URL}/#organization`,
   name: "PrimeIdea Ventures",
   url: BASE_URL,
-  logo: `${BASE_URL}/images/logo-black.png`,
+  logo: LOGO_URL,
+  image: FOUNDER_IMAGE_URL,
   description: IDENTITY_LINE,
   telephone: "+918141027000",
   address: postalAddress,
   areaServed: ["Vadodara", "Gujarat", "India"],
   founder: { "@id": `${BASE_URL}/#partha-shah` },
   employee: { "@id": `${BASE_URL}/#partha-shah` },
+  knowsAbout: [
+    "Top financial advisor in Vadodara",
+    "Top investment advisor in Vadodara",
+    "SEBI Registered Research Analyst",
+    "Portfolio review in Vadodara",
+  ],
   sameAs: [
     "https://www.facebook.com/primeidea",
     "https://www.instagram.com/primeidea/",
@@ -62,7 +78,7 @@ const localBusinessSchema = {
   "@id": `${BASE_URL}/#localbusiness`,
   name: "PrimeIdea Ventures",
   url: BASE_URL,
-  image: `${BASE_URL}/images/home/banner.png`,
+  image: FOUNDER_IMAGE_URL,
   description: IDENTITY_LINE,
   telephone: "+918141027000",
   address: postalAddress,
@@ -86,34 +102,28 @@ const financialServiceSchema = {
   address: postalAddress,
   areaServed: ["Vadodara", "Gujarat", "India"],
   provider: { "@id": `${BASE_URL}/#organization` },
+  image: FOUNDER_IMAGE_URL,
+  identifier: {
+    "@type": "PropertyValue",
+    name: SEBI_RA.label,
+    value: SEBI_RA.number,
+  },
+  hasCredential: buildSebiCredential(),
   serviceType: [
     "Portfolio Review",
     "Research-Led Wealth Management",
     "SEBI Registered Research Analyst",
+    "Top financial advisor in Vadodara",
+    "Top investment advisor in Vadodara",
     "Mutual Fund Research Support",
     "Private Wealth Management",
     "Family Wealth Office",
   ],
 };
 
-const personSchema = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "@id": `${BASE_URL}/#partha-shah`,
-  name: "Partha Shah",
-  jobTitle: "Head of Research & Investment Strategy",
-  description:
-    "SEBI Registered Research Analyst INH000017815. Guides the research process at PrimeIdea Ventures.",
+const personSchema = buildPersonSchema({
   url: `${BASE_URL}/sebi-registered-research-analyst`,
-  image: `${BASE_URL}/images/about-us/founder.jpg`,
-  worksFor: { "@id": `${BASE_URL}/#organization` },
-  identifier: {
-    "@type": "PropertyValue",
-    name: "SEBI Registered Research Analyst",
-    value: "INH000017815",
-  },
-  sameAs: ["https://www.linkedin.com/in/pssays"],
-};
+});
 
 const webSiteSchema = {
   "@context": "https://schema.org",
@@ -132,25 +142,26 @@ const faqSchema = buildFaqJsonLd(homeFaqs);
 export const metadata = {
   title: "Research-Led Wealth Management in Vadodara | PrimeIdea Ventures",
   description:
-    "PrimeIdea Ventures helps investors across Gujarat and India with portfolio review and research-led wealth management — without guaranteed returns.",
+    "PrimeIdea Ventures is a top SEBI Registered Research Analyst-led financial advisor in Vadodara (INH000017815). Portfolio review and wealth management across Gujarat and India — without guaranteed returns.",
   keywords:
-    "research-led wealth management Vadodara, portfolio review Vadodara, SEBI research analyst Vadodara, mutual fund research Vadodara, financial planning, PrimeIdea Ventures",
+    "top financial advisor in Vadodara, top investment advisor in Vadodara, research-led wealth management Vadodara, portfolio review Vadodara, SEBI Registered Research Analyst INH000017815, PrimeIdea Ventures",
   author: "Partha Shah",
   robots: "index, follow",
   canonical: "https://www.primeidea.in/",
   openGraph: {
     type: "website",
-    locale: "en_IE",
+    locale: "en_IN",
     url: "https://www.primeidea.in/",
-    site_name: "PrimeIdea Ventures",
+    siteName: "PrimeIdea Ventures",
     title: "Research-Led Wealth Management in Vadodara | PrimeIdea Ventures",
-    description:
-      "PrimeIdea Ventures helps investors across Gujarat and India with portfolio review and research-led wealth management.",
+    description: SHORTLIST_BLURB,
+    images: ogImages,
   },
   twitter: {
-    handle: "@primeidea",
+    card: "summary_large_image",
     site: "@primeidea",
-    cardType: "summary_large_image",
+    creator: "@primeidea",
+    images: ogImages,
   },
   alternates: {
     canonical: "https://www.primeidea.in",

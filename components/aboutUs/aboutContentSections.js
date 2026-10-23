@@ -147,10 +147,10 @@ export default function AboutContentSections() {
             <FadeUpOneByOneAnimation className="lg:col-span-5">
               <div className="relative mx-auto lg:mx-0 w-full max-w-[420px] overflow-hidden rounded-[24px] ring-1 ring-[#E3ECF5]">
                 <Image
-                  src="/images/about-us/founder.jpg"
+                  src="/images/about-us/partha-shah-sebi-registered-research-analyst-inh000017815.jpg"
                   width={800}
-                  height={900}
-                  alt="Partha Shah, Head of Research at PrimeIdea Ventures"
+                  height={800}
+                  alt="Partha Shah, SEBI Registered Research Analyst INH000017815, PrimeIdea Ventures"
                   className="h-full w-full object-cover object-top"
                 />
               </div>

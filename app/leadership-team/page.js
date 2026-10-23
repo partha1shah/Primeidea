@@ -10,6 +10,11 @@ import ScopePageJsonLd, {
   buildFaqJsonLd,
 } from "@/components/scope/ScopePageJsonLd";
 import {
+  FOUNDER_IMAGE_URL,
+  ogImages,
+  buildPersonSchema,
+} from "@/data/geoEntity";
+import {
   CheckBadgeIcon,
   MapPinIcon,
   UserIcon,
@@ -59,12 +64,13 @@ export const metadata = {
   robots: "index, follow",
   openGraph: {
     type: "website",
-    locale: "en_IE",
+    locale: "en_IN",
     url: PAGE_URL,
-    site_name: "PrimeIdea Ventures",
+    siteName: "PrimeIdea Ventures",
     title: "Leadership Team | PrimeIdea Ventures",
     description:
       "Partha Shah, Head of Research & Investment Strategy, SEBI Registered Research Analyst INH000017815, leads PrimeIdea’s research process from Vadodara.",
+    images: ogImages,
   },
   twitter: {
     handle: "@primeidea",
@@ -90,27 +96,16 @@ const organizationSchema = {
     addressRegion: "Gujarat",
     addressCountry: "IN",
   },
+  image: FOUNDER_IMAGE_URL,
   employee: {
     "@type": "Person",
     name: "Partha Shah",
+    image: FOUNDER_IMAGE_URL,
+    identifier: "INH000017815",
   },
 };
 
-const personSchema = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  name: "Partha Shah",
-  jobTitle: "Head of Research & Investment Strategy",
-  identifier: "INH000017815",
-  image: "https://www.primeidea.in/images/about-us/founder.jpg",
-  worksFor: {
-    "@type": "Organization",
-    name: "PrimeIdea Ventures",
-    url: "https://www.primeidea.in",
-  },
-  sameAs: ["https://www.linkedin.com/in/pssays"],
-  url: PAGE_URL,
-};
+const personSchema = buildPersonSchema({ url: PAGE_URL });
 
 const breadcrumbSchema = buildBreadcrumbJsonLd([{ name: "Leadership Team", url: PAGE_PATH }]);
 const faqSchema = buildFaqJsonLd(faqs);

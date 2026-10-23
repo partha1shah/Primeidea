@@ -5,6 +5,7 @@ import "./globals.css";
 import Script from "next/script";
 import StickyMobileCta from "@/components/StickyMobileCta";
 import AnalyticsScripts, { GtmNoscript } from "@/components/AnalyticsScripts";
+import { FOUNDER_IMAGE_ALT, ogImages } from "@/data/geoEntity";
 
 const googleSiteVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
 
@@ -74,6 +75,22 @@ export const metadata = {
       }
     : {}),
   assets: ['https://www.primeidea.in'],
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: "https://www.primeidea.in",
+    siteName: "PrimeIdea Ventures",
+    images: ogImages,
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@primeidea",
+    creator: "@primeidea",
+    images: ogImages,
+  },
+  other: {
+    "og:image:alt": FOUNDER_IMAGE_ALT,
+  },
 };
 
 export const viewport = {
