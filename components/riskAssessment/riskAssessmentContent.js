@@ -22,8 +22,8 @@ const expectItems = [
     body: "Bands from Conservative to Aggressive for discussion only.",
   },
   {
-    title: "Download JSON or email your result",
-    body: "Share the response securely with the research desk.",
+    title: "Submit your result",
+    body: "Send the response directly to the research desk by email.",
   },
 ];
 
@@ -152,7 +152,7 @@ export default function RiskAssessmentContent() {
             </h2>
             <p className="text-base leading-relaxed text-[#4D4D4D]">
               Answer the client details, then the optional risk questions. Your draft is
-              saved on this device until you download or clear it.
+              saved on this device until you submit or clear it.
             </p>
           </div>
           <RiskAssessmentWizard />

@@ -1,5 +1,7 @@
 "use client";
 
+import TurnstileWidget from "@/components/TurnstileWidget";
+import { CF7_FORM_IDS, pushLeadEvent } from "@/lib/cf7Submit";
 import {
   STEPS,
   STORAGE_KEY,
@@ -8,16 +10,19 @@ import {
   getQuestionsForStep,
   getReviewRows,
   isQuestionVisible,
-  saveJsonFile,
+  responseFilename,
 } from "@/lib/financialProfile/questionnaire";
-import { openResponseEmailDraft } from "@/lib/prepareResponseEmail";
+import { submitQuestionnaireLead } from "@/lib/questionnaireLead";
+import { useTurnstile } from "@/lib/useTurnstile";
 import {
-  ArrowDownTrayIcon,
   CheckCircleIcon,
   CheckIcon,
   ClipboardDocumentListIcon,
-  EnvelopeIcon,
+  PaperAirplaneIcon,
 } from "@heroicons/react/24/outline";
+import { useRouter } from "next/navigation";
+import { Notyf } from "notyf";
+import "notyf/notyf.min.css";
 import { useEffect, useMemo, useState } from "react";
 
 const TOTAL_STEPS = STEPS.length;
@@ -45,11 +50,15 @@ function formatAnswer(value) {
 }
 
 export default function FinancialProfileWizard() {
+  const router = useRouter();
+  const turnstile = useTurnstile();
   const [current, setCurrent] = useState(0);
   const [form, setForm] = useState(emptyFormState);
   const [errors, setErrors] = useState({});
   const [saveNote, setSaveNote] = useState("Draft is saved on this device.");
   const [successMessage, setSuccessMessage] = useState("");
+  const [submitError, setSubmitError] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
@@ -114,7 +123,9 @@ export default function FinancialProfileWizard() {
     setForm(emptyFormState());
     setErrors({});
     setSuccessMessage("");
+    setSubmitError("");
     setCurrent(0);
+    turnstile.reset();
     setSaveNote("Form cleared. Draft removed from this device.");
     document
       .getElementById("financial-profile-panel")
@@ -152,7 +163,7 @@ export default function FinancialProfileWizard() {
   function handleNext() {
     if (!validStepOne()) return;
     if (isReview) {
-      handleDownload();
+      handleSubmit();
       return;
     }
     if (current < TOTAL_STEPS - 1) goTo(current + 1);
@@ -167,54 +178,68 @@ export default function FinancialProfileWizard() {
     if (current > 0) goTo(current - 1);
   }
 
-  function handleDownload() {
+  async function handleSubmit() {
     if (!validStepOne()) {
       setCurrent(0);
       return;
     }
-    saveJsonFile(buildResponsePayload(form));
-    setSuccessMessage(
-      "Your response data has been downloaded as a JSON file. Please share it only through a secure channel with PrimeIdea Ventures."
-    );
-  }
 
-  function handleEmail() {
-    if (!validStepOne()) {
-      setCurrent(0);
+    const notyf = new Notyf({
+      position: { x: "right", y: "top" },
+      duration: 5000,
+    });
+
+    if (!turnstile.token) {
+      notyf.error("Please complete the security check before submitting.");
       return;
     }
-    const payload = buildResponsePayload(form);
-    const filename = saveJsonFile(payload);
-    const answeredCount = Array.isArray(payload.questionsAndAnswers)
-      ? payload.questionsAndAnswers.filter((q) => q.status === "answered").length
-      : 0;
-    setSuccessMessage(
-      `JSON file downloaded as ${filename}. Your email draft is opening — please attach that downloaded JSON file before sending.`
-    );
-    openResponseEmailDraft({
-      filename,
-      subject: `${payload.form} Response — ${payload.responses.fullName || "Client"}`,
-      introLines: [
-        "Hello PrimeIdea team,",
-        "",
-        "Please find my Financial Profile response.",
-      ],
-      detailLines: [
-        `Form: ${payload.form}`,
-        `Client name: ${payload.responses.fullName || "—"}`,
-        `Mobile: ${payload.responses.mobile || "—"}`,
-        `Email: ${payload.responses.email || "—"}`,
-        `City: ${payload.responses.city || "—"}`,
-        `Profession: ${payload.responses.profession || "—"}`,
-        `Age group: ${payload.responses.ageGroup || "—"}`,
-        `Investment experience: ${payload.responses.investmentExperience || "—"}`,
-        `Risk tolerance: ${payload.responses.riskTolerance || "—"}`,
-        `Investment horizon: ${payload.responses.investmentHorizon || "—"}`,
-        `Questions answered: ${answeredCount}`,
-        `Generated at: ${payload.generatedAt}`,
-        `JSON file to attach: ${filename}`,
-      ],
-    });
+
+    setIsSubmitting(true);
+    setSubmitError("");
+    setSuccessMessage("");
+
+    try {
+      const payload = buildResponsePayload(form);
+      const result = await submitQuestionnaireLead(
+        CF7_FORM_IDS.financialProfile,
+        payload,
+        {
+          turnstileToken: turnstile.token,
+          filename: responseFilename(payload),
+        }
+      );
+
+      if (result.ok) {
+        pushLeadEvent("financial_profile_form_submit", {
+          form: "Financial Profile",
+          form_id: CF7_FORM_IDS.financialProfile,
+        });
+        try {
+          localStorage.removeItem(STORAGE_KEY);
+        } catch {
+          // ignore
+        }
+        turnstile.reset();
+        router.push("/financial-profile/thank-you");
+        return;
+      }
+
+      turnstile.reset();
+      const message =
+        result.message ||
+        "There was an error sending your response. Please try again.";
+      setSubmitError(message);
+      notyf.error(message);
+    } catch (error) {
+      console.error("Financial profile submit error:", error);
+      turnstile.reset();
+      const message =
+        "There was an error sending your response. Please try again.";
+      setSubmitError(message);
+      notyf.error(message);
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -291,7 +316,7 @@ export default function FinancialProfileWizard() {
                     Final Review
                   </span>
                   <span className="block text-[11px] text-white/55">
-                    Check & download
+                    Check & submit
                   </span>
                 </span>
               </button>
@@ -384,7 +409,7 @@ export default function FinancialProfileWizard() {
             <div>
               <p className="mb-5 text-sm leading-relaxed text-[#4D4D4D]">
                 Please review the information below. You can go back to any
-                section and edit it before downloading or preparing the response.
+                section and edit it before submitting.
               </p>
 
               <div className="space-y-2 rounded-[20px] border border-[#D0E0EC] bg-white p-4 md:p-5">
@@ -411,33 +436,36 @@ export default function FinancialProfileWizard() {
               </div>
 
               <p className="mt-4 text-xs leading-relaxed text-[#6B7C8A] md:text-sm">
-                Prepare Email downloads your complete JSON response and opens a
-                draft to research@primeidea.in with your details. Please attach
-                the downloaded JSON file before sending.
+                Submit sends your complete response to the PrimeIdea research
+                desk by email.
               </p>
 
               {successMessage ? (
                 <div className="mt-4 rounded-xl bg-green-100 p-3 text-sm text-green-700">
-                  <strong>Response prepared.</strong> {successMessage}
+                  <strong>Response sent.</strong> {successMessage}
                 </div>
               ) : null}
 
-              <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
+              {submitError ? (
+                <div className="mt-4 rounded-xl bg-red-100 p-3 text-sm text-red-700">
+                  {submitError}
+                </div>
+              ) : null}
+
+              <div className="mt-5 space-y-3">
+                <TurnstileWidget
+                  onToken={turnstile.onToken}
+                  resetKey={turnstile.resetKey}
+                  className="min-h-[65px]"
+                />
                 <button
                   type="button"
-                  onClick={handleDownload}
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#FFC300] px-5 py-3.5 text-base font-bold text-[#232D63] transition-colors hover:bg-[#293C7D] hover:text-white"
+                  onClick={handleSubmit}
+                  disabled={isSubmitting || !turnstile.token}
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#FFC300] px-5 py-3.5 text-base font-bold text-[#232D63] transition-colors hover:bg-[#293C7D] hover:text-white disabled:cursor-not-allowed disabled:opacity-50"
                 >
-                  <ArrowDownTrayIcon className="h-5 w-5" aria-hidden />
-                  Download Response
-                </button>
-                <button
-                  type="button"
-                  onClick={handleEmail}
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-[#D0E0EC] bg-white px-5 py-3.5 text-base font-bold text-[#293C7D] transition-colors hover:border-[#293C7D]/50"
-                >
-                  <EnvelopeIcon className="h-5 w-5" aria-hidden />
-                  Prepare Email
+                  <PaperAirplaneIcon className="h-5 w-5" aria-hidden />
+                  {isSubmitting ? "Submitting…" : "Submit"}
                 </button>
               </div>
             </div>
@@ -469,10 +497,13 @@ export default function FinancialProfileWizard() {
               <button
                 type="button"
                 onClick={handleNext}
-                className="rounded-xl bg-[#FFC300] px-5 py-3 text-sm font-bold text-[#232D63] transition-colors hover:bg-[#293C7D] hover:text-white"
+                disabled={isReview && (isSubmitting || !turnstile.token)}
+                className="rounded-xl bg-[#FFC300] px-5 py-3 text-sm font-bold text-[#232D63] transition-colors hover:bg-[#293C7D] hover:text-white disabled:cursor-not-allowed disabled:opacity-50"
               >
                 {isReview
-                  ? "Download Response →"
+                  ? isSubmitting
+                    ? "Submitting…"
+                    : "Submit →"
                   : current === TOTAL_STEPS - 1
                     ? "Review & Submit →"
                     : "Next →"}

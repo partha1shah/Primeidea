@@ -40,11 +40,11 @@ const faqs = [
       "Client details (name, mobile, email) are required. The five risk questions are optional. If you skip some, a provisional profile is shown based only on the questions you answer.",
   },
   {
-    question: "Can I download or share my result?",
+    question: "How do I share my result?",
     answer:
-      "Yes. You can download a JSON response, or use Prepare Email to download the JSON file and open a draft to research@primeidea.in with your details and clear instructions to attach that downloaded JSON file before sending.",
+      "Use Submit on the result step. Your response is emailed to the PrimeIdea research desk. Name, mobile, and email are required before you can submit.",
     plainText:
-      "Yes. You can download a JSON response, or use Prepare Email to download the JSON file and open a draft to research@primeidea.in with your details and clear instructions to attach that downloaded JSON file before sending.",
+      "Use Submit on the result step. Your response is emailed to the PrimeIdea research desk. Name, mobile, and email are required before you can submit.",
   },
   {
     question: "What should I do after the assessment?",

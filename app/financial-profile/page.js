@@ -35,23 +35,23 @@ const faqs = [
   {
     question: "Which answers are required?",
     answer:
-      "Full name, mobile, email, and city are required on the first step to download or email your response. Other sections can be skipped or left approximate.",
+      "Full name, mobile, email, and city are required on the first step before you can submit. Other sections can be skipped or left approximate.",
     plainText:
-      "Full name, mobile, email, and city are required on the first step to download or email your response. Other sections can be skipped or left approximate.",
+      "Full name, mobile, email, and city are required on the first step before you can submit. Other sections can be skipped or left approximate.",
   },
   {
     question: "Can I save and continue later?",
     answer:
-      "Yes. A draft is saved on this device until you download, clear the form, or clear browser storage.",
+      "Yes. A draft is saved on this device until you submit, clear the form, or clear browser storage.",
     plainText:
-      "Yes. A draft is saved on this device until you download, clear the form, or clear browser storage.",
+      "Yes. A draft is saved on this device until you submit, clear the form, or clear browser storage.",
   },
   {
     question: "How do I share my completed profile?",
     answer:
-      "Use Download Response for a JSON file, or Prepare Email to download the JSON and open a draft to research@primeidea.in with your details and clear instructions to attach that downloaded JSON file before sending.",
+      "Use Submit on the final review step. Your response is emailed to the PrimeIdea research desk. Name, mobile, email, and city are required before you can submit.",
     plainText:
-      "Use Download Response for a JSON file, or Prepare Email to download the JSON and open a draft to research@primeidea.in with your details and clear instructions to attach that downloaded JSON file before sending.",
+      "Use Submit on the final review step. Your response is emailed to the PrimeIdea research desk. Name, mobile, email, and city are required before you can submit.",
   },
 ];
 
@@ -153,7 +153,7 @@ export default function FinancialProfilePage() {
 
       <ScopeFaqsSection
         title="Financial profile — Frequently Asked Questions"
-        description="What the questionnaire covers, what is required, and how to share your response."
+        description="What the questionnaire covers, what is required, and how to submit your response."
         faqs={faqs}
       />
 

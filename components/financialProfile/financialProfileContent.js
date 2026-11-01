@@ -22,8 +22,8 @@ const expectItems = [
     body: "Continue later without losing progress until you clear the form.",
   },
   {
-    title: "Review before sharing",
-    body: "Download JSON or prepare an email to the research desk.",
+    title: "Review before submitting",
+    body: "Check your answers, then submit them to the research desk by email.",
   },
 ];
 
@@ -154,7 +154,7 @@ export default function FinancialProfileContent() {
             </h2>
             <p className="text-base leading-relaxed text-[#4D4D4D]">
               Complete the sections at your pace. Only the first step is required to
-              download or email your response.
+              submit your response.
             </p>
           </div>
           <FinancialProfileWizard />
