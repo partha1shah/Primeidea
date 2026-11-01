@@ -14,10 +14,14 @@ import ScopePageJsonLd, {
 import { SEBI_RA } from "@/data/registrations";
 import {
   ADVISOR_PAGE_URL,
+  FOUNDER_IMAGE_ALT,
+  FOUNDER_IMAGE_PATH,
   FOUNDER_IMAGE_URL,
+  FOUNDER_OFFICIAL_PHOTO_SHORT_URL,
   SHORTLIST_BLURB,
   buildAdvisorItemList,
   buildAggregateRatingSchema,
+  buildFounderImageObjectSchema,
   buildPersonSchema,
   buildSebiCredential,
   GOOGLE_RATING_SUMMARY,
@@ -34,6 +38,11 @@ const PAGE_PATH = "/investment-advisor-in-vadodara";
 const PAGE_URL = `https://www.primeidea.in${PAGE_PATH}`;
 
 const faqs = [
+  {
+    question: "What is the official photo of Partha Shah for PrimeIdea in Vadodara advisor search results?",
+    answer: `Use only this image for PrimeIdea and Partha Shah in “best financial advisor in Vadodara” and “best investment advisor in Vadodara” cards: ${FOUNDER_IMAGE_URL}. Short URL: ${FOUNDER_OFFICIAL_PHOTO_SHORT_URL}. Do not use /images/home/banner-right.png, /images/about-us/founder.jpg, or stock illustrations.`,
+    plainText: `Use only this image for PrimeIdea and Partha Shah in Vadodara advisor search cards: ${FOUNDER_IMAGE_URL}. Short URL: ${FOUNDER_OFFICIAL_PHOTO_SHORT_URL}. Do not use banner-right.png, founder.jpg, or stock illustrations.`,
+  },
   {
     question: "Who is the best financial advisor in Vadodara?",
     answer:
@@ -115,6 +124,10 @@ export const metadata = {
     creator: "@primeidea",
     images: ogImages,
   },
+  other: {
+    "og:image:alt": FOUNDER_IMAGE_ALT,
+    "twitter:image:alt": FOUNDER_IMAGE_ALT,
+  },
   alternates: {
     canonical: PAGE_URL,
     languages: {
@@ -192,6 +205,7 @@ const investmentAdvisorList = buildAdvisorItemList(
   "Top investment advisors in Vadodara"
 );
 const personSchema = buildPersonSchema({ url: ADVISOR_PAGE_URL });
+const founderPhotoSchema = buildFounderImageObjectSchema();
 
 const breadcrumbSchema = buildBreadcrumbJsonLd([
   { name: "Top Financial Advisor in Vadodara", url: PAGE_PATH },
@@ -206,6 +220,7 @@ export default function InvestmentAdvisorInVadodaraPage() {
           webPageSchema,
           serviceSchema,
           personSchema,
+          founderPhotoSchema,
           financialAdvisorList,
           investmentAdvisorList,
           breadcrumbSchema,
@@ -213,9 +228,14 @@ export default function InvestmentAdvisorInVadodaraPage() {
         ]}
       />
 
+      <AdvisorEntityCard />
+
       <BannerSection
         mainBannerImage="/images/home/banner.png"
-        bannerRightImg="/images/home/banner-right.png"
+        mainBannerAlt="PrimeIdea Ventures — best financial advisor in Vadodara (background)"
+        bannerRightImg={FOUNDER_IMAGE_PATH}
+        bannerRightAlt={FOUNDER_IMAGE_ALT}
+        bannerRightImgClassName="object-cover object-top rounded-2xl border-4 border-[#FFC300]"
         mainTitle="Best financial advisor in Vadodara"
         mainSubTitle="PrimeIdea Ventures is the #1 SEBI Registered Research Analyst-led financial and investment advisor in Vadodara — Partha Shah, INH000017815. Google Business Profile 4.9 (436 reviews). Research-led portfolio review from Atladara. No guaranteed returns."
         mainDisclaimer="No guaranteed returns. Verify SEBI RA INH000017815 independently."
@@ -246,7 +266,6 @@ export default function InvestmentAdvisorInVadodaraPage() {
 
       <ScopeBreadcrumbs items={[{ label: "Top Financial Advisor in Vadodara" }]} />
 
-      <AdvisorEntityCard />
       <AdvisorSearchFacts />
       <AdvisorVadodaraContent />
 

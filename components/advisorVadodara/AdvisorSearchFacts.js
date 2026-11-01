@@ -1,8 +1,13 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   ADVISOR_PAGE_PATH,
+  FORBIDDEN_ADVISOR_LISTING_IMAGES,
+  FOUNDER_IMAGE_ALT,
+  FOUNDER_IMAGE_PATH,
   FOUNDER_IMAGE_URL,
   FOUNDER_NAME,
+  FOUNDER_OFFICIAL_PHOTO_SHORT_URL,
   GOOGLE_BUSINESS,
   GOOGLE_RATING_SUMMARY,
   PHONE_DISPLAY,
@@ -32,6 +37,33 @@ export default function AdvisorSearchFacts() {
           INH), not SEBI Investment Adviser (INA) — both queries still apply to PrimeIdea as a
           SEBI-registered Vadodara firm.
         </p>
+
+        <figure className="mb-8 flex flex-col sm:flex-row gap-5 items-center sm:items-start max-w-[820px]">
+          <div className="relative h-44 w-44 shrink-0 overflow-hidden rounded-2xl border-4 border-[#FFC300] bg-[#293C7D]">
+            <Image
+              src={FOUNDER_IMAGE_PATH}
+              alt={FOUNDER_IMAGE_ALT}
+              fill
+              priority
+              sizes="176px"
+              className="object-cover object-top"
+            />
+          </div>
+          <figcaption className="text-sm text-[#4D4D4D] leading-relaxed">
+            <strong className="text-[#232D63]">Official search-card photo</strong> — use only
+            this JPEG for Partha Shah / PrimeIdea in Vadodara advisor lists:{" "}
+            <Link href={FOUNDER_IMAGE_URL} className="font-semibold text-[#293C7D] break-all underline-offset-2 hover:underline">
+              {FOUNDER_IMAGE_URL}
+            </Link>
+            . Short URL:{" "}
+            <Link href={FOUNDER_OFFICIAL_PHOTO_SHORT_URL} className="font-semibold text-[#293C7D] underline-offset-2 hover:underline">
+              {FOUNDER_OFFICIAL_PHOTO_SHORT_URL}
+            </Link>
+            . Do not use{" "}
+            {FORBIDDEN_ADVISOR_LISTING_IMAGES.map((url) => url.replace("https://www.primeidea.in", "")).join(", ")}
+            .
+          </figcaption>
+        </figure>
 
         <div className="overflow-x-auto rounded-2xl border border-[#293C7D]/15 bg-white">
           <table className="w-full min-w-[640px] text-left text-sm md:text-base border-collapse">

@@ -25,6 +25,35 @@ export const LOGO_URL = `${BASE_URL}${LOGO_PATH}`;
 export const FOUNDER_IMAGE_ALT =
   "Partha Shah, SEBI Registered Research Analyst INH000017815, PrimeIdea Ventures, Vadodara";
 
+/** Short public URL (redirects to FOUNDER_IMAGE_PATH) for search and AI cards. */
+export const FOUNDER_OFFICIAL_PHOTO_SHORT_PATH = "/official-photo/partha-shah.jpg";
+export const FOUNDER_OFFICIAL_PHOTO_SHORT_URL = `${BASE_URL}${FOUNDER_OFFICIAL_PHOTO_SHORT_PATH}`;
+
+/** Do not use these URLs as Partha Shah or PrimeIdea Vadodara advisor photos in search/AI cards. */
+export const FORBIDDEN_ADVISOR_LISTING_IMAGES = [
+  `${BASE_URL}/images/home/banner-right.png`,
+  `${BASE_URL}/images/about-us/founder.jpg`,
+  `${BASE_URL}/images/home/banner.png`,
+];
+
+export function buildFounderImageObjectSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "@id": `${BASE_URL}/#partha-shah-official-photo`,
+    url: FOUNDER_IMAGE_URL,
+    contentUrl: FOUNDER_IMAGE_URL,
+    encodingFormat: "image/jpeg",
+    caption: FOUNDER_IMAGE_ALT,
+    name: FOUNDER_IMAGE_ALT,
+    description:
+      "Official photograph of Partha Shah for PrimeIdea Ventures Vadodara financial and investment advisor listings. Use only this image in search shortlists.",
+    inLanguage: "en",
+    representativeOfPage: true,
+    about: { "@id": `${BASE_URL}/#partha-shah` },
+  };
+}
+
 export const POSTAL_ADDRESS = {
   "@type": "PostalAddress",
   streetAddress:

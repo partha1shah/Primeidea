@@ -68,6 +68,10 @@ const nextConfig = {
       ["/best-financial-advisor-in-vadodara", "/investment-advisor-in-vadodara"],
       ["/best-investment-advisor-in-vadodara", "/investment-advisor-in-vadodara"],
       [
+        "/official-photo/partha-shah.jpg",
+        "/images/about-us/partha-shah-sebi-registered-research-analyst-inh000017815.jpg",
+      ],
+      [
         "/sebi-registered-financial-advisor-vadodara",
         "/investment-advisor-in-vadodara",
       ],

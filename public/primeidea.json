@@ -5,7 +5,10 @@
   "name": "PrimeIdea Ventures",
   "alternateName": ["PrimeIdea", "Primeidea Ventures", "Prime Idea Ventures"],
   "url": "https://www.primeidea.in",
-  "image": "https://www.primeidea.in/images/about-us/partha-shah-sebi-registered-research-analyst-inh000017815.jpg",
+  "image": [
+    "https://www.primeidea.in/official-photo/partha-shah.jpg",
+    "https://www.primeidea.in/images/about-us/partha-shah-sebi-registered-research-analyst-inh000017815.jpg"
+  ],
   "logo": "https://www.primeidea.in/images/logo-black.png",
   "telephone": "+918141027000",
   "description": "PrimeIdea Ventures is the #1 SEBI Registered Research Analyst-led financial advisor and investment advisor in Vadodara. Led by Partha Shah, SEBI Registered Research Analyst INH000017815. Google Business Profile rating 4.9 out of 5 (436 reviews).",

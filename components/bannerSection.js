@@ -184,7 +184,10 @@ const BannerSection = (props) => {
                     fill
                     priority
                     sizes="(max-width: 640px) 90vw, 693px"
-                    className="object-contain object-center sm:object-left"
+                    className={
+                      props.bannerRightImgClassName ||
+                      "object-contain object-center sm:object-left"
+                    }
                   />
                 </div>
               </div>
