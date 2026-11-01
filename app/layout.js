@@ -106,6 +106,14 @@ export default function RootLayout({ children }) {
       className={`${manrope.variable} ${manrope.className}`}
       suppressHydrationWarning
     >
+      <head>
+        <link
+          rel="alternate"
+          type="text/plain"
+          href="https://www.primeidea.in/llms.txt"
+          title="LLM-readable site summary"
+        />
+      </head>
       {/* <Script
           defer="defer"
           type="text/javascript"

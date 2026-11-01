@@ -5,6 +5,8 @@ import {
   FOUNDER_IMAGE_PATH,
   FOUNDER_IMAGE_URL,
   FOUNDER_NAME,
+  GOOGLE_BUSINESS,
+  GOOGLE_RATING_SUMMARY,
   PHONE_DISPLAY,
 } from "@/data/geoEntity";
 import { SEBI_RA } from "@/data/registrations";
@@ -57,6 +59,17 @@ export default function AdvisorEntityCard() {
                 Research-led wealth management and portfolio review, led by{" "}
                 {FOUNDER_NAME}, {SEBI_RA.label} {SEBI_RA.number}. Office in
                 Atladara. Verify registration on the official SEBI website.
+              </p>
+              <p className="text-sm font-semibold text-[#1F7A4D] m-0 mb-3">
+                Google: {GOOGLE_RATING_SUMMARY} —{" "}
+                <Link
+                  href={GOOGLE_BUSINESS.mapsUrl}
+                  className="underline-offset-2 hover:underline"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  verify on Maps
+                </Link>
               </p>
               <ul className="flex flex-wrap justify-center sm:justify-start gap-x-5 gap-y-2 list-none m-0 p-0 text-sm font-semibold text-[#293C7D]">
                 <li itemProp="telephone">

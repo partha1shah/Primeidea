@@ -39,7 +39,13 @@ export default function ScopePageMetaStrip({
       <div className="absolute inset-0 bg-gradient-to-b from-[#293C7D]/40 to-[#232D63]/90 pointer-events-none" />
 
       <div className="relative mx-auto 2xl:max-w-[1340px] xl:max-w-[1170px] lg:max-w-[1004px] px-4 py-8 md:py-10">
-        <ul className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-5 list-none m-0 p-0">
+        <ul
+          className={
+            stats.length >= 4
+              ? "grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-5 list-none m-0 p-0"
+              : "grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-5 list-none m-0 p-0"
+          }
+        >
           {stats.map(({ label, value, Icon }) => (
             <li key={label}>
               <div className="h-full rounded-2xl border border-white/15 bg-[#293C7D]/55 px-5 py-5 md:px-6 md:py-6 backdrop-blur-sm transition-colors hover:border-[#FFC300]/35">

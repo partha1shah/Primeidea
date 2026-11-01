@@ -5,6 +5,10 @@ import ScopePageJsonLd, {
   buildBreadcrumbJsonLd,
 } from "@/components/scope/ScopePageJsonLd";
 import Image from "next/image";
+import {
+  buildAggregateRatingSchema,
+  GOOGLE_BUSINESS,
+} from "@/data/geoEntity";
 
 const PAGE_PATH = "/contact-us";
 const PAGE_URL = `https://www.primeidea.in${PAGE_PATH}`;
@@ -92,6 +96,9 @@ const localBusinessSchema = {
     longitude: 73.1535375,
   },
   areaServed: ["Vadodara", "Gujarat", "India"],
+  aggregateRating: buildAggregateRatingSchema(),
+  sameAs: [GOOGLE_BUSINESS.mapsUrl],
+  hasMap: GOOGLE_BUSINESS.mapsUrl,
 };
 
 const breadcrumbSchema = buildBreadcrumbJsonLd([

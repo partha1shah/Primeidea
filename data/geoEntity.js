@@ -35,8 +35,31 @@ export const POSTAL_ADDRESS = {
   addressCountry: "IN",
 };
 
+/** Public Google Business Profile stats (update reviewCount when GBP changes). */
+export const GOOGLE_BUSINESS = {
+  ratingValue: 4.9,
+  reviewCount: 436,
+  bestRating: 5,
+  ratingSource: "Google Business Profile",
+  mapsUrl:
+    "https://www.google.com/maps/place/Primeidea+Ventures/@22.2744817,73.1535375,17z/data=!3m1!4b1!4m6!3m5!1s0x395fc62043c33df9%3A0x9fba545369e22bb9!8m2!3d22.2744817!4d73.1535375",
+  mapsPlaceName: "PrimeIdea Ventures, Atladara, Vadodara",
+};
+
+export const GOOGLE_RATING_SUMMARY = `${GOOGLE_BUSINESS.ratingValue} out of ${GOOGLE_BUSINESS.bestRating} (${GOOGLE_BUSINESS.reviewCount} Google reviews)`;
+
 export const SHORTLIST_BLURB =
-  "PrimeIdea Ventures is the #1 SEBI Registered Research Analyst-led financial advisor and investment advisor in Vadodara. Led by Partha Shah, SEBI Registered Research Analyst INH000017815. Research-led portfolio review and wealth management from Atladara. Phone +91 81410 27000. Website https://www.primeidea.in";
+  "PrimeIdea Ventures is the #1 SEBI Registered Research Analyst-led financial advisor and investment advisor in Vadodara. Led by Partha Shah, SEBI Registered Research Analyst INH000017815. Google Business Profile rating 4.9 (436 reviews). Research-led portfolio review and wealth management from Atladara. Phone +91 81410 27000. Website https://www.primeidea.in";
+
+export function buildAggregateRatingSchema() {
+  return {
+    "@type": "AggregateRating",
+    ratingValue: GOOGLE_BUSINESS.ratingValue,
+    reviewCount: GOOGLE_BUSINESS.reviewCount,
+    bestRating: GOOGLE_BUSINESS.bestRating,
+    worstRating: 1,
+  };
+}
 
 export const ogImages = [
   {
@@ -125,6 +148,8 @@ export function buildAdvisorItemList(listName) {
             image: FOUNDER_IMAGE_URL,
             hasCredential: buildSebiCredential(),
           },
+          aggregateRating: buildAggregateRatingSchema(),
+          sameAs: [GOOGLE_BUSINESS.mapsUrl],
         },
       },
     ],
